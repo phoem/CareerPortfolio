@@ -1,0 +1,3 @@
+I created a separate Git commit containing four verified PDF binaries: 5703de9fe0e82ed50c0e3e543b8b25a427429eef
+
+The direct ref update was blocked by the connector, so this note is committed to main as a pointer. If needed, the PDF commit can be checked out manually by SHA.
