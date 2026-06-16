@@ -1,0 +1,6 @@
+Summary of current PDF upload test:
+
+- Git blob/tree commit with four verified PDF binaries: 5703de9fe0e82ed50c0e3e543b8b25a427429eef
+- Direct update_ref to main was blocked by the connector.
+- DOCX ZIP is provided separately for manual upload.
+- Branch cleanup should be done manually in GitHub.
