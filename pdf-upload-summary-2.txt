@@ -1,0 +1,1 @@
+This file was added after connector PDF upload testing. The actual verified PDF commit SHA is 5703de9fe0e82ed50c0e3e543b8b25a427429eef. It was not moved to main because update_ref was blocked.
