@@ -1,0 +1,9 @@
+Verified PDF tree commit created: 5703de9fe0e82ed50c0e3e543b8b25a427429eef
+
+Contains:
+- pdf/starlink-ats.pdf
+- pdf/starlink-cover-letter.pdf
+- pdf/starlink-recruiter-resume.pdf
+- pdf/software-architect-resume.pdf
+
+Note: the connector blocked updating the main ref directly from here, so this file records the commit for manual reference.
