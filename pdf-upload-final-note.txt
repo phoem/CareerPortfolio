@@ -1,0 +1,5 @@
+A verified PDF export commit was created through the blob API, but the connector blocked moving main to that commit.
+
+PDF commit: 5703de9fe0e82ed50c0e3e543b8b25a427429eef
+
+Safe cleanup: remove this note and the previous pdf-upload notes after manually handling PDFs.
