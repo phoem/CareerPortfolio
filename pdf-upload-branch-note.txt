@@ -1,3 +1,0 @@
-PDF binary commit SHA: 5703de9fe0e82ed50c0e3e543b8b25a427429eef
-
-This commit contains four verified PDF binaries. Delete this note after merging or recreating the PDF files manually.
