@@ -35,7 +35,3 @@ The generic materials provide reusable versions for Senior Software Engineer, So
 - Markdown files are the source/editable GitHub-native versions.
 - DOCX files are the editable word-processor versions for manual customization.
 - PDF files are the application-ready exports.
-
-## Cleanup Notes
-
-Temporary files from earlier upload testing, including `pdf-commit-sha.txt` and `pdf-upload-summary-2.txt`, are not required and should not be kept in the final package.
