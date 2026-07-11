@@ -14,7 +14,7 @@ This repository stores three canonical generic resumes, targeted application pac
 
 ### Netflix - Distributed Systems Engineer, Compute Runtime
 
-| Document | Markdown | DOCX | PDF |
+| Document | Markdown | Generated DOCX | Generated PDF |
 |---|---:|---:|---:|
 | Resume | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.md` | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.docx` | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.pdf` |
 | Cover Letter | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Cover_Letter.md` | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Cover_Letter.docx` | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Cover_Letter.pdf` |
@@ -33,5 +33,7 @@ Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, Pri
 
 - `AGENTS.md` contains concise repository-level instructions for AI and coding agents.
 - `docs/RESUME_WORKFLOW.md` contains the detailed selection, evidence-mapping, gap-question, and project-knowledge process.
+- `scripts/generate_resume_artifacts.py` generates matching DOCX and PDF files from the Markdown sources.
+- `.github/workflows/generate-resume-artifacts.yml` automates artifact generation after the workflow is available on the default branch.
 - Targeted packages should be created against actual job listings, not speculative company names.
-- Generated DOCX and PDF files must remain consistent with their Markdown sources and be visually reviewed before commit.
+- Generated DOCX and PDF files must remain consistent with their Markdown sources and be visually reviewed before use.
