@@ -1,3 +1,14 @@
+---
+type: Embedded System
+title: AVR Smart Smoke/CO2 Detector
+description: Embedded firmware for battery-powered wireless smart smoke and CO2 detector prototypes.
+tags: [embedded, avr, c, spi, uart, i2c, sensors]
+timestamp: 2026-07-11T00:00:00Z
+status: partial
+owner: Jordan Newman
+evidence_status: confirmed
+---
+
 # AVR Smart Smoke/CO2 Detector
 
 ## Summary
