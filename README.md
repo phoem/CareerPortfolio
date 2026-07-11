@@ -12,7 +12,9 @@ This repository stores three canonical generic resumes, targeted application pac
 
 ## Targeted Packages
 
-### Netflix - Distributed Systems Engineer, Compute Runtime
+### Netflix - Distributed Systems Engineer (L5 + L6), Compute Runtime
+
+The employer posting associated with requisition JR39731 was verified as a Compute Runtime distributed-systems role; the package is intentionally not positioned as an Open Connect application.
 
 | Document | Markdown | Generated DOCX | Generated PDF |
 |---|---:|---:|---:|
