@@ -1,3 +1,14 @@
+---
+type: Kernel Module
+title: KeepClean
+description: FreeBSD kernel module for monitoring execution activity, protecting system assets, and reporting telemetry.
+tags: [freebsd, kernel, security, telemetry, syscalls]
+timestamp: 2026-07-11T00:00:00Z
+status: partial
+owner: Jordan Newman
+evidence_status: confirmed
+---
+
 # KeepClean
 
 ## Summary
