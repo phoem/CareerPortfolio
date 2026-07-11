@@ -1,3 +1,15 @@
+---
+type: Infrastructure Platform
+title: CDN Platform
+description: Production hosting and content-delivery platform spanning thousands of servers, multiple locations, and custom systems software.
+tags: [cdn, distributed-systems, infrastructure, freebsd, networking, reliability]
+timestamp: 2026-07-11T00:00:00Z
+status: partial
+owner: Jordan Newman
+evidence_status: confirmed
+deployment: Approximately 3,000-4,000 servers, 10 CDN locations, multiple datacenters, and more than 65 Gbps peak traffic.
+---
+
 # CDN Platform
 
 ## Summary
@@ -10,10 +22,10 @@ Jordan built the custom HTTP/CDN serving software and substantial supporting inf
 
 ## Confirmed Components
 
-- PrimeHTTPD high-performance FreeBSD HTTP/CDN server;
-- VirtualDir FreeBSD kernel pathname-virtualization module;
-- PrimeDump packet-analysis tooling;
-- PrimeDNSTop DNS-monitoring tooling;
+- [PrimeHTTPD](/PrimeHTTPD/README.md), a high-performance FreeBSD HTTP/CDN server;
+- [VirtualDir](/VirtualDir/README.md), a FreeBSD kernel pathname-virtualization module;
+- [PrimeDump](/PrimeDump/README.md), packet-analysis tooling;
+- [PrimeDNSTop](/PrimeDNSTop/README.md), DNS-monitoring tooling;
 - DDoS detection and mitigation software;
 - monitoring, telemetry, authentication, security, deployment, and infrastructure-management systems.
 
