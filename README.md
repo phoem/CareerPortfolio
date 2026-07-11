@@ -1,58 +1,37 @@
 # Jordan Newman Resume Package
 
-This repository stores canonical resumes, targeted application materials, and a growing project-knowledge portfolio used to create accurate role-specific resumes and cover letters.
+This repository stores three canonical generic resumes, targeted application packages, and an incremental project-knowledge portfolio used to create accurate role-specific resumes and cover letters.
 
-## Current Package
+## Canonical Generic Resumes
+
+| Document | Markdown | DOCX | PDF |
+|---|---:|---:|---:|
+| Senior Software Engineer | `generic/Jordan_Newman_Generic_Senior_Software_Engineer_Resume.md` | `generic/Jordan_Newman_Generic_Senior_Software_Engineer_Resume.docx` | `generic/Jordan_Newman_Generic_Senior_Software_Engineer_Resume.pdf` |
+| Software Architect | `generic/Jordan_Newman_Generic_Software_Architect_Resume.md` | `generic/Jordan_Newman_Generic_Software_Architect_Resume.docx` | `generic/Jordan_Newman_Generic_Software_Architect_Resume.pdf` |
+| Backend / Infrastructure | `generic/Jordan_Newman_Generic_Backend_Infrastructure_Resume.md` | `generic/Jordan_Newman_Generic_Backend_Infrastructure_Resume.docx` | `generic/Jordan_Newman_Generic_Backend_Infrastructure_Resume.pdf` |
+
+## Targeted Packages
+
+### Netflix - Distributed Systems Engineer, Compute Runtime
+
+| Document | Markdown | DOCX | PDF |
+|---|---:|---:|---:|
+| Resume | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.md` | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.docx` | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.pdf` |
+| Cover Letter | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Cover_Letter.md` | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Cover_Letter.docx` | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Cover_Letter.pdf` |
 
 ### Starlink
 
-| Document | Markdown | DOCX | PDF |
-|---|---:|---:|---:|
-| ATS Resume | `starlink/Jordan_Newman_Starlink_ATS_Resume.md` | `starlink/Jordan_Newman_Starlink_ATS_Resume.docx` | `starlink/Jordan_Newman_Starlink_ATS_Resume.pdf` |
-| Recruiter 2-Page Resume | `starlink/Jordan_Newman_Starlink_Recruiter_2Page_Resume.md` | `starlink/Jordan_Newman_Starlink_Recruiter_2Page_Resume.docx` | `starlink/Jordan_Newman_Starlink_Recruiter_2Page_Resume.pdf` |
-| Cover Letter | `starlink/Jordan_Newman_Starlink_Cover_Letter.md` | `starlink/Jordan_Newman_Starlink_Cover_Letter.docx` | `starlink/Jordan_Newman_Starlink_Cover_Letter.pdf` |
-
-### Generic
-
-The three generic resumes are the canonical reusable bases for future applications.
-
-| Document | Markdown | DOCX | PDF |
-|---|---:|---:|---:|
-| Senior Software Engineer Resume | `generic/Jordan_Newman_Generic_Senior_Software_Engineer_Resume.md` | `generic/Jordan_Newman_Generic_Senior_Software_Engineer_Resume.docx` | `generic/Jordan_Newman_Generic_Senior_Software_Engineer_Resume.pdf` |
-| Software Architect Resume | `generic/Jordan_Newman_Generic_Software_Architect_Resume.md` | `generic/Jordan_Newman_Generic_Software_Architect_Resume.docx` | `generic/Jordan_Newman_Generic_Software_Architect_Resume.pdf` |
-| Backend / Infrastructure Resume | `generic/Jordan_Newman_Generic_Backend_Infrastructure_Resume.md` | `generic/Jordan_Newman_Generic_Backend_Infrastructure_Resume.docx` | `generic/Jordan_Newman_Generic_Backend_Infrastructure_Resume.pdf` |
+The existing Starlink ATS resume, recruiter resume, and cover letter remain under `starlink/`.
 
 ## Project Portfolio
 
-The `portfolio/` directory is the source of truth for documented project details used across resumes and interview preparation. It grows incrementally as new facts become relevant and are confirmed.
+The `portfolio/` directory is the factual source of truth for project descriptions used across resumes and interview preparation. It is intentionally incremental: confirmed information is recorded, unknown details are omitted or listed as open questions, and new project knowledge is added only as it becomes relevant.
 
-Current project knowledge:
+Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, PrimeDNSTop, KeepClean, StatCache, TAFOS, and the AVR smart smoke/CO2 detector.
 
-- `portfolio/PrimeHTTPD/README.md` — high-performance FreeBSD HTTP/CDN server and platform context
-- `portfolio/VirtualDir/README.md` — FreeBSD kernel filesystem-path virtualization module and `vdcli` management tool
-
-Unknown information is deliberately omitted rather than guessed.
-
-## Resume Workflow
+## Workflow
 
 - `AGENTS.md` contains concise repository-level instructions for AI and coding agents.
-- `docs/RESUME_WORKFLOW.md` documents the detailed resume-selection, evidence-mapping, gap-question, and project-knowledge process.
-
-When tailoring a resume, the workflow compares the posting against all three generic resumes, selects the strongest base, uses documented portfolio evidence, and asks targeted questions only when meaningful gaps remain.
-
-## Positioning
-
-Core positioning across the package:
-
-> Systems software engineer with experience in kernel development, operating systems, networking, security, embedded firmware, and large-scale infrastructure.
-
-The Starlink materials emphasize embedded software, FreeBSD/Linux systems programming, kernel modules, C networking software, AVR firmware, bootloaders, operating-system work, DDoS mitigation, telemetry, and large-scale infrastructure.
-
-The generic materials provide reusable versions for Senior Software Engineer, Software Architect, and Backend / Infrastructure Engineer roles. Each version selectively emphasizes the same verified experience according to its target audience.
-
-## File Format Notes
-
-- Markdown files are the source/editable GitHub-native versions.
-- DOCX files are editable word-processor versions for manual customization.
-- PDF files are application-ready exports.
-- Generated DOCX and PDF files should remain consistent with their Markdown source.
+- `docs/RESUME_WORKFLOW.md` contains the detailed selection, evidence-mapping, gap-question, and project-knowledge process.
+- Targeted packages should be created against actual job listings, not speculative company names.
+- Generated DOCX and PDF files must remain consistent with their Markdown sources and be visually reviewed before commit.
