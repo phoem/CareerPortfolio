@@ -1,3 +1,14 @@
+---
+type: Software Project
+title: PrimeDump
+description: Real-time libpcap-based packet analyzer for operational visibility, troubleshooting, and DDoS investigation.
+tags: [networking, security, libpcap, packet-analysis, ddos, freebsd]
+timestamp: 2026-07-11T00:00:00Z
+status: partial
+owner: Jordan Newman
+evidence_status: confirmed
+---
+
 # PrimeDump
 
 ## Summary
@@ -13,7 +24,7 @@ PrimeDump is a custom libpcap-based traffic-analysis tool built for real-time vi
 
 ## Relationship to the Platform
 
-PrimeDump complemented PrimeHTTPD, PrimeDNSTop, and the broader CDN and hosting infrastructure by providing packet-level operational visibility.
+PrimeDump complemented [PrimeHTTPD](/PrimeHTTPD/README.md), [PrimeDNSTop](/PrimeDNSTop/README.md), and the broader [CDN platform](/CDN_Platform/README.md) by providing packet-level operational visibility.
 
 ## Open Questions
 
