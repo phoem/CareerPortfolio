@@ -25,9 +25,18 @@ The employer posting associated with requisition JR39731 was verified as a Compu
 
 The existing Starlink ATS resume, recruiter resume, and cover letter remain under `starlink/`.
 
-## Project Portfolio
+## Project Knowledge Portfolio
 
-The `portfolio/` directory is the factual source of truth for project descriptions used across resumes and interview preparation. It is intentionally incremental: confirmed information is recorded, unknown details are omitted or listed as open questions, and new project knowledge is added only as it becomes relevant.
+The `portfolio/` directory is the factual source of truth for project descriptions used across resumes and interview preparation.
+
+It is maintained as a Google Cloud Open Knowledge Format (OKF) v0.1 knowledge bundle:
+
+- project concepts are Markdown files with YAML frontmatter;
+- every concept includes a required `type` field;
+- `portfolio/index.md` provides progressive-disclosure navigation;
+- `portfolio/log.md` records meaningful knowledge updates;
+- ordinary Markdown links connect related projects and systems;
+- confirmed information is recorded while unknown details remain omitted or listed as open questions.
 
 Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, PrimeDNSTop, KeepClean, StatCache, TAFOS, and the AVR smart smoke/CO2 detector.
 
@@ -35,6 +44,7 @@ Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, Pri
 
 - `AGENTS.md` contains concise repository-level instructions for AI and coding agents.
 - `docs/RESUME_WORKFLOW.md` contains the detailed selection, evidence-mapping, gap-question, and project-knowledge process.
+- `docs/OKF_PORTFOLIO.md` documents the repository-specific OKF conventions.
 - `scripts/generate_resume_artifacts.py` generates matching DOCX and PDF files from the Markdown sources.
 - `.github/workflows/generate-resume-artifacts.yml` automates artifact generation after the workflow is available on the default branch.
 - Targeted packages should be created against actual job listings, not speculative company names.
