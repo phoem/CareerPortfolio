@@ -1,96 +1,87 @@
 # Jordan Newman - Generic Software Architect Resume
 
-**Software Architect | Systems, Infrastructure, Security, DevOps**
+**Software Architect | Distributed Systems, Infrastructure, Security, DevOps**
 
-Marlboro, NJ | 347-739-4731 | phoem@mac.com | Private GitHub repository access available upon request
+Marlboro, NJ | 347-739-4731 | phoem@mac.com | github.com/phoem
 
 ## Summary
 
-Software architect and systems engineer with experience designing production software and infrastructure across ISP/CDN, enterprise software, security, DevOps, and backend platforms. Built systems operating across 3,000-4,000 servers, 10 CDN locations, and 65+ Gbps of peak traffic. Combines architecture, hands-on engineering, technical leadership, and operational ownership.
+Software architect and hands-on systems engineer with experience designing production software and infrastructure across CDN, hosting, enterprise software, security, backend platforms, and DevOps. Architected systems operating across approximately 3,000-4,000 servers, 10 CDN locations, and more than 65 Gbps of peak traffic. Combines technical leadership with deep implementation experience in C, FreeBSD, networking, kernel development, reliability, and performance engineering.
 
 ## Technical Skills
 - **Languages:** C, C++, Go, Python, C#, Objective-C, PHP, Perl, JavaScript, Node.js, Shell, Visual Basic
-- **Systems:** FreeBSD, Linux, kernel modules, system calls, bootloaders, operating systems, kqueue, GDB, TCP/IP
-- **Networking/Security:** DDoS detection/mitigation, packet capture, DNS analysis, libpcap, IPFW, authentication, telemetry
-- **Embedded:** Embedded C, Atmel AVR, SPI, UART, I2C, Arduino, circuit design, soldering, hardware troubleshooting
+- **Systems:** FreeBSD, Linux, kernel modules, system calls, operating systems, kqueue, sendfile(), GDB, TCP/IP, non-blocking I/O
+- **Networking/Security:** HTTP, DNS, CDN architecture, socket programming, DDoS detection/mitigation, packet capture, libpcap, IPFW, authentication, telemetry
 - **Cloud/DevOps:** Azure DevOps, Docker, Kubernetes, Terraform, CI/CD, security scanning, deployment automation
 - **Databases/Web:** MySQL, MultiValue/Universe, OAuth/OAuth2, SMTP OAuth, React, jQuery, PHP, web services
 
 ## Selected Technical Highlights
-- Architected infrastructure spanning 3,000-4,000 servers, 10 CDN locations, and 65+ Gbps peak traffic.
-- Designed systems for high availability, DDoS mitigation, production telemetry, authentication, and traffic analysis.
-- Led technical teams and operations across datacenter, CDN, hosting, support, and infrastructure engineering functions.
-- Standardized DevOps, Kubernetes, Terraform, Azure DevOps, CI/CD, and security-scanning practices across engineering teams.
-- Maintained hands-on depth in C, kernel development, networking, security, performance engineering, and low-level systems.
+
+- Architected the custom HTTP serving and CDN software platform for infrastructure spanning thousands of servers and multiple points of presence.
+- Designed high-availability, DDoS mitigation, traffic analysis, telemetry, authentication, and operational-control systems.
+- Created a kernel-aware event-driven server architecture using kqueue, sendfile(), non-blocking sockets, I/O workers, and FreeBSD-specific optimizations.
+- Designed a transparent FreeBSD kernel pathname-virtualization layer for multi-tenant hosting without application changes or chroot jails.
+- Standardized Kubernetes, Terraform, Azure DevOps, CI/CD, and security-scanning practices across engineering teams.
 
 ## Selected Systems Projects
-- **TAFOS Operating System:** Developed educational x86 OS kernel in C and assembly with custom MBR bootloader, protected mode, IDT, heap allocator, port I/O, VGA output, and GDB support.
-- **KeepClean:** Developed FreeBSD kernel module hooking syscalls to monitor execution activity, protect system assets, and report telemetry to userspace services.
-- **VirtualDir:** Developed FreeBSD kernel module remapping filesystem paths through syscall interception; deployed customer-facing across approximately 30 production servers over 5-8 years.
-- **StatCache:** Developed FreeBSD kernel module instrumenting stat() and lstat() activity for filesystem visibility and performance analysis.
-- **PrimeDump:** Developed libpcap-based traffic analyzer decoding Ethernet, IP, TCP, UDP, and ICMPv6 headers with ncurses real-time views and IPFW integration.
-- **PrimeDNSTop:** Developed DNS traffic monitor parsing UDP/53 and RFC 1035 queries to detect recursion attacks and rank source/domain activity.
-- **AVR Smart Smoke/CO2 Detector:** Developed contract firmware in embedded C for battery-powered wireless Atmel AVR prototypes using SPI, UART, and I2C interfaces.
+
+- **PrimeHTTPD:** Architected and implemented a high-performance, non-blocking, kqueue-based HTTP/CDN server in C for FreeBSD. Used sendfile(), SF_NODISKIO, TCP_NODELAY, TCP_NOPUSH, O_NONBLOCK, accept_filter_http, persistent connections, and dedicated I/O workers.
+- **VirtualDir:** Designed and developed a FreeBSD kernel module that intercepted filesystem-related syscalls and transparently remapped paths from configuration, enabling shared physical layouts without chroot jails; included the vdcli runtime management tool.
+- **PrimeDump:** Built a libpcap-based real-time traffic analyzer decoding Ethernet, IP, TCP, UDP, and ICMPv6 with ncurses views and IPFW integration.
+- **PrimeDNSTop:** Built a DNS traffic monitor parsing UDP/53 and RFC 1035 queries to detect recursion attacks and rank source and domain activity.
+- **TAFOS:** Developed an educational x86 operating-system kernel in C and assembly with a custom MBR bootloader, protected mode, IDT, heap allocator, port I/O, VGA output, and GDB support.
 
 ## Professional Experience
 
 ### Advantive - Senior Development Specialist
 *Remote / Tampa Bay, FL | July 2022 - Present*
 
-- Partnered with architecture leadership to standardize DevOps policies, Kubernetes deployments, security scanning, and software delivery.
-- Implemented hands-on Azure DevOps, Docker, Kubernetes, Terraform, and CI/CD practices across engineering teams.
-- Developed shared libraries, documentation, and AI workflows to improve engineering consistency and productivity.
+- Implemented Azure DevOps, Docker, Kubernetes, Terraform, CI/CD, and security-scanning workflows across engineering teams.
+- Partnered with architecture teams to standardize deployment practices and developed shared libraries, documentation, and AI-assisted engineering workflows.
 
 ### DDI Systems - Senior Development Specialist
 *Manalapan, NJ | November 2021 - July 2022*
 
-- Modernized legacy enterprise software by migrating VB.NET components to C# and replacing deprecated implementations.
-- Integrated Microsoft Office 365 SMTP OAuth to improve authentication architecture and customer-facing security.
+- Modernized legacy VB.NET components in C# and integrated Microsoft Office 365 SMTP OAuth for secure customer-facing workflows.
 
 ### ISPrime LLC - CEO
 *Weehawken, NJ | April 2018 - January 2020*
 
-- Led datacenter modernization and operational restructuring to improve scalability, reliability, and staff execution.
-- Refined internally developed software platforms supporting monitoring, security, infrastructure management, and production operations.
+- Led datacenter modernization, operational restructuring, and improvements to internally developed monitoring, security, and infrastructure platforms.
 
 ### DDI Systems - Computer Programmer
 *Manalapan, NJ | April 2017 - April 2018*
 
-- Designed ERP integration workflows connecting SellerCloud, Essendant, SFTP data feeds, and MultiValue/Universe databases.
-- Automated catalog, order, image, and SDS ingestion workflows for customer-facing enterprise software.
+- Built ERP integrations and automated order, catalog, image, SDS, SFTP, SellerCloud, Essendant, and MultiValue/Universe data workflows.
 
 ### Too Much Media LLC - Computer Programmer
 *Morganville, NJ | January 2016 - April 2017*
 
-- Designed real-time support workflows integrating browser chat, ticketing systems, JavaScript, React, and PHP services.
-- Implemented OAuth 2.0 authorization architecture for protected customer websites.
+- Developed real-time browser chat integrated with ticketing systems and implemented OAuth 2.0 authorization for protected sites.
 
 ### MFCXY, Inc. - Computer Programmer
 *Chicago, IL | December 2014 - September 2015*
 
-- Developed backend and Windows client features while advising on performance, security, and migration strategy.
-- Built middleware supporting database migration and operational continuity across platform changes.
+- Developed backend and Windows client features and middleware for cross-platform database migration.
 
 ### AJPM, LLC - Programmer / Owner
 *New Jersey / Remote | November 2012 - December 2013*
 
-- Designed end-to-end business software automating purchasing, inventory, repair tracking, resale workflows, and financial reporting.
+- Built automated purchasing, inventory, repair, resale, and financial workflow software.
 
 ### ISPrime Inc. - CIO / Partner
 *Weehawken, NJ | March 2001 - December 2014*
 
-- Architected infrastructure spanning 3,000-4,000 servers, 10 CDN locations, multiple datacenters, and 65+ Gbps peak traffic.
-- Designed high-performance C web server architecture optimized for FreeBSD kqueue and deployed across approximately 200 servers.
-- Architected DDoS detection and mitigation systems protecting infrastructure during attacks involving up to 750,000 compromised hosts.
-- Designed monitoring, telemetry, authentication, and security platforms supporting thousands of production servers.
-- Created production FreeBSD kernel modules improving security, virtual hosting architecture, and filesystem observability.
-- Built and led technical operations, support, and infrastructure teams supporting 24/7/365 production environments.
+- Architected and operated hosting and CDN infrastructure spanning approximately 3,000-4,000 servers, 10 locations, multiple datacenters, and more than 65 Gbps of peak traffic.
+- Designed and built PrimeHTTPD, a high-performance, non-blocking, kqueue-based HTTP/CDN server in C for FreeBSD; deployed it across approximately 200 servers and supported more than 150,000 concurrent connections.
+- Leveraged sendfile(), SF_NODISKIO, TCP_NODELAY, TCP_NOPUSH, O_NONBLOCK, accept_filter_http, persistent connections, and dedicated I/O workers to keep disk operations from blocking the networking event loop.
+- Built DDoS detection and mitigation systems, packet and DNS analysis tools, monitoring, telemetry, authentication, deployment, and security software used across production infrastructure.
+- Developed production FreeBSD kernel modules including VirtualDir, KeepClean, and StatCache.
 
 ### FatWallet.com - Systems Administrator
 *Wisconsin / Remote | December 2000 - June 2001*
 
-- Re-architected production infrastructure to resolve website performance and stability issues without downtime.
-- Designed automated alerting systems for server health, website availability, and operational response.
+- Rebuilt production infrastructure to resolve performance and stability issues without customer-facing downtime and created automated availability and health alerting.
 
 ## Education
 
