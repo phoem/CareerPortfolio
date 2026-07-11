@@ -1,3 +1,15 @@
+---
+type: Kernel Module
+title: VirtualDir
+description: FreeBSD kernel module that transparently virtualizes filesystem paths through syscall interception and configurable remapping.
+tags: [freebsd, kernel, filesystem, syscalls, virtualization, cdn]
+timestamp: 2026-07-11T00:00:00Z
+status: partial
+owner: Jordan Newman
+evidence_status: confirmed
+deployment: Customer-facing across approximately 30 servers for approximately 5-8 years.
+---
+
 # VirtualDir
 
 ## Summary
@@ -27,7 +39,7 @@ Documented implementation details include:
 
 ## Operational Context
 
-VirtualDir was built to support production virtual-hosting and CDN infrastructure. It provided a kernel-level pathname abstraction so multiple hosting environments could share a physical filesystem organization while presenting different logical paths.
+VirtualDir was built to support production virtual-hosting and [CDN infrastructure](/CDN_Platform/README.md). It provided a kernel-level pathname abstraction so multiple hosting environments could share a physical filesystem organization while presenting different logical paths.
 
 Known deployment information:
 
@@ -59,7 +71,7 @@ Designed a transparent kernel-level filesystem abstraction for multi-tenant host
 
 ## Relationship to the CDN Platform
 
-VirtualDir complemented PrimeHTTPD and the broader CDN platform by providing transparent path translation and flexible content organization for virtual-hosting environments.
+VirtualDir complemented [PrimeHTTPD](/PrimeHTTPD/README.md) and the broader CDN platform by providing transparent path translation and flexible content organization for virtual-hosting environments.
 
 ## Open Questions
 
