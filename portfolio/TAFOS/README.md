@@ -1,3 +1,14 @@
+---
+type: Operating System Project
+title: TAFOS Operating System
+description: Educational x86 operating-system kernel written in C and assembly.
+tags: [operating-systems, x86, c, assembly, bootloader, kernel]
+timestamp: 2026-07-11T00:00:00Z
+status: partial
+owner: Jordan Newman
+evidence_status: confirmed
+---
+
 # TAFOS Operating System
 
 ## Summary
