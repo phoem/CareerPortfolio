@@ -1,3 +1,15 @@
+---
+type: Software Project
+title: PrimeHTTPD
+description: High-performance non-blocking event-driven HTTP and CDN server written in C for FreeBSD.
+tags: [c, freebsd, http, cdn, networking, performance, kqueue]
+timestamp: 2026-07-11T00:00:00Z
+status: partial
+owner: Jordan Newman
+evidence_status: confirmed
+deployment: Approximately 200 production servers; more than 150,000 concurrent connections.
+---
+
 # PrimeHTTPD
 
 ## Summary
@@ -6,7 +18,7 @@ PrimeHTTPD is a high-performance, non-blocking, event-driven HTTP server written
 
 ## Personal Ownership
 
-Jordan Newman architected and implemented PrimeHTTPD and the surrounding CDN software platform.
+Jordan Newman architected and implemented PrimeHTTPD and the surrounding [CDN software platform](/CDN_Platform/README.md).
 
 ## Architecture and Implementation
 
@@ -36,7 +48,7 @@ Known production context:
 - support for more than 150,000 concurrent connections;
 - high-traffic customer production workloads.
 
-The CDN platform also used custom supporting software, including the VirtualDir FreeBSD kernel module and custom network-analysis and DDoS-mitigation tooling.
+The platform also used custom supporting software, including [VirtualDir](/VirtualDir/README.md), [PrimeDump](/PrimeDump/README.md), and [PrimeDNSTop](/PrimeDNSTop/README.md).
 
 ## Resume-Ready Descriptions
 
@@ -53,12 +65,6 @@ Designed and built the high-performance C web server and supporting software pla
 ### Architect version
 
 Architected the HTTP serving and CDN software platform for infrastructure spanning thousands of servers and multiple points of presence, combining a custom FreeBSD event-driven server, kernel-aware performance optimizations, operational tooling, and custom systems software.
-
-## Known Relationships
-
-- **VirtualDir:** FreeBSD kernel pathname-virtualization module used to support flexible multi-tenant hosting and shared physical filesystem layouts without chroot jails.
-- **PrimeDump:** packet-analysis and mitigation tooling used for traffic visibility and DDoS response.
-- **PrimeDNSTop:** DNS monitoring and analysis tooling used to identify abnormal DNS traffic and attacks.
 
 ## Open Questions
 
