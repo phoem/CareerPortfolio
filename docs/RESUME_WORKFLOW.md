@@ -20,18 +20,20 @@ All three should improve over time, but each should emphasize the same facts dif
 2. Identify required and preferred capabilities.
 3. Compare those requirements against the three generic resumes.
 4. Select the best base resume.
-5. Search `portfolio/` for projects that demonstrate the requested capabilities.
+5. Traverse `portfolio/index.md` and search the OKF project bundle for concepts that demonstrate the requested capabilities.
 6. Build a factual evidence map:
    - requirement
    - matching experience
    - supporting project or role
    - documented metric or outcome
+   - supporting OKF concept
 7. Identify gaps.
 8. For each meaningful gap, ask Jordan whether he has worked on a project involving that capability.
 9. When Jordan provides relevant experience, update the project portfolio before relying on it in the resume.
-10. Tailor the summary, skills order, selected highlights, project descriptions, and work-history bullets.
-11. Produce Markdown, DOCX, and PDF deliverables as required.
-12. Update the repository README and company package index when adding a new application package.
+10. Add cross-links, citations, metadata, and a log entry when the new knowledge warrants them.
+11. Tailor the summary, skills order, selected highlights, project descriptions, and work-history bullets.
+12. Produce Markdown, DOCX, and PDF deliverables as required.
+13. Update the repository README and company package index when adding a new application package.
 
 ## Question Strategy
 
@@ -51,11 +53,30 @@ A useful gap question follows this pattern:
 
 Ask fewer questions when the existing portfolio already supplies sufficient evidence.
 
-## Project Portfolio
+## OKF Project Portfolio
 
-Each major project may have a directory under `portfolio/`. Documentation grows incrementally. Unknown information is omitted rather than guessed.
+The `portfolio/` directory is an Open Knowledge Format (OKF) v0.1 knowledge bundle based on the Google Cloud specification.
 
-Recommended sections when facts are available:
+OKF uses a directory tree of Markdown files with YAML frontmatter. It does **not** use `project.okf.yaml` files.
+
+### Bundle rules
+
+- Each project concept is a UTF-8 Markdown file.
+- Every non-reserved concept file must begin with YAML frontmatter.
+- `type` is required and must be non-empty.
+- Recommended metadata includes `title`, `description`, `resource`, `tags`, and `timestamp`.
+- Repository-specific extensions may include `status`, `owner`, `evidence_status`, `deployment`, and other useful fields.
+- `index.md` is reserved for progressive-disclosure navigation.
+- `log.md` is reserved for chronological knowledge updates.
+- Concepts should use ordinary Markdown links to related concepts.
+- External evidence should be listed under `# Citations` when applicable.
+- Unknown metadata and body fields must be preserved during round-trip edits.
+
+See `docs/OKF_PORTFOLIO.md` for the local conventions used in this repository.
+
+### Recommended body sections
+
+Use only sections supported by known facts:
 
 - Summary
 - Problem solved
@@ -70,12 +91,29 @@ Recommended sections when facts are available:
 - Resume-ready descriptions
 - Interview discussion points
 - Open questions for future documentation
+- Citations
 
 Not every project needs every section immediately.
 
+## Knowledge-Capture Workflow
+
+When new project information is learned:
+
+1. Locate the existing concept through `portfolio/index.md` or create a new project concept.
+2. Confirm what Jordan personally designed, implemented, operated, or led.
+3. Record only confirmed facts.
+4. Distinguish exact values, estimates, ranges, and qualitative outcomes.
+5. Add or update YAML frontmatter.
+6. Add links to related OKF concepts.
+7. Add external citations where claims rely on published material.
+8. Put unresolved but potentially valuable details under `Open Questions` rather than guessing.
+9. Update `portfolio/index.md` when a concept is added or materially renamed.
+10. Record meaningful changes in `portfolio/log.md`.
+11. Only then use the information in generic or targeted resumes.
+
 ## Resume Description Variants
 
-Project files may hold multiple factual wording variants:
+Project concepts may hold multiple factual wording variants:
 
 - one-line ATS version;
 - recruiter-friendly version;
@@ -93,13 +131,15 @@ These are alternate presentations of the same documented facts, not separate cla
 - Distinguish personal implementation from team or company ownership.
 - Avoid claiming benchmark leadership unless a reproducible or contemporaneous basis is documented.
 - Prefer precise APIs and mechanisms when known, such as `kqueue`, `sendfile()`, `SF_NODISKIO`, `TCP_NOPUSH`, `TCP_NODELAY`, `O_NONBLOCK`, and `accept_filter_http`.
+- Important project knowledge must not live only in a resume.
 
 ## Maintenance
 
 When new facts are learned:
 
-1. Update the project portfolio.
+1. Update the OKF project portfolio.
 2. Determine whether one or more generic resumes should be improved.
 3. Update only the generic versions for which the information strengthens the intended positioning.
 4. Regenerate matching DOCX and PDF files.
-5. Record the change with a clear commit message.
+5. Record the knowledge change in `portfolio/log.md` when meaningful.
+6. Commit with a clear message.
