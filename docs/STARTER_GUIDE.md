@@ -10,9 +10,14 @@ Copy these repository-level files and directories:
 README.md
 AGENTS.md
 docs/
-  RESUME_WORKFLOW.md
+  workflows/
+    RESUME_WORKFLOW.md
+    ATS_VALIDATION.md
   OKF_PORTFOLIO.md
   STARTER_GUIDE.md
+  ROADMAP.md
+  decisions/
+    README.md
 scripts/
   generate_resume_artifacts.py
 .github/workflows/
@@ -96,7 +101,8 @@ After initialization, an agent may create new items as needed:
 - dated entries in `knowledge/log.md`;
 - new company-specific application directories;
 - Markdown resume and cover-letter sources;
-- generated DOCX and PDF artifacts.
+- generated DOCX and PDF artifacts;
+- ATS validation reports and score histories.
 
 This deliberate initialization prevents accidental assumptions about resume types, directory names, personal data, or career goals.
 
