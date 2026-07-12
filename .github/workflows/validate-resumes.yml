@@ -1,0 +1,94 @@
+name: Validate resumes
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'generic/*.md'
+      - 'generic/*.docx'
+      - 'generic/*.pdf'
+      - 'netflix/*.md'
+      - 'netflix/*.docx'
+      - 'netflix/*.pdf'
+      - 'scripts/validate_resume.py'
+      - 'scripts/record_ats_history.py'
+      - '.github/workflows/validate-resumes.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PDF extraction dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Validate generic resumes
+        run: |
+          set -e
+          mkdir -p generic/validation
+          for stem in \
+            Jordan_Newman_Generic_Senior_Software_Engineer_Resume \
+            Jordan_Newman_Generic_Software_Architect_Resume \
+            Jordan_Newman_Generic_Backend_Infrastructure_Resume
+          do
+            python scripts/validate_resume.py \
+              --resume "generic/${stem}.md" \
+              --docx "generic/${stem}.docx" \
+              --pdf "generic/${stem}.pdf" \
+              --output "generic/validation/${stem}-ATS_REPORT.md" \
+              --json-output "generic/validation/${stem}-ATS_RESULT.json"
+            python scripts/record_ats_history.py \
+              --result "generic/validation/${stem}-ATS_RESULT.json" \
+              --history "generic/validation/${stem}-ATS_HISTORY.md"
+          done
+
+      - name: Validate Netflix resume when exact posting is available
+        run: |
+          mkdir -p netflix/validation
+          if test -f netflix/JOB_DESCRIPTION.md; then
+            python scripts/validate_resume.py \
+              --resume netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.md \
+              --docx netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.docx \
+              --pdf netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.pdf \
+              --job netflix/JOB_DESCRIPTION.md \
+              --output netflix/validation/ATS_REPORT.md \
+              --json-output netflix/validation/ATS_RESULT.json
+            python scripts/record_ats_history.py \
+              --result netflix/validation/ATS_RESULT.json \
+              --history netflix/validation/ATS_HISTORY.md
+          else
+            cat > netflix/validation/ATS_REPORT.md <<'EOF'
+          # ATS Readiness Report
+
+          Targeted Netflix validation is pending because the exact job posting has not yet been stored as `netflix/JOB_DESCRIPTION.md`.
+
+          The validator intentionally will not reconstruct required and preferred qualifications from the tailored resume or from memory. Add the exact posting, then rerun this workflow.
+          EOF
+          fi
+
+      - name: Commit validation reports
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add generic/validation netflix/validation
+          if git diff --cached --quiet; then
+            echo 'No validation changes to commit.'
+          else
+            git commit -m 'Update ATS validation reports'
+            git push
+          fi
