@@ -47,8 +47,8 @@ Automated checks may be added in `scripts/validate_resume.py`, but human or agen
 
 ## Related Documentation
 
-- [ATS Validation Workflow](../ATS_VALIDATION.md)
-- [Resume Tailoring and Knowledge Workflow](../RESUME_WORKFLOW.md)
+- [ATS Validation Workflow](../workflows/ATS_VALIDATION.md)
+- [Resume Tailoring and Knowledge Workflow](../workflows/RESUME_WORKFLOW.md)
 - [ADR 0003: Knowledge Before Artifacts](0003-knowledge-before-artifacts.md)
 - [ADR 0006: Store Only Confirmed Knowledge](0006-store-only-confirmed-knowledge.md)
 - [ADR 0007: Use Gap Analysis Before Asking Questions](0007-use-gap-analysis-before-asking-questions.md)
