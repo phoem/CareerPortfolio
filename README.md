@@ -42,12 +42,14 @@ It is maintained as a Google Cloud Open Knowledge Format (OKF) v0.1 knowledge bu
 
 Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, PrimeDNSTop, KeepClean, StatCache, TAFOS, and the AVR smart smoke/CO2 detector.
 
-## Workflow
+## Workflow and Governance
 
 - `AGENTS.md` contains concise repository-level instructions for AI and coding agents.
 - `docs/RESUME_WORKFLOW.md` contains the detailed selection, evidence-mapping, gap-question, and knowledge-capture process.
 - `docs/OKF_PORTFOLIO.md` documents the repository-specific OKF conventions.
 - `docs/STARTER_GUIDE.md` explains how another person can bootstrap their own CareerPortfolio.
+- `docs/ROADMAP.md` records deferred enhancements and promotion criteria without prematurely adding structure.
+- `docs/decisions/README.md` indexes the Architecture Decision Records that explain significant repository decisions.
 - `scripts/generate_resume_artifacts.py` generates matching DOCX and PDF files from Markdown sources.
 - `.github/workflows/generate-resume-artifacts.yml` automates artifact generation after the workflow is available on the default branch.
 - Targeted packages should be created against actual job listings, not speculative company names.
