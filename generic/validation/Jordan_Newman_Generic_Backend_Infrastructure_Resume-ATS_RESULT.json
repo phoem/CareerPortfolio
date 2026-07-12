@@ -1,0 +1,44 @@
+{
+  "validator_version": "0.1.0",
+  "overall_score": 99,
+  "disposition": "Submission Ready",
+  "targeted_complete": true,
+  "pass_number": 0,
+  "categories": {
+    "Artifact parseability and structure": {
+      "score": 100,
+      "findings": [
+        "DOCX token coverage versus Markdown: 99.5%.",
+        "PDF token coverage versus Markdown: 99.2%."
+      ],
+      "weight": 50
+    },
+    "Required-information completeness": {
+      "score": 100,
+      "findings": [
+        "Contact details, conventional sections, and work-history dates are present."
+      ],
+      "weight": 20
+    },
+    "Language and keyword quality": {
+      "score": 100,
+      "findings": [
+        "Language is specific, action-oriented, and readable."
+      ],
+      "weight": 15
+    },
+    "Human readability and positioning": {
+      "score": 91,
+      "findings": [
+        "3 bullets are long enough to hinder scanning."
+      ],
+      "weight": 15
+    }
+  },
+  "critical_failures": [],
+  "hashes": {
+    "resume": "95c842ea3d8a08568e34dd3426560142292054b563fb07a9b4d38b14e2095de6",
+    "docx": "7ad3b5b7716d814ca5208b7cc1ea82eccfa559dd21179f5a0cae03962c6e4cfd",
+    "pdf": "843748afa4e3be7a07a644486254e0ad62cbc4a156e3fa9cdd3d65de8effa0ff"
+  }
+}
