@@ -9,9 +9,18 @@ CareerPortfolio should evaluate a finished resume before submission for two sepa
 
 No tool can produce a universal or authoritative ATS score because employers use different systems, configurations, knockout questions, recruiter workflows, and ranking models. CareerPortfolio therefore reports a transparent **heuristic readiness score** with category-level evidence and recommendations.
 
+## Score Types
+
+CareerPortfolio tracks two different score types:
+
+- **Generic resume baseline score:** ATS compatibility, completeness, artifact consistency, structure, and general readability. It does not claim job-specific alignment.
+- **Targeted resume readiness score:** the complete score against one specific job description, including required and preferred evidence coverage.
+
+Do not compare these two score types directly.
+
 ## Required Inputs
 
-- the target job description;
+- the target job description for targeted validation;
 - the final Markdown resume source;
 - the generated DOCX and PDF artifacts;
 - relevant concepts from the `knowledge/` OKF bundle.
@@ -78,7 +87,7 @@ A technically parseable resume can still be weak. Review:
 
 ## Heuristic Readiness Score
 
-Score each category from 0 to 100, with the following default weighting:
+Score each category from 0 to 100, with the following default weighting for targeted resumes:
 
 | Category | Weight |
 |---|---:|
@@ -89,7 +98,9 @@ Score each category from 0 to 100, with the following default weighting:
 | Language and keyword quality | 10% |
 | Human readability and positioning | 10% |
 
-The overall readiness score is the weighted total. The report must always show category scores and the reasons behind them; the total alone is not sufficient.
+Generic baseline scoring omits the job-evidence categories and renormalizes the remaining categories.
+
+The report must always show category scores and the reasons behind them; the total alone is not sufficient.
 
 ## Suggested Interpretation
 
@@ -164,27 +175,71 @@ When the loop stops below the target, provide:
 
 The report must be honest even when the recommendation is not to submit.
 
-## Validation Report
+## Current Score and History
 
-Each targeted application should eventually be able to include an optional report such as:
+Each resume keeps a current validation result and a compact append-only history.
+
+### Current result
+
+Record:
+
+- validation date;
+- score type: generic baseline or targeted readiness;
+- validator or scoring-model version;
+- overall score and category scores;
+- disposition;
+- source commit or artifact version;
+- job identifier or job-description hash for targeted resumes;
+- link to the full report.
+
+### History retention
+
+Record only meaningful runs:
+
+- the initial baseline;
+- each autonomous revision pass;
+- validation after meaningful human input;
+- the final pre-submission result;
+- later regression checks after substantial resume changes.
+
+Do not retain duplicate runs where neither the resume, artifacts, job description, nor scoring model changed.
+
+A score becomes stale when its resume source, generated artifacts, target job description, or scoring model changes. Stale results must be labeled and rerun before relying on them.
+
+### Suggested paths
+
+Targeted resume:
 
 ```text
 applications/<company>/<role>/validation/
     ATS_REPORT.md
-    extracted-pdf.txt
-    extracted-docx.txt
+    ATS_HISTORY.md
 ```
+
+Existing company-specific directories may use the same `validation/` subdirectory until the broader `applications/` layout is adopted.
+
+Generic resumes:
+
+```text
+generic/validation/
+    <resume-name>-ATS_REPORT.md
+    <resume-name>-ATS_HISTORY.md
+```
+
+## Validation Report
 
 The report should include:
 
 - overall readiness score;
+- score type;
 - category scores;
 - critical failures;
-- requirement-to-evidence matrix;
+- requirement-to-evidence matrix for targeted resumes;
 - missing or weak evidence;
 - parseability findings;
 - prioritized recommendations;
 - revision-pass history;
+- source, artifact, job, and validator version identifiers;
 - final disposition: Not Ready, Needs Revision, Strong, or Submission Ready.
 
 Generated extraction files may be temporary when they add no lasting review value.
@@ -199,7 +254,8 @@ A future `scripts/validate_resume.py` may automate deterministic checks such as:
 - detecting broken characters and likely reading-order problems;
 - calculating transparent keyword and requirement coverage;
 - generating an initial Markdown validation report;
-- tracking revision-pass count and score history;
+- tracking current scores, revision-pass count, and score history;
+- marking stale validation results;
 - enforcing the three-pass autonomous retry limit.
 
 Human or agent review remains required for evidence quality, relevance, truthfulness, and narrative strength.
