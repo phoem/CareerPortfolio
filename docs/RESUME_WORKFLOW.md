@@ -33,7 +33,9 @@ All three should improve over time, but each should emphasize the same facts dif
 10. Add cross-links, citations, metadata, and a log entry when the new knowledge warrants them.
 11. Tailor the summary, skills order, selected highlights, project descriptions, and work-history bullets.
 12. Produce Markdown, DOCX, and PDF deliverables as required.
-13. Update the repository README and company package index when adding a new application package.
+13. Run the ATS readiness and final-artifact validation process in `docs/ATS_VALIDATION.md`.
+14. Resolve critical failures and repeat validation until the application is at least Strong or Jordan explicitly approves submission with known limitations.
+15. Update the repository README and company package index when adding a new application package.
 
 ## Question Strategy
 
@@ -123,6 +125,19 @@ Knowledge concepts may hold multiple factual wording variants:
 
 These are alternate presentations of the same documented facts, not separate claims.
 
+## ATS Readiness and Final Quality Gate
+
+Every finished targeted resume should be validated against both the job description and the generated artifacts.
+
+- Treat the result as a transparent heuristic readiness score, not a prediction of a specific employer's ATS ranking.
+- Inspect extracted text and reading order from the actual DOCX and PDF.
+- Score parseability, completeness, required evidence, preferred evidence, keyword quality, and human positioning separately.
+- Report critical failures and prioritized recommendations.
+- Never improve a score by inventing experience or inserting unsupported keywords.
+- Mark a resume Not Ready when the artifacts fail to parse, the wrong role is targeted, unsupported claims appear, or the generated files disagree materially with the Markdown source.
+
+See `docs/ATS_VALIDATION.md` and ADR 0011 for the full model.
+
 ## Accuracy Rules
 
 - Never infer that a feature existed solely because it would be typical for that system.
@@ -149,6 +164,7 @@ When new facts are learned:
 2. Determine whether one or more generic resumes should be improved.
 3. Update only the generic versions for which the information strengthens the intended positioning.
 4. Regenerate matching DOCX and PDF files.
-5. Record the knowledge change in `knowledge/log.md` when meaningful.
-6. Record significant repository decisions in an ADR.
-7. Commit with a clear message.
+5. Run ATS readiness and final-artifact validation for targeted applications.
+6. Record the knowledge change in `knowledge/log.md` when meaningful.
+7. Record significant repository decisions in an ADR.
+8. Commit with a clear message.
