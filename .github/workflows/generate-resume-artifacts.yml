@@ -1,0 +1,53 @@
+name: Generate resume artifacts
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - resume-knowledge-workflow
+    paths:
+      - 'generic/*.md'
+      - 'netflix/*.md'
+      - 'scripts/generate_resume_artifacts.py'
+      - '.github/workflows/generate-resume-artifacts.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libreoffice
+          python -m pip install --upgrade pip
+          python -m pip install python-docx
+
+      - name: Generate DOCX and PDF files
+        run: python scripts/generate_resume_artifacts.py
+
+      - name: Commit generated artifacts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add generic/*.docx generic/*.pdf netflix/*.docx netflix/*.pdf
+          if git diff --cached --quiet; then
+            echo 'No generated changes to commit.'
+          else
+            git commit -m 'Generate resume DOCX and PDF artifacts'
+            git push
+          fi

@@ -1,13 +1,13 @@
-# Jordan Newman - Generic Senior Software Engineer Resume
+# Jordan Newman - Netflix Distributed Systems Engineer - Compute Runtime Resume
 
-**Senior Software Engineer | Systems, Backend, Security, Infrastructure**
+**Distributed Systems Engineer | Compute Runtime, Systems Software, Infrastructure**
 
 Marlboro, NJ | 347-739-4731 | phoem@mac.com | github.com/phoem  
 *Selected public repositories are available. The most significant engineering repositories are private; access is available upon request.*
 
 ## Summary
 
-Senior software engineer specializing in systems software, distributed infrastructure, networking, security, and performance engineering. Built production systems spanning high-performance HTTP/CDN serving, FreeBSD kernel modules, packet and DNS analysis, authentication, telemetry, deployment automation, and enterprise integrations. Combines deep C and operating-system expertise with modern cloud and DevOps delivery.
+Distributed systems and systems software engineer with deep experience building production runtime, networking, kernel, and infrastructure software. Architected and operated systems spanning approximately 3,000-4,000 servers, 10 locations, and more than 65 Gbps of peak traffic. Built a non-blocking FreeBSD HTTP/CDN runtime in C, specialized I/O workers, kernel modules, DDoS defenses, telemetry, deployment automation, and modern container and infrastructure-as-code workflows. Brings hands-on depth from kernel interfaces through large-scale production operations.
 
 ## Technical Skills
 - **Languages:** C, C++, Go, Python, C#, Objective-C, PHP, Perl, JavaScript, Node.js, Shell, Visual Basic
@@ -18,11 +18,12 @@ Senior software engineer specializing in systems software, distributed infrastru
 
 ## Selected Technical Highlights
 
-- Built and operated infrastructure spanning approximately 3,000-4,000 servers, 10 CDN locations, and more than 65 Gbps of peak traffic.
-- Designed the custom HTTP/CDN server and supporting software platform used for high-traffic production workloads.
-- Built non-blocking event-driven systems around kqueue, zero-copy sendfile(), kernel-aware I/O, and dedicated disk I/O workers.
-- Developed production FreeBSD kernel modules, DDoS mitigation systems, packet analyzers, DNS monitoring, authentication, and telemetry software.
-- Implemented Azure DevOps, Docker, Kubernetes, Terraform, CI/CD, and security-scanning workflows.
+- Designed and deployed PrimeHTTPD, a custom event-driven compute and HTTP serving runtime across approximately 200 production FreeBSD servers.
+- Supported more than 150,000 concurrent connections using kqueue, persistent connections, non-blocking sockets, zero-copy sendfile(), and FreeBSD-specific TCP and accept-filter optimizations.
+- Separated latency-sensitive event processing from blocking disk work through dedicated I/O workers and SF_NODISKIO-aware handling.
+- Architected and operated distributed production infrastructure spanning thousands of servers and multiple geographic locations.
+- Built observability, traffic analysis, DNS monitoring, authentication, deployment, security, and DDoS mitigation systems for 24/7 infrastructure.
+- Implemented Kubernetes, Docker, Terraform, Azure DevOps, CI/CD, and security-scanning workflows in modern engineering environments.
 
 ## Selected Systems Projects
 
