@@ -112,6 +112,58 @@ Regardless of the numeric score, mark the resume **Not Ready** when any of these
 - Markdown, DOCX, and PDF materially disagree;
 - obvious placeholders, corrupted characters, or stale application content remain.
 
+## Revision Loop
+
+ATS validation is an iterative quality gate, not a one-time score.
+
+When the score or disposition is below the configured submission target:
+
+1. identify the lowest-scoring fixable categories;
+2. separate presentation problems from missing knowledge and genuine qualification gaps;
+3. apply one coherent set of supported improvements;
+4. update the OKF knowledge base first when new facts are learned;
+5. regenerate Markdown-derived DOCX and PDF artifacts;
+6. rerun validation and record the score delta.
+
+### Autonomous retry limit
+
+An agent may perform at most **three consecutive revision passes without human interaction**.
+
+A pass includes analysis, one coherent set of edits, artifact regeneration, and rescoring.
+
+Stop before the limit when:
+
+- the resume reaches the configured submission threshold;
+- a pass produces no material improvement;
+- remaining deductions require user knowledge or clarification;
+- further changes would reduce readability or encourage keyword stuffing;
+- further changes would require unsupported claims or factual distortion;
+- the remaining issue is a genuine qualification gap;
+- no responsible improvement remains.
+
+After three autonomous passes, stop and request human direction. Do not begin a fourth pass automatically.
+
+Meaningful human input resets the autonomous retry counter. Examples include:
+
+- answering a gap question;
+- confirming a proposed revision strategy;
+- supplying new project or employment evidence;
+- explicitly instructing the agent to continue.
+
+### Required handoff report
+
+When the loop stops below the target, provide:
+
+- score history by pass;
+- changes made in each pass;
+- remaining category deductions;
+- unresolved evidence or qualification gaps;
+- questions requiring user input;
+- prioritized recommendations;
+- final recommendation: submit, revise with user input, or do not submit.
+
+The report must be honest even when the recommendation is not to submit.
+
 ## Validation Report
 
 Each targeted application should eventually be able to include an optional report such as:
@@ -132,6 +184,7 @@ The report should include:
 - missing or weak evidence;
 - parseability findings;
 - prioritized recommendations;
+- revision-pass history;
 - final disposition: Not Ready, Needs Revision, Strong, or Submission Ready.
 
 Generated extraction files may be temporary when they add no lasting review value.
@@ -145,6 +198,8 @@ A future `scripts/validate_resume.py` may automate deterministic checks such as:
 - checking headings, dates, contact fields, and missing sections;
 - detecting broken characters and likely reading-order problems;
 - calculating transparent keyword and requirement coverage;
-- generating an initial Markdown validation report.
+- generating an initial Markdown validation report;
+- tracking revision-pass count and score history;
+- enforcing the three-pass autonomous retry limit.
 
 Human or agent review remains required for evidence quality, relevance, truthfulness, and narrative strength.
