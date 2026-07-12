@@ -75,6 +75,6 @@ When Jordan provides new information:
 ## Repository Changes
 
 - The canonical repository is `phoem/CareerPortfolio`.
-- Prefer a dedicated branch and pull request for meaningful updates.
+- Commit directly to `main` by default unless Jordan explicitly requests a branch or pull request.
 - Use clear commit messages that describe the resume, knowledge, workflow, ADR, roadmap, or OKF change.
 - Do not reorganize or rename existing files without a concrete benefit and corresponding README, index, and ADR updates when appropriate.
