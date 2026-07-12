@@ -45,7 +45,8 @@ Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, Pri
 ## Workflow and Governance
 
 - `AGENTS.md` contains concise repository-level instructions for AI and coding agents.
-- `docs/RESUME_WORKFLOW.md` contains the detailed selection, evidence-mapping, gap-question, and knowledge-capture process.
+- `docs/workflows/RESUME_WORKFLOW.md` contains the detailed selection, evidence-mapping, gap-question, and knowledge-capture process.
+- `docs/workflows/ATS_VALIDATION.md` defines the ATS compatibility, job-alignment, revision-loop, and score-history process.
 - `docs/OKF_PORTFOLIO.md` documents the repository-specific OKF conventions.
 - `docs/STARTER_GUIDE.md` explains how another person can bootstrap their own CareerPortfolio.
 - `docs/ROADMAP.md` records deferred enhancements and promotion criteria without prematurely adding structure.
