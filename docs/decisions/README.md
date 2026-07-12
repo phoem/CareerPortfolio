@@ -26,6 +26,7 @@ ADRs are immutable historical records. When a decision changes, add a new ADR th
 | [0008](0008-grow-the-knowledge-base-incrementally.md) | Grow the knowledge base incrementally | Accepted |
 | [0009](0009-centralize-verified-career-metrics.md) | Centralize verified career metrics | Accepted; implementation pending |
 | [0010](0010-centralize-confirmed-technology-experience.md) | Centralize confirmed technology experience | Accepted; implementation pending |
+| [0011](0011-use-transparent-ats-readiness-validation.md) | Use transparent ATS readiness validation | Accepted; automation pending |
 
 ## Creating a new ADR
 
