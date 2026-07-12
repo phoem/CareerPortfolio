@@ -2,18 +2,18 @@
 
 ## Purpose
 
-This repository is a living resume, project-knowledge, and application-material system for Jordan Newman.
+This repository is a living professional-knowledge, resume, and application-material system for Jordan Newman.
 
 Agents working in this repository must preserve factual accuracy, avoid inventing experience, and tailor each resume to the target role using only documented information or facts confirmed directly by Jordan.
 
 ## Source-of-Truth Hierarchy
 
-1. `portfolio/` is the authoritative project-knowledge source and MUST be maintained as an Open Knowledge Format (OKF) v0.1 knowledge bundle.
+1. `knowledge/` is the authoritative professional-knowledge source and MUST be maintained as an Open Knowledge Format (OKF) v0.1 knowledge bundle.
 2. `generic/` contains the three canonical reusable resumes:
    - Senior Software Engineer
    - Software Architect
    - Backend / Infrastructure Engineer
-3. Company-specific directories contain targeted application packages derived from the best-fitting generic resume and the portfolio.
+3. Company-specific directories contain targeted application packages derived from the best-fitting generic resume and the knowledge bundle.
 4. `docs/RESUME_WORKFLOW.md` defines the detailed operating process.
 5. `docs/OKF_PORTFOLIO.md` defines the repository-specific OKF conventions.
 
@@ -22,7 +22,7 @@ Agents working in this repository must preserve factual accuracy, avoid inventin
 - Read the job description before selecting a resume base.
 - Compare the role requirements against all three generic resumes.
 - Select the closest base resume rather than blindly reusing the most recent one.
-- Traverse `portfolio/index.md` and review relevant OKF concepts before drafting claims or bullets.
+- Traverse `knowledge/index.md` and review relevant OKF concepts before drafting claims or bullets.
 - Never invent technologies, metrics, responsibilities, dates, outcomes, or project features.
 - When a role needs evidence that is not documented, ask Jordan whether he has worked on a project involving the missing capability.
 - If Jordan confirms relevant experience, gather only the details needed to document it accurately, update the appropriate OKF concept first, then use it in a resume.
@@ -32,9 +32,9 @@ Agents working in this repository must preserve factual accuracy, avoid inventin
 - Keep the three generic resumes broadly reusable while selectively improving each with the strongest relevant project descriptions.
 - Keep company-specific resumes tightly aligned to the target posting.
 
-## OKF Project Knowledge Capture
+## OKF Knowledge Capture
 
-The `portfolio/` directory targets Google Cloud's Open Knowledge Format v0.1.
+The `knowledge/` directory targets Google Cloud's Open Knowledge Format v0.1.
 
 - Every non-reserved Markdown concept file MUST begin with parseable YAML frontmatter.
 - Every concept frontmatter block MUST contain a non-empty `type` field.
@@ -46,15 +46,15 @@ The `portfolio/` directory targets Google Cloud's Open Knowledge Format v0.1.
 - Preserve unknown frontmatter fields when editing.
 - Do not create separate `project.okf.yaml` files; OKF knowledge lives in Markdown concept documents with YAML frontmatter.
 
-When Jordan provides new information about a project:
+When Jordan provides new information:
 
-1. Update the corresponding OKF concept under `portfolio/`.
+1. Update the corresponding OKF concept under `knowledge/`.
 2. Record factual implementation details, scale, technologies, outcomes, ownership, and operational context.
 3. Preserve uncertainty explicitly where appropriate.
 4. Add or update cross-links to related concepts.
 5. Add resume-ready variants only when supported by documented facts.
 6. Update the nearest `index.md` when a new concept is added.
-7. Add a dated entry to `portfolio/log.md` for meaningful knowledge changes.
+7. Add a dated entry to `knowledge/log.md` for meaningful knowledge changes.
 8. Grow documentation incrementally; do not require every concept to have every possible section.
 
 ## Resume Generation
@@ -64,10 +64,11 @@ When Jordan provides new information about a project:
 - Preserve ATS-safe structure in ATS variants.
 - Avoid dense keyword stuffing or unsupported claims.
 - Use role-specific wording while keeping the underlying facts consistent across variants.
-- Important project facts must not exist only inside a resume; add them to the OKF portfolio first.
+- Important facts must not exist only inside a resume; add them to the OKF knowledge bundle first.
 
 ## Repository Changes
 
+- The canonical repository is `phoem/CareerPortfolio`.
 - Prefer a dedicated branch and pull request for meaningful updates.
-- Use clear commit messages that describe the resume, portfolio, workflow, or OKF change.
+- Use clear commit messages that describe the resume, knowledge, workflow, or OKF change.
 - Do not reorganize or rename existing files without a concrete benefit and corresponding README and index updates.
