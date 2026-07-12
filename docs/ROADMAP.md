@@ -11,6 +11,7 @@ This roadmap records useful future ideas without committing the repository to pr
 - Starter guide for creating a new CareerPortfolio.
 - Architecture Decision Records under `docs/decisions/`.
 - Generated Markdown, DOCX, and PDF application artifacts.
+- Documented ATS readiness and final-resume validation workflow.
 
 ## Near-Term Enhancements
 
@@ -20,6 +21,8 @@ These are accepted ideas that directly improve current resume and application wo
 - Complete the shared confirmed technology-experience catalog.
 - Add a resume and artifact style guide.
 - Add a stable professional-profile knowledge concept.
+- Implement `scripts/validate_resume.py` for deterministic ATS-readiness checks and Markdown report generation.
+- Validate the actual generated PDF and DOCX artifacts, not only Markdown sources.
 - Continue expanding project concepts only as real job requirements expose useful gaps.
 - Add validation checks for OKF conformance, broken links, duplicated metrics, and inconsistent resume claims.
 
@@ -38,6 +41,7 @@ Add these when a real application, interview, promotion, or public-profile need 
 - Public portfolio website generation.
 - Architecture diagrams for flagship projects.
 - Career timeline visualization.
+- GitHub Actions quality gate for ATS readiness, artifact consistency, and OKF validation.
 
 ## Parking Lot
 
@@ -54,6 +58,7 @@ Useful ideas that do not yet justify implementation.
 - Professional references and recommendation tracking.
 - Automated job-listing evidence maps and fit scoring.
 - Automated portfolio completeness and interview-readiness scoring.
+- Calibration against multiple third-party ATS scanners when useful and legally/technically practical.
 
 ## Promotion Criteria
 
