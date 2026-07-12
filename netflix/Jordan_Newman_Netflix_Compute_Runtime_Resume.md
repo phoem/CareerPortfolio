@@ -2,7 +2,8 @@
 
 **Distributed Systems Engineer | Compute Runtime, Systems Software, Infrastructure**
 
-Marlboro, NJ | 347-739-4731 | phoem@mac.com | github.com/phoem
+Marlboro, NJ | 347-739-4731 | phoem@mac.com | github.com/phoem  
+*Selected public repositories are available. The most significant engineering repositories are private; access is available upon request.*
 
 ## Summary
 
@@ -38,7 +39,7 @@ Distributed systems and systems software engineer with deep experience building 
 *Remote / Tampa Bay, FL | July 2022 - Present*
 
 - Implemented Azure DevOps, Docker, Kubernetes, Terraform, CI/CD, and security-scanning workflows across engineering teams.
-- Partnered with architecture teams to standardize deployment practices and developed shared libraries, documentation, and AI-assisted engineering workflows.
+- Served as a member of the Architecture Team, collaborating with fellow architects and the architecture lead to make technical decisions, define engineering standards, guide platform direction, and develop shared libraries, documentation, and AI-assisted engineering workflows.
 
 ### DDI Systems - Senior Development Specialist
 *Manalapan, NJ | November 2021 - July 2022*
@@ -73,11 +74,16 @@ Distributed systems and systems software engineer with deep experience building 
 ### ISPrime Inc. - CIO / Partner
 *Weehawken, NJ | March 2001 - December 2014*
 
+**Infrastructure Leadership**
 - Architected and operated hosting and CDN infrastructure spanning approximately 3,000-4,000 servers, 10 locations, multiple datacenters, and more than 65 Gbps of peak traffic.
+
+**Systems Software Engineering**
 - Designed and built PrimeHTTPD, a high-performance, non-blocking, kqueue-based HTTP/CDN server in C for FreeBSD; deployed it across approximately 200 servers and supported more than 150,000 concurrent connections.
 - Leveraged sendfile(), SF_NODISKIO, TCP_NODELAY, TCP_NOPUSH, O_NONBLOCK, accept_filter_http, persistent connections, and dedicated I/O workers to keep disk operations from blocking the networking event loop.
-- Built DDoS detection and mitigation systems, packet and DNS analysis tools, monitoring, telemetry, authentication, deployment, and security software used across production infrastructure.
 - Developed production FreeBSD kernel modules including VirtualDir, KeepClean, and StatCache.
+
+**Security and Networking**
+- Built DDoS detection and mitigation systems, packet and DNS analysis tools, monitoring, telemetry, authentication, deployment, and security software used across production infrastructure.
 
 ### FatWallet.com - Systems Administrator
 *Wisconsin / Remote | December 2000 - June 2001*
