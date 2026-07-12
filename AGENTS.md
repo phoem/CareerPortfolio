@@ -16,6 +16,8 @@ Agents working in this repository must preserve factual accuracy, avoid inventin
 3. Company-specific directories contain targeted application packages derived from the best-fitting generic resume and the knowledge bundle.
 4. `docs/RESUME_WORKFLOW.md` defines the detailed operating process.
 5. `docs/OKF_PORTFOLIO.md` defines the repository-specific OKF conventions.
+6. `docs/decisions/` contains Architecture Decision Records for significant repository decisions.
+7. `docs/ROADMAP.md` stores deferred ideas and future enhancements that are not yet justified for implementation.
 
 ## Required Behavior
 
@@ -31,6 +33,8 @@ Agents working in this repository must preserve factual accuracy, avoid inventin
 - Tailor technical depth to the audience: recruiter, ATS, hiring manager, systems engineer, or architect.
 - Keep the three generic resumes broadly reusable while selectively improving each with the strongest relevant project descriptions.
 - Keep company-specific resumes tightly aligned to the target posting.
+- Record significant structural or workflow decisions as ADRs under `docs/decisions/`.
+- Put useful but premature ideas in `docs/ROADMAP.md` instead of creating speculative structure.
 
 ## OKF Knowledge Capture
 
@@ -70,5 +74,5 @@ When Jordan provides new information:
 
 - The canonical repository is `phoem/CareerPortfolio`.
 - Prefer a dedicated branch and pull request for meaningful updates.
-- Use clear commit messages that describe the resume, knowledge, workflow, or OKF change.
-- Do not reorganize or rename existing files without a concrete benefit and corresponding README and index updates.
+- Use clear commit messages that describe the resume, knowledge, workflow, ADR, roadmap, or OKF change.
+- Do not reorganize or rename existing files without a concrete benefit and corresponding README, index, and ADR updates when appropriate.
