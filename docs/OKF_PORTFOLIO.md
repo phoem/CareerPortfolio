@@ -1,6 +1,6 @@
-# OKF Portfolio Conventions
+# OKF Knowledge Conventions
 
-This repository uses the [Google Cloud Open Knowledge Format (OKF) v0.1](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) for the project-knowledge bundle under `portfolio/`.
+This repository uses the [Google Cloud Open Knowledge Format (OKF) v0.1](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) for the professional-knowledge bundle under `knowledge/`.
 
 ## What OKF Means Here
 
@@ -10,11 +10,11 @@ This repository does **not** use `project.okf.yaml` files. The Markdown concept 
 
 ## Bundle Root
 
-`portfolio/` is the OKF knowledge-bundle root.
+`knowledge/` is the OKF knowledge-bundle root.
 
-- `portfolio/index.md` provides progressive-disclosure navigation.
-- `portfolio/log.md` records meaningful knowledge changes.
-- Project directories contain one or more Markdown concept documents.
+- `knowledge/index.md` provides progressive-disclosure navigation.
+- `knowledge/log.md` records meaningful knowledge changes.
+- Concept directories contain one or more Markdown concept documents.
 
 ## Concept Frontmatter
 
@@ -28,9 +28,9 @@ type: Software Project
 title: Project Name
 description: One-sentence project summary.
 tags: [systems, networking]
-timestamp: 2026-07-11T00:00:00Z
+timestamp: 2026-07-12T00:00:00Z
 status: partial
-owner: Jordan Newman
+owner: Person Name
 evidence_status: confirmed
 ---
 ```
@@ -64,6 +64,8 @@ Types are descriptive, not centrally registered. Preferred values include:
 - `Operating System Project`
 - `Technical Metric`
 - `Resume Evidence`
+- `Professional Profile`
+- `Interview Story`
 - `Reference`
 
 Agents must tolerate and preserve other useful types.
@@ -90,4 +92,4 @@ When a claim relies on published or external evidence, include a numbered `# Cit
 - Estimates and ranges must remain estimates and ranges.
 - Missing information belongs in `Open Questions`, not invented prose.
 - Documentation grows as job requirements make additional details relevant.
-- Update the OKF concept before adding newly learned project facts to a resume.
+- Update the OKF concept before adding newly learned facts to a resume.
