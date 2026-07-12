@@ -14,10 +14,11 @@ Agents working in this repository must preserve factual accuracy, avoid inventin
    - Software Architect
    - Backend / Infrastructure Engineer
 3. Company-specific directories contain targeted application packages derived from the best-fitting generic resume and the knowledge bundle.
-4. `docs/RESUME_WORKFLOW.md` defines the detailed operating process.
-5. `docs/OKF_PORTFOLIO.md` defines the repository-specific OKF conventions.
-6. `docs/decisions/` contains Architecture Decision Records for significant repository decisions.
-7. `docs/ROADMAP.md` stores deferred ideas and future enhancements that are not yet justified for implementation.
+4. `docs/workflows/RESUME_WORKFLOW.md` defines the detailed operating process.
+5. `docs/workflows/ATS_VALIDATION.md` defines the ATS validation and revision-loop process.
+6. `docs/OKF_PORTFOLIO.md` defines the repository-specific OKF conventions.
+7. `docs/decisions/` contains Architecture Decision Records for significant repository decisions.
+8. `docs/ROADMAP.md` stores deferred ideas and future enhancements that are not yet justified for implementation.
 
 ## Required Behavior
 
@@ -69,6 +70,7 @@ When Jordan provides new information:
 - Avoid dense keyword stuffing or unsupported claims.
 - Use role-specific wording while keeping the underlying facts consistent across variants.
 - Important facts must not exist only inside a resume; add them to the OKF knowledge bundle first.
+- Run `docs/workflows/ATS_VALIDATION.md` before submitting targeted application materials.
 
 ## Repository Changes
 
