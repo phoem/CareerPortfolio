@@ -12,8 +12,9 @@ This directory is the Open Knowledge Format knowledge bundle used as the factual
 * [PrimeHTTPD](PrimeHTTPD/README.md) - High-performance non-blocking FreeBSD HTTP/CDN server written in C.
 * [Container Runtime and Kubernetes Experience](Container_Runtime_Experience/README.md) - Production Kubernetes workflow experience plus experimental work with kubelet, containerd, runc, and NRI concepts.
 
-# FreeBSD Kernel and Systems Software
+# Kernel and Systems Software
 
+* [Linux Kernel Experience](Linux_Kernel_Experience/README.md) - Strong familiarity with Linux kernel architecture and internals without claiming Linux kernel-module development.
 * [VirtualDir](VirtualDir/README.md) - Kernel-level filesystem-path virtualization with runtime configuration management.
 * [KeepClean](KeepClean/README.md) - FreeBSD kernel module for execution monitoring, system protection, and telemetry.
 * [StatCache](StatCache/README.md) - FreeBSD kernel instrumentation for stat and lstat activity.
