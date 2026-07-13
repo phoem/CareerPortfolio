@@ -1,5 +1,6 @@
 name: Generate resume artifacts
 
+# Manual recheck marker: 2026-07-13
 on:
   workflow_dispatch:
   push:
