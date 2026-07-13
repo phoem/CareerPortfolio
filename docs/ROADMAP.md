@@ -6,12 +6,15 @@ This roadmap records useful future ideas without committing the repository to pr
 
 - Google Cloud Open Knowledge Format (OKF) knowledge bundle.
 - Three canonical generic resumes.
-- Targeted application packages based on real job listings.
+- Targeted application packages under `applications/<company>/<posting>/`.
+- Separate exact job descriptions, artifacts, and ATS histories for every posting.
 - Resume tailoring and knowledge-capture workflow.
 - Starter guide for creating a new CareerPortfolio.
 - Architecture Decision Records under `docs/decisions/`.
 - Generated Markdown, DOCX, and PDF application artifacts.
-- Documented ATS readiness and final-resume validation workflow.
+- ATS readiness validation, score history, and three-pass revision guardrail.
+- Reusable resume designs under `designs/`.
+- Repository-default, persistent application, and one-build design selection.
 
 ## Near-Term Enhancements
 
@@ -21,8 +24,12 @@ These are accepted ideas that directly improve current resume and application wo
 - Complete the shared confirmed technology-experience catalog.
 - Add a resume and artifact style guide.
 - Add a stable professional-profile knowledge concept.
-- Implement `scripts/validate_resume.py` for deterministic ATS-readiness checks and Markdown report generation.
+- Restore exact job descriptions for existing application packages.
+- Run and calibrate the ATS validator against the Netflix Compute Runtime application.
 - Validate the actual generated PDF and DOCX artifacts, not only Markdown sources.
+- Add at least one additional tested design template beyond `classic-ats`.
+- Add design preview images and design-level ATS baseline results.
+- Migrate legacy root-level company packages, including `starlink/`, into `applications/`.
 - Continue expanding project concepts only as real job requirements expose useful gaps.
 - Add validation checks for OKF conformance, broken links, duplicated metrics, and inconsistent resume claims.
 
@@ -32,7 +39,7 @@ Add these when a real application, interview, promotion, or public-profile need 
 
 - Interview preparation workflow.
 - STAR-format interview stories.
-- Role- and company-specific interview packets.
+- Role- and company-specific interview packets stored with or linked to the relevant application package.
 - LinkedIn profile generation and synchronization.
 - Recruiter-facing professional profile.
 - Promotion packets and performance-review evidence.
@@ -41,7 +48,9 @@ Add these when a real application, interview, promotion, or public-profile need 
 - Public portfolio website generation.
 - Architecture diagrams for flagship projects.
 - Career timeline visualization.
-- GitHub Actions quality gate for ATS readiness, artifact consistency, and OKF validation.
+- GitHub Actions quality gate for ATS readiness, artifact consistency, OKF validation, and design regression checks.
+- Per-resume design overrides for generic resumes.
+- Design inheritance, variants, preview generation, and accessibility checks.
 
 ## Parking Lot
 
@@ -58,7 +67,7 @@ Useful ideas that do not yet justify implementation.
 - Professional references and recommendation tracking.
 - Automated job-listing evidence maps and fit scoring.
 - Automated portfolio completeness and interview-readiness scoring.
-- Calibration against multiple third-party ATS scanners when useful and legally/technically practical.
+- Calibration against multiple third-party ATS scanners when useful and legally or technically practical.
 
 ## Promotion Criteria
 
