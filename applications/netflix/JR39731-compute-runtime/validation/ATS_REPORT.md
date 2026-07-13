@@ -1,22 +1,22 @@
 # ATS Readiness Report
 
-- **Validated:** 2026-07-13T01:41:33+00:00
+- **Validated:** 2026-07-13T05:52:22+00:00
 - **Validator:** CareerPortfolio ATS Validator v0.1.0
 - **Score type:** Targeted readiness
-- **Overall score:** 80/100
-- **Disposition:** Strong
+- **Overall score:** 76/100
+- **Disposition:** Needs Revision
 - **Autonomous revision pass:** 0 of 3
 
 ## Category Scores
 
 | Category | Score | Weight |
 |---|---:|---:|
-| Artifact parseability and structure | 84 | 25% |
+| Artifact parseability and structure | 60 | 25% |
 | Required-information completeness | 100 | 10% |
-| Required job-requirement evidence | 59 | 30% |
+| Required job-requirement evidence | 65 | 30% |
 | Preferred job-requirement evidence | 100 | 15% |
 | Language and keyword quality | 75 | 10% |
-| Human readability and positioning | 88 | 10% |
+| Human readability and positioning | 85 | 10% |
 
 ## Critical Failures
 
@@ -24,8 +24,8 @@
 
 ## Artifact parseability and structure
 
-- DOCX token coverage versus Markdown: 92.5%.
-- PDF token coverage versus Markdown: 92.5%.
+- DOCX token coverage versus Markdown: 85.6%.
+- PDF token coverage versus Markdown: 85.6%.
 
 ## Required-information completeness
 
@@ -39,12 +39,12 @@
 - Adjacent: Work Type:** Remote (matched: remote).
 - Direct: Build and maintain the software that runs our Kubernetes container orchestration platform (matched: software, kubernetes, container, orchestration, platform).
 - Direct: Architect and design innovative solutions to support new workloads and features, and improve the reliability and performance of existing workloads (matched: design, solutions, new, features, improve, reliability, performance).
-- Adjacent: Develop and maintain Kubernetes and containerd customizations and plugins (matched: develop, kubernetes).
-- Adjacent: Contribute to the upstream containerd and Kubernetes projects (matched: kubernetes, projects).
+- Direct: Develop and maintain Kubernetes and containerd customizations and plugins (matched: develop, kubernetes, containerd, plugins).
+- Direct: Contribute to the upstream containerd and Kubernetes projects (matched: containerd, kubernetes, projects).
 - Adjacent: Debug performance and operational problems observed with container workloads (matched: performance, operational, container).
 - Adjacent: Continuously and proactively increase efficiency and optimize our compute platform (matched: compute, platform).
 - Adjacent: Minimum of 5 years of experience evolving Compute infrastructure for a large organization; total 8+ years of software development experience (matched: compute, infrastructure, software, development).
-- Missing: Experience supporting containers and related runtimes as a service (e.g. Kubernetes kubelet, containerd, runc, NRI plugins, etc.) (matched: kubernetes).
+- Adjacent: Experience supporting containers and related runtimes as a service (e.g. Kubernetes kubelet, containerd, runc, NRI plugins, etc.) (matched: kubernetes, kubelet, containerd, runc, nri, plugins).
 - Direct: Experience debugging system performance issues in a Linux environment (matched: debugging, system, performance, issues, linux).
 - Direct: Excellent operational and troubleshooting skills (matched: operational, troubleshooting, skills).
 - Direct: Experience designing large-scale distributed systems, preferably a compute orchestration system like Kubernetes (matched: large-scale, distributed, systems, compute, orchestration, system, kubernetes).
@@ -63,11 +63,11 @@
 
 ## Language and keyword quality
 
-- Job-language token coverage: 14.2%.
+- Job-language token coverage: 15.4%.
 
 ## Human readability and positioning
 
-- 4 bullets are long enough to hinder scanning.
+- 5 bullets are long enough to hinder scanning.
 
 ## Requirement-to-Evidence Matrix
 
@@ -79,12 +79,12 @@
 | Required | Adjacent | Work Type:** Remote | remote |
 | Required | Direct | Build and maintain the software that runs our Kubernetes container orchestration platform | software, kubernetes, container, orchestration, platform |
 | Required | Direct | Architect and design innovative solutions to support new workloads and features, and improve the reliability and performance of existing workloads | design, solutions, new, features, improve, reliability, performance |
-| Required | Adjacent | Develop and maintain Kubernetes and containerd customizations and plugins | develop, kubernetes |
-| Required | Adjacent | Contribute to the upstream containerd and Kubernetes projects | kubernetes, projects |
+| Required | Direct | Develop and maintain Kubernetes and containerd customizations and plugins | develop, kubernetes, containerd, plugins |
+| Required | Direct | Contribute to the upstream containerd and Kubernetes projects | containerd, kubernetes, projects |
 | Required | Adjacent | Debug performance and operational problems observed with container workloads | performance, operational, container |
 | Required | Adjacent | Continuously and proactively increase efficiency and optimize our compute platform | compute, platform |
 | Required | Adjacent | Minimum of 5 years of experience evolving Compute infrastructure for a large organization; total 8+ years of software development experience | compute, infrastructure, software, development |
-| Required | Missing | Experience supporting containers and related runtimes as a service (e.g. Kubernetes kubelet, containerd, runc, NRI plugins, etc.) | kubernetes |
+| Required | Adjacent | Experience supporting containers and related runtimes as a service (e.g. Kubernetes kubelet, containerd, runc, NRI plugins, etc.) | kubernetes, kubelet, containerd, runc, nri, plugins |
 | Required | Direct | Experience debugging system performance issues in a Linux environment | debugging, system, performance, issues, linux |
 | Required | Direct | Excellent operational and troubleshooting skills | operational, troubleshooting, skills |
 | Required | Direct | Experience designing large-scale distributed systems, preferably a compute orchestration system like Kubernetes | large-scale, distributed, systems, compute, orchestration, system, kubernetes |
@@ -99,11 +99,11 @@
 
 ## Artifact Versions
 
-- `resume`: `2f387eb0daab564633d952147806cb316d4b863a74f842f9eee7f1bbaa99a315`
+- `resume`: `6a973bc0e19aaca5a612d7bd31ad6a33dd9eff608ed138acd0622d281d6a90e9`
 - `docx`: `bcf48ced2e8b64097e79d0d0e703c2c2891ef6850cce5f7e130a333aad0f2485`
 - `pdf`: `34f085669ee79465ea226923232dea7bff93a1773332043f9bb6e1fa07b0ac97`
 - `job`: `97b70a63892fe54de663df97b75164e25eeff3eefa46a25dcf32bdf60623b4c5`
 
 ## Recommended Next Action
 
-- Review the listed deductions and submit unless a safe, evidence-backed improvement is material.
+- Revise the lowest-scoring fixable categories, regenerate artifacts, and rerun validation. Stop after three autonomous passes or earlier when a stop condition is reached.
