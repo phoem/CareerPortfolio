@@ -10,6 +10,7 @@ This directory is the Open Knowledge Format knowledge bundle used as the factual
 
 * [CDN Platform](CDN_Platform/README.md) - Production hosting and content-delivery platform spanning thousands of servers and multiple locations.
 * [PrimeHTTPD](PrimeHTTPD/README.md) - High-performance non-blocking FreeBSD HTTP/CDN server written in C.
+* [Container Runtime and Kubernetes Experience](Container_Runtime_Experience/README.md) - Production Kubernetes workflow experience plus experimental work with kubelet, containerd, runc, and NRI concepts.
 
 # FreeBSD Kernel and Systems Software
 
