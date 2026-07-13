@@ -1,15 +1,15 @@
 {
   "validator_version": "0.1.0",
-  "overall_score": 81,
+  "overall_score": 80,
   "disposition": "Strong",
   "targeted_complete": true,
   "pass_number": 0,
   "categories": {
     "Artifact parseability and structure": {
-      "score": 100,
+      "score": 84,
       "findings": [
-        "DOCX token coverage versus Markdown: 99.5%.",
-        "PDF token coverage versus Markdown: 99.5%."
+        "DOCX token coverage versus Markdown: 92.5%.",
+        "PDF token coverage versus Markdown: 92.5%."
       ],
       "weight": 25
     },
@@ -21,31 +21,31 @@
       "weight": 10
     },
     "Required job-requirement evidence": {
-      "score": 49,
+      "score": 59,
       "findings": [
         "Adjacent: Location:** USA - Remote (matched: remote).",
         "Missing: Job Posting Date:** 03-30-2026 (matched: none).",
         "Missing: Job Requisition ID:** JR39731 (matched: none).",
         "Adjacent: Work Type:** Remote (matched: remote).",
-        "Adjacent: Build and maintain the software that runs our Kubernetes container orchestration platform (matched: software, kubernetes, container, platform).",
-        "Adjacent: Architect and design innovative solutions to support new workloads and features, and improve the reliability and performance of existing workloads (matched: new, features, performance).",
+        "Direct: Build and maintain the software that runs our Kubernetes container orchestration platform (matched: software, kubernetes, container, orchestration, platform).",
+        "Direct: Architect and design innovative solutions to support new workloads and features, and improve the reliability and performance of existing workloads (matched: design, solutions, new, features, improve, reliability, performance).",
         "Adjacent: Develop and maintain Kubernetes and containerd customizations and plugins (matched: develop, kubernetes).",
         "Adjacent: Contribute to the upstream containerd and Kubernetes projects (matched: kubernetes, projects).",
         "Adjacent: Debug performance and operational problems observed with container workloads (matched: performance, operational, container).",
         "Adjacent: Continuously and proactively increase efficiency and optimize our compute platform (matched: compute, platform).",
         "Adjacent: Minimum of 5 years of experience evolving Compute infrastructure for a large organization; total 8+ years of software development experience (matched: compute, infrastructure, software, development).",
         "Missing: Experience supporting containers and related runtimes as a service (e.g. Kubernetes kubelet, containerd, runc, NRI plugins, etc.) (matched: kubernetes).",
-        "Direct: Experience debugging system performance issues in a Linux environment (matched: system, performance, issues, linux).",
-        "Adjacent: Excellent operational and troubleshooting skills (matched: operational, skills).",
-        "Direct: Experience designing large-scale distributed systems, preferably a compute orchestration system like Kubernetes (matched: large-scale, distributed, systems, compute, system, kubernetes).",
+        "Direct: Experience debugging system performance issues in a Linux environment (matched: debugging, system, performance, issues, linux).",
+        "Direct: Excellent operational and troubleshooting skills (matched: operational, troubleshooting, skills).",
+        "Direct: Experience designing large-scale distributed systems, preferably a compute orchestration system like Kubernetes (matched: large-scale, distributed, systems, compute, orchestration, system, kubernetes).",
         "Missing: Proficiency in Go, Java, or C/C++ (matched: none).",
-        "Adjacent: Understanding of networking concepts (TCP, IPv4, sockets, host and service networking in a containerized environment) (matched: networking, tcp, sockets, networking).",
+        "Direct: Understanding of networking concepts (TCP, IPv4, sockets, host and service networking in a containerized environment) (matched: networking, tcp, ipv4, sockets, host, networking).",
         "Missing: Ability to thrive in ambiguity in a \u201ccontext not control\u201d environment while working with high velocity (matched: none).",
         "Adjacent: Excellent communication and collaboration skills (matched: skills).",
         "Adjacent: Track record of successful contributions to open source projects (matched: source, projects).",
         "Direct: Linux kernel development experience (matched: linux, kernel, development).",
         "Adjacent: Experience managing compute infrastructure for AI/ML workloads (matched: compute, infrastructure).",
-        "Adjacent: Understanding of networking concepts (TCP, IPv4, sockets, host and service networking in a containerized environment) (matched: networking, tcp, sockets, networking)."
+        "Direct: Understanding of networking concepts (TCP, IPv4, sockets, host and service networking in a containerized environment) (matched: networking, tcp, ipv4, sockets, host, networking)."
       ],
       "weight": 30
     },
@@ -59,21 +59,21 @@
     "Language and keyword quality": {
       "score": 75,
       "findings": [
-        "Job-language token coverage: 11.4%."
+        "Job-language token coverage: 14.2%."
       ],
       "weight": 10
     },
     "Human readability and positioning": {
-      "score": 91,
+      "score": 88,
       "findings": [
-        "3 bullets are long enough to hinder scanning."
+        "4 bullets are long enough to hinder scanning."
       ],
       "weight": 10
     }
   },
   "critical_failures": [],
   "hashes": {
-    "resume": "050cfb74c1c23e9b2e2a11af8f83b2c8f42315276769be89c2fc1430c64b96f6",
+    "resume": "2f387eb0daab564633d952147806cb316d4b863a74f842f9eee7f1bbaa99a315",
     "docx": "bcf48ced2e8b64097e79d0d0e703c2c2891ef6850cce5f7e130a333aad0f2485",
     "pdf": "34f085669ee79465ea226923232dea7bff93a1773332043f9bb6e1fa07b0ac97",
     "job": "97b70a63892fe54de663df97b75164e25eeff3eefa46a25dcf32bdf60623b4c5"
