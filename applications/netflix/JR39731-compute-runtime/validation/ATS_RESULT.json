@@ -1,15 +1,15 @@
 {
   "validator_version": "0.1.0",
-  "overall_score": 76,
-  "disposition": "Needs Revision",
+  "overall_score": 86,
+  "disposition": "Strong",
   "targeted_complete": true,
   "pass_number": 0,
   "categories": {
     "Artifact parseability and structure": {
-      "score": 60,
+      "score": 100,
       "findings": [
-        "DOCX token coverage versus Markdown: 85.6%.",
-        "PDF token coverage versus Markdown: 85.6%."
+        "DOCX token coverage versus Markdown: 99.5%.",
+        "PDF token coverage versus Markdown: 99.5%."
       ],
       "weight": 25
     },
@@ -74,8 +74,8 @@
   "critical_failures": [],
   "hashes": {
     "resume": "6a973bc0e19aaca5a612d7bd31ad6a33dd9eff608ed138acd0622d281d6a90e9",
-    "docx": "bcf48ced2e8b64097e79d0d0e703c2c2891ef6850cce5f7e130a333aad0f2485",
-    "pdf": "34f085669ee79465ea226923232dea7bff93a1773332043f9bb6e1fa07b0ac97",
+    "docx": "b27ac167a65ecf2d11ab1e787c6d38b71729ff76fd08b98cc62e3d8b314f9dc9",
+    "pdf": "85a91bb16191a1cea5cb82f80a3dcdfae91058c2dd688309d197ab951d199d10",
     "job": "97b70a63892fe54de663df97b75164e25eeff3eefa46a25dcf32bdf60623b4c5"
   }
 }

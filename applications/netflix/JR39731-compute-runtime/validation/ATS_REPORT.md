@@ -1,17 +1,17 @@
 # ATS Readiness Report
 
-- **Validated:** 2026-07-13T05:52:22+00:00
+- **Validated:** 2026-07-13T05:57:08+00:00
 - **Validator:** CareerPortfolio ATS Validator v0.1.0
 - **Score type:** Targeted readiness
-- **Overall score:** 76/100
-- **Disposition:** Needs Revision
+- **Overall score:** 86/100
+- **Disposition:** Strong
 - **Autonomous revision pass:** 0 of 3
 
 ## Category Scores
 
 | Category | Score | Weight |
 |---|---:|---:|
-| Artifact parseability and structure | 60 | 25% |
+| Artifact parseability and structure | 100 | 25% |
 | Required-information completeness | 100 | 10% |
 | Required job-requirement evidence | 65 | 30% |
 | Preferred job-requirement evidence | 100 | 15% |
@@ -24,8 +24,8 @@
 
 ## Artifact parseability and structure
 
-- DOCX token coverage versus Markdown: 85.6%.
-- PDF token coverage versus Markdown: 85.6%.
+- DOCX token coverage versus Markdown: 99.5%.
+- PDF token coverage versus Markdown: 99.5%.
 
 ## Required-information completeness
 
@@ -100,10 +100,10 @@
 ## Artifact Versions
 
 - `resume`: `6a973bc0e19aaca5a612d7bd31ad6a33dd9eff608ed138acd0622d281d6a90e9`
-- `docx`: `bcf48ced2e8b64097e79d0d0e703c2c2891ef6850cce5f7e130a333aad0f2485`
-- `pdf`: `34f085669ee79465ea226923232dea7bff93a1773332043f9bb6e1fa07b0ac97`
+- `docx`: `b27ac167a65ecf2d11ab1e787c6d38b71729ff76fd08b98cc62e3d8b314f9dc9`
+- `pdf`: `85a91bb16191a1cea5cb82f80a3dcdfae91058c2dd688309d197ab951d199d10`
 - `job`: `97b70a63892fe54de663df97b75164e25eeff3eefa46a25dcf32bdf60623b4c5`
 
 ## Recommended Next Action
 
-- Revise the lowest-scoring fixable categories, regenerate artifacts, and rerun validation. Stop after three autonomous passes or earlier when a stop condition is reached.
+- Review the listed deductions and submit unless a safe, evidence-backed improvement is material.

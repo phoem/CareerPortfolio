@@ -23,3 +23,11 @@
 - **Revision pass:** 0 of 3
 - **Categories:** Artifact parseability and structure: 60; Required-information completeness: 100; Required job-requirement evidence: 65; Preferred job-requirement evidence: 100; Language and keyword quality: 75; Human readability and positioning: 85
 - **Artifact set:** `205a13322c29c2473ff139c391784a0574fcf649aa7485de88b962e88dfb11ba`
+
+## 2026-07-13T05:57:08+00:00 — 86/100 (Strong)
+
+- **Score type:** Targeted readiness
+- **Validator:** v0.1.0
+- **Revision pass:** 0 of 3
+- **Categories:** Artifact parseability and structure: 100; Required-information completeness: 100; Required job-requirement evidence: 65; Preferred job-requirement evidence: 100; Language and keyword quality: 75; Human readability and positioning: 85
+- **Artifact set:** `155d79e5b2ef30339b761a49aff9a8cc2b21e85e8682a70ffc9d5abe74e28ba5`
