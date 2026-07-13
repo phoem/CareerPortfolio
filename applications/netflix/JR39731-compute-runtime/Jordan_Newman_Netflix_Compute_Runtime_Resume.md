@@ -7,13 +7,13 @@ Marlboro, NJ | 347-739-4731 | phoem@mac.com | github.com/phoem
 
 ## Summary
 
-Distributed systems and systems software engineer with more than 20 years of software development and production infrastructure experience. Architected, built, debugged, and operated large-scale compute and networking platforms spanning approximately 3,000-4,000 servers, 10 locations, and more than 65 Gbps of peak traffic. Built a non-blocking FreeBSD HTTP/CDN runtime in C, specialized I/O workers, kernel modules, performance and troubleshooting tools, DDoS defenses, telemetry, deployment automation, and modern Kubernetes, container, and infrastructure-as-code workflows. Brings hands-on depth from operating-system and networking internals through fleet-scale reliability and operations.
+Distributed systems and systems software engineer with more than 20 years of software development and production infrastructure experience. Architected, built, debugged, and operated large-scale compute and networking platforms spanning approximately 3,000-4,000 servers, 10 locations, and more than 65 Gbps of peak traffic. Built a non-blocking FreeBSD HTTP/CDN runtime in C, specialized I/O workers, kernel modules, performance and troubleshooting tools, DDoS defenses, telemetry, deployment automation, and modern Kubernetes, container, and infrastructure-as-code workflows. Production Kubernetes experience is supplemented by hands-on lab work with kubelet, containerd, and runc, plus familiarity with NRI plugin architecture. Brings hands-on depth from operating-system and networking internals through fleet-scale reliability and operations.
 
 ## Technical Skills
 - **Languages:** C, C++, Go, Python, C#, Objective-C, PHP, Perl, JavaScript, Node.js, Shell, Visual Basic
 - **Systems and Performance:** FreeBSD, Linux, kernel modules, system calls, operating systems, kqueue, sendfile(), GDB, performance debugging, troubleshooting, non-blocking I/O
 - **Networking:** TCP/IP, IPv4, sockets, HTTP, DNS, CDN architecture, packet capture, libpcap, IPFW, host networking, authentication, telemetry
-- **Cloud and Orchestration:** Kubernetes, Docker, container orchestration, Terraform, Azure DevOps, CI/CD, security scanning, deployment automation
+- **Cloud and Orchestration:** Kubernetes, Docker, container orchestration, Terraform, Azure DevOps, CI/CD, security scanning, deployment automation; experimental kubelet, containerd, and runc; familiarity with NRI plugin architecture
 - **Databases/Web:** MySQL, MultiValue/Universe, OAuth/OAuth2, SMTP OAuth, React, jQuery, PHP, web services
 
 ## Selected Technical Highlights
@@ -24,6 +24,7 @@ Distributed systems and systems software engineer with more than 20 years of sof
 - Architected and operated distributed compute, hosting, and CDN infrastructure spanning thousands of servers and multiple geographic locations.
 - Built observability, traffic analysis, DNS monitoring, authentication, deployment, security, and DDoS mitigation systems for 24/7 production operations.
 - Implemented Kubernetes, Docker, Terraform, Azure DevOps, CI/CD, and security-scanning workflows across modern engineering environments.
+- Used kubelet, containerd, and runc in hands-on experiments and studied the fundamentals of developing NRI plugins; this work was exploratory rather than production runtime development.
 
 ## Selected Systems Projects
 
