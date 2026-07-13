@@ -1,0 +1,17 @@
+{
+  "company": "Netflix",
+  "role": "Distributed Systems Engineer (L5 + L6), Compute Runtime",
+  "requisition_id": "JR39731",
+  "slug": "JR39731-compute-runtime",
+  "job_description": "JOB_DESCRIPTION.md",
+  "artifacts": [
+    {
+      "type": "resume",
+      "source": "Jordan_Newman_Netflix_Compute_Runtime_Resume.md"
+    },
+    {
+      "type": "cover_letter",
+      "source": "Jordan_Newman_Netflix_Compute_Runtime_Cover_Letter.md"
+    }
+  ]
+}
