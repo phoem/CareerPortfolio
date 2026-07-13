@@ -8,7 +8,8 @@
   "business_unit": "Streaming",
   "source_url": "https://explore.jobs.netflix.net/careers/job/790315115650?microsite=netflix.com&utm_source=LinkedIn&domain=netflix.com",
   "job_description": "JOB_DESCRIPTION.md",
-  "job_description_status": "missing-full-text",
+  "job_description_status": "complete-user-captured",
+  "job_description_captured_at": "2026-07-13",
   "slug": "JR39731-compute-runtime",
   "artifacts": [
     {
