@@ -1,6 +1,5 @@
 name: Generate resume artifacts
 
-# Manual recheck marker: 2026-07-13
 on:
   workflow_dispatch:
   push:
@@ -19,6 +18,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: careerportfolio-repository-writes
+  cancel-in-progress: false
+
 jobs:
   generate:
     if: github.actor != 'github-actions[bot]'
@@ -28,6 +31,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -53,5 +57,6 @@ jobs:
             echo 'No generated changes to commit.'
           else
             git commit -m 'Generate resume DOCX and PDF artifacts'
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
