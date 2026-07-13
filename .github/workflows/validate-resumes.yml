@@ -9,9 +9,7 @@ on:
       - 'generic/*.md'
       - 'generic/*.docx'
       - 'generic/*.pdf'
-      - 'netflix/*.md'
-      - 'netflix/*.docx'
-      - 'netflix/*.pdf'
+      - 'applications/**'
       - 'scripts/validate_resume.py'
       - 'scripts/record_ats_history.py'
       - '.github/workflows/validate-resumes.yml'
@@ -32,10 +30,10 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install PDF extraction dependency
+      - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y poppler-utils
+          sudo apt-get install -y poppler-utils jq
 
       - name: Validate generic resumes
         run: |
@@ -57,35 +55,46 @@ jobs:
               --history "generic/validation/${stem}-ATS_HISTORY.md"
           done
 
-      - name: Validate Netflix resume when exact posting is available
+      - name: Validate targeted application resumes
         run: |
-          mkdir -p netflix/validation
-          if test -f netflix/JOB_DESCRIPTION.md; then
-            python scripts/validate_resume.py \
-              --resume netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.md \
-              --docx netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.docx \
-              --pdf netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.pdf \
-              --job netflix/JOB_DESCRIPTION.md \
-              --output netflix/validation/ATS_REPORT.md \
-              --json-output netflix/validation/ATS_RESULT.json
-            python scripts/record_ats_history.py \
-              --result netflix/validation/ATS_RESULT.json \
-              --history netflix/validation/ATS_HISTORY.md
-          else
-            cat > netflix/validation/ATS_REPORT.md <<'EOF'
+          set -e
+          while IFS= read -r manifest; do
+            directory="$(dirname "$manifest")"
+            resume_source="$(jq -r '.artifacts[] | select(.type == "resume") | .source' "$manifest" | head -n 1)"
+            job_file="$(jq -r '.job_description // "JOB_DESCRIPTION.md"' "$manifest")"
+            mkdir -p "$directory/validation"
+            if test -z "$resume_source" || test "$resume_source" = "null"; then
+              echo "No resume artifact in $manifest; skipping."
+              continue
+            fi
+            stem="${resume_source%.md}"
+            if test -f "$directory/$job_file"; then
+              python scripts/validate_resume.py \
+                --resume "$directory/$resume_source" \
+                --docx "$directory/${stem}.docx" \
+                --pdf "$directory/${stem}.pdf" \
+                --job "$directory/$job_file" \
+                --output "$directory/validation/ATS_REPORT.md" \
+                --json-output "$directory/validation/ATS_RESULT.json"
+              python scripts/record_ats_history.py \
+                --result "$directory/validation/ATS_RESULT.json" \
+                --history "$directory/validation/ATS_HISTORY.md"
+            else
+              cat > "$directory/validation/ATS_REPORT.md" <<EOF
           # ATS Readiness Report
 
-          Targeted Netflix validation is pending because the exact job posting has not yet been stored as `netflix/JOB_DESCRIPTION.md`.
+          Targeted validation is pending because the exact job posting has not yet been stored as \`$job_file\` in this application package.
 
-          The validator intentionally will not reconstruct required and preferred qualifications from the tailored resume or from memory. Add the exact posting, then rerun this workflow.
+          The validator will not reconstruct required and preferred qualifications from the tailored resume or from memory. Add the exact posting, then rerun this workflow.
           EOF
-          fi
+            fi
+          done < <(find applications -name APPLICATION.json -print | sort)
 
       - name: Commit validation reports
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add generic/validation netflix/validation
+          git add generic/validation applications
           if git diff --cached --quiet; then
             echo 'No validation changes to commit.'
           else
