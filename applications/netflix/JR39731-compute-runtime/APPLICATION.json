@@ -2,8 +2,14 @@
   "company": "Netflix",
   "role": "Distributed Systems Engineer (L5 + L6), Compute Runtime",
   "requisition_id": "JR39731",
-  "slug": "JR39731-compute-runtime",
+  "provider_position_id": "790315115650",
+  "location": "USA - Remote",
+  "department": "Engineering",
+  "business_unit": "Streaming",
+  "source_url": "https://explore.jobs.netflix.net/careers/job/790315115650?microsite=netflix.com&utm_source=LinkedIn&domain=netflix.com",
   "job_description": "JOB_DESCRIPTION.md",
+  "job_description_status": "missing-full-text",
+  "slug": "JR39731-compute-runtime",
   "artifacts": [
     {
       "type": "resume",
