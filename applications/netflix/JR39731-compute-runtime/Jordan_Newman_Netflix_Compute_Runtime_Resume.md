@@ -1,35 +1,35 @@
 # Jordan Newman - Netflix Distributed Systems Engineer - Compute Runtime Resume
 
-**Distributed Systems Engineer | Compute Runtime, Systems Software, Infrastructure**
+**Distributed Systems Engineer | Compute Infrastructure, Runtime, Systems Software**
 
 Marlboro, NJ | 347-739-4731 | phoem@mac.com | github.com/phoem  
 *Selected public repositories are available. The most significant engineering repositories are private; access is available upon request.*
 
 ## Summary
 
-Distributed systems and systems software engineer with deep experience building production runtime, networking, kernel, and infrastructure software. Architected and operated systems spanning approximately 3,000-4,000 servers, 10 locations, and more than 65 Gbps of peak traffic. Built a non-blocking FreeBSD HTTP/CDN runtime in C, specialized I/O workers, kernel modules, DDoS defenses, telemetry, deployment automation, and modern container and infrastructure-as-code workflows. Brings hands-on depth from kernel interfaces through large-scale production operations.
+Distributed systems and systems software engineer with more than 20 years of software development and production infrastructure experience. Architected, built, debugged, and operated large-scale compute and networking platforms spanning approximately 3,000-4,000 servers, 10 locations, and more than 65 Gbps of peak traffic. Built a non-blocking FreeBSD HTTP/CDN runtime in C, specialized I/O workers, kernel modules, performance and troubleshooting tools, DDoS defenses, telemetry, deployment automation, and modern Kubernetes, container, and infrastructure-as-code workflows. Brings hands-on depth from operating-system and networking internals through fleet-scale reliability and operations.
 
 ## Technical Skills
 - **Languages:** C, C++, Go, Python, C#, Objective-C, PHP, Perl, JavaScript, Node.js, Shell, Visual Basic
-- **Systems:** FreeBSD, Linux, kernel modules, system calls, operating systems, kqueue, sendfile(), GDB, TCP/IP, non-blocking I/O
-- **Networking/Security:** HTTP, DNS, CDN architecture, socket programming, DDoS detection/mitigation, packet capture, libpcap, IPFW, authentication, telemetry
-- **Cloud/DevOps:** Azure DevOps, Docker, Kubernetes, Terraform, CI/CD, security scanning, deployment automation
+- **Systems and Performance:** FreeBSD, Linux, kernel modules, system calls, operating systems, kqueue, sendfile(), GDB, performance debugging, troubleshooting, non-blocking I/O
+- **Networking:** TCP/IP, IPv4, sockets, HTTP, DNS, CDN architecture, packet capture, libpcap, IPFW, host networking, authentication, telemetry
+- **Cloud and Orchestration:** Kubernetes, Docker, container orchestration, Terraform, Azure DevOps, CI/CD, security scanning, deployment automation
 - **Databases/Web:** MySQL, MultiValue/Universe, OAuth/OAuth2, SMTP OAuth, React, jQuery, PHP, web services
 
 ## Selected Technical Highlights
 
 - Designed and deployed PrimeHTTPD, a custom event-driven compute and HTTP serving runtime across approximately 200 production FreeBSD servers.
 - Supported more than 150,000 concurrent connections using kqueue, persistent connections, non-blocking sockets, zero-copy sendfile(), and FreeBSD-specific TCP and accept-filter optimizations.
-- Separated latency-sensitive event processing from blocking disk work through dedicated I/O workers and SF_NODISKIO-aware handling.
-- Architected and operated distributed production infrastructure spanning thousands of servers and multiple geographic locations.
-- Built observability, traffic analysis, DNS monitoring, authentication, deployment, security, and DDoS mitigation systems for 24/7 infrastructure.
-- Implemented Kubernetes, Docker, Terraform, Azure DevOps, CI/CD, and security-scanning workflows in modern engineering environments.
+- Diagnosed and removed runtime bottlenecks by separating latency-sensitive event processing from blocking disk work through dedicated I/O workers and SF_NODISKIO-aware handling.
+- Architected and operated distributed compute, hosting, and CDN infrastructure spanning thousands of servers and multiple geographic locations.
+- Built observability, traffic analysis, DNS monitoring, authentication, deployment, security, and DDoS mitigation systems for 24/7 production operations.
+- Implemented Kubernetes, Docker, Terraform, Azure DevOps, CI/CD, and security-scanning workflows across modern engineering environments.
 
 ## Selected Systems Projects
 
-- **PrimeHTTPD:** Architected and implemented a high-performance, non-blocking, kqueue-based HTTP/CDN server in C for FreeBSD. Used sendfile(), SF_NODISKIO, TCP_NODELAY, TCP_NOPUSH, O_NONBLOCK, accept_filter_http, persistent connections, and dedicated I/O workers.
-- **VirtualDir:** Designed and developed a FreeBSD kernel module that intercepted filesystem-related syscalls and transparently remapped paths from configuration, enabling shared physical layouts without chroot jails; included the vdcli runtime management tool.
-- **PrimeDump:** Built a libpcap-based real-time traffic analyzer decoding Ethernet, IP, TCP, UDP, and ICMPv6 with ncurses views and IPFW integration.
+- **PrimeHTTPD:** Architected and implemented a high-performance, non-blocking, kqueue-based HTTP/CDN runtime in C for FreeBSD. Used sendfile(), SF_NODISKIO, TCP_NODELAY, TCP_NOPUSH, O_NONBLOCK, accept_filter_http, persistent connections, and dedicated I/O workers to improve throughput, reliability, and latency under production load.
+- **VirtualDir:** Designed and developed a production FreeBSD kernel module that intercepted filesystem-related syscalls and transparently remapped paths from configuration, enabling shared physical layouts without chroot jails; included the vdcli runtime management tool.
+- **PrimeDump:** Built a libpcap-based real-time network troubleshooting and traffic-analysis tool decoding Ethernet, IPv4/IPv6, TCP, UDP, and ICMPv6 with ncurses views and IPFW integration.
 - **PrimeDNSTop:** Built a DNS traffic monitor parsing UDP/53 and RFC 1035 queries to detect recursion attacks and rank source and domain activity.
 - **TAFOS:** Developed an educational x86 operating-system kernel in C and assembly with a custom MBR bootloader, protected mode, IDT, heap allocator, port I/O, VGA output, and GDB support.
 
@@ -38,8 +38,8 @@ Distributed systems and systems software engineer with deep experience building 
 ### Advantive - Senior Development Specialist
 *Remote / Tampa Bay, FL | July 2022 - Present*
 
-- Implemented Azure DevOps, Docker, Kubernetes, Terraform, CI/CD, and security-scanning workflows across engineering teams.
-- Served as a member of the Architecture Team, collaborating with fellow architects and the architecture lead to make technical decisions, define engineering standards, guide platform direction, and develop shared libraries, documentation, and AI-assisted engineering workflows.
+- Implemented Kubernetes, Docker, Terraform, Azure DevOps, CI/CD, and security-scanning workflows across engineering teams.
+- Served as a member of the Architecture Team, collaborating with fellow architects and the architecture lead to design technical solutions, define engineering standards, guide platform direction, and develop shared libraries, documentation, and AI-assisted engineering workflows.
 
 ### DDI Systems - Senior Development Specialist
 *Manalapan, NJ | November 2021 - July 2022*
@@ -75,11 +75,11 @@ Distributed systems and systems software engineer with deep experience building 
 *Weehawken, NJ | March 2001 - December 2014*
 
 **Infrastructure Leadership**
-- Architected and operated hosting and CDN infrastructure spanning approximately 3,000-4,000 servers, 10 locations, multiple datacenters, and more than 65 Gbps of peak traffic.
+- Architected and operated compute, hosting, and CDN infrastructure spanning approximately 3,000-4,000 servers, 10 locations, multiple datacenters, and more than 65 Gbps of peak traffic.
 
 **Systems Software Engineering**
-- Designed and built PrimeHTTPD, a high-performance, non-blocking, kqueue-based HTTP/CDN server in C for FreeBSD; deployed it across approximately 200 servers and supported more than 150,000 concurrent connections.
-- Leveraged sendfile(), SF_NODISKIO, TCP_NODELAY, TCP_NOPUSH, O_NONBLOCK, accept_filter_http, persistent connections, and dedicated I/O workers to keep disk operations from blocking the networking event loop.
+- Designed and built PrimeHTTPD, a high-performance, non-blocking, kqueue-based HTTP/CDN runtime in C for FreeBSD; deployed it across approximately 200 servers and supported more than 150,000 concurrent connections.
+- Debugged performance and operational issues across the runtime and operating-system boundary, using sendfile(), SF_NODISKIO, TCP_NODELAY, TCP_NOPUSH, O_NONBLOCK, accept_filter_http, persistent connections, and dedicated I/O workers to keep disk operations from blocking the networking event loop.
 - Developed production FreeBSD kernel modules including VirtualDir, KeepClean, and StatCache.
 
 **Security and Networking**
