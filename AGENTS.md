@@ -13,16 +13,19 @@ Agents working in this repository must preserve factual accuracy, avoid inventin
    - Senior Software Engineer
    - Software Architect
    - Backend / Infrastructure Engineer
-3. Company-specific directories contain targeted application packages derived from the best-fitting generic resume and the knowledge bundle.
-4. `docs/workflows/RESUME_WORKFLOW.md` defines the detailed operating process.
-5. `docs/workflows/ATS_VALIDATION.md` defines the ATS validation and revision-loop process.
-6. `docs/OKF_PORTFOLIO.md` defines the repository-specific OKF conventions.
-7. `docs/decisions/` contains Architecture Decision Records for significant repository decisions.
-8. `docs/ROADMAP.md` stores deferred ideas and future enhancements that are not yet justified for implementation.
+3. `applications/<company>/<posting>/` contains one isolated package per real job posting.
+4. `designs/` contains reusable rendering designs and the repository default.
+5. `docs/workflows/RESUME_WORKFLOW.md` defines the detailed operating process.
+6. `docs/workflows/ATS_VALIDATION.md` defines the ATS validation and revision-loop process.
+7. `docs/OKF_PORTFOLIO.md` defines the repository-specific OKF conventions.
+8. `docs/decisions/` contains Architecture Decision Records for significant repository decisions.
+9. `docs/ROADMAP.md` stores deferred ideas and future enhancements that are not yet justified for implementation.
 
 ## Required Behavior
 
-- Read the job description before selecting a resume base.
+- Read the exact job description before selecting a resume base.
+- Create a separate application directory for every posting, even when another application exists for the same company.
+- Never overwrite or combine one posting's `JOB_DESCRIPTION.md`, resume, validation score, or history with another posting.
 - Compare the role requirements against all three generic resumes.
 - Select the closest base resume rather than blindly reusing the most recent one.
 - Traverse `knowledge/index.md` and review relevant OKF concepts before drafting claims or bullets.
@@ -33,9 +36,25 @@ Agents working in this repository must preserve factual accuracy, avoid inventin
 - Prefer concrete scale, architecture, implementation details, and measured outcomes when documented.
 - Tailor technical depth to the audience: recruiter, ATS, hiring manager, systems engineer, or architect.
 - Keep the three generic resumes broadly reusable while selectively improving each with the strongest relevant project descriptions.
-- Keep company-specific resumes tightly aligned to the target posting.
+- Keep targeted resumes tightly aligned to their own posting.
 - Record significant structural or workflow decisions as ADRs under `docs/decisions/`.
 - Put useful but premature ideas in `docs/ROADMAP.md` instead of creating speculative structure.
+
+## Application Packages
+
+- Use `applications/<company>/<requisition-or-role>/`.
+- Include `APPLICATION.json` with company, role, requisition, job-description filename, and artifact sources.
+- Store the exact posting as `JOB_DESCRIPTION.md` in that application directory.
+- Store ATS reports and history under that application's `validation/` directory.
+- Future interview material should remain associated with the relevant application package or link back to it unambiguously.
+
+## Design Selection
+
+- `designs/default.json` selects the repository default design.
+- `DESIGN.json` in an application directory is persistent for all future builds of that application.
+- `DESIGN_NEXT.json` is a one-build override, takes precedence, and is removed after successful generation.
+- Unknown design names are errors; do not silently substitute another design.
+- Designs control presentation only and must never change or invent factual resume content.
 
 ## OKF Knowledge Capture
 
@@ -76,5 +95,5 @@ When Jordan provides new information:
 
 - The canonical repository is `phoem/CareerPortfolio`.
 - Commit directly to `main` by default unless Jordan explicitly requests a branch or pull request.
-- Use clear commit messages that describe the resume, knowledge, workflow, ADR, roadmap, or OKF change.
+- Use clear commit messages that describe the resume, knowledge, workflow, ADR, roadmap, design, or application change.
 - Do not reorganize or rename existing files without a concrete benefit and corresponding README, index, and ADR updates when appropriate.
