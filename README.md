@@ -12,20 +12,41 @@ Resumes, cover letters, and related career artifacts are derived from the curate
 | Software Architect | `generic/Jordan_Newman_Generic_Software_Architect_Resume.md` | `generic/Jordan_Newman_Generic_Software_Architect_Resume.docx` | `generic/Jordan_Newman_Generic_Software_Architect_Resume.pdf` |
 | Backend / Infrastructure | `generic/Jordan_Newman_Generic_Backend_Infrastructure_Resume.md` | `generic/Jordan_Newman_Generic_Backend_Infrastructure_Resume.docx` | `generic/Jordan_Newman_Generic_Backend_Infrastructure_Resume.pdf` |
 
-## Targeted Packages
+## Targeted Application Packages
 
-### Netflix - Distributed Systems Engineer (L5 + L6), Compute Runtime
+Targeted applications live under:
+
+```text
+applications/<company>/<requisition-or-role>/
+```
+
+Every posting receives a separate package with its own exact job description, resume, cover letter, ATS report and history, and optional design selection. Multiple roles at the same company never share or overwrite one `JOB_DESCRIPTION.md`.
+
+### Netflix — JR39731 Compute Runtime
+
+| Document | Path |
+|---|---|
+| Package | `applications/netflix/JR39731-compute-runtime/` |
+| Resume source | `applications/netflix/JR39731-compute-runtime/Jordan_Newman_Netflix_Compute_Runtime_Resume.md` |
+| Cover-letter source | `applications/netflix/JR39731-compute-runtime/Jordan_Newman_Netflix_Compute_Runtime_Cover_Letter.md` |
+| Job description | `applications/netflix/JR39731-compute-runtime/JOB_DESCRIPTION.md` when restored |
+| Validation | `applications/netflix/JR39731-compute-runtime/validation/` |
 
 The employer posting associated with requisition JR39731 was verified as a Compute Runtime distributed-systems role; the package is intentionally not positioned as an Open Connect application.
 
-| Document | Markdown | Generated DOCX | Generated PDF |
-|---|---:|---:|---:|
-| Resume | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.md` | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.docx` | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Resume.pdf` |
-| Cover Letter | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Cover_Letter.md` | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Cover_Letter.docx` | `netflix/Jordan_Newman_Netflix_Compute_Runtime_Cover_Letter.pdf` |
-
 ### Starlink
 
-The existing Starlink ATS resume, recruiter resume, and cover letter remain under `starlink/`.
+The existing Starlink ATS resume, recruiter resume, and cover letter remain under `starlink/` as a legacy package pending migration to the application-package layout.
+
+## Resume Designs
+
+Reusable rendering designs live under `designs/`.
+
+- `designs/default.json` selects the repository default.
+- `applications/.../DESIGN.json` persistently selects a design for all future rebuilds of one application.
+- `applications/.../DESIGN_NEXT.json` selects a design for only the next successful build and is then consumed.
+
+See `designs/README.md` and ADR 0016.
 
 ## Career Knowledge Base
 
@@ -51,9 +72,9 @@ Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, Pri
 - `docs/STARTER_GUIDE.md` explains how another person can bootstrap their own CareerPortfolio.
 - `docs/ROADMAP.md` records deferred enhancements and promotion criteria without prematurely adding structure.
 - `docs/decisions/README.md` indexes the Architecture Decision Records that explain significant repository decisions.
-- `scripts/generate_resume_artifacts.py` generates matching DOCX and PDF files from Markdown sources.
-- `.github/workflows/generate-resume-artifacts.yml` automates artifact generation after the workflow is available on the default branch.
-- Targeted packages should be created against actual job listings, not speculative company names.
+- `scripts/generate_resume_artifacts.py` generates matching DOCX and PDF files from manifests and Markdown sources.
+- `.github/workflows/generate-resume-artifacts.yml` automates artifact generation on `main`.
+- `.github/workflows/validate-resumes.yml` validates generic resumes and each application package independently.
 - Generated DOCX and PDF files must remain consistent with their Markdown sources and be visually reviewed before use.
 
 ## Repository
