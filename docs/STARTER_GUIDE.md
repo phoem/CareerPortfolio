@@ -18,10 +18,18 @@ docs/
   ROADMAP.md
   decisions/
     README.md
+designs/
+  README.md
+  default.json
+  classic-ats/
+    design.json
 scripts/
   generate_resume_artifacts.py
+  validate_resume.py
+  record_ats_history.py
 .github/workflows/
   generate-resume-artifacts.yml
+  validate-resumes.yml
 ```
 
 Create these empty or template-backed directories:
@@ -35,6 +43,51 @@ applications/
 ```
 
 Do not copy another person's project concepts, resumes, metrics, contact details, or company-specific application materials unless they are being used only as examples and are fully replaced.
+
+## Application Package Structure
+
+Create a separate directory for every individual posting:
+
+```text
+applications/
+  example-company/
+    REQ123-example-role/
+      APPLICATION.json
+      JOB_DESCRIPTION.md
+      Example_Resume.md
+      Example_Cover_Letter.md
+      DESIGN.json
+      validation/
+```
+
+A second role at the same company gets a sibling posting directory. Never overwrite or combine job descriptions merely because the employer is the same.
+
+`APPLICATION.json` identifies the posting and the source artifacts:
+
+```json
+{
+  "company": "Example Company",
+  "role": "Example Role",
+  "requisition_id": "REQ123",
+  "slug": "REQ123-example-role",
+  "job_description": "JOB_DESCRIPTION.md",
+  "artifacts": [
+    {"type": "resume", "source": "Example_Resume.md"},
+    {"type": "cover_letter", "source": "Example_Cover_Letter.md"}
+  ]
+}
+```
+
+## Resume Design Selection
+
+The repository default is stored in `designs/default.json`.
+
+For one application package:
+
+- add `DESIGN.json` to use a design for all future rebuilds of that posting;
+- add `DESIGN_NEXT.json` to use a design only for the next successful build.
+
+`DESIGN_NEXT.json` takes precedence and is removed after generation. See `designs/README.md`.
 
 ## Minimal Knowledge Bundle
 
@@ -99,10 +152,11 @@ After initialization, an agent may create new items as needed:
 - new OKF concept directories and Markdown files under `knowledge/`;
 - new entries in `knowledge/index.md`;
 - dated entries in `knowledge/log.md`;
-- new company-specific application directories;
+- new application packages under `applications/<company>/<posting>/`;
 - Markdown resume and cover-letter sources;
 - generated DOCX and PDF artifacts;
-- ATS validation reports and score histories.
+- ATS validation reports and score histories;
+- persistent or one-build design selections.
 
 This deliberate initialization prevents accidental assumptions about resume types, directory names, personal data, or career goals.
 
@@ -132,5 +186,5 @@ A useful initial repository contains:
 - one metrics concept;
 - one technologies concept;
 - at least one canonical generic resume;
-- the workflow and OKF documentation;
+- the workflow, application-package, and design documentation;
 - no unsupported claims.
