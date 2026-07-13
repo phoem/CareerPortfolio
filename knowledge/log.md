@@ -1,5 +1,12 @@
 # Knowledge Base Update Log
 
+## 2026-07-13
+
+* **Creation**: Added a confirmed technology-experience concept for Kubernetes and container runtimes.
+* **Clarification**: Recorded production Kubernetes workflow experience separately from experimental use of kubelet, containerd, and runc.
+* **Boundary**: Recorded familiarity with NRI plugin development concepts without claiming that an NRI plugin has been written.
+* **Resume update**: Updated the Netflix JR39731 resume with evidence-safe container runtime language.
+
 ## 2026-07-12
 
 * **Rename**: Renamed the repository from `MyResumes` to `CareerPortfolio`.
