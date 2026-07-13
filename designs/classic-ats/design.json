@@ -1,0 +1,23 @@
+{
+  "name": "classic-ats",
+  "description": "Single-column ATS-safe design used by the existing CareerPortfolio generator.",
+  "font": "Arial",
+  "resume": {
+    "top_margin_inches": 0.42,
+    "bottom_margin_inches": 0.42,
+    "left_margin_inches": 0.52,
+    "right_margin_inches": 0.52,
+    "body_font_points": 8.7,
+    "title_font_points": 16.0,
+    "line_spacing": 1.0
+  },
+  "cover_letter": {
+    "top_margin_inches": 0.65,
+    "bottom_margin_inches": 0.65,
+    "left_margin_inches": 0.75,
+    "right_margin_inches": 0.75,
+    "body_font_points": 10.5,
+    "title_font_points": 15.0,
+    "line_spacing": 1.08
+  }
+}
