@@ -30,6 +30,8 @@ ADRs are immutable historical records. When a decision changes, add a new ADR th
 | [0012](0012-limit-autonomous-ats-revision-passes.md) | Limit autonomous ATS revision passes | Accepted |
 | [0013](0013-track-current-and-historical-ats-scores.md) | Track current and historical ATS scores | Accepted; automation pending |
 | [0014](0014-group-process-documents-under-workflows.md) | Group process documents under `docs/workflows/` | Accepted |
+| [0015](0015-organize-targeted-applications-by-company-and-posting.md) | Organize targeted applications by company and posting | Accepted |
+| [0016](0016-support-selectable-resume-designs.md) | Support selectable resume designs | Accepted |
 
 ## Creating a new ADR
 
