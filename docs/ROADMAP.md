@@ -29,7 +29,6 @@ These are accepted ideas that directly improve current resume and application wo
 - Validate the actual generated PDF and DOCX artifacts, not only Markdown sources.
 - Add at least one additional tested design template beyond `classic-ats`.
 - Add design preview images and design-level ATS baseline results.
-- Migrate legacy root-level company packages, including `starlink/`, into `applications/`.
 - Continue expanding project concepts only as real job requirements expose useful gaps.
 - Add validation checks for OKF conformance, broken links, duplicated metrics, and inconsistent resume claims.
 

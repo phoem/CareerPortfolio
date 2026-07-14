@@ -1,0 +1,24 @@
+{
+  "company": "SpaceX / Starlink",
+  "role": "Embedded Software Engineer",
+  "requisition_id": null,
+  "job_description": "JOB_DESCRIPTION.md",
+  "job_description_status": "missing-historical-posting",
+  "slug": "embedded-software-engineer",
+  "artifacts": [
+    {
+      "type": "resume",
+      "variant": "ats",
+      "source": "Jordan_Newman_Starlink_ATS_Resume.md"
+    },
+    {
+      "type": "resume",
+      "variant": "recruiter-2-page",
+      "source": "Jordan_Newman_Starlink_Recruiter_2Page_Resume.md"
+    },
+    {
+      "type": "cover_letter",
+      "source": "Jordan_Newman_Starlink_Cover_Letter.md"
+    }
+  ]
+}

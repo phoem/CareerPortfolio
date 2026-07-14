@@ -34,9 +34,16 @@ Every posting receives a separate package with its own exact job description, re
 
 The employer posting associated with requisition JR39731 was verified as a Compute Runtime distributed-systems role; the package is intentionally not positioned as an Open Connect application.
 
-### Starlink
+### Starlink — Embedded Software Engineer
 
-The existing Starlink ATS resume, recruiter resume, and cover letter remain under `starlink/` as a legacy package pending migration to the application-package layout.
+| Document | Path |
+|---|---|
+| Package | `applications/starlink/embedded-software-engineer/` |
+| ATS resume source | `applications/starlink/embedded-software-engineer/Jordan_Newman_Starlink_ATS_Resume.md` |
+| Recruiter resume source | `applications/starlink/embedded-software-engineer/Jordan_Newman_Starlink_Recruiter_2Page_Resume.md` |
+| Cover-letter source | `applications/starlink/embedded-software-engineer/Jordan_Newman_Starlink_Cover_Letter.md` |
+| Job-source status | Exact historical posting and requisition not yet recovered |
+| Validation | `applications/starlink/embedded-software-engineer/validation/` |
 
 ## Resume Designs
 
