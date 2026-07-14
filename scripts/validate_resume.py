@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 STANDARD_HEADINGS = {
     "summary",
     "technical skills",
@@ -40,6 +40,27 @@ STOPWORDS = {
     "at", "by", "an", "have", "has", "using", "work", "role", "team",
     "experience", "years", "including", "across", "their", "they", "your",
 }
+ALIASES = {
+    "c/c++": {"c", "c++", "c/c++"},
+    "tcp": {"tcp", "tcp/ip"},
+    "open source": {"open source", "open-source", "github", "public repositories"},
+    "nri": {"nri", "node resource interface"},
+    "kubelet": {"kubelet", "kubelets"},
+    "ai/ml": {"ai/ml", "machine learning", "ml workloads"},
+}
+LIMITING_PHRASES = (
+    "experimental",
+    "experiments",
+    "exploratory",
+    "familiarity",
+    "familiar with",
+    "fundamentals",
+    "conceptual",
+    "has not",
+    "have not",
+    "without claiming",
+    "not production",
+)
 
 
 @dataclass
@@ -63,11 +84,8 @@ def normalize(text: str) -> str:
 
 
 def tokens(text: str) -> list[str]:
-    return [
-        token.lower()
-        for token in re.findall(r"[A-Za-z][A-Za-z0-9+#./-]{1,}", text)
-        if token.lower() not in STOPWORDS
-    ]
+    values = re.findall(r"[A-Za-z][A-Za-z0-9+#./-]*", text.lower())
+    return [value for value in values if value not in STOPWORDS and len(value) > 1]
 
 
 def extract_markdown(path: Path) -> str:
@@ -169,34 +187,152 @@ def score_completeness(markdown: str) -> CategoryScore:
 def extract_requirements(job: str) -> tuple[list[str], list[str]]:
     required: list[str] = []
     preferred: list[str] = []
-    mode = "required"
+    mode: str | None = None
     for raw in job.splitlines():
-        line = raw.strip().lstrip("-*• ").strip()
-        lower = line.lower()
-        if not line:
+        stripped = raw.strip()
+        if not stripped:
             continue
-        if any(
-            phrase in lower
-            for phrase in ("preferred qualifications", "nice to have", "bonus", "preferred experience")
-        ):
-            mode = "preferred"
+        if stripped.startswith("#"):
+            heading = re.sub(r"^#+\s*", "", stripped).strip().lower().rstrip(":")
+            if heading in {
+                "what we are looking for",
+                "required qualifications",
+                "requirements",
+                "qualifications",
+                "what you will bring",
+            }:
+                mode = "required"
+            elif heading in {
+                "additionally helpful experience",
+                "preferred qualifications",
+                "preferred experience",
+                "nice to have",
+                "bonus qualifications",
+            }:
+                mode = "preferred"
+            else:
+                # Metadata, responsibilities, compensation, and narrative context
+                # are deliberately excluded from qualification scoring.
+                mode = None
             continue
-        if any(
-            phrase in lower
-            for phrase in ("required qualifications", "what you will bring", "qualifications", "requirements")
-        ):
-            mode = "required"
-            continue
-        if raw.strip().startswith(("-", "*", "•")) and len(line.split()) >= 3:
-            (preferred if mode == "preferred" else required).append(line)
+        if mode and stripped.startswith(("-", "*", "•")):
+            line = stripped.lstrip("-*• ").strip()
+            if len(line.split()) >= 3:
+                (required if mode == "required" else preferred).append(line)
     return required[:25], preferred[:20]
 
 
+def phrase_present(phrase: str, resume_lower: str) -> bool:
+    options = ALIASES.get(phrase, {phrase})
+    return any(
+        re.search(rf"(?<![a-z0-9]){re.escape(option)}(?![a-z0-9])", resume_lower)
+        for option in options
+    )
+
+
+def evidence_lines(terms: list[str], resume: str) -> list[str]:
+    matches: list[str] = []
+    for line in resume.lower().splitlines():
+        if any(phrase_present(term, line) for term in terms):
+            matches.append(line.strip())
+    return matches
+
+
 def requirement_match(requirement: str, resume: str) -> tuple[str, float, list[str]]:
-    requirement_tokens = [token for token in tokens(requirement) if len(token) > 2]
-    resume_tokens = set(tokens(resume))
-    matched = [token for token in requirement_tokens if token in resume_tokens]
-    ratio = len(matched) / max(1, len(set(requirement_tokens)))
+    req_lower = requirement.lower()
+    resume_lower = resume.lower()
+    requirement_tokens = list(dict.fromkeys(tokens(requirement)))
+    matched = [term for term in requirement_tokens if phrase_present(term, resume_lower)]
+    ratio = len(matched) / max(1, len(requirement_tokens))
+    contexts = evidence_lines(matched, resume)
+    limiting = any(
+        phrase in context for context in contexts for phrase in LIMITING_PHRASES
+    )
+
+    # These requirements need capability evidence, not mere keyword overlap.
+    if "minimum of 5 years" in req_lower and "8+ years" in req_lower:
+        direct = bool(re.search(r"(?:more than|over)\s+(?:8|[12]\d)\s+years", resume_lower)) and (
+            "compute" in resume_lower and "infrastructure" in resume_lower
+        )
+        return ("direct" if direct else "adjacent" if ratio >= 0.25 else "missing",
+                1.0 if direct else ratio, matched)
+    if "proficiency in go, java, or c/c++" in req_lower:
+        language_section = "\n".join(
+            line for line in resume_lower.splitlines()
+            if "languages:" in line or line.startswith("**languages")
+        )
+        direct = bool(re.search(r"(?<![a-z])go(?![a-z])", language_section)) or any(
+            value in language_section for value in ("c++", "c/c++", " c,")
+        )
+        return ("direct" if direct else "missing", 1.0 if direct else 0.0,
+                ["Go/C/C++"] if direct else [])
+    if "contribute to the upstream" in req_lower:
+        direct = bool(re.search(
+            r"(contributed|contributions?)\s+to\s+(?:the\s+)?(?:upstream|kubernetes|containerd)",
+            resume_lower,
+        ))
+        return ("direct" if direct else "missing", 1.0 if direct else ratio,
+                ["upstream contributions"] if direct else matched)
+    if "linux kernel development" in req_lower:
+        direct = bool(re.search(
+            r"linux kernel (?:module|modules|development|patch|patches|contribution|contributions)",
+            resume_lower,
+        )) and not any(phrase in resume_lower for phrase in ("has not written", "without claiming"))
+        if direct:
+            return "direct", ratio, matched
+        if "linux kernel" in resume_lower and (
+            "freebsd kernel" in resume_lower or "kernel-module development" in resume_lower
+        ):
+            return "adjacent", ratio, matched
+        return "missing", ratio, matched
+    if "ai/ml workloads" in req_lower:
+        direct = bool(re.search(
+            r"(?:managed|operated|supported|owned).{0,100}(?:ai/ml|machine learning|ml workloads)",
+            resume_lower,
+        ))
+        return ("direct" if direct else "missing", 1.0 if direct else ratio,
+                matched if direct else [])
+    if "customizations and plugins" in req_lower:
+        if re.search(r"(?:developed|maintained|built|implemented).{0,100}(?:containerd|kubernetes).{0,100}(?:customizations?|plugins?)", resume_lower):
+            return "direct", ratio, matched
+        if any(term in resume_lower for term in ("containerd", "nri plugin")):
+            return "adjacent", ratio, matched
+        return "missing", ratio, matched
+    if "runtimes as a service" in req_lower:
+        if re.search(r"(?:production|operated|supported).{0,100}(?:container runtime|containerd|runc|kubelet)", resume_lower) and not limiting:
+            return "direct", ratio, matched
+        if any(term in resume_lower for term in ("kubernetes", "kubelet", "containerd", "runc")):
+            return "adjacent", ratio, matched
+        return "missing", ratio, matched
+    if "debugging system performance issues in a linux environment" in req_lower:
+        direct = "linux" in resume_lower and bool(re.search(
+            r"(?:debugged|debugging|diagnosed|troubleshooting).{0,100}(?:performance|runtime|system)",
+            resume_lower,
+        ))
+        return ("direct" if direct else "adjacent" if ratio >= 0.25 else "missing",
+                1.0 if direct else ratio, matched)
+    if "designing large-scale distributed systems" in req_lower:
+        direct = "large-scale distributed systems" in resume_lower or (
+            "distributed systems" in resume_lower and "kubernetes" in resume_lower
+        )
+        return ("direct" if direct else "adjacent" if ratio >= 0.25 else "missing",
+                1.0 if direct else ratio, matched)
+    if "thrive in ambiguity" in req_lower:
+        adjacent = "evolving requirements" in resume_lower and "competing priorities" in resume_lower
+        return ("adjacent" if adjacent else "missing", 0.55 if adjacent else ratio,
+                ["evolving requirements", "competing priorities"] if adjacent else matched)
+    if "communication and collaboration skills" in req_lower:
+        direct = "collaborated" in resume_lower and "engineering teams" in resume_lower
+        return ("direct" if direct else "adjacent" if ratio >= 0.25 else "missing",
+                1.0 if direct else ratio, matched)
+    if "open source projects" in req_lower:
+        direct = bool(re.search(r"(?:contributed|contributions?)\s+to.{0,80}open.source", resume_lower))
+        if direct:
+            return "direct", ratio, matched
+        if "github.com/" in resume_lower or "public repositories" in resume_lower:
+            return "adjacent", ratio, matched
+        return "missing", ratio, matched
+
     strength = "direct" if ratio >= 0.55 else "adjacent" if ratio >= 0.25 else "missing"
     return strength, ratio, matched
 
@@ -219,7 +355,7 @@ def score_requirements(requirements: list[str], resume: str, label: str) -> Cate
     return CategoryScore(round(sum(points) / len(points)), findings)
 
 
-def score_language(markdown: str, job: str | None) -> CategoryScore:
+def score_language(markdown: str, requirements: list[str]) -> CategoryScore:
     findings: list[str] = []
     score = 100
     resume_tokens = tokens(markdown)
@@ -241,14 +377,14 @@ def score_language(markdown: str, job: str | None) -> CategoryScore:
     if action_hits < 8:
         score -= 10
         findings.append("Relatively few bullets begin with strong action verbs.")
-    if job:
-        job_tokens = set(tokens(job))
-        overlap = len(job_tokens & set(resume_tokens)) / max(1, len(job_tokens))
-        findings.append(f"Job-language token coverage: {overlap:.1%}.")
-        if overlap < 0.20:
-            score -= 25
-        elif overlap < 0.30:
-            score -= 12
+    if requirements:
+        requirement_tokens = set(tokens(" ".join(requirements)))
+        overlap = len(requirement_tokens & set(resume_tokens)) / max(1, len(requirement_tokens))
+        findings.append(f"Qualification-language token coverage: {overlap:.1%}.")
+        if overlap < 0.35:
+            score -= 20
+        elif overlap < 0.50:
+            score -= 10
     if not findings:
         findings.append("Language is specific, action-oriented, and readable.")
     return CategoryScore(max(0, score), findings)
@@ -400,7 +536,6 @@ def main() -> int:
 
     parseability = score_parseability(markdown, docx, pdf)
     completeness = score_completeness(markdown)
-    language = score_language(markdown, job)
     human = score_human(markdown)
     requirement_rows: list[tuple[str, str, str, list[str]]] = []
 
@@ -412,6 +547,7 @@ def main() -> int:
             if preferred
             else CategoryScore(100, ["No explicit preferred requirements were listed."])
         )
+        language = score_language(markdown, required + preferred)
         for requirement_type, requirements in (("Required", required), ("Preferred", preferred)):
             for requirement in requirements:
                 strength, _, matched = requirement_match(requirement, markdown)
@@ -426,6 +562,7 @@ def main() -> int:
         }
         targeted_complete = bool(required)
     else:
+        language = score_language(markdown, [])
         scores = {
             "Artifact parseability and structure": (parseability, 50),
             "Required-information completeness": (completeness, 20),

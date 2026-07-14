@@ -66,9 +66,10 @@ jobs:
           set -e
           while IFS= read -r manifest; do
             directory="$(dirname "$manifest")"
+            validation_directory="$directory/validation"
             resume_source="$(jq -r '.artifacts[] | select(.type == "resume") | .source' "$manifest" | head -n 1)"
             job_file="$(jq -r '.job_description // "JOB_DESCRIPTION.md"' "$manifest")"
-            mkdir -p "$directory/validation"
+            mkdir -p "$validation_directory"
             if test -z "$resume_source" || test "$resume_source" = "null"; then
               echo "No resume artifact in $manifest; skipping."
               continue
@@ -80,13 +81,13 @@ jobs:
                 --docx "$directory/${stem}.docx" \
                 --pdf "$directory/${stem}.pdf" \
                 --job "$directory/$job_file" \
-                --output "$directory/validation/ATS_REPORT.md" \
-                --json-output "$directory/validation/ATS_RESULT.json"
+                --output "$validation_directory/ATS_REPORT.md" \
+                --json-output "$validation_directory/ATS_RESULT.json"
               python scripts/record_ats_history.py \
-                --result "$directory/validation/ATS_RESULT.json" \
-                --history "$directory/validation/ATS_HISTORY.md"
+                --result "$validation_directory/ATS_RESULT.json" \
+                --history "$validation_directory/ATS_HISTORY.md"
             else
-              cat > "$directory/validation/ATS_REPORT.md" <<EOF
+              cat > "$validation_directory/ATS_REPORT.md" <<EOF
           # ATS Readiness Report
 
           Targeted validation is pending because the exact job posting has not yet been stored as \`$job_file\` in this application package.

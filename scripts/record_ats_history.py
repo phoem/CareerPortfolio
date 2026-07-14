@@ -17,7 +17,7 @@ def main() -> int:
 
     result = json.loads(args.result.read_text(encoding="utf-8"))
     hashes = result.get("hashes", {})
-    artifact_key = "".join(
+    artifact_key = result.get("validator_version", "") + "".join(
         hashes.get(name, "") for name in ("resume", "docx", "pdf", "job")
     )
     marker = hashlib.sha256(artifact_key.encode("ascii")).hexdigest()
@@ -47,7 +47,7 @@ def main() -> int:
         f"- **Artifact set:** `{marker}`\n"
     )
     args.history.parent.mkdir(parents=True, exist_ok=True)
-    args.history.write_text(existing.rstrip() + entry, encoding="utf-8")
+    args.history.write_text(existing.rstrip() + entry + "\n", encoding="utf-8")
     print(f"Recorded {result['overall_score']}/100 in {args.history}")
     return 0
 

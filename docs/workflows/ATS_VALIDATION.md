@@ -216,8 +216,6 @@ applications/<company>/<role>/validation/
     ATS_HISTORY.md
 ```
 
-Existing company-specific directories may use the same `validation/` subdirectory until the broader `applications/` layout is adopted.
-
 Generic resumes:
 
 ```text
@@ -244,9 +242,9 @@ The report should include:
 
 Generated extraction files may be temporary when they add no lasting review value.
 
-## Automation Roadmap
+## Automation
 
-A future `scripts/validate_resume.py` may automate deterministic checks such as:
+`scripts/validate_resume.py` automates deterministic checks such as:
 
 - extracting text from DOCX and PDF;
 - comparing extracted content with Markdown;
