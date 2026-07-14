@@ -1,5 +1,5 @@
 {
-  "validator_version": "0.1.0",
+  "validator_version": "0.2.0",
   "overall_score": 86,
   "disposition": "Strong",
   "targeted_complete": true,
@@ -21,61 +21,50 @@
       "weight": 10
     },
     "Required job-requirement evidence": {
-      "score": 65,
+      "score": 85,
       "findings": [
-        "Adjacent: Location:** USA - Remote (matched: remote).",
-        "Missing: Job Posting Date:** 03-30-2026 (matched: none).",
-        "Missing: Job Requisition ID:** JR39731 (matched: none).",
-        "Adjacent: Work Type:** Remote (matched: remote).",
-        "Direct: Build and maintain the software that runs our Kubernetes container orchestration platform (matched: software, kubernetes, container, orchestration, platform).",
-        "Direct: Architect and design innovative solutions to support new workloads and features, and improve the reliability and performance of existing workloads (matched: design, solutions, new, features, improve, reliability, performance).",
-        "Direct: Develop and maintain Kubernetes and containerd customizations and plugins (matched: develop, kubernetes, containerd, plugins).",
-        "Direct: Contribute to the upstream containerd and Kubernetes projects (matched: containerd, kubernetes, projects).",
-        "Adjacent: Debug performance and operational problems observed with container workloads (matched: performance, operational, container).",
-        "Adjacent: Continuously and proactively increase efficiency and optimize our compute platform (matched: compute, platform).",
-        "Adjacent: Minimum of 5 years of experience evolving Compute infrastructure for a large organization; total 8+ years of software development experience (matched: compute, infrastructure, software, development).",
-        "Adjacent: Experience supporting containers and related runtimes as a service (e.g. Kubernetes kubelet, containerd, runc, NRI plugins, etc.) (matched: kubernetes, kubelet, containerd, runc, nri, plugins).",
+        "Direct: Minimum of 5 years of experience evolving Compute infrastructure for a large organization; total 8+ years of software development experience (matched: evolving, compute, infrastructure, software, development).",
+        "Adjacent: Experience supporting containers and related runtimes as a service (e.g. Kubernetes kubelet, containerd, runc, NRI plugins, etc.) (matched: related, runtimes, kubernetes, kubelet, containerd, runc, nri).",
         "Direct: Experience debugging system performance issues in a Linux environment (matched: debugging, system, performance, issues, linux).",
         "Direct: Excellent operational and troubleshooting skills (matched: operational, troubleshooting, skills).",
-        "Direct: Experience designing large-scale distributed systems, preferably a compute orchestration system like Kubernetes (matched: large-scale, distributed, systems, compute, orchestration, system, kubernetes).",
-        "Missing: Proficiency in Go, Java, or C/C++ (matched: none).",
-        "Direct: Understanding of networking concepts (TCP, IPv4, sockets, host and service networking in a containerized environment) (matched: networking, tcp, ipv4, sockets, host, networking).",
-        "Missing: Ability to thrive in ambiguity in a \u201ccontext not control\u201d environment while working with high velocity (matched: none).",
-        "Adjacent: Excellent communication and collaboration skills (matched: skills).",
-        "Adjacent: Track record of successful contributions to open source projects (matched: source, projects).",
-        "Direct: Linux kernel development experience (matched: linux, kernel, development).",
-        "Adjacent: Experience managing compute infrastructure for AI/ML workloads (matched: compute, infrastructure).",
-        "Direct: Understanding of networking concepts (TCP, IPv4, sockets, host and service networking in a containerized environment) (matched: networking, tcp, ipv4, sockets, host, networking)."
+        "Direct: Experience designing large-scale distributed systems, preferably a compute orchestration system like Kubernetes (matched: distributed, systems, compute, orchestration, system, kubernetes).",
+        "Direct: Proficiency in Go, Java, or C/C++ (matched: Go/C/C++).",
+        "Adjacent: Understanding of networking concepts (TCP, IPv4, sockets, host and service networking in a containerized environment) (matched: networking, tcp, ipv4, sockets, host).",
+        "Adjacent: Ability to thrive in ambiguity in a \u201ccontext not control\u201d environment while working with high velocity (matched: evolving requirements, competing priorities).",
+        "Direct: Excellent communication and collaboration skills (matched: skills)."
       ],
       "weight": 30
     },
     "Preferred job-requirement evidence": {
-      "score": 100,
+      "score": 41,
       "findings": [
-        "No explicit preferred requirements were listed."
+        "Adjacent: Track record of successful contributions to open source projects (matched: source, projects).",
+        "Adjacent: Linux kernel development experience (matched: linux, kernel, development).",
+        "Missing: Experience managing compute infrastructure for AI/ML workloads (matched: none).",
+        "Adjacent: Understanding of networking concepts (TCP, IPv4, sockets, host and service networking in a containerized environment) (matched: networking, tcp, ipv4, sockets, host)."
       ],
       "weight": 15
     },
     "Language and keyword quality": {
-      "score": 75,
+      "score": 90,
       "findings": [
-        "Job-language token coverage: 15.4%."
+        "Qualification-language token coverage: 43.2%."
       ],
       "weight": 10
     },
     "Human readability and positioning": {
-      "score": 85,
+      "score": 100,
       "findings": [
-        "5 bullets are long enough to hinder scanning."
+        "The first third is role-specific and evidence is easy to scan."
       ],
       "weight": 10
     }
   },
   "critical_failures": [],
   "hashes": {
-    "resume": "6a973bc0e19aaca5a612d7bd31ad6a33dd9eff608ed138acd0622d281d6a90e9",
-    "docx": "b27ac167a65ecf2d11ab1e787c6d38b71729ff76fd08b98cc62e3d8b314f9dc9",
-    "pdf": "85a91bb16191a1cea5cb82f80a3dcdfae91058c2dd688309d197ab951d199d10",
+    "resume": "e1d9b9fd4364dd04516f8655ad9b27d6134e04d4e097dbea49b9ac9a9a5742d1",
+    "docx": "c288cfeba1d5ef30aced64f76681545e9a106caa0db12b8a450678f65cad96c9",
+    "pdf": "776d35b54d2415d03ff475edab7fd5da4802c604d4d48d8bfd7f421ff8eaf24f",
     "job": "97b70a63892fe54de663df97b75164e25eeff3eefa46a25dcf32bdf60623b4c5"
   }
 }
