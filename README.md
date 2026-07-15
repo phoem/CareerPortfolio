@@ -34,6 +34,15 @@ Every posting receives a separate package with its own exact job description, re
 
 The employer posting associated with requisition JR39731 was verified as a Compute Runtime distributed-systems role; the package is intentionally not positioned as an Open Connect application.
 
+### 1Password — Senior Developer, Partnerships Engineering
+
+| Document | Path |
+|---|---|
+| Package | `applications/1password/7bbbdf90-partnerships-engineering/` |
+| Resume source | `applications/1password/7bbbdf90-partnerships-engineering/Jordan_Newman_1Password_Partnerships_Engineering_Resume.md` |
+| Job description | `applications/1password/7bbbdf90-partnerships-engineering/JOB_DESCRIPTION.md` |
+| Validation | `applications/1password/7bbbdf90-partnerships-engineering/validation/` |
+
 ### Starlink — Embedded Software Engineer
 
 | Document | Path |
