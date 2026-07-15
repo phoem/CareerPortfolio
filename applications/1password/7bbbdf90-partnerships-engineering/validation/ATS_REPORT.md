@@ -1,13 +1,11 @@
 # ATS Readiness Report
 
-- **Validated:** 2026-07-15T18:02:52+00:00
-- **Validator:** CareerPortfolio ATS Validator v0.2.0
+- **Validated:** 2026-07-15T18:18:13+00:00
+- **Validator:** CareerPortfolio ATS Validator v0.2.1
 - **Score type:** Targeted readiness
-- **Overall score:** 70/100
-- **Disposition:** Not Ready
+- **Overall score:** 86/100
+- **Disposition:** Strong
 - **Autonomous revision pass:** 0 of 3
-
-> **Targeted score incomplete:** the supplied job description did not yield explicit required/preferred bullet requirements. Preserve this report, but do not treat the overall score as submission-ready.
 
 ## Category Scores
 
@@ -15,9 +13,9 @@
 |---|---:|---:|
 | Artifact parseability and structure | 100 | 25% |
 | Required-information completeness | 100 | 10% |
-| Required job-requirement evidence | 0 | 30% |
+| Required job-requirement evidence | 57 | 30% |
 | Preferred job-requirement evidence | 100 | 15% |
-| Language and keyword quality | 100 | 10% |
+| Language and keyword quality | 90 | 10% |
 | Human readability and positioning | 97 | 10% |
 
 ## Critical Failures
@@ -35,7 +33,18 @@
 
 ## Required job-requirement evidence
 
-- No required requirements were available; targeted scoring is incomplete.
+- Adjacent: Strong backend or full-stack engineering experience building APIs, SDKs, platform capabilities, and integrations with AI-native technologies such as LLM APIs, agent frameworks, embeddings, or retrieval systems (matched: backend, engineering, building, apis, platform, capabilities, integrations, systems).
+- Missing: A track record of delivering complex integrations across organizational boundaries (matched: integrations).
+- Adjacent: Comfort engaging directly with external technical stakeholders and representing engineering decisions clearly (matched: technical, engineering, decisions).
+- Direct: Experience designing secure systems, including authentication, authorization, and policy-driven access models (matched: secure, systems, authentication, authorization, access).
+- Adjacent: Ability to reason about partner architectures and translate them into pragmatic integration designs (matched: about, partner, into, integration).
+- Direct: Clear technical writing and documentation skills (matched: clear, technical, documentation, skills).
+- Missing: Strong ownership mindset; drive work forward without waiting for perfect clarity (matched: ownership, without).
+- Adjacent: Sound judgment on when to build reusable infrastructure versus solving a narrow partner need (matched: judgment, when, reusable, infrastructure, partner).
+- Adjacent: Experience building or maintaining developer platforms or SDK ecosystems (matched: building, developer, platforms).
+- Adjacent: Familiarity with browser integrations or extension architectures (matched: browser, integrations).
+- Direct: Experience migrating systems to new platform primitives or security models (matched: systems, new, platform, security).
+- Adjacent: Hands-on experience integrating with external AI companies or AI-native technologies such as LLM APIs, agent frameworks, embeddings, or retrieval systems (matched: hands-on, ai, apis, systems).
 
 ## Preferred job-requirement evidence
 
@@ -43,11 +52,28 @@
 
 ## Language and keyword quality
 
-- Language is specific, action-oriented, and readable.
+- Qualification-language token coverage: 36.7%.
 
 ## Human readability and positioning
 
 - 1 bullets are long enough to hinder scanning.
+
+## Requirement-to-Evidence Matrix
+
+| Type | Strength | Requirement | Matched terms |
+|---|---|---|---|
+| Required | Adjacent | Strong backend or full-stack engineering experience building APIs, SDKs, platform capabilities, and integrations with AI-native technologies such as LLM APIs, agent frameworks, embeddings, or retrieval systems | backend, engineering, building, apis, platform, capabilities, integrations, systems |
+| Required | Missing | A track record of delivering complex integrations across organizational boundaries | integrations |
+| Required | Adjacent | Comfort engaging directly with external technical stakeholders and representing engineering decisions clearly | technical, engineering, decisions |
+| Required | Direct | Experience designing secure systems, including authentication, authorization, and policy-driven access models | secure, systems, authentication, authorization, access |
+| Required | Adjacent | Ability to reason about partner architectures and translate them into pragmatic integration designs | about, partner, into, integration |
+| Required | Direct | Clear technical writing and documentation skills | clear, technical, documentation, skills |
+| Required | Missing | Strong ownership mindset; drive work forward without waiting for perfect clarity | ownership, without |
+| Required | Adjacent | Sound judgment on when to build reusable infrastructure versus solving a narrow partner need | judgment, when, reusable, infrastructure, partner |
+| Required | Adjacent | Experience building or maintaining developer platforms or SDK ecosystems | building, developer, platforms |
+| Required | Adjacent | Familiarity with browser integrations or extension architectures | browser, integrations |
+| Required | Direct | Experience migrating systems to new platform primitives or security models | systems, new, platform, security |
+| Required | Adjacent | Hands-on experience integrating with external AI companies or AI-native technologies such as LLM APIs, agent frameworks, embeddings, or retrieval systems | hands-on, ai, apis, systems |
 
 ## Artifact Versions
 
@@ -58,4 +84,4 @@
 
 ## Recommended Next Action
 
-- Capture the exact job posting in a repository file, then rerun targeted validation.
+- Review the listed deductions and submit unless a safe, evidence-backed improvement is material.

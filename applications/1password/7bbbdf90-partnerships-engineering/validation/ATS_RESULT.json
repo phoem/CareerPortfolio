@@ -1,8 +1,8 @@
 {
-  "validator_version": "0.2.0",
-  "overall_score": 70,
-  "disposition": "Not Ready",
-  "targeted_complete": false,
+  "validator_version": "0.2.1",
+  "overall_score": 86,
+  "disposition": "Strong",
+  "targeted_complete": true,
   "pass_number": 0,
   "categories": {
     "Artifact parseability and structure": {
@@ -21,9 +21,20 @@
       "weight": 10
     },
     "Required job-requirement evidence": {
-      "score": 0,
+      "score": 57,
       "findings": [
-        "No required requirements were available; targeted scoring is incomplete."
+        "Adjacent: Strong backend or full-stack engineering experience building APIs, SDKs, platform capabilities, and integrations with AI-native technologies such as LLM APIs, agent frameworks, embeddings, or retrieval systems (matched: backend, engineering, building, apis, platform, capabilities, integrations, systems).",
+        "Missing: A track record of delivering complex integrations across organizational boundaries (matched: integrations).",
+        "Adjacent: Comfort engaging directly with external technical stakeholders and representing engineering decisions clearly (matched: technical, engineering, decisions).",
+        "Direct: Experience designing secure systems, including authentication, authorization, and policy-driven access models (matched: secure, systems, authentication, authorization, access).",
+        "Adjacent: Ability to reason about partner architectures and translate them into pragmatic integration designs (matched: about, partner, into, integration).",
+        "Direct: Clear technical writing and documentation skills (matched: clear, technical, documentation, skills).",
+        "Missing: Strong ownership mindset; drive work forward without waiting for perfect clarity (matched: ownership, without).",
+        "Adjacent: Sound judgment on when to build reusable infrastructure versus solving a narrow partner need (matched: judgment, when, reusable, infrastructure, partner).",
+        "Adjacent: Experience building or maintaining developer platforms or SDK ecosystems (matched: building, developer, platforms).",
+        "Adjacent: Familiarity with browser integrations or extension architectures (matched: browser, integrations).",
+        "Direct: Experience migrating systems to new platform primitives or security models (matched: systems, new, platform, security).",
+        "Adjacent: Hands-on experience integrating with external AI companies or AI-native technologies such as LLM APIs, agent frameworks, embeddings, or retrieval systems (matched: hands-on, ai, apis, systems)."
       ],
       "weight": 30
     },
@@ -35,9 +46,9 @@
       "weight": 15
     },
     "Language and keyword quality": {
-      "score": 100,
+      "score": 90,
       "findings": [
-        "Language is specific, action-oriented, and readable."
+        "Qualification-language token coverage: 36.7%."
       ],
       "weight": 10
     },

@@ -1,7 +1,7 @@
 # ATS Readiness Report
 
-- **Validated:** 2026-07-15T18:02:52+00:00
-- **Validator:** CareerPortfolio ATS Validator v0.2.0
+- **Validated:** 2026-07-15T18:18:13+00:00
+- **Validator:** CareerPortfolio ATS Validator v0.2.1
 - **Score type:** Targeted readiness
 - **Overall score:** 86/100
 - **Disposition:** Strong
