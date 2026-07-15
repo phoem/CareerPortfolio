@@ -20,7 +20,7 @@ Senior software engineer and hands-on architect with more than 20 years of exper
 
 ## Selected Integration and Platform Highlights
 
-- Served on the Advantive Architecture Team, collaborating with fellow architects and the architecture lead to make technical decisions, define standards, guide platform direction, and create reusable libraries and engineering documentation.
+- Collaborate on Advantive Architecture Team decisions, engineering standards, platform direction, reusable libraries, and technical documentation.
 - Implemented secure software-delivery capabilities across engineering teams using Azure DevOps, Kubernetes, Docker, Terraform, CI/CD, and automated security scanning.
 - Integrated Microsoft Office 365 SMTP OAuth into customer-facing enterprise software while modernizing deprecated VB.NET components in C#.
 - Delivered complex integrations across vendor and platform boundaries, including SellerCloud, Essendant, supplier SFTP feeds, product catalogs, images, safety data, orders, and MultiValue/Universe data.
@@ -33,7 +33,7 @@ Senior software engineer and hands-on architect with more than 20 years of exper
 ### Advantive - Senior Development Specialist
 *Remote / Tampa Bay, FL | July 2022 - Present*
 
-- Serve as a member of the Architecture Team, collaborating with architects and the architecture lead to evaluate technical needs, make decisions amid evolving requirements, define engineering standards, and guide platform direction across teams.
+- Demonstrate end-to-end ownership by driving architecture work forward amid evolving requirements, collaborating with architects and the architecture lead to evaluate needs, define standards, and guide platform direction.
 - Develop reusable libraries, technical documentation, and AI-assisted engineering workflows that improve consistency and developer productivity.
 - Implement Azure DevOps, Docker, Kubernetes, Terraform, CI/CD, and security-scanning workflows for reliable, secure software delivery.
 
