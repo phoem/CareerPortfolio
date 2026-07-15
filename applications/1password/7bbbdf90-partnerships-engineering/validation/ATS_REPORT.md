@@ -1,10 +1,10 @@
 # ATS Readiness Report
 
-- **Validated:** 2026-07-15T18:25:52+00:00
+- **Validated:** 2026-07-15T18:40:45+00:00
 - **Validator:** CareerPortfolio ATS Validator v0.2.1
 - **Score type:** Targeted readiness
-- **Overall score:** 88/100
-- **Disposition:** Strong
+- **Overall score:** 90/100
+- **Disposition:** Submission Ready
 - **Autonomous revision pass:** 0 of 3
 
 ## Category Scores
@@ -13,10 +13,10 @@
 |---|---:|---:|
 | Artifact parseability and structure | 100 | 25% |
 | Required-information completeness | 100 | 10% |
-| Required job-requirement evidence | 65 | 30% |
+| Required job-requirement evidence | 70 | 30% |
 | Preferred job-requirement evidence | 100 | 15% |
 | Language and keyword quality | 90 | 10% |
-| Human readability and positioning | 94 | 10% |
+| Human readability and positioning | 100 | 10% |
 
 ## Critical Failures
 
@@ -39,7 +39,7 @@
 - Direct: Experience designing secure systems, including authentication, authorization, and policy-driven access models (matched: secure, systems, authentication, authorization, access).
 - Adjacent: Ability to reason about partner architectures and translate them into pragmatic integration designs (matched: about, partner, into, integration).
 - Direct: Clear technical writing and documentation skills (matched: clear, technical, documentation, skills).
-- Missing: Strong ownership mindset; drive work forward without waiting for perfect clarity (matched: ownership, without).
+- Adjacent: Strong ownership mindset; drive work forward without waiting for perfect clarity (matched: ownership, forward, without).
 - Adjacent: Sound judgment on when to build reusable infrastructure versus solving a narrow partner need (matched: judgment, when, reusable, infrastructure, partner).
 - Adjacent: Experience building or maintaining developer platforms or SDK ecosystems (matched: building, developer, platforms).
 - Adjacent: Familiarity with browser integrations or extension architectures (matched: browser, integrations).
@@ -52,11 +52,11 @@
 
 ## Language and keyword quality
 
-- Qualification-language token coverage: 40.0%.
+- Qualification-language token coverage: 41.1%.
 
 ## Human readability and positioning
 
-- 2 bullets are long enough to hinder scanning.
+- The first third is role-specific and evidence is easy to scan.
 
 ## Requirement-to-Evidence Matrix
 
@@ -68,7 +68,7 @@
 | Required | Direct | Experience designing secure systems, including authentication, authorization, and policy-driven access models | secure, systems, authentication, authorization, access |
 | Required | Adjacent | Ability to reason about partner architectures and translate them into pragmatic integration designs | about, partner, into, integration |
 | Required | Direct | Clear technical writing and documentation skills | clear, technical, documentation, skills |
-| Required | Missing | Strong ownership mindset; drive work forward without waiting for perfect clarity | ownership, without |
+| Required | Adjacent | Strong ownership mindset; drive work forward without waiting for perfect clarity | ownership, forward, without |
 | Required | Adjacent | Sound judgment on when to build reusable infrastructure versus solving a narrow partner need | judgment, when, reusable, infrastructure, partner |
 | Required | Adjacent | Experience building or maintaining developer platforms or SDK ecosystems | building, developer, platforms |
 | Required | Adjacent | Familiarity with browser integrations or extension architectures | browser, integrations |
@@ -77,11 +77,11 @@
 
 ## Artifact Versions
 
-- `resume`: `5226f17f117e41cb9484757c5bce53fcc06e707c768ae45b7006a5c9f2f39fc4`
-- `docx`: `873609b2e3e65365b53b548885a7c0e34c1500fd9f9bc2034fea14eb5b81a357`
-- `pdf`: `596eeb52c93535b0190c2d9193c4e323753c56263a5ec52771b1d6be5c3d5a47`
+- `resume`: `de61262d9757b896736146c3234f3862ddca07db472c87f4518f3e3072aa7ee6`
+- `docx`: `d73bcf8d7fd74276d5a5ec4b7e5ef8b30f725f708fac0c4ad3c71435fd975d79`
+- `pdf`: `e94036c075ce95029ac3c98d33b5659a928fc82c60200d3fecbe28f103cd904b`
 - `job`: `d8b91fb5c40c4255e7da519c032ad793afab6b89ad4fd602b221f987f51f6e97`
 
 ## Recommended Next Action
 
-- Review the listed deductions and submit unless a safe, evidence-backed improvement is material.
+- Submit after final human visual review.
