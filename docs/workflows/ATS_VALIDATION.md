@@ -24,6 +24,9 @@ Do not compare these two score types directly.
 - the final Markdown resume source;
 - the generated DOCX and PDF artifacts;
 - relevant concepts from the `knowledge/` OKF bundle.
+- the rebuilt-artifact manifest emitted by the immediately preceding generation run.
+
+Validation is build-scoped. Automation validates only resume entries in that manifest; it must not rescan unrelated generic or targeted resumes merely because another resume was rebuilt.
 
 ## Validation Stages
 
@@ -257,3 +260,5 @@ Generated extraction files may be temporary when they add no lasting review valu
 - enforcing the three-pass autonomous retry limit.
 
 Human or agent review remains required for evidence quality, relevance, truthfulness, and narrative strength.
+
+`scripts/validate_rebuilt_artifacts.py` is the automation entry point after generation. It routes each rebuilt resume to its current validation directory, invokes the validator, and records history. Cover letters in the build manifest are intentionally skipped because ATS resume scoring does not apply to them.

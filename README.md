@@ -88,9 +88,9 @@ Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, Pri
 - `docs/STARTER_GUIDE.md` explains how another person can bootstrap their own CareerPortfolio.
 - `docs/ROADMAP.md` records deferred enhancements and promotion criteria without prematurely adding structure.
 - `docs/decisions/README.md` indexes the Architecture Decision Records that explain significant repository decisions.
-- `scripts/generate_resume_artifacts.py` generates matching DOCX and PDF files from manifests and Markdown sources.
-- `.github/workflows/generate-resume-artifacts.yml` automates artifact generation on `main`.
-- `.github/workflows/validate-resumes.yml` validates generic resumes and each application package independently.
+- `scripts/generate_resume_artifacts.py` generates matching DOCX and PDF files for explicitly selected Markdown sources.
+- `.github/workflows/generate-resume-artifacts.yml` rebuilds only sources changed on `main`; repository-wide rebuilds require an explicitly approved manual dispatch.
+- `.github/workflows/validate-resumes.yml` is called with the exact build manifest and validates only resumes rebuilt by that run.
 - Generated DOCX and PDF files must remain consistent with their Markdown sources and be visually reviewed before use.
 
 ## Repository

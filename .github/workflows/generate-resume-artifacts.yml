@@ -2,6 +2,16 @@ name: Generate resume artifacts
 
 on:
   workflow_dispatch:
+    inputs:
+      full_rebuild:
+        description: 'Rebuild every resume and cover letter (manual approval only)'
+        required: true
+        default: false
+        type: boolean
+      sources:
+        description: 'Optional comma-separated repository-relative Markdown sources to rebuild'
+        required: false
+        type: string
   push:
     branches:
       - main
@@ -13,7 +23,9 @@ on:
       - 'applications/**/DESIGN_NEXT.json'
       - 'designs/**'
       - 'scripts/generate_resume_artifacts.py'
+      - 'scripts/validate_rebuilt_artifacts.py'
       - '.github/workflows/generate-resume-artifacts.yml'
+      - '.github/workflows/validate-resumes.yml'
 
 permissions:
   contents: write
@@ -26,6 +38,8 @@ jobs:
   generate:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
+    outputs:
+      rebuilt_manifest: ${{ steps.result.outputs.rebuilt_manifest }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -45,8 +59,49 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install python-docx
 
-      - name: Generate DOCX and PDF files
-        run: python scripts/generate_resume_artifacts.py
+      - name: Determine changed paths
+        id: changes
+        shell: bash
+        run: |
+          changed="$RUNNER_TEMP/changed-paths.txt"
+          : > "$changed"
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            before="${{ github.event.before }}"
+            if [[ "$before" == "0000000000000000000000000000000000000000" ]]; then
+              git diff-tree --no-commit-id --name-only -r "${{ github.sha }}" > "$changed"
+            else
+              git diff --name-only "$before" "${{ github.sha }}" > "$changed"
+            fi
+          elif [[ -n "${{ inputs.sources }}" ]]; then
+            printf '%s\n' "${{ inputs.sources }}" | tr ',' '\n' | sed '/^[[:space:]]*$/d' > "$changed"
+          fi
+          echo "path=$changed" >> "$GITHUB_OUTPUT"
+
+      - name: Generate only selected DOCX and PDF files
+        id: generate
+        shell: bash
+        run: |
+          args=(--changed-paths-file "${{ steps.changes.outputs.path }}" --rebuilt-manifest "$RUNNER_TEMP/rebuilt.json")
+          if [[ "${{ inputs.full_rebuild || false }}" == "true" ]]; then
+            args+=(--full-rebuild)
+          fi
+          python scripts/generate_resume_artifacts.py "${args[@]}"
+
+      - name: Publish rebuild result
+        id: result
+        shell: bash
+        run: |
+          compact="$(jq -c . "$RUNNER_TEMP/rebuilt.json")"
+          echo "rebuilt_manifest=$compact" >> "$GITHUB_OUTPUT"
+          rebuilt_count="$(jq '.rebuilt | length' "$RUNNER_TEMP/rebuilt.json")"
+          echo "### Resume artifact generation" >> "$GITHUB_STEP_SUMMARY"
+          echo "Rebuilt **${rebuilt_count}** source artifact set(s)." >> "$GITHUB_STEP_SUMMARY"
+          if jq -e '.full_rebuild_recommended' "$RUNNER_TEMP/rebuilt.json" >/dev/null; then
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "A shared generator or design change may warrant a full rebuild." >> "$GITHUB_STEP_SUMMARY"
+            echo "No full rebuild was performed. Dispatch this workflow manually with **full_rebuild** enabled only after Jordan approves it." >> "$GITHUB_STEP_SUMMARY"
+            jq -r '.recommendations[] | "- " + .' "$RUNNER_TEMP/rebuilt.json" >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       - name: Commit generated artifacts
         run: |
@@ -56,7 +111,15 @@ jobs:
           if git diff --cached --quiet; then
             echo 'No generated changes to commit.'
           else
-            git commit -m 'Generate resume DOCX and PDF artifacts'
+            git commit -m 'Generate changed resume artifacts'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+
+  validate:
+    needs: generate
+    if: needs.generate.outputs.rebuilt_manifest != ''
+    uses: ./.github/workflows/validate-resumes.yml
+    with:
+      rebuilt_manifest: ${{ needs.generate.outputs.rebuilt_manifest }}
+    secrets: inherit

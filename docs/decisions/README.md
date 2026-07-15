@@ -32,6 +32,7 @@ ADRs are immutable historical records. When a decision changes, add a new ADR th
 | [0014](0014-group-process-documents-under-workflows.md) | Group process documents under `docs/workflows/` | Accepted |
 | [0015](0015-organize-targeted-applications-by-company-and-posting.md) | Organize targeted applications by company and posting | Accepted |
 | [0016](0016-support-selectable-resume-designs.md) | Support selectable resume designs | Accepted |
+| [0017](0017-use-incremental-artifact-builds-and-scoped-validation.md) | Use incremental artifact builds and scoped validation | Accepted |
 
 ## Creating a new ADR
 

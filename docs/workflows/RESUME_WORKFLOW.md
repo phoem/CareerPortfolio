@@ -32,8 +32,8 @@ All three should improve over time, but each should emphasize the same facts dif
 9. When Jordan provides relevant experience, update the knowledge bundle before relying on it in the resume.
 10. Add cross-links, citations, metadata, and a log entry when the new knowledge warrants them.
 11. Tailor the summary, skills order, selected highlights, project descriptions, and work-history bullets.
-12. Produce Markdown, DOCX, and PDF deliverables as required.
-13. Run the ATS readiness and final-artifact validation process in `docs/workflows/ATS_VALIDATION.md`.
+12. Produce Markdown and rebuild only the corresponding DOCX and PDF deliverables.
+13. Pass the exact rebuilt-artifact manifest to the ATS readiness and final-artifact validation process in `docs/workflows/ATS_VALIDATION.md`.
 14. Resolve critical failures and repeat validation until the application is at least Strong or Jordan explicitly approves submission with known limitations.
 15. Update the repository README and company package index when adding a new application package.
 
@@ -163,8 +163,16 @@ When new facts are learned:
 1. Update the OKF knowledge base.
 2. Determine whether one or more generic resumes should be improved.
 3. Update only the generic versions for which the information strengthens the intended positioning.
-4. Regenerate matching DOCX and PDF files.
-5. Run ATS readiness and final-artifact validation for targeted applications.
+4. Regenerate only the matching DOCX and PDF files whose sources changed.
+5. Run ATS readiness and final-artifact validation only for resumes included in that rebuild.
 6. Record the knowledge change in `knowledge/log.md` when meaningful.
 7. Record significant repository decisions in an ADR.
 8. Commit with a clear message.
+
+## Incremental Builds and Full Rebuilds
+
+Normal pushes rebuild only artifact sources directly affected by the change. A changed resume or cover-letter Markdown source rebuilds itself; an application manifest or application-specific design selection rebuilds the artifact sources in that application package.
+
+Changes to shared generator code or shared designs do not automatically rebuild the repository. The workflow reports that a full rebuild may be warranted, and the agent should explain the impact and recommend one when appropriate. A full rebuild remains Jordan's decision and may run only through an explicit manual workflow dispatch with `full_rebuild` enabled.
+
+The generator emits a manifest containing the exact sources, DOCX files, and PDF files rebuilt. Validation must use that manifest rather than rediscovering every resume in the repository.

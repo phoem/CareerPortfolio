@@ -85,6 +85,10 @@ When Jordan provides new information:
 
 - Markdown is the editable source format.
 - DOCX and PDF are generated deliverables and must remain consistent with the Markdown source.
+- Automatic builds MUST rebuild only resume or cover-letter sources affected by the triggering change.
+- ATS validation MUST consume the exact rebuilt-artifact manifest and validate only resumes rebuilt in that run.
+- A repository-wide rebuild is manual-only and requires Jordan's explicit approval through the workflow's `full_rebuild` input.
+- Changes to shared generator or design infrastructure may justify recommending a full rebuild, but agents and workflows MUST NOT perform one without Jordan's approval.
 - Preserve ATS-safe structure in ATS variants.
 - Avoid dense keyword stuffing or unsupported claims.
 - Use role-specific wording while keeping the underlying facts consistent across variants.

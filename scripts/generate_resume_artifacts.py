@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import subprocess
@@ -74,6 +75,68 @@ def discover_sources() -> list[SourceSpec]:
             design_name, one_shot = resolve_application_design(directory, artifact_type)
             sources.append(SourceSpec(source, artifact_type, design_name, one_shot))
     return sources
+
+
+def relative(path: Path) -> str:
+    return path.relative_to(ROOT).as_posix()
+
+
+def select_sources(
+    sources: list[SourceSpec],
+    *,
+    full_rebuild: bool,
+    requested_sources: set[str],
+    changed_paths: set[str],
+) -> tuple[list[SourceSpec], list[str]]:
+    """Select only artifacts explicitly affected by this run.
+
+    Shared generator and design changes deliberately do not select every resume.
+    They return a recommendation so the user can decide whether to dispatch a
+    manual full rebuild.
+    """
+    by_path = {relative(spec.source): spec for spec in sources}
+    selected: set[str] = set()
+    recommendations: list[str] = []
+
+    if full_rebuild:
+        return sources, recommendations
+
+    for requested in requested_sources:
+        normalized = Path(requested.strip()).as_posix().lstrip("./")
+        if normalized not in by_path:
+            raise ValueError(f"Requested source is not a generated artifact source: {requested}")
+        selected.add(normalized)
+
+    for changed in changed_paths:
+        normalized = Path(changed.strip()).as_posix().lstrip("./")
+        if not normalized:
+            continue
+        if normalized in by_path:
+            selected.add(normalized)
+            continue
+
+        name = Path(normalized).name
+        if normalized.startswith("applications/") and name in {
+            "APPLICATION.json",
+            "DESIGN.json",
+            "DESIGN_NEXT.json",
+        }:
+            directory = Path(normalized).parent.as_posix()
+            selected.update(
+                source_path
+                for source_path in by_path
+                if Path(source_path).parent.as_posix() == directory
+            )
+            continue
+
+        if normalized == "scripts/generate_resume_artifacts.py" or normalized.startswith(
+            "designs/"
+        ):
+            recommendations.append(
+                f"{normalized} changed; consider a manual full rebuild after reviewing the impact."
+            )
+
+    return [by_path[path] for path in sorted(selected)], recommendations
 
 
 def add_bottom_border(paragraph) -> None:
@@ -197,9 +260,52 @@ def convert_to_pdf(docx_path: Path) -> None:
     )
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--full-rebuild",
+        action="store_true",
+        help="Rebuild every generated artifact. Intended only for explicit manual use.",
+    )
+    parser.add_argument(
+        "--source",
+        action="append",
+        default=[],
+        help="Repository-relative Markdown artifact source to rebuild (repeatable).",
+    )
+    parser.add_argument(
+        "--changed-paths-file",
+        type=Path,
+        help="File containing repository-relative changed paths, one per line.",
+    )
+    parser.add_argument(
+        "--rebuilt-manifest",
+        type=Path,
+        required=True,
+        help="Write the exact rebuilt artifact set and rebuild recommendations as JSON.",
+    )
+    return parser.parse_args()
+
+
 def main() -> None:
+    args = parse_args()
+    changed_paths: set[str] = set()
+    if args.changed_paths_file and args.changed_paths_file.exists():
+        changed_paths = {
+            line.strip()
+            for line in args.changed_paths_file.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        }
+
+    sources, recommendations = select_sources(
+        discover_sources(),
+        full_rebuild=args.full_rebuild,
+        requested_sources=set(args.source),
+        changed_paths=changed_paths,
+    )
     consumed_one_shot: set[Path] = set()
-    for spec in discover_sources():
+    rebuilt: list[dict[str, str]] = []
+    for spec in sources:
         destination = spec.source.with_suffix(".docx")
         markdown_to_docx(spec, destination)
         convert_to_pdf(destination)
@@ -210,9 +316,31 @@ def main() -> None:
             f"{destination.with_suffix('.pdf').relative_to(ROOT)} "
             f"using design {spec.design_name}"
         )
+        rebuilt.append(
+            {
+                "source": relative(spec.source),
+                "artifact_type": spec.artifact_type,
+                "docx": relative(destination),
+                "pdf": relative(destination.with_suffix(".pdf")),
+                "design": spec.design_name,
+            }
+        )
     for path in consumed_one_shot:
         path.unlink(missing_ok=True)
         print(f"Consumed one-build design override {path.relative_to(ROOT)}")
+
+    result = {
+        "full_rebuild": bool(args.full_rebuild),
+        "rebuilt": rebuilt,
+        "full_rebuild_recommended": bool(recommendations),
+        "recommendations": sorted(set(recommendations)),
+    }
+    args.rebuilt_manifest.parent.mkdir(parents=True, exist_ok=True)
+    args.rebuilt_manifest.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    if not rebuilt:
+        print("No resume artifacts were selected for rebuilding.")
+    for recommendation in result["recommendations"]:
+        print(f"Recommendation: {recommendation}")
 
 
 if __name__ == "__main__":
