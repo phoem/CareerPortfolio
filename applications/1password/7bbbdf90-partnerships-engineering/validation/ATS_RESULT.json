@@ -1,0 +1,59 @@
+{
+  "validator_version": "0.2.0",
+  "overall_score": 70,
+  "disposition": "Not Ready",
+  "targeted_complete": false,
+  "pass_number": 0,
+  "categories": {
+    "Artifact parseability and structure": {
+      "score": 100,
+      "findings": [
+        "DOCX token coverage versus Markdown: 99.1%.",
+        "PDF token coverage versus Markdown: 99.1%."
+      ],
+      "weight": 25
+    },
+    "Required-information completeness": {
+      "score": 100,
+      "findings": [
+        "Contact details, conventional sections, and work-history dates are present."
+      ],
+      "weight": 10
+    },
+    "Required job-requirement evidence": {
+      "score": 0,
+      "findings": [
+        "No required requirements were available; targeted scoring is incomplete."
+      ],
+      "weight": 30
+    },
+    "Preferred job-requirement evidence": {
+      "score": 100,
+      "findings": [
+        "No explicit preferred requirements were listed."
+      ],
+      "weight": 15
+    },
+    "Language and keyword quality": {
+      "score": 100,
+      "findings": [
+        "Language is specific, action-oriented, and readable."
+      ],
+      "weight": 10
+    },
+    "Human readability and positioning": {
+      "score": 97,
+      "findings": [
+        "1 bullets are long enough to hinder scanning."
+      ],
+      "weight": 10
+    }
+  },
+  "critical_failures": [],
+  "hashes": {
+    "resume": "ed344015349a695dad4187e13153ba5c089ca4620ebed95d3318138eb957458a",
+    "docx": "9d3d3ba0c9abc827d63329e1125a29d50e9c9cb4d040b118ea2105047ab48afd",
+    "pdf": "922ea67c6b001ca2f8dc9bc8c3e4d3122a03ebfd51dc4bf731147854d9c694cf",
+    "job": "d8b91fb5c40c4255e7da519c032ad793afab6b89ad4fd602b221f987f51f6e97"
+  }
+}
