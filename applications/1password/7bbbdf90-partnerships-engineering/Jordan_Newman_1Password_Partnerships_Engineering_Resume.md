@@ -7,7 +7,7 @@ Marlboro, NJ | 347-739-4731 | phoem@mac.com | github.com/phoem
 
 ## Summary
 
-Senior software engineer and hands-on architect with more than 20 years of experience building backend platforms, secure integrations, reusable infrastructure, and production systems. Delivered enterprise integrations spanning OAuth-based authentication, browser and ticketing workflows, ERP and supplier platforms, cross-database migration, shared libraries, deployment automation, and high-scale internet infrastructure. Combines independent technical ownership with Architecture Team collaboration, clear documentation, security-focused design, and practical judgment about when to create reusable platform capabilities. Current work includes AI-assisted engineering workflows alongside Azure DevOps, Kubernetes, Terraform, CI/CD, and secure software-delivery standards.
+Senior software engineer and hands-on architect with more than 20 years of experience building backend platforms, secure integrations, reusable infrastructure, and production systems. Delivered complex integrations across organizational boundaries spanning OAuth-based authentication, browser and ticketing workflows, ERP and third-party supplier platforms, cross-database migration, shared libraries, deployment automation, and high-scale internet infrastructure. Combines end-to-end technical ownership with Architecture Team collaboration, clear documentation, security-focused design, and practical judgment about when to create reusable platform capabilities. Current work includes AI-assisted engineering workflows alongside Azure DevOps, Kubernetes, Terraform, CI/CD, and secure software-delivery standards.
 
 ## Technical Skills
 
@@ -23,17 +23,17 @@ Senior software engineer and hands-on architect with more than 20 years of exper
 - Served on the Advantive Architecture Team, collaborating with fellow architects and the architecture lead to make technical decisions, define standards, guide platform direction, and create reusable libraries and engineering documentation.
 - Implemented secure software-delivery capabilities across engineering teams using Azure DevOps, Kubernetes, Docker, Terraform, CI/CD, and automated security scanning.
 - Integrated Microsoft Office 365 SMTP OAuth into customer-facing enterprise software while modernizing deprecated VB.NET components in C#.
-- Built ERP integrations and automated workflows spanning SellerCloud, Essendant, supplier SFTP feeds, product catalogs, images, safety data, orders, and MultiValue/Universe data.
+- Delivered complex integrations across vendor and platform boundaries, including SellerCloud, Essendant, supplier SFTP feeds, product catalogs, images, safety data, orders, and MultiValue/Universe data.
 - Developed real-time browser chat integrated with ticketing workflows and implemented OAuth 2.0 authorization for protected customer sites.
 - Built middleware for cross-platform database migration and backend/client integrations supporting operational continuity.
-- Architected reusable authentication, telemetry, deployment, monitoring, security, and infrastructure-management systems supporting approximately 3,000-4,000 servers across 10 locations.
+- Held end-to-end architecture and operational responsibility for reusable authentication, telemetry, deployment, monitoring, security, and infrastructure-management systems supporting approximately 3,000-4,000 servers across 10 locations.
 
 ## Professional Experience
 
 ### Advantive - Senior Development Specialist
 *Remote / Tampa Bay, FL | July 2022 - Present*
 
-- Serve as a member of the Architecture Team, collaborating with architects and the architecture lead to evaluate technical needs, make architecture decisions, define engineering standards, and guide platform direction across teams.
+- Serve as a member of the Architecture Team, collaborating with architects and the architecture lead to evaluate technical needs, make decisions amid evolving requirements, define engineering standards, and guide platform direction across teams.
 - Develop reusable libraries, technical documentation, and AI-assisted engineering workflows that improve consistency and developer productivity.
 - Implement Azure DevOps, Docker, Kubernetes, Terraform, CI/CD, and security-scanning workflows for reliable, secure software delivery.
 
