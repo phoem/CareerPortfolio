@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-VERSION = "0.2.0"
+VERSION = "0.2.1"
 STANDARD_HEADINGS = {
     "summary",
     "technical skills",
@@ -196,6 +196,8 @@ def extract_requirements(job: str) -> tuple[list[str], list[str]]:
             heading = re.sub(r"^#+\s*", "", stripped).strip().lower().rstrip(":")
             if heading in {
                 "what we are looking for",
+                "what we're looking for",
+                "what we’re looking for",
                 "required qualifications",
                 "requirements",
                 "qualifications",
