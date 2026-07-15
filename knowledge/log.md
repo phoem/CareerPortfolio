@@ -1,5 +1,10 @@
 # Knowledge Base Update Log
 
+## 2026-07-15
+
+* **Creation**: Added Jordan Newman's professional-profile concept.
+* **Confirmation**: Recorded `https://www.linkedin.com/in/jordan-newman-aa3b19b2/` as the canonical LinkedIn URL for future career artifacts.
+
 ## 2026-07-13
 
 * **Creation**: Added a confirmed technology-experience concept for Kubernetes and container runtimes.

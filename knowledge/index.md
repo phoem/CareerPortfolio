@@ -6,6 +6,10 @@ okf_version: "0.1"
 
 This directory is the Open Knowledge Format knowledge bundle used as the factual source for resumes, cover letters, interview preparation, and future professional-portfolio material.
 
+# Professional Profile
+
+* [Jordan Newman Professional Profile](Professional_Profile/README.md) - Confirmed public profile and stable professional identity information used across career artifacts.
+
 # Infrastructure and Distributed Systems
 
 * [CDN Platform](CDN_Platform/README.md) - Production hosting and content-delivery platform spanning thousands of servers and multiple locations.
