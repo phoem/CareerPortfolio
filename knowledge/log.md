@@ -4,6 +4,7 @@
 
 * **Creation**: Added Jordan Newman's professional-profile concept.
 * **Confirmation**: Recorded `https://www.linkedin.com/in/jordan-newman-aa3b19b2/` as the canonical LinkedIn URL for future career artifacts.
+* **Confirmation**: Recorded `https://github.com/phoem` as the canonical GitHub URL for future career artifacts.
 
 ## 2026-07-13
 
