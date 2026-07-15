@@ -164,6 +164,10 @@ def markdown_to_docx(spec: SourceSpec, destination: Path) -> None:
         elif line.startswith("*") and line.endswith("*"):
             paragraph = document.add_paragraph()
             paragraph.paragraph_format.space_after = Pt(0)
+            # Keep resume job metadata (location and dates) with the first
+            # accomplishment bullet so a role heading is not orphaned at a
+            # page boundary. Cover-letter emphasis remains free-flowing.
+            paragraph.paragraph_format.keep_with_next = not is_letter
             paragraph.add_run(line[1:-1]).italic = True
         else:
             paragraph = document.add_paragraph()
