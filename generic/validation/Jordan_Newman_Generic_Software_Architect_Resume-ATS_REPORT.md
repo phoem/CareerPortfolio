@@ -1,6 +1,6 @@
 # ATS Readiness Report
 
-- **Validated:** 2026-07-15T18:18:12+00:00
+- **Validated:** 2026-07-15T18:25:52+00:00
 - **Validator:** CareerPortfolio ATS Validator v0.2.1
 - **Score type:** Generic baseline
 - **Overall score:** 99/100
@@ -40,8 +40,8 @@
 ## Artifact Versions
 
 - `resume`: `d199cdad38e54946614e25f8b78a8c4414173289bcbd781b89a8fb868315146a`
-- `docx`: `a642152f904545e028ef2806b99bea13ceeadcaac75665fcf55137bbd00d9994`
-- `pdf`: `6b4ef2251ed5bd82aec4c0a2531b99a613c2794e2871a5012e225353ddaed493`
+- `docx`: `fdc6891be8ce2cdf143ef96a5dec0258485bb7c80449e67aae2eb17de0ddc4e2`
+- `pdf`: `a0736d0fad9e9984035c652723d4a7df13fe2dffa0116067d53394d76b593682`
 
 ## Recommended Next Action
 
