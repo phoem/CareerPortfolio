@@ -9,6 +9,7 @@ This directory is the Open Knowledge Format knowledge bundle used as the factual
 # Professional Profile
 
 * [Jordan Newman Professional Profile](Professional_Profile/README.md) - Confirmed public profile and stable professional identity information used across career artifacts.
+* [Jordan Newman Career Timeline](Career_Timeline/README.md) - Confirmed employment titles and dates used across career artifacts and LinkedIn synchronization.
 
 # Infrastructure and Distributed Systems
 
