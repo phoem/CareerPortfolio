@@ -17,9 +17,10 @@ Agents working in this repository must preserve factual accuracy, avoid inventin
 4. `designs/` contains reusable rendering designs and the repository default.
 5. `docs/workflows/RESUME_WORKFLOW.md` defines the detailed operating process.
 6. `docs/workflows/ATS_VALIDATION.md` defines the ATS validation and revision-loop process.
-7. `docs/OKF_PORTFOLIO.md` defines the repository-specific OKF conventions.
-8. `docs/decisions/` contains Architecture Decision Records for significant repository decisions.
-9. `docs/ROADMAP.md` stores deferred ideas and future enhancements that are not yet justified for implementation.
+7. `docs/workflows/LINKEDIN_PROFILE_WORKFLOW.md` defines the manual LinkedIn review, approval, publishing, and verification process.
+8. `docs/OKF_PORTFOLIO.md` defines the repository-specific OKF conventions.
+9. `docs/decisions/` contains Architecture Decision Records for significant repository decisions.
+10. `docs/ROADMAP.md` stores deferred ideas and future enhancements that are not yet justified for implementation.
 
 ## Required Behavior
 
@@ -101,3 +102,13 @@ When Jordan provides new information:
 - Commit directly to `main` by default unless Jordan explicitly requests a branch or pull request.
 - Use clear commit messages that describe the resume, knowledge, workflow, ADR, roadmap, design, or application change.
 - Do not reorganize or rename existing files without a concrete benefit and corresponding README, index, and ADR updates when appropriate.
+
+## LinkedIn Profile Changes
+
+- Run the LinkedIn workflow only when Jordan explicitly requests it.
+- Keep the review phase read-only and present exact, evidence-supported replacement text before editing.
+- Require explicit field-level approval before making any externally visible change.
+- Publish only the approved wording and verify every saved field afterward.
+- Never store LinkedIn credentials, cookies, session tokens, or recovery information.
+- Never modify unrelated account, privacy, job-search, messaging, connection, endorsement, recommendation, or posting settings.
+- Stop for renewed approval if the current profile or proposed wording materially changes after the approval gate.

@@ -84,6 +84,7 @@ Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, Pri
 - `AGENTS.md` contains concise repository-level instructions for AI and coding agents.
 - `docs/workflows/RESUME_WORKFLOW.md` contains the detailed selection, evidence-mapping, gap-question, and knowledge-capture process.
 - `docs/workflows/ATS_VALIDATION.md` defines the ATS compatibility, job-alignment, revision-loop, and score-history process.
+- `docs/workflows/LINKEDIN_PROFILE_WORKFLOW.md` defines the manual read-only review, proposal, approval-gated publishing, and verification process for LinkedIn.
 - `docs/OKF_PORTFOLIO.md` documents the repository-specific OKF conventions.
 - `docs/STARTER_GUIDE.md` explains how another person can bootstrap their own CareerPortfolio.
 - `docs/ROADMAP.md` records deferred enhancements and promotion criteria without prematurely adding structure.
@@ -92,6 +93,8 @@ Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, Pri
 - `.github/workflows/generate-resume-artifacts.yml` rebuilds only sources changed on `main`; repository-wide rebuilds require an explicitly approved manual dispatch.
 - `.github/workflows/validate-resumes.yml` is called with the exact build manifest and validates only resumes rebuilt by that run.
 - Generated DOCX and PDF files must remain consistent with their Markdown sources and be visually reviewed before use.
+
+LinkedIn profile synchronization is intentionally manual. CareerPortfolio proposes exact evidence-backed changes first and edits the authenticated profile only after Jordan approves specific fields.
 
 ## Repository
 

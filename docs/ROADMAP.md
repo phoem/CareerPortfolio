@@ -15,6 +15,8 @@ This roadmap records useful future ideas without committing the repository to pr
 - ATS readiness validation, score history, and three-pass revision guardrail.
 - Reusable resume designs under `designs/`.
 - Repository-default, persistent application, and one-build design selection.
+- Stable professional-profile knowledge concept with canonical LinkedIn and GitHub URLs.
+- Manual approval-gated LinkedIn review and publishing workflow.
 
 ## Near-Term Enhancements
 
@@ -23,7 +25,6 @@ These are accepted ideas that directly improve current resume and application wo
 - Complete the shared verified metrics catalog.
 - Complete the shared confirmed technology-experience catalog.
 - Add a resume and artifact style guide.
-- Add a stable professional-profile knowledge concept.
 - Restore exact job descriptions for existing application packages.
 - Run and calibrate the ATS validator against the Netflix Compute Runtime application.
 - Validate the actual generated PDF and DOCX artifacts, not only Markdown sources.
@@ -39,7 +40,6 @@ Add these when a real application, interview, promotion, or public-profile need 
 - Interview preparation workflow.
 - STAR-format interview stories.
 - Role- and company-specific interview packets stored with or linked to the relevant application package.
-- LinkedIn profile generation and synchronization.
 - Recruiter-facing professional profile.
 - Promotion packets and performance-review evidence.
 - Executive and conference biographies.

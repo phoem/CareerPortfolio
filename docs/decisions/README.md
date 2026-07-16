@@ -33,6 +33,7 @@ ADRs are immutable historical records. When a decision changes, add a new ADR th
 | [0015](0015-organize-targeted-applications-by-company-and-posting.md) | Organize targeted applications by company and posting | Accepted |
 | [0016](0016-support-selectable-resume-designs.md) | Support selectable resume designs | Accepted |
 | [0017](0017-use-incremental-artifact-builds-and-scoped-validation.md) | Use incremental artifact builds and scoped validation | Accepted |
+| [0018](0018-use-an-approval-gated-linkedin-profile-workflow.md) | Use an approval-gated LinkedIn profile workflow | Accepted |
 
 ## Creating a new ADR
 
