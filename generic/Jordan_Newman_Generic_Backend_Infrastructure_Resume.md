@@ -35,23 +35,23 @@ Backend and infrastructure engineer specializing in distributed systems, high-pe
 ## Professional Experience
 
 ### Advantive - Senior Development Specialist
-*Remote / Tampa Bay, FL | July 2022 - Present*
+*Remote / Tampa Bay, FL | June 2022 - Present*
 
 - Implemented Azure DevOps, Docker, Kubernetes, Terraform, CI/CD, and security-scanning workflows across engineering teams.
 - Served as a member of the Architecture Team, collaborating with fellow architects and the architecture lead to make technical decisions, define engineering standards, guide platform direction, and develop shared libraries, documentation, and AI-assisted engineering workflows.
 
 ### DDI Systems - Senior Development Specialist
-*Manalapan, NJ | November 2021 - July 2022*
+*Manalapan, NJ | October 2021 - July 2022*
 
 - Modernized legacy VB.NET components in C# and integrated Microsoft Office 365 SMTP OAuth for secure customer-facing workflows.
 
 ### ISPrime LLC - CEO
-*Weehawken, NJ | April 2018 - January 2020*
+*Weehawken, NJ | March 2018 - December 2019*
 
 - Led datacenter modernization, operational restructuring, and improvements to internally developed monitoring, security, and infrastructure platforms.
 
 ### DDI Systems - Computer Programmer
-*Manalapan, NJ | April 2017 - April 2018*
+*Manalapan, NJ | April 2017 - March 2018*
 
 - Built ERP integrations and automated order, catalog, image, SDS, SFTP, SellerCloud, Essendant, and MultiValue/Universe data workflows.
 
@@ -71,7 +71,7 @@ Backend and infrastructure engineer specializing in distributed systems, high-pe
 - Built automated purchasing, inventory, repair, resale, and financial workflow software.
 
 ### ISPrime Inc. - CIO / Partner
-*Weehawken, NJ | March 2001 - December 2014*
+*Weehawken, NJ | January 2001 - December 2014*
 
 **Infrastructure Leadership**
 - Architected and operated hosting and CDN infrastructure spanning approximately 3,000-4,000 servers, 10 locations, multiple datacenters, and more than 65 Gbps of peak traffic.
