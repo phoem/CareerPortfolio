@@ -35,6 +35,7 @@ Agents working in this repository must preserve factual accuracy, avoid inventin
 - If Jordan confirms relevant experience, gather only the details needed to document it accurately, update the appropriate OKF concept first, then use it in a resume.
 - Leave unknown fields out rather than filling them with assumptions.
 - Prefer concrete scale, architecture, implementation details, and measured outcomes when documented.
+- Use the Google XYZ formula as a preferred resume-bullet guideline when supported: outcome (X), verified measure or scope (Y), and Jordan’s method or contribution (Z). Do not force literal XYZ phrasing or invent a metric; follow `docs/STYLE_GUIDE.md`.
 - Tailor technical depth to the audience: recruiter, ATS, hiring manager, systems engineer, or architect.
 - Keep the three generic resumes broadly reusable while selectively improving each with the strongest relevant project descriptions.
 - Keep targeted resumes tightly aligned to their own posting.
