@@ -21,6 +21,7 @@ LinkedIn access uses a browser session in which Jordan is already signed in, or 
 - Review is read-only until Jordan explicitly approves proposed field changes.
 - Approval is field-specific. Silence, general enthusiasm, or approval of one field does not authorize changes to another field.
 - Never modify account security, privacy, visibility, contact preferences, job-search settings, connections, messages, recommendations, endorsements, or posts through this workflow.
+- Skills may be added, removed, or reordered when supported by verified CareerPortfolio evidence and explicitly approved. Never add, remove, request, or otherwise manipulate endorsements.
 - Never publish a post, notify the network, follow or unfollow an account, or send a connection request.
 - If LinkedIn's current content changes after proposal generation, stop and obtain renewed approval for the affected field.
 
@@ -43,6 +44,34 @@ LinkedIn access uses a browser session in which Jordan is already signed in, or 
    - opportunities to improve recruiter searchability and technical positioning;
    - dates, titles, or metrics that require Jordan's confirmation.
 5. Do not infer that LinkedIn-only information is correct when it conflicts with or is absent from CareerPortfolio. Ask Jordan to confirm it.
+
+## Skills Review and Synchronization
+
+Treat the LinkedIn Skills section as profile data that can be reviewed and updated, while treating endorsements as out of scope.
+
+1. Compare visible LinkedIn skills with confirmed technology, domain, project, and employment knowledge.
+2. Classify skills as:
+   - confirmed and appropriately represented;
+   - confirmed but missing;
+   - duplicated, stale, misleading, or too broad;
+   - unsupported and requiring Jordan's confirmation;
+   - candidates for higher or lower profile priority.
+3. Propose exact skill additions, removals, and ordering changes with supporting evidence.
+4. Record newly confirmed skills in the appropriate OKF concept before proposing them for LinkedIn.
+5. Require explicit approval for each set of skill changes.
+6. After publishing, verify the visible skills and ordering without interacting with endorsements.
+
+## Incorrect Information and Removal
+
+When Jordan states that existing LinkedIn information is wrong or inaccurate:
+
+1. Treat that statement as a factual correction and stop using the incorrect claim as evidence.
+2. Update the relevant CareerPortfolio knowledge concept to remove, correct, or explicitly mark the contradicted information before it is reused elsewhere.
+3. Propose either exact replacement wording or deletion of the affected LinkedIn field or entry.
+4. Explain any consequence of deleting the entire entry instead of editing only the incorrect portion.
+5. Obtain explicit publishing approval for the exact correction or deletion.
+
+Saying that information is wrong confirms the knowledge correction, but it does not by itself authorize the external LinkedIn edit. If Jordan explicitly says to remove or replace the information on LinkedIn, that instruction may serve as field-level approval after the workflow restates the exact affected field and intended action.
 
 ## Proposal Format
 
@@ -68,6 +97,7 @@ Stop after presenting the proposal. Do not edit LinkedIn until Jordan explicitly
 - all proposed changes;
 - a named subset of fields;
 - revised wording supplied or confirmed by Jordan.
+- an exact deletion or replacement Jordan explicitly directs after identifying incorrect information.
 
 Before publishing, restate the exact fields authorized and the final text that will be entered. Material wording changes made after approval require renewed approval.
 

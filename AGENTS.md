@@ -111,4 +111,7 @@ When Jordan provides new information:
 - Publish only the approved wording and verify every saved field afterward.
 - Never store LinkedIn credentials, cookies, session tokens, or recovery information.
 - Never modify unrelated account, privacy, job-search, messaging, connection, endorsement, recommendation, or posting settings.
+- Review LinkedIn skills against verified knowledge and propose evidence-supported additions, removals, or ordering changes; never manipulate endorsements.
+- When Jordan identifies LinkedIn information as false, correct the relevant OKF knowledge first, then propose an exact deletion or replacement.
+- Treat factual correction and external publishing approval separately unless Jordan explicitly directs the exact LinkedIn removal or replacement.
 - Stop for renewed approval if the current profile or proposed wording materially changes after the approval gate.

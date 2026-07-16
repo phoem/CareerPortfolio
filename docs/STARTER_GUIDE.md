@@ -13,6 +13,7 @@ docs/
   workflows/
     RESUME_WORKFLOW.md
     ATS_VALIDATION.md
+    LINKEDIN_PROFILE_WORKFLOW.md
   OKF_PORTFOLIO.md
   STARTER_GUIDE.md
   ROADMAP.md
@@ -26,6 +27,7 @@ designs/
 scripts/
   generate_resume_artifacts.py
   validate_resume.py
+  validate_rebuilt_artifacts.py
   record_ats_history.py
 .github/workflows/
   generate-resume-artifacts.yml
@@ -177,6 +179,22 @@ A new CareerPortfolio should begin by gathering:
 
 Capture confirmed project knowledge first, then build the canonical generic resumes from that knowledge.
 
+## LinkedIn Workflow Setup
+
+`docs/workflows/LINKEDIN_PROFILE_WORKFLOW.md` is reusable, but a new owner must personalize it before the first run.
+
+1. Replace references to Jordan Newman with the portfolio owner's name.
+2. Create or update `knowledge/Professional_Profile/README.md` with the owner's exact canonical LinkedIn URL.
+3. Record the owner's confirmed GitHub or other public profile URLs only when supplied by that person.
+4. Update `AGENTS.md` and the repository README if they contain another person's name, repository URL, or profile URL.
+5. Build enough verified project, employment, technology, and skills knowledge for meaningful comparison before requesting a LinkedIn review.
+6. Open LinkedIn in a browser session where the owner signs in interactively. Never store credentials, cookies, recovery codes, or session tokens in CareerPortfolio.
+7. Invoke the workflow manually, for example: `Run my LinkedIn profile workflow.`
+
+The workflow first performs a read-only scan and presents exact proposed changes. The owner must approve specific fields before anything is changed on LinkedIn. Skills may be added, removed, or reordered when supported by verified knowledge and explicitly approved; endorsements are never changed.
+
+When the owner says existing LinkedIn information is false, update the CareerPortfolio knowledge record to preserve the correction, then propose an exact deletion or replacement. Confirmation that information is false does not by itself authorize an external edit unless the owner also explicitly directs the workflow to remove or replace it.
+
 ## Recommended First Milestone
 
 A useful initial repository contains:
@@ -187,4 +205,5 @@ A useful initial repository contains:
 - one technologies concept;
 - at least one canonical generic resume;
 - the workflow, application-package, and design documentation;
+- a personalized, approval-gated LinkedIn workflow when LinkedIn synchronization is desired;
 - no unsupported claims.
