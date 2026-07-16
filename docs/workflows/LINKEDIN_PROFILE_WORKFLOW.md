@@ -78,7 +78,7 @@ Saying that information is wrong confirms the knowledge correction, but it does 
 
 Present a proposal before opening any LinkedIn edit form. For every proposed change include:
 
-| Field | Current text | Proposed text | Evidence | Reason | Approval status |
+| Field | Current value | Exact proposal | Evidence | Reason | Approval status |
 |---|---|---|---|---|---|
 
 Also report:
@@ -89,7 +89,7 @@ Also report:
 - any change that may cause LinkedIn to notify the network;
 - a concise priority order.
 
-Use exact final replacement text, not merely a description of the intended edit.
+For longer fields, show the complete current value and complete exact final replacement text, not merely a description of the intended edit.
 
 ## Approval Gate
 
