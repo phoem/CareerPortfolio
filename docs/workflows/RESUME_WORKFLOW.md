@@ -31,7 +31,7 @@ All three should improve over time, but each should emphasize the same facts dif
 8. For each meaningful gap, ask Jordan whether he has worked on a project involving that capability.
 9. When Jordan provides relevant experience, update the knowledge bundle before relying on it in the resume.
 10. Add cross-links, citations, metadata, and a log entry when the new knowledge warrants them.
-11. Tailor the summary, skills order, selected highlights, project descriptions, and work-history bullets.
+11. Tailor the summary, skills order, selected highlights, project descriptions, and work-history bullets using `docs/STYLE_GUIDE.md`. Prefer the Google XYZ formula—outcome (X), verified measure or scope (Y), and method (Z)—when the documented facts support it; use an outcome-first alternative when they do not.
 12. Produce Markdown and rebuild only the corresponding DOCX and PDF deliverables.
 13. Pass the exact rebuilt-artifact manifest to the ATS readiness and final-artifact validation process in `docs/workflows/ATS_VALIDATION.md`.
 14. Resolve critical failures and repeat validation until the application is at least Strong or Jordan explicitly approves submission with known limitations.
