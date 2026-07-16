@@ -96,6 +96,8 @@ Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, Pri
 
 LinkedIn profile synchronization is intentionally manual. CareerPortfolio proposes exact evidence-backed changes first and edits the authenticated profile only after Jordan approves specific fields.
 
+All attempted and completed LinkedIn edits are recorded in the append-only `linkedin/CHANGELOG.md` audit trail with timestamps, before/after state, approval scope, result, and verification details.
+
 ## Repository
 
 `phoem/CareerPortfolio`

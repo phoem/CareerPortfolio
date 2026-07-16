@@ -115,3 +115,5 @@ When Jordan provides new information:
 - When Jordan identifies LinkedIn information as false, correct the relevant OKF knowledge first, then propose an exact deletion or replacement.
 - Treat factual correction and external publishing approval separately unless Jordan explicitly directs the exact LinkedIn removal or replacement.
 - Stop for renewed approval if the current profile or proposed wording materially changes after the approval gate.
+- Append every attempted or successful LinkedIn edit to `linkedin/CHANGELOG.md` with timestamp, before/after state, approval, result, and verification details.
+- Treat the LinkedIn change log as append-only; add correction entries instead of silently rewriting history.

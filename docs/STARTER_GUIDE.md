@@ -42,9 +42,14 @@ knowledge/
   log.md
 generic/
 applications/
+linkedin/
+  README.md
+  CHANGELOG.md
 ```
 
 Do not copy another person's project concepts, resumes, metrics, contact details, or company-specific application materials unless they are being used only as examples and are fully replaced.
+
+Do not copy another person's LinkedIn change-log entries. Start `linkedin/CHANGELOG.md` with only its heading and initialization note.
 
 ## Application Package Structure
 
@@ -190,10 +195,14 @@ Capture confirmed project knowledge first, then build the canonical generic resu
 5. Build enough verified project, employment, technology, and skills knowledge for meaningful comparison before requesting a LinkedIn review.
 6. Open LinkedIn in a browser session where the owner signs in interactively. Never store credentials, cookies, recovery codes, or session tokens in CareerPortfolio.
 7. Invoke the workflow manually, for example: `Run my LinkedIn profile workflow.`
+8. Set the owner's preferred audit-log timezone and require ISO 8601 timestamps with an explicit UTC offset.
+9. Initialize an empty, append-only `linkedin/CHANGELOG.md`; never copy Jordan's entries into another portfolio.
 
 The workflow first performs a read-only scan and presents exact proposed changes. The owner must approve specific fields before anything is changed on LinkedIn. Skills may be added, removed, or reordered when supported by verified knowledge and explicitly approved; endorsements are never changed.
 
 When the owner says existing LinkedIn information is false, update the CareerPortfolio knowledge record to preserve the correction, then propose an exact deletion or replacement. Confirmation that information is false does not by itself authorize an external edit unless the owner also explicitly directs the workflow to remove or replace it.
+
+Every attempted or successful LinkedIn edit must be logged with its timestamp, field, action, exact before and after state, approval, result, and verification status. Failed or partially completed attempts are valuable audit information and must also be recorded. Never store authentication or private-session material in the log.
 
 ## Recommended First Milestone
 

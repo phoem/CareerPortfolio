@@ -24,6 +24,7 @@ LinkedIn access uses a browser session in which Jordan is already signed in, or 
 - Skills may be added, removed, or reordered when supported by verified CareerPortfolio evidence and explicitly approved. Never add, remove, request, or otherwise manipulate endorsements.
 - Never publish a post, notify the network, follow or unfollow an account, or send a connection request.
 - If LinkedIn's current content changes after proposal generation, stop and obtain renewed approval for the affected field.
+- Record every attempted or successful profile edit in `linkedin/CHANGELOG.md`.
 
 ## Phase 1: Read-Only Review
 
@@ -96,7 +97,7 @@ Stop after presenting the proposal. Do not edit LinkedIn until Jordan explicitly
 
 - all proposed changes;
 - a named subset of fields;
-- revised wording supplied or confirmed by Jordan.
+- revised wording supplied or confirmed by Jordan;
 - an exact deletion or replacement Jordan explicitly directs after identifying incorrect information.
 
 Before publishing, restate the exact fields authorized and the final text that will be entered. Material wording changes made after approval require renewed approval.
@@ -113,6 +114,7 @@ For each approved field, one at a time:
 6. Save the change.
 7. Re-read the visible profile field and verify it matches the approved text.
 8. Stop immediately if the save fails, the UI behaves unexpectedly, or LinkedIn presents an additional consequential choice.
+9. Append the result to `linkedin/CHANGELOG.md`, including failed or partially completed attempts.
 
 Do not batch unverified edits. A failure in one field does not authorize alternative wording or changes elsewhere.
 
@@ -129,6 +131,53 @@ After publishing, report:
 
 Update the relevant OKF concepts and `knowledge/log.md` when the successful LinkedIn update reflects newly confirmed professional knowledge. Do not store authentication material or unnecessary browser captures in the repository.
 
+## Required Change Log
+
+`linkedin/CHANGELOG.md` is an append-only audit trail. A publishing session is not complete until every attempted field change has been logged and committed.
+
+Each entry must include all applicable information:
+
+- ISO 8601 date and time with an explicit UTC offset;
+- canonical LinkedIn profile URL;
+- profile field or specific item affected;
+- action: added, removed, updated, reordered, attempted, or reverted;
+- exact previous visible text or state;
+- exact approved intended text or state;
+- final visible text or state after the attempt;
+- who approved the change and the approved scope;
+- success, failure, partial, or not-saved result;
+- post-save verification status;
+- network-notification setting observed when applicable;
+- LinkedIn warning, validation message, or unexpected UI behavior;
+- supporting CareerPortfolio evidence or knowledge concept;
+- related CareerPortfolio commit when available;
+- follow-up or rollback recommendation.
+
+Use this entry template:
+
+```markdown
+## 2026-07-15T15:30:00-04:00 — Headline updated
+
+- **Profile:** https://www.linkedin.com/in/example/
+- **Field:** Headline
+- **Action:** Updated
+- **Before:** Exact prior text
+- **Approved change:** Exact approved replacement
+- **Final visible state:** Exact text observed after saving
+- **Approval:** Profile owner approved the Headline replacement
+- **Result:** Success
+- **Verification:** Verified after save
+- **Network notification:** Disabled / not offered / unknown
+- **Evidence:** `knowledge/...`
+- **Warnings or errors:** None
+- **Related commit:** Pending / commit URL
+- **Follow-up:** None
+```
+
+Log failures and no-save attempts honestly. If an entry is later found to be inaccurate, append a correction that references the original timestamp; do not silently rewrite or delete history.
+
+Never log credentials, cookies, session tokens, recovery data, private messages, or other authentication and private-session material.
+
 ## Optional Review Record
 
 When Jordan asks to preserve a review, store it under:
@@ -139,4 +188,4 @@ linkedin/reviews/<YYYY-MM-DD>/
     RESULT.md
 ```
 
-Do not create or commit a profile snapshot or review record by default. The chat proposal and completion report are sufficient unless Jordan explicitly wants a durable audit record.
+Do not create or commit a profile snapshot or proposal record by default. The required `linkedin/CHANGELOG.md` remains mandatory for actual edit attempts; the chat proposal and completion report are sufficient for review-only sessions unless Jordan explicitly wants a durable proposal record.

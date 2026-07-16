@@ -17,6 +17,7 @@ This roadmap records useful future ideas without committing the repository to pr
 - Repository-default, persistent application, and one-build design selection.
 - Stable professional-profile knowledge concept with canonical LinkedIn and GitHub URLs.
 - Manual approval-gated LinkedIn review and publishing workflow.
+- Append-only audit log for attempted and completed LinkedIn profile changes.
 
 ## Near-Term Enhancements
 
