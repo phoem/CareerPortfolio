@@ -5,6 +5,9 @@
 * **Creation**: Added Jordan Newman's professional-profile concept.
 * **Confirmation**: Recorded `https://www.linkedin.com/in/jordan-newman-aa3b19b2/` as the canonical LinkedIn URL for future career artifacts.
 * **Confirmation**: Recorded `https://github.com/phoem` as the canonical GitHub URL for future career artifacts.
+* **Creation**: Added a confirmed career-timeline concept for employment dates and titles.
+* **Correction**: Standardized Advantive to June 2022 - Present; DDI System to October 2021 - July 2022 as Senior Development Specialist; ISPRIME CEO to March 2018 - December 2019; DDI System (2017) to April 2017 - March 2018; and ISPRIME Owner and CIO to January 2001 - December 2014.
+* **Synchronization**: Updated all three canonical generic resume sources to use the confirmed timeline.
 
 ## 2026-07-13
 
