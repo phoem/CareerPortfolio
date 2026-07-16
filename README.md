@@ -86,6 +86,7 @@ Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, Pri
 - `docs/workflows/ATS_VALIDATION.md` defines the ATS compatibility, job-alignment, revision-loop, and score-history process.
 - `docs/workflows/LINKEDIN_PROFILE_WORKFLOW.md` defines the manual read-only review, proposal, approval-gated publishing, and verification process for LinkedIn.
 - `docs/OKF_PORTFOLIO.md` documents the repository-specific OKF conventions.
+- `docs/STYLE_GUIDE.md` defines outcome-oriented resume writing, including the Google XYZ formula as a non-mechanical guideline.
 - `docs/STARTER_GUIDE.md` explains how another person can bootstrap their own CareerPortfolio.
 - `docs/ROADMAP.md` records deferred enhancements and promotion criteria without prematurely adding structure.
 - `docs/decisions/README.md` indexes the Architecture Decision Records that explain significant repository decisions.
