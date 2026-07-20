@@ -2,9 +2,23 @@
 
 This guide explains how another person can create a new CareerPortfolio without copying Jordan Newman's private career data.
 
-## Recommended Starter Files
+## Automated Setup
 
-Copy these repository-level files and directories:
+From this CareerPortfolio repository, run:
+
+```bash
+python scripts/create_career_portfolio.py /path/to/new/CareerPortfolio --owner-name "Example Person"
+```
+
+The destination path is the exact directory that becomes the new repository root. It must be empty or not yet exist. Use `--force` only to refresh reusable scaffold files in a non-empty destination. The initializer never deletes unrelated files and never resets an existing knowledge index, knowledge log, or LinkedIn change log.
+
+The initializer copies and personalizes all reusable workflows, designs, documentation, and scripts from this repository. It creates privacy-safe starter documentation, empty `generic/` and `applications/` directories, an OKF knowledge bundle, and a new LinkedIn audit log. It deliberately excludes resumes, project and career concepts, application packages, generated artifacts, validation history, existing LinkedIn entries, and this repository's ADR history.
+
+The script validates its reusable-file manifest before writing the destination. If a new workflow, design, or script has been added to the source repository without being classified for the starter, initialization stops with an error instead of silently omitting it.
+
+## Manual Setup Reference
+
+When the initializer cannot be used, use this as the manual scaffold checklist. Copy reusable implementation files, but personalize owner references and replace source-specific examples. Create clean template-backed repository, knowledge, roadmap, style-guide, ADR-index, and LinkedIn-log files rather than carrying another person's content or history forward.
 
 ```text
 README.md
@@ -16,6 +30,7 @@ docs/
     LINKEDIN_PROFILE_WORKFLOW.md
   OKF_PORTFOLIO.md
   STARTER_GUIDE.md
+  STYLE_GUIDE.md
   ROADMAP.md
   decisions/
     README.md
@@ -29,6 +44,7 @@ scripts/
   validate_resume.py
   validate_rebuilt_artifacts.py
   record_ats_history.py
+  create_career_portfolio.py
 .github/workflows/
   generate-resume-artifacts.yml
   validate-resumes.yml
@@ -50,6 +66,8 @@ linkedin/
 Do not copy another person's project concepts, resumes, metrics, contact details, or company-specific application materials unless they are being used only as examples and are fully replaced.
 
 Do not copy another person's LinkedIn change-log entries. Start `linkedin/CHANGELOG.md` with only its heading and initialization note.
+
+Do not copy the source repository's ADR index entries without the corresponding decisions. Start `docs/decisions/README.md` with an empty index for the new portfolio. Remove source-specific project names and metrics from examples in copied documentation.
 
 ## Application Package Structure
 
@@ -186,7 +204,7 @@ Capture confirmed project knowledge first, then build the canonical generic resu
 
 ## LinkedIn Workflow Setup
 
-`docs/workflows/LINKEDIN_PROFILE_WORKFLOW.md` is reusable, but a new owner must personalize it before the first run.
+`docs/workflows/LINKEDIN_PROFILE_WORKFLOW.md` is reusable. The initializer personalizes it automatically; a manual setup must personalize it before the first run.
 
 1. Replace references to Jordan Newman with the portfolio owner's name.
 2. Create or update `knowledge/Professional_Profile/README.md` with the owner's exact canonical LinkedIn URL.
