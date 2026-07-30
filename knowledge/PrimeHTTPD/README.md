@@ -3,7 +3,8 @@ type: Software Project
 title: PrimeHTTPD
 description: High-performance non-blocking event-driven HTTP and CDN server written in C for FreeBSD.
 tags: [c, freebsd, http, cdn, networking, performance, kqueue, c10k]
-timestamp: 2026-07-30T00:00:00Z
+generated:
+  at: 2026-07-30T00:00:00Z
 status: partial
 owner: Jordan Newman
 evidence_status: confirmed
@@ -54,7 +55,7 @@ Known production context:
 
 The platform also used [VirtualDir](/VirtualDir/README.md), [PrimeDump](/PrimeDump/README.md), [PrimeDNSTop](/PrimeDNSTop/README.md), and other custom operational software.
 
-## Evidence
+## Evidence Quality
 
 - **Exact qualitative fact:** PrimeHTTPD was intentionally architected to solve the C10K problem.
 - **Exact qualitative fact:** Jordan selected an event-driven `kqueue` design because he judged it the most efficient concurrency model for that problem.
