@@ -3,7 +3,8 @@ type: Kernel Module
 title: VirtualDir
 description: FreeBSD kernel module that virtualizes filesystem paths through transparent syscall interception and configurable path remapping.
 tags: [freebsd, kernel, filesystem, syscalls, virtualization, hosting]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  at: 2026-07-12T00:00:00Z
 status: partial
 owner: Jordan Newman
 evidence_status: confirmed
@@ -44,6 +45,12 @@ Known deployment information:
 - customer-facing production use;
 - deployed across approximately 30 servers;
 - used for approximately 5-8 years.
+
+## Evidence Quality
+
+- The deployment count and duration are estimates and must remain approximate downstream.
+- Kernel-module authorship, syscall interception, runtime configuration, and production use are confirmed qualitative facts.
+- No benchmark or quantified performance-overhead claim is currently resume-safe.
 
 ## Management Commands
 
