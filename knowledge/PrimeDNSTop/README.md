@@ -3,7 +3,8 @@ type: DNS Analysis Tool
 title: PrimeDNSTop
 description: Custom DNS traffic-monitoring tool for abnormal-activity and recursion-attack analysis.
 tags: [dns, networking, security, ddos, rfc1035]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  at: 2026-07-12T00:00:00Z
 status: partial
 owner: Jordan Newman
 evidence_status: confirmed
@@ -21,6 +22,11 @@ PrimeDNSTop is a custom DNS traffic-monitoring tool built to identify abnormal D
 - parses RFC 1035 DNS queries;
 - ranks source and domain activity;
 - supports detection and investigation of DNS recursion attacks.
+
+## Evidence Quality
+
+- DNS parsing, activity ranking, and production investigation use are confirmed qualitative evidence.
+- No query-rate, deployment-count, or detection-accuracy metric is currently resume-safe.
 
 ## Relationship to the Platform
 
