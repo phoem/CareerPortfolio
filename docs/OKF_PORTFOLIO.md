@@ -53,6 +53,20 @@ Repository extensions:
 
 Unknown fields must be preserved during edits.
 
+## Evidence Quality
+
+Concepts should make the quality and limits of important evidence visible in prose or a dedicated `Evidence` section. Use the smallest amount of structure that keeps the distinction clear.
+
+Useful classifications include:
+
+- **Exact** — a value, date, implementation detail, or outcome known precisely from a reliable record or direct confirmation.
+- **Estimated** — an explicitly approximate value or range; preserve words such as `approximately`, `about`, or `estimated` in downstream wording.
+- **Externally supported** — a claim supported by a publication, repository, benchmark record, or other source listed under `Citations`.
+- **Qualitative** — a confirmed fact without a defensible numeric measure.
+- **Resume-safe wording** — an optional concise wording variant that faithfully preserves the underlying evidence classification and personal ownership.
+
+Do not encode a metric as exact merely because it appears precise in an old resume. Do not treat external publication as proof of Jordan's personal contribution unless the concept separately documents that ownership.
+
 ## Concept Types
 
 Types are descriptive, not centrally registered. Preferred values include:
@@ -81,6 +95,20 @@ PrimeHTTPD was part of the [CDN platform](/CDN_Platform/README.md) and worked al
 ```
 
 Relationship meaning is expressed in prose, consistent with OKF.
+
+## Open Questions
+
+Use an `Open Questions` section in the nearest relevant concept to preserve missing details that could materially strengthen future resumes, application evidence maps, or interviews.
+
+Open questions should:
+
+- ask for a specific implementation, ownership, scale, performance, reliability, or outcome detail;
+- remain clearly separated from confirmed factual sections;
+- avoid speculative answers or implied claims;
+- be removed, answered, or rewritten when Jordan provides the missing information;
+- trigger a `knowledge/log.md` entry when the answer produces a meaningful knowledge change.
+
+Do not create a parallel missing-knowledge database unless repeated use demonstrates that concept-local questions are insufficient.
 
 ## Citations
 
