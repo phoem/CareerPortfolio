@@ -1,5 +1,11 @@
 # Knowledge Base Update Log
 
+## 2026-07-30
+
+* **PrimeHTTPD clarification**: Recorded that PrimeHTTPD was intentionally architected around the C10K concurrency problem and that Jordan selected a non-blocking, event-driven `kqueue` design as the most efficient approach for the problem.
+* **Historical boundary**: Recorded the narrower, resume-safe context that Jordan was not aware of a publicly released event-driven web server solving the same need at the time, without claiming universal or industry-wide priority.
+* **Evidence quality**: Classified PrimeHTTPD concurrency motivation, production scale, estimated infrastructure scale, and historical context; expanded open questions for dates and contemporaneous benchmark evidence.
+
 ## 2026-07-15
 
 * **Creation**: Added Jordan Newman's professional-profile concept.
