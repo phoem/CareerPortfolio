@@ -35,6 +35,9 @@ These are accepted ideas that directly improve current resume and application wo
 - Add design preview images and design-level ATS baseline results.
 - Continue expanding project concepts only as real job requirements expose useful gaps.
 - Add validation checks for OKF conformance, broken links, duplicated metrics, inconsistent resume claims, and stale application evidence maps.
+- Review a representative PrimeHTTPD production configuration to document directives, defaults, feature combinations, operational controls, and deployment assumptions.
+- Review the PrimeHTTPD source code when available to verify process lifecycle, descriptor ownership, worker failure recovery, cache behavior, protocol features, and implementation details before promoting recollections to source-verified claims.
+- Create a PrimeAuth knowledge concept when its architecture and operational role are next needed for an application or interview.
 
 ## Future Capabilities
 
@@ -57,6 +60,12 @@ Add these when a real application, interview, promotion, or public-profile need 
 - GitHub Actions quality gate for ATS readiness, artifact consistency, OKF validation, evidence-map freshness, and design regression checks.
 - Per-resume design overrides for generic resumes.
 - Design inheritance, variants, preview generation, and accessibility checks.
+- Interview-grade project templates covering problem, constraints, architecture, algorithms, operating-system interactions, performance, reliability, security, tradeoffs, operational history, lessons, evidence, interview stories, and resume-ready language.
+- A structured career-archaeology workflow that combines interviews, source-code review, configurations, historical records, and production metrics while preserving the provenance of every claim.
+- Source-backed architecture and sequence diagrams generated from verified project knowledge.
+- Reusable technical and behavioral interview-question sets derived from each flagship project.
+- Automated generation of portfolio pages, biographies, technical case studies, and interview packets from the authoritative knowledge bundle.
+- Knowledge completeness and confidence reporting that distinguishes direct confirmation, estimates, source verification, and unresolved recollections.
 
 ## Parking Lot
 
