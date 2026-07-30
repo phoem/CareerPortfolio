@@ -6,9 +6,11 @@ tags:
   - career
   - employment
   - timeline
-timestamp: "2026-07-15"
+generated:
+  at: 2026-07-15T00:00:00Z
 status: confirmed
 owner: Jordan Newman
+evidence_status: confirmed
 ---
 
 # Jordan Newman Career Timeline
@@ -24,6 +26,11 @@ The following dates and titles were confirmed by Jordan during a LinkedIn profil
 | ISPRIME | Chief Executive Officer | March 2018 - December 2019 |
 | DDI System | Computer Programmer | April 2017 - March 2018 |
 | ISPRIME | Owner and CIO | January 2001 - December 2014 |
+
+## Evidence Quality
+
+- Titles and date ranges are exact user-confirmed facts as of 2026-07-15.
+- `Present` is time-sensitive and must be reconfirmed when future evidence indicates an employment change.
 
 ## Notes
 
