@@ -3,6 +3,8 @@ type: Technology Experience
 title: Linux Kernel Experience
 description: Confirmed familiarity with Linux kernel architecture and internals without Linux kernel-module development claims.
 tags: [linux, kernel, systems, performance, debugging]
+generated:
+  at: 2026-07-13T00:00:00Z
 status: partial
 owner: Jordan Newman
 evidence_status: confirmed
@@ -20,6 +22,12 @@ evidence_status: confirmed
 
 - Has not written a Linux kernel module.
 - No claim is currently supported for production Linux kernel development or upstream Linux kernel contributions.
+
+## Evidence Quality
+
+- Linux kernel familiarity is confirmed qualitative evidence.
+- Production kernel-module authorship applies to FreeBSD, not Linux.
+- Downstream wording must not imply Linux kernel-module development or upstream contribution history.
 
 ## Resume-Safe Language
 
