@@ -37,6 +37,7 @@ ADRs are immutable historical records. When a decision changes, add a new ADR th
 | [0019](0019-maintain-an-append-only-linkedin-change-log.md) | Maintain an append-only LinkedIn change log | Accepted |
 | [0020](0020-use-google-xyz-formula-as-resume-bullet-guideline.md) | Use the Google XYZ formula as a resume-bullet guideline | Accepted |
 | [0021](0021-formalize-application-evidence-maps-and-knowledge-evidence-quality.md) | Formalize application evidence maps and knowledge evidence quality | Accepted |
+| [0022](0022-upgrade-knowledge-bundle-to-okf-v0.2.md) | Upgrade the knowledge bundle to OKF v0.2 | Accepted |
 
 ## Creating a new ADR
 
