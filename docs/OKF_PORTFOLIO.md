@@ -1,6 +1,6 @@
 # OKF Knowledge Conventions
 
-This repository uses the [Google Cloud Open Knowledge Format (OKF) v0.1](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) for the professional-knowledge bundle under `knowledge/`.
+This repository uses the [Google Cloud Open Knowledge Format (OKF) v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) for the professional-knowledge bundle under `knowledge/`.
 
 ## What OKF Means Here
 
@@ -12,7 +12,7 @@ This repository does **not** use `project.okf.yaml` files. The Markdown concept 
 
 `knowledge/` is the OKF knowledge-bundle root.
 
-- `knowledge/index.md` provides progressive-disclosure navigation.
+- `knowledge/index.md` provides progressive-disclosure navigation and declares `okf_version: "0.2"`.
 - `knowledge/log.md` records meaningful knowledge changes.
 - Concept directories contain one or more Markdown concept documents.
 
@@ -28,9 +28,14 @@ type: Software Project
 title: Project Name
 description: One-sentence project summary.
 tags: [systems, networking]
-timestamp: 2026-07-12T00:00:00Z
-status: partial
-owner: Person Name
+generated:
+  by: human/jordan-newman
+  at: 2026-07-30T00:00:00Z
+verified:
+  - by: human/jordan-newman
+    at: 2026-07-30T00:00:00Z
+status: active
+owner: Jordan Newman
 evidence_status: confirmed
 ---
 ```
@@ -42,16 +47,55 @@ Standard OKF fields:
 - `description` — one-sentence summary;
 - `resource` — canonical URI when known;
 - `tags` — cross-cutting categorization;
-- `timestamp` — last meaningful knowledge update.
+- `sources` — structured provenance for externally supported claims;
+- `generated` — who or what produced the current content and when;
+- `verified` — who or what confirmed the content against its sources or authoritative record;
+- `status` — lifecycle state;
+- `stale_after` — optional freshness boundary when the knowledge can reasonably expire.
 
 Repository extensions:
 
-- `status` — documentation maturity such as `partial`, `documented`, or `interview-ready`;
 - `owner` — the person whose work is documented;
 - `evidence_status` — normally `confirmed`; use another value only when uncertainty is explicitly documented;
-- `deployment` — optional short production-use summary.
+- `deployment` — optional short production-use summary;
+- documentation-maturity fields may be retained as repository extensions when they do not conflict with OKF lifecycle semantics.
 
 Unknown fields must be preserved during edits.
+
+## v0.1 Migration Rules
+
+- Replace legacy `timestamp` with `generated.at`; preserve the old value when it accurately represents the last meaningful content update.
+- Add `generated.by` using the most accurate known actor. Do not imply that an AI agent authored historical content when it did not.
+- Add `verified` only when a person, source, or deterministic check actually confirmed the content.
+- Move external provenance from body `# Citations` lists into frontmatter `sources` with stable IDs.
+- Use source-keyed Markdown footnotes when a particular claim needs claim-level attribution.
+- Do not add `stale_after` mechanically. Use it only for knowledge whose freshness can reasonably expire.
+- Preserve repository-specific metadata and all unknown fields.
+
+## Trust and Provenance
+
+`generated` describes authorship or production of the current concept. `verified` describes confirmation. These are distinct.
+
+For Jordan-confirmed professional history, a typical verification record is:
+
+```yaml
+verified:
+  - by: human/jordan-newman
+    at: 2026-07-30T00:00:00Z
+```
+
+For external sources:
+
+```yaml
+sources:
+  - id: pcworld-dns-attack
+    url: https://example.com/article
+    title: Article title
+    author: Publisher or author when known
+    usage_count: 1
+```
+
+Do not use an external publication as proof of Jordan's personal contribution unless the concept separately documents that ownership.
 
 ## Evidence Quality
 
@@ -61,11 +105,11 @@ Useful classifications include:
 
 - **Exact** — a value, date, implementation detail, or outcome known precisely from a reliable record or direct confirmation.
 - **Estimated** — an explicitly approximate value or range; preserve words such as `approximately`, `about`, or `estimated` in downstream wording.
-- **Externally supported** — a claim supported by a publication, repository, benchmark record, or other source listed under `Citations`.
+- **Externally supported** — a claim supported by a publication, repository, benchmark record, or other frontmatter `sources` entry.
 - **Qualitative** — a confirmed fact without a defensible numeric measure.
 - **Resume-safe wording** — an optional concise wording variant that faithfully preserves the underlying evidence classification and personal ownership.
 
-Do not encode a metric as exact merely because it appears precise in an old resume. Do not treat external publication as proof of Jordan's personal contribution unless the concept separately documents that ownership.
+Do not encode a metric as exact merely because it appears precise in an old resume.
 
 ## Concept Types
 
@@ -81,6 +125,7 @@ Types are descriptive, not centrally registered. Preferred values include:
 - `Professional Profile`
 - `Interview Story`
 - `Reference`
+- `Attested Computation`
 
 Agents must tolerate and preserve other useful types.
 
@@ -110,9 +155,9 @@ Open questions should:
 
 Do not create a parallel missing-knowledge database unless repeated use demonstrates that concept-local questions are insufficient.
 
-## Citations
+## Attested Computation
 
-When a claim relies on published or external evidence, include a numbered `# Citations` section. Personal recollection and directly supplied project facts do not require external citations, but the concept should clearly distinguish estimates from exact values.
+Use `type: Attested Computation` only when a knowledge claim is produced by a repeatable computation whose runtime, parameters, executor, and attester are documented. Resume claims should not be converted into attested computations merely to appear more formal.
 
 ## Accuracy and Incremental Growth
 
@@ -121,3 +166,4 @@ When a claim relies on published or external evidence, include a numbered `# Cit
 - Missing information belongs in `Open Questions`, not invented prose.
 - Documentation grows as job requirements make additional details relevant.
 - Update the OKF concept before adding newly learned facts to a resume.
+- Keep `generated`, `verified`, `sources`, lifecycle, and freshness metadata current whenever a meaningful knowledge change is made.
