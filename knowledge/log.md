@@ -2,6 +2,9 @@
 
 ## 2026-07-30
 
+* **OKF migration**: Upgraded the `knowledge/` bundle declaration and all indexed concepts from OKF v0.1 timestamp metadata to OKF v0.2 `generated.at` metadata.
+* **Evidence boundaries**: Added or clarified evidence-quality sections for project, platform, technology-experience, career-timeline, and profile concepts without changing the underlying factual claims.
+* **Governance**: Added ADR 0022 and updated the OKF conventions to cover v0.2 provenance, verification, freshness, structured sources, claim-level source footnotes, and attested computation.
 * **PrimeHTTPD clarification**: Recorded that PrimeHTTPD was intentionally architected around the C10K concurrency problem and that Jordan selected a non-blocking, event-driven `kqueue` design as the most efficient approach for the problem.
 * **Historical boundary**: Recorded the narrower, resume-safe context that Jordan was not aware of a publicly released event-driven web server solving the same need at the time, without claiming universal or industry-wide priority.
 * **Evidence quality**: Classified PrimeHTTPD concurrency motivation, production scale, estimated infrastructure scale, and historical context; expanded open questions for dates and contemporaneous benchmark evidence.
