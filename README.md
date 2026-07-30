@@ -20,7 +20,7 @@ Targeted applications live under:
 applications/<company>/<requisition-or-role>/
 ```
 
-Every posting receives a separate package with its own exact job description, resume, cover letter, ATS report and history, and optional design selection. Multiple roles at the same company never share or overwrite one `JOB_DESCRIPTION.md`.
+Every posting receives a separate package with its own exact job description, resume, cover letter, evidence map, ATS report and history, and optional design selection. Multiple roles at the same company never share or overwrite one `JOB_DESCRIPTION.md`.
 
 ### Netflix — JR39731 Compute Runtime
 
@@ -68,13 +68,14 @@ See `designs/README.md` and ADR 0016.
 
 The `knowledge/` directory is the factual source of truth for project descriptions used across resumes and interview preparation.
 
-It is maintained as a Google Cloud Open Knowledge Format (OKF) v0.1 knowledge bundle:
+It is maintained as a Google Cloud Open Knowledge Format (OKF) v0.2 knowledge bundle:
 
 - concepts are Markdown files with YAML frontmatter;
 - every concept includes a required `type` field;
-- `knowledge/index.md` provides progressive-disclosure navigation;
+- `knowledge/index.md` declares `okf_version: "0.2"` and provides progressive-disclosure navigation;
 - `knowledge/log.md` records meaningful knowledge updates;
 - ordinary Markdown links connect related projects and systems;
+- `generated`, `verified`, `sources`, lifecycle, and freshness metadata are maintained where supported and useful;
 - confirmed information is recorded while unknown details remain omitted or listed as open questions.
 
 Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, PrimeDNSTop, KeepClean, StatCache, TAFOS, and the AVR smart smoke/CO2 detector.
@@ -85,7 +86,7 @@ Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, Pri
 - `docs/workflows/RESUME_WORKFLOW.md` contains the detailed selection, evidence-mapping, gap-question, and knowledge-capture process.
 - `docs/workflows/ATS_VALIDATION.md` defines the ATS compatibility, job-alignment, revision-loop, and score-history process.
 - `docs/workflows/LINKEDIN_PROFILE_WORKFLOW.md` defines the manual read-only review, proposal, approval-gated publishing, and verification process for LinkedIn.
-- `docs/OKF_PORTFOLIO.md` documents the repository-specific OKF conventions.
+- `docs/OKF_PORTFOLIO.md` documents the repository-specific OKF v0.2 conventions and migration rules.
 - `docs/STYLE_GUIDE.md` defines outcome-oriented resume writing, including the Google XYZ formula as a non-mechanical guideline.
 - `docs/STARTER_GUIDE.md` explains how another person can bootstrap their own CareerPortfolio.
 - `docs/ROADMAP.md` records deferred enhancements and promotion criteria without prematurely adding structure.
