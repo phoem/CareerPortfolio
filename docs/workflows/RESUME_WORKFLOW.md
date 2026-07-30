@@ -21,21 +21,43 @@ All three should improve over time, but each should emphasize the same facts dif
 3. Compare those requirements against the three generic resumes.
 4. Select the best base resume.
 5. Traverse `knowledge/index.md` and search the OKF knowledge bundle for concepts that demonstrate the requested capabilities.
-6. Build a factual evidence map:
-   - requirement;
-   - matching experience;
-   - supporting project or role;
-   - documented metric or outcome;
-   - supporting OKF concept.
-7. Identify gaps.
+6. Create or update `EVIDENCE_MAP.md` in the application package. For every meaningful requirement, record:
+   - classification as required, preferred, or contextual;
+   - matching experience and intended resume evidence;
+   - supporting project, role, and OKF concept;
+   - documented metric, scope, or qualitative outcome;
+   - evidence strength as direct, adjacent, or missing;
+   - any wording, gap question, or follow-up action needed.
+7. Review the evidence map for genuine gaps and stale mappings before drafting.
 8. For each meaningful gap, ask Jordan whether he has worked on a project involving that capability.
 9. When Jordan provides relevant experience, update the knowledge bundle before relying on it in the resume.
-10. Add cross-links, citations, metadata, and a log entry when the new knowledge warrants them.
+10. Add cross-links, citations, metadata, evidence classifications, open questions, and a log entry when the new knowledge warrants them.
 11. Tailor the summary, skills order, selected highlights, project descriptions, and work-history bullets using `docs/STYLE_GUIDE.md`. Prefer the Google XYZ formula—outcome (X), verified measure or scope (Y), and method (Z)—when the documented facts support it; use an outcome-first alternative when they do not.
-12. Produce Markdown and rebuild only the corresponding DOCX and PDF deliverables.
-13. Pass the exact rebuilt-artifact manifest to the ATS readiness and final-artifact validation process in `docs/workflows/ATS_VALIDATION.md`.
-14. Resolve critical failures and repeat validation until the application is at least Strong or Jordan explicitly approves submission with known limitations.
-15. Update the repository README and company package index when adding a new application package.
+12. Keep `EVIDENCE_MAP.md` synchronized with the selected wording and final evidence used in the resume.
+13. Produce Markdown and rebuild only the corresponding DOCX and PDF deliverables.
+14. Pass the exact rebuilt-artifact manifest, job description, evidence map, and relevant OKF concepts to the ATS readiness and final-artifact validation process in `docs/workflows/ATS_VALIDATION.md`.
+15. Resolve critical failures and repeat validation until the application is at least Strong or Jordan explicitly approves submission with known limitations.
+16. Update the repository README and company package index when adding a new application package.
+
+## Application Evidence Map
+
+Every targeted application package must contain `EVIDENCE_MAP.md`. It is a reviewable bridge between the exact posting, the OKF knowledge bundle, the targeted resume, and ATS validation.
+
+Recommended columns:
+
+| Requirement | Class | Resume evidence | Supporting OKF concept | Metric or scope | Strength | Gap or action |
+|---|---|---|---|---|---|---|
+
+Rules:
+
+- Use the exact posting as the source for requirement wording and classification.
+- Link to the nearest supporting OKF concept rather than copying an undocumented claim into the map.
+- Mark evidence `direct`, `adjacent`, or `missing` and explain borderline cases.
+- Preserve estimates and ranges exactly as classified in the knowledge concept.
+- Do not convert adjacent experience into a direct technology claim.
+- Update the map whenever the job description, relevant knowledge, or resume wording changes materially.
+- Treat a stale or materially inconsistent map as a validation issue.
+- The evidence map is not a substitute for the exact `JOB_DESCRIPTION.md` or the final ATS report.
 
 ## Question Strategy
 
@@ -71,7 +93,7 @@ OKF uses a directory tree of Markdown files with YAML frontmatter. It does **not
 - `index.md` is reserved for progressive-disclosure navigation.
 - `log.md` is reserved for chronological knowledge updates.
 - Concepts should use ordinary Markdown links to related concepts.
-- External evidence should be listed under `# Citations` when applicable.
+- External evidence should be listed under `Citations` when applicable.
 - Unknown metadata and body fields must be preserved during round-trip edits.
 
 See `docs/OKF_PORTFOLIO.md` for the local conventions used in this repository.
@@ -90,9 +112,10 @@ Use only sections supported by known facts:
 - Performance and reliability
 - Security or operational impact
 - Relationship to other systems
+- Evidence
 - Resume-ready descriptions
 - Interview discussion points
-- Open questions for future documentation
+- Open Questions
 - Citations
 
 Not every concept needs every section immediately.
@@ -104,14 +127,15 @@ When new professional information is learned:
 1. Locate the existing concept through `knowledge/index.md` or create a new concept.
 2. Confirm what Jordan personally designed, implemented, operated, or led.
 3. Record only confirmed facts.
-4. Distinguish exact values, estimates, ranges, and qualitative outcomes.
+4. Distinguish exact values, estimates, ranges, externally supported facts, and qualitative outcomes.
 5. Add or update YAML frontmatter.
 6. Add links to related OKF concepts.
 7. Add external citations where claims rely on published material.
 8. Put unresolved but potentially valuable details under `Open Questions` rather than guessing.
-9. Update `knowledge/index.md` when a concept is added or materially renamed.
-10. Record meaningful changes in `knowledge/log.md`.
-11. Only then use the information in generic or targeted resumes.
+9. Add resume-safe wording only when it faithfully preserves the evidence classification and personal ownership.
+10. Update `knowledge/index.md` when a concept is added or materially renamed.
+11. Record meaningful changes in `knowledge/log.md`.
+12. Only then use the information in generic or targeted resumes.
 
 ## Resume Description Variants
 
@@ -132,6 +156,7 @@ Every finished targeted resume should be validated against both the job descript
 - Treat the result as a transparent heuristic readiness score, not a prediction of a specific employer's ATS ranking.
 - Inspect extracted text and reading order from the actual DOCX and PDF.
 - Score parseability, completeness, required evidence, preferred evidence, keyword quality, and human positioning separately.
+- Use the current `EVIDENCE_MAP.md` as the starting requirement-to-evidence matrix and verify it against the resume and OKF concepts.
 - Report critical failures and prioritized recommendations.
 - Never improve a score by inventing experience or inserting unsupported keywords.
 - Mark a resume Not Ready when the artifacts fail to parse, the wrong role is targeted, unsupported claims appear, or the generated files disagree materially with the Markdown source.
