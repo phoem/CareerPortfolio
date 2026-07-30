@@ -3,7 +3,8 @@ type: Infrastructure Platform
 title: CDN Platform
 description: Production hosting and content-delivery platform spanning thousands of servers, multiple locations, and custom systems software.
 tags: [cdn, distributed-systems, infrastructure, freebsd, networking, reliability]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  at: 2026-07-12T00:00:00Z
 status: partial
 owner: Jordan Newman
 evidence_status: confirmed
@@ -37,6 +38,12 @@ Jordan built the custom HTTP/CDN serving software and substantial supporting inf
 - approximately 200 PrimeHTTPD production servers;
 - more than 150,000 concurrent PrimeHTTPD connections;
 - 24/7 customer-facing production workloads.
+
+## Evidence Quality
+
+- Infrastructure counts and location counts are estimates and must remain approximate in downstream artifacts.
+- Peak traffic exceeding 65 Gbps and more than 150,000 concurrent PrimeHTTPD connections are confirmed resume-safe scale statements.
+- Personal ownership is confirmed separately from the platform-wide scale claims.
 
 ## Open Questions
 
