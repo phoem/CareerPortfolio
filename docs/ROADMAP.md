@@ -9,6 +9,8 @@ This roadmap records useful future ideas without committing the repository to pr
 - Targeted application packages under `applications/<company>/<posting>/`.
 - Separate exact job descriptions, artifacts, and ATS histories for every posting.
 - Resume tailoring and knowledge-capture workflow.
+- Required application-level requirement-to-evidence maps.
+- Explicit knowledge evidence-quality classifications and concept-local open questions.
 - Starter guide for creating a new CareerPortfolio.
 - Architecture Decision Records under `docs/decisions/`.
 - Generated Markdown, DOCX, and PDF application artifacts.
@@ -32,7 +34,7 @@ These are accepted ideas that directly improve current resume and application wo
 - Add at least one additional tested design template beyond `classic-ats`.
 - Add design preview images and design-level ATS baseline results.
 - Continue expanding project concepts only as real job requirements expose useful gaps.
-- Add validation checks for OKF conformance, broken links, duplicated metrics, and inconsistent resume claims.
+- Add validation checks for OKF conformance, broken links, duplicated metrics, inconsistent resume claims, and stale application evidence maps.
 
 ## Future Capabilities
 
@@ -41,6 +43,10 @@ Add these when a real application, interview, promotion, or public-profile need 
 - Interview preparation workflow.
 - STAR-format interview stories.
 - Role- and company-specific interview packets stored with or linked to the relevant application package.
+- Interview feedback capture, including questions asked, topics emphasized, difficult areas, resume bullets referenced, and newly disclosed professional facts that may warrant OKF updates.
+- Application retrospectives that record outcomes, what appeared effective, what should change, and lessons for future tailoring without treating correlation as proof.
+- Company preference profiles derived from multiple verified postings and observed hiring signals, while preserving each real posting as the primary tailoring source.
+- Project-to-role relevance metadata or technical-depth weighting after repeated use demonstrates that manual selection is inefficient.
 - Recruiter-facing professional profile.
 - Promotion packets and performance-review evidence.
 - Executive and conference biographies.
@@ -48,7 +54,7 @@ Add these when a real application, interview, promotion, or public-profile need 
 - Public portfolio website generation.
 - Architecture diagrams for flagship projects.
 - Career timeline visualization.
-- GitHub Actions quality gate for ATS readiness, artifact consistency, OKF validation, and design regression checks.
+- GitHub Actions quality gate for ATS readiness, artifact consistency, OKF validation, evidence-map freshness, and design regression checks.
 - Per-resume design overrides for generic resumes.
 - Design inheritance, variants, preview generation, and accessibility checks.
 
@@ -67,6 +73,7 @@ Useful ideas that do not yet justify implementation.
 - Professional references and recommendation tracking.
 - Automated job-listing evidence maps and fit scoring.
 - Automated portfolio completeness and interview-readiness scoring.
+- Application-outcome analytics and tailoring-effectiveness analysis after enough comparable outcomes exist to avoid misleading conclusions.
 - Calibration against multiple third-party ATS scanners when useful and legally or technically practical.
 
 ## Promotion Criteria
