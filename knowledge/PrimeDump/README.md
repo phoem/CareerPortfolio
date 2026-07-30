@@ -3,7 +3,8 @@ type: Network Analysis Tool
 title: PrimeDump
 description: Custom libpcap-based real-time packet-analysis and mitigation-support tool.
 tags: [networking, libpcap, security, ddos, ipfw, ncurses]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  at: 2026-07-12T00:00:00Z
 status: partial
 owner: Jordan Newman
 evidence_status: confirmed
@@ -21,6 +22,11 @@ PrimeDump is a custom libpcap-based traffic-analysis tool built for real-time vi
 - ncurses-based real-time views;
 - integration with IPFW;
 - use during traffic anomaly and DDoS investigation.
+
+## Evidence Quality
+
+- Implementation details and production operational use are confirmed qualitative evidence.
+- No throughput, packet-rate, deployment-count, or mitigation-effectiveness metric is currently resume-safe.
 
 ## Relationship to the Platform
 
