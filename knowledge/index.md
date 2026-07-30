@@ -1,10 +1,12 @@
 ---
-okf_version: "0.1"
+okf_version: "0.2"
 ---
 
 # Career Knowledge Base
 
 This directory is the Open Knowledge Format knowledge bundle used as the factual source for resumes, cover letters, interview preparation, and future professional-portfolio material.
+
+The bundle targets OKF v0.2. Concepts use structured authorship, verification, provenance, lifecycle, and freshness metadata where supported and useful. Repository-specific metadata is preserved.
 
 # Professional Profile
 
