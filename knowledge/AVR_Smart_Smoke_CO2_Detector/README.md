@@ -3,7 +3,8 @@ type: Embedded Firmware Project
 title: AVR Smart Smoke/CO2 Detector
 description: Embedded firmware for battery-powered wireless smart smoke and CO2 detector prototypes.
 tags: [embedded-c, avr, firmware, spi, uart, i2c, hardware]
-timestamp: 2026-07-12T00:00:00Z
+generated:
+  at: 2026-07-12T00:00:00Z
 status: partial
 owner: Jordan Newman
 evidence_status: confirmed
@@ -23,6 +24,11 @@ A contract embedded-firmware project for battery-powered wireless smart smoke an
 - Arduino-related development;
 - circuit design, soldering, and hardware troubleshooting;
 - battery-powered wireless prototypes.
+
+## Evidence Quality
+
+- The technology, interface, firmware, and hardware-development statements are confirmed qualitative evidence.
+- Production status, commercial deployment, battery life, reliability, and test-result claims are not currently supported.
 
 ## Open Questions
 
