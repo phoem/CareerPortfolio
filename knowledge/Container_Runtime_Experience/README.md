@@ -3,6 +3,8 @@ type: Technology Experience
 title: Container Runtime and Kubernetes Experience
 description: Confirmed production and experimental experience with Kubernetes and container runtime components.
 tags: [kubernetes, kubelet, containerd, runc, nri, containers, linux]
+generated:
+  at: 2026-07-13T00:00:00Z
 status: partial
 owner: Jordan Newman
 evidence_status: confirmed
@@ -21,6 +23,12 @@ evidence_status: confirmed
 - kubelet, containerd, and runc usage has been experimental rather than production operation or production development.
 - Has not written an NRI plugin.
 - No claim is currently supported for upstream Kubernetes or containerd contributions.
+
+## Evidence Quality
+
+- Professional Kubernetes workflow experience is confirmed qualitative evidence.
+- kubelet, containerd, and runc experience must be described as experimental or lab work.
+- NRI knowledge is architectural familiarity only and must not imply implementation experience.
 
 ## Resume-Safe Language
 
