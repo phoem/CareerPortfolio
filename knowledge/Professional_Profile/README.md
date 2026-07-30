@@ -6,9 +6,11 @@ tags:
   - career
   - professional-profile
   - contact-information
-timestamp: "2026-07-15"
+generated:
+  at: 2026-07-15T00:00:00Z
 status: confirmed
 owner: Jordan Newman
+evidence_status: confirmed
 ---
 
 # Jordan Newman Professional Profile
