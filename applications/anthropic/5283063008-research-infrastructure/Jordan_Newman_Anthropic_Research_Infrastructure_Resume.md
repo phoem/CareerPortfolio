@@ -22,6 +22,19 @@ Hands-on software architect and infrastructure engineer with 20+ years of experi
 - Established a non-blocking runtime architecture using one primary `kqueue` process, configurable I/O workers, `sendmsg()` descriptor passing, shared `mmap()` worker state, least-busy-worker dispatch, and `sendfile()` with `SF_NODISKIO`.
 - Built the monitoring, telemetry, deployment, authentication, packet/DNS analysis, security, and DDoS systems needed to operate and defend customer-facing infrastructure around the clock.
 
+## Independent Delivery and Technical Leadership
+
+- Independently scoped and delivered complex technical projects from initial requirements and architecture through hands-on coding, production deployment, and long-term operation.
+- Make architectural decisions and define engineering standards, shared libraries, and platform direction that other engineers and teams build upon.
+- Use written technical documentation and cross-team collaboration to communicate decisions and establish alignment across engineering teams.
+- Operated effectively in fast-changing startup environments with high autonomy and ownership, combining executive accountability with hands-on systems engineering during rapid company growth.
+
+## Selected Systems Engineering
+
+- **PrimeHTTPD:** Built persistent connections, descriptor and gzip caches, chunked encoding, ETags, conditional requests, authentication integration, wildcard/PCRE2 rewrites, and signal-driven configuration reloads around a high-concurrency event core.
+- **VirtualDir:** Designed and developed a production FreeBSD kernel module and management utility that intercepted filesystem-related system calls and transparently remapped paths, enabling shared physical layouts without chroot jails; deployed on approximately 30 servers for approximately 5-8 years.
+- **PrimeDump and PrimeDNSTop:** Built libpcap-based packet and DNS analysis tools that decoded Ethernet, IP, TCP, UDP, ICMPv6, and RFC 1035 traffic for troubleshooting, abnormal-activity detection, and DDoS investigation.
+
 ## Professional Experience
 
 ### Advantive - Senior Development Specialist, APIs and Integrations
