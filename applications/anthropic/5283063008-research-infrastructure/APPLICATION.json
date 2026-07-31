@@ -1,0 +1,22 @@
+{
+  "company": "Anthropic",
+  "role": "Software Engineer, Research Infrastructure",
+  "requisition_id": "5283063008",
+  "location": "San Francisco, CA or New York City, NY",
+  "department": "Research Productivity",
+  "source_url": "https://job-boards.greenhouse.io/anthropic/jobs/5283063008",
+  "job_description": "JOB_DESCRIPTION.md",
+  "job_description_status": "complete-structured-official-page-capture",
+  "job_description_captured_at": "2026-07-31",
+  "slug": "5283063008-research-infrastructure",
+  "artifacts": [
+    {
+      "type": "resume",
+      "source": "Jordan_Newman_Anthropic_Research_Infrastructure_Resume.md"
+    },
+    {
+      "type": "cover_letter",
+      "source": "COVER_LETTER.md"
+    }
+  ]
+}

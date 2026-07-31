@@ -53,6 +53,16 @@ The employer posting associated with requisition JR39731 was verified as a Compu
 | Job description | `applications/openai/software-engineer-compute-infrastructure/JOB_DESCRIPTION.md` |
 | Validation | `applications/openai/software-engineer-compute-infrastructure/validation/` |
 
+### Anthropic — Software Engineer, Research Infrastructure
+
+| Document | Path |
+|---|---|
+| Package | `applications/anthropic/5283063008-research-infrastructure/` |
+| Resume source | `applications/anthropic/5283063008-research-infrastructure/Jordan_Newman_Anthropic_Research_Infrastructure_Resume.md` |
+| Cover-letter source | `applications/anthropic/5283063008-research-infrastructure/COVER_LETTER.md` |
+| Job description | `applications/anthropic/5283063008-research-infrastructure/JOB_DESCRIPTION.md` |
+| Validation | `applications/anthropic/5283063008-research-infrastructure/validation/` |
+
 ### Starlink — Embedded Software Engineer
 
 | Document | Path |
