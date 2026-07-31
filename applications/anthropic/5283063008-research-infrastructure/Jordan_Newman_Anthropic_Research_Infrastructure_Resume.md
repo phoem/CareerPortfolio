@@ -31,9 +31,13 @@ Hands-on software architect and infrastructure engineer with 20+ years of experi
 
 ## Selected Systems Engineering
 
-- **PrimeHTTPD:** Built persistent connections, descriptor and gzip caches, chunked encoding, ETags, conditional requests, authentication integration, wildcard/PCRE2 rewrites, and signal-driven configuration reloads around a high-concurrency event core.
-- **VirtualDir:** Designed and developed a production FreeBSD kernel module and management utility that intercepted filesystem-related system calls and transparently remapped paths, enabling shared physical layouts without chroot jails; deployed on approximately 30 servers for approximately 5-8 years.
+- **PrimeHTTPD:** Built persistent connections, descriptor and gzip caches, chunked encoding, ETags, conditional requests, authentication integration, and signal-driven configuration reloads around a high-concurrency event core.
+- Added wildcard and PCRE2 request rewriting and integrated the runtime with PrimeAuth for HTTP Basic and cookie authentication.
+- **VirtualDir:** Designed and developed a production FreeBSD kernel module and management utility that intercepted filesystem-related system calls and transparently remapped paths.
+- Enabled shared physical layouts without chroot jails; deployed VirtualDir on approximately 30 servers for approximately 5-8 years.
 - **PrimeDump and PrimeDNSTop:** Built libpcap-based packet and DNS analysis tools that decoded Ethernet, IP, TCP, UDP, ICMPv6, and RFC 1035 traffic for troubleshooting, abnormal-activity detection, and DDoS investigation.
+- **KeepClean and StatCache:** Developed production FreeBSD kernel modules for execution monitoring, system-asset protection, user-space telemetry, and filesystem performance instrumentation.
+- **TAFOS:** Developed an educational x86 operating-system kernel in C and assembly with a custom MBR bootloader, protected-mode transition, interrupt descriptor table, heap allocator, port I/O, VGA output, and GDB debugging.
 
 ## Professional Experience
 
