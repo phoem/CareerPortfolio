@@ -2,6 +2,10 @@
 
 ## 2026-07-31
 
+* **PrimeBGP**: Added confirmed design and implementation ownership for a passive BGP4 speaker that accepted peering sessions, processed route updates, and stored prefixes in an in-memory red-black tree for policy-based rerouting.
+* **PrimeFlow**: Added confirmed design and implementation ownership for a NetFlow v5 collector daemon with a modular processing pipeline and companion `pcap`-based flow generator.
+* **Network infrastructure**: Recorded ISPRIME familiarity with Cisco, Juniper, and Foundry equipment; SNMP and NetFlow monitoring; and hands-on datacenter design, setup, migration, and operations.
+* **Evidence boundaries**: Left languages, individual-tool deployment scale, routing topology, device models, specific configuration ownership, and unconfirmed protocols as open questions.
 * **ISPRIME mentoring**: Recorded that Jordan created internal training documentation and trained the majority of ISPRIME employees over the years.
 * **Leadership development**: Recorded that Jordan personally mentored two beginners over several years into technical experts and eventual ISPRIME leaders.
 * **Evidence boundary**: Preserved trainee counts, leadership titles, training topics, and the mentees' later IT careers as qualitative or open details rather than inventing specifics.

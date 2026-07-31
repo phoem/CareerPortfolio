@@ -20,6 +20,7 @@ The bundle targets OKF v0.2. Concepts use structured authorship, verification, p
 * [CDN Platform](CDN_Platform/README.md) - Production hosting and content-delivery platform spanning thousands of servers and multiple locations.
 * [PrimeHTTPD](PrimeHTTPD/README.md) - High-performance non-blocking FreeBSD HTTP/CDN server written in C.
 * [Container Runtime and Kubernetes Experience](Container_Runtime_Experience/README.md) - Production Kubernetes workflow experience plus experimental work with kubelet, containerd, runc, and NRI concepts.
+* [Network Infrastructure and Datacenter Operations](Network_Infrastructure_Experience/README.md) - ISPRIME network-vendor, BGP4, monitoring, datacenter-design, migration, and operations experience.
 
 # Kernel and Systems Software
 
@@ -30,6 +31,8 @@ The bundle targets OKF v0.2. Concepts use structured authorship, verification, p
 
 # Network Analysis and Security
 
+* [PrimeBGP](PrimeBGP/README.md) - Passive BGP4 speaker and in-memory prefix store for policy-based rerouting.
+* [PrimeFlow](PrimeFlow/README.md) - NetFlow v5 collector daemon with a modular pipeline and companion flow generator.
 * [PrimeDump](PrimeDump/README.md) - Real-time libpcap-based packet analysis and mitigation support.
 * [PrimeDNSTop](PrimeDNSTop/README.md) - DNS traffic monitoring and recursion-attack analysis.
 
