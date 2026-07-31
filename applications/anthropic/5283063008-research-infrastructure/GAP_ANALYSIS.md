@@ -18,6 +18,10 @@ Jordan personally architected and implemented PrimeHTTPD in C for FreeBSD. It mo
 
 The current Advantive role includes Architecture Team decisions, engineering standards, platform direction, shared libraries, documentation, developer tooling, and cross-team infrastructure workflows. Prior Owner/CIO and CEO roles add high-autonomy technical and operational leadership.
 
+### Mentoring and employee development
+
+At ISPRIME, Jordan created internal training documentation and trained most employees over the years. He personally mentored two beginners over several years into technical experts and eventual company leaders.
+
 ### Reliability and scalability engineering
 
 The PrimeHTTPD architecture isolates blocking disk work from its event loop, uses descriptor passing and shared-memory worker state, and exploits kernel-assisted I/O. The surrounding platform includes monitoring, telemetry, deployment, packet/DNS analysis, security, and DDoS systems built for customer-facing operations.
@@ -40,16 +44,11 @@ PrimeHTTPD and the CDN platform demonstrate substantial independent, end-to-end 
 
 Founder/operator and executive responsibility for a growing infrastructure company is strong adjacent evidence. The current record does not quantify growth phases or changing priorities.
 
-### Mentoring
-
-Technical leadership and standard-setting are documented; explicit mentoring responsibility is not.
-
 ## Material gaps
 
 - No verified ownership of infrastructure purpose-built for ML research workflows.
 - No verified partnership with ML researchers.
 - No verified large-scale GPU training, accelerator-fleet, or research-compute orchestration experience.
-- No verified mentorship claim.
 
 ## Application strategy
 
@@ -57,7 +56,7 @@ Technical leadership and standard-setting are documented; explicit mentoring res
 - Present research infrastructure as the next domain for proven systems judgment, not as prior experience.
 - Use current developer-tooling and AI-assisted workflow experience as adjacent evidence.
 - Keep the first third focused on the capabilities Anthropic requires rather than the historical CDN domain.
-- Avoid unsupported ML, GPU, cloud-control-plane, mentoring, and project-duration claims.
+- Avoid unsupported ML, GPU, cloud-control-plane, and project-duration claims.
 
 ## Recommendation
 

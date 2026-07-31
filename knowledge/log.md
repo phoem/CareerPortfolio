@@ -1,5 +1,11 @@
 # Knowledge Base Update Log
 
+## 2026-07-31
+
+* **ISPRIME mentoring**: Recorded that Jordan created internal training documentation and trained the majority of ISPRIME employees over the years.
+* **Leadership development**: Recorded that Jordan personally mentored two beginners over several years into technical experts and eventual ISPRIME leaders.
+* **Evidence boundary**: Preserved trainee counts, leadership titles, training topics, and the mentees' later IT careers as qualitative or open details rather than inventing specifics.
+
 ## 2026-07-30
 
 * **Advantive role**: Added confirmed current-role responsibilities covering Architecture Team participation, platform engineering, developer tooling, Docker, Kubernetes, Terraform, Azure DevOps, CI/CD, security scanning, shared libraries, documentation, and AI-assisted engineering workflows.

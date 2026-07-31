@@ -13,6 +13,7 @@ The bundle targets OKF v0.2. Concepts use structured authorship, verification, p
 * [Jordan Newman Professional Profile](Professional_Profile/README.md) - Confirmed public profile and stable professional identity information used across career artifacts.
 * [Jordan Newman Career Timeline](Career_Timeline/README.md) - Confirmed employment titles and dates used across career artifacts and LinkedIn synchronization.
 * [Advantive Role](Advantive_Role/README.md) - Current architecture, platform-engineering, developer-tooling, and infrastructure responsibilities.
+* [ISPRIME Technical Leadership, Training, and Mentoring](ISPrime_Technical_Leadership/README.md) - Confirmed employee training, internal documentation, and multi-year mentoring at ISPRIME.
 
 # Infrastructure and Distributed Systems
 

@@ -67,6 +67,7 @@ Hands-on software architect and infrastructure engineer with 20+ years of experi
 - Implemented descriptor and gzip caches, chunked encoding, ETags, conditional requests, authentication integration, wildcard/PCRE2 rewrites, and signal-driven configuration reloads.
 - Developed production FreeBSD kernel modules, including VirtualDir for transparent filesystem path virtualization, plus packet and DNS analysis tools used for troubleshooting and attack investigation.
 - Built monitoring, telemetry, authentication, deployment, infrastructure-management, DDoS detection and mitigation, and security software in response to production operational needs.
+- Acted as a technical lead and mentor across ISPRIME, creating internal training documentation and training most employees; personally guided two beginners over several years into technical experts and eventual company leaders.
 
 ### Earlier Software and Systems Experience
 
