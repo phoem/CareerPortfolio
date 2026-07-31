@@ -2,6 +2,8 @@
 
 ## 2026-07-30
 
+* **Advantive role**: Added confirmed current-role responsibilities covering Architecture Team participation, platform engineering, developer tooling, Docker, Kubernetes, Terraform, Azure DevOps, CI/CD, security scanning, shared libraries, documentation, and AI-assisted engineering workflows.
+* **Evidence boundary**: Recorded that current evidence supports qualitative platform-workflow claims but not Kubernetes scheduler/control-plane ownership or quantified team impact.
 * **OKF migration**: Upgraded the `knowledge/` bundle declaration and all indexed concepts from OKF v0.1 timestamp metadata to OKF v0.2 `generated.at` metadata.
 * **Evidence boundaries**: Added or clarified evidence-quality sections for project, platform, technology-experience, career-timeline, and profile concepts without changing the underlying factual claims.
 * **Governance**: Added ADR 0022 and updated the OKF conventions to cover v0.2 provenance, verification, freshness, structured sources, claim-level source footnotes, and attested computation.

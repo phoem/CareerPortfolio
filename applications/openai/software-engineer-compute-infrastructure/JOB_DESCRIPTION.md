@@ -8,6 +8,8 @@
 - **Compensation shown at capture:** $230,000–$405,000 plus equity
 - **Status:** Live posting verified on 2026-07-30
 
+> **Capture note:** The official posting was reviewed in full on 2026-07-30. This file is a structured, faithful capture of its role content rather than a verbatim reproduction of the full webpage.
+
 ## Role Summary
 
 OpenAI Compute Infrastructure builds the platform that turns very large amounts of compute into reliable infrastructure for frontier AI research and products. The organization connects accelerators, CPUs, networking, storage, data centers, orchestration, agent infrastructure, developer tools, and observability into a coherent platform.

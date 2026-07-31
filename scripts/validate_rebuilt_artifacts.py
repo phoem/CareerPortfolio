@@ -62,6 +62,7 @@ def write_pending(report: Path, job_filename: str) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", required=True, type=Path)
+    parser.add_argument("--pass-number", type=int, default=0, choices=range(0, 4))
     args = parser.parse_args()
     payload = json.loads(args.manifest.read_text(encoding="utf-8"))
 
@@ -86,6 +87,8 @@ def main() -> None:
             str(docx.relative_to(ROOT)),
             "--pdf",
             str(pdf.relative_to(ROOT)),
+            "--pass-number",
+            str(args.pass_number),
         ]
         if application is not None:
             job_filename = str(application.get("job_description", "JOB_DESCRIPTION.md"))

@@ -5,7 +5,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
+import shutil
 import subprocess
 from dataclasses import dataclass
 from pathlib import Path
@@ -152,7 +154,7 @@ def add_bottom_border(paragraph) -> None:
 
 
 def add_inline_markup(paragraph, text: str) -> None:
-    for part in re.split(r"(\*\*.*?\*\*|\*.*?\*)", text):
+    for part in re.split(r"(\*\*.*?\*\*|\*.*?\*|`.*?`)", text):
         if not part:
             continue
         if part.startswith("**") and part.endswith("**"):
@@ -161,6 +163,8 @@ def add_inline_markup(paragraph, text: str) -> None:
         elif part.startswith("*") and part.endswith("*"):
             run = paragraph.add_run(part[1:-1])
             run.italic = True
+        elif part.startswith("`") and part.endswith("`"):
+            paragraph.add_run(part[1:-1])
         else:
             paragraph.add_run(part)
 
@@ -246,17 +250,44 @@ def markdown_to_docx(spec: SourceSpec, destination: Path) -> None:
 
 
 def convert_to_pdf(docx_path: Path) -> None:
-    subprocess.run(
-        [
-            "libreoffice",
-            "--headless",
-            "--convert-to",
-            "pdf",
-            "--outdir",
-            str(docx_path.parent),
-            str(docx_path),
-        ],
-        check=True,
+    libreoffice = shutil.which("libreoffice") or shutil.which("soffice")
+    if libreoffice:
+        subprocess.run(
+            [
+                libreoffice,
+                "--headless",
+                "--convert-to",
+                "pdf",
+                "--outdir",
+                str(docx_path.parent),
+                str(docx_path),
+            ],
+            check=True,
+        )
+        return
+
+    if os.name == "nt":
+        powershell = shutil.which("powershell.exe") or shutil.which("powershell")
+        word_converter = ROOT / "scripts" / "convert_docx_to_pdf_with_word.ps1"
+        if powershell and word_converter.exists():
+            subprocess.run(
+                [
+                    powershell,
+                    "-NoProfile",
+                    "-NonInteractive",
+                    "-ExecutionPolicy",
+                    "Bypass",
+                    "-File",
+                    str(word_converter),
+                    "-DocxPath",
+                    str(docx_path.resolve()),
+                ],
+                check=True,
+            )
+            return
+
+    raise RuntimeError(
+        "PDF conversion requires LibreOffice/soffice, or Microsoft Word on Windows."
     )
 
 

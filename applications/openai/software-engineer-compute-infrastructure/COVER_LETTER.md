@@ -1,4 +1,10 @@
-# Cover Letter — OpenAI Software Engineer, Compute Infrastructure
+# Jordan Newman
+
+**Software Engineer, Compute Infrastructure**
+
+Marlboro, NJ | 347-739-4731 | phoem@mac.com | https://github.com/phoem
+
+July 30, 2026
 
 Dear OpenAI Hiring Team,
 
@@ -12,7 +18,7 @@ Beyond the serving runtime, I built FreeBSD kernel modules, packet and DNS analy
 
 In my current role at Advantive, I work across architecture and engineering enablement, including Docker, Kubernetes, Terraform, Azure DevOps, CI/CD, security scanning, shared libraries, technical standards, documentation, and AI-assisted engineering workflows. I enjoy building leverage for other engineers and creating durable improvements rather than isolated fixes.
 
-My strongest fit within OpenAI Compute Infrastructure is in low-level systems, networking, reliability, observability, compute foundations, and infrastructure tooling. I do not claim direct production experience with every layer named in the posting, such as NCCL or large GPU fleets. What I bring is deep systems judgment, proven production ownership, and the ability to move from kernel and runtime behavior through network operations and developer-facing platform improvements.
+My strongest fit within OpenAI Compute Infrastructure is in low-level systems, networking, reliability, observability, compute foundations, and infrastructure tooling. I bring deep systems judgment, proven production ownership, and the ability to move from kernel and runtime behavior through network operations and developer-facing platform improvements.
 
 I would welcome the opportunity to help OpenAI make enormous compute systems faster, more reliable, easier to diagnose, and easier for researchers and product teams to use.
 

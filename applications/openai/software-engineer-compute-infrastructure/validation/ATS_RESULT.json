@@ -1,0 +1,63 @@
+{
+  "validator_version": "0.2.1",
+  "overall_score": 97,
+  "disposition": "Submission Ready",
+  "targeted_complete": true,
+  "pass_number": 1,
+  "categories": {
+    "Artifact parseability and structure": {
+      "score": 100,
+      "findings": [
+        "DOCX token coverage versus Markdown: 100.0%.",
+        "PDF token coverage versus Markdown: 100.0%."
+      ],
+      "weight": 25
+    },
+    "Required-information completeness": {
+      "score": 100,
+      "findings": [
+        "Contact details, conventional sections, and work-history dates are present."
+      ],
+      "weight": 10
+    },
+    "Required job-requirement evidence": {
+      "score": 91,
+      "findings": [
+        "Direct: Strong software engineering skills and experience building, operating, or improving production infrastructure systems. (matched: software, engineering, skills, building, operating, production, infrastructure).",
+        "Direct: Experience in one or more of distributed systems, operating systems, networking protocols, RDMA, NCCL or collective communication, storage, Kubernetes, scheduling, observability, reliability engineering, HPC, GPU infrastructure, CaaS, agent infrastructure, hardware-aware optimization, benchmarking, developer experience, or infrastructure tooling. (matched: one, more, distributed, systems, operating, networking, storage, kubernetes).",
+        "Direct: Ability to debug complex behavior across software, hardware, networking, and workload layers and turn findings into robust improvements. (matched: complex, behavior, software, hardware, networking, workload, layers, findings).",
+        "Adjacent: Comfort with ambiguity, strong ownership, and practical durable solutions. (matched: ownership, durable).",
+        "Direct: Interest in infrastructure that directly enables frontier AI research and products. (matched: interest, infrastructure, directly, frontier, ai, research, products.)."
+      ],
+      "weight": 30
+    },
+    "Preferred job-requirement evidence": {
+      "score": 100,
+      "findings": [
+        "No explicit preferred requirements were listed."
+      ],
+      "weight": 15
+    },
+    "Language and keyword quality": {
+      "score": 100,
+      "findings": [
+        "Qualification-language token coverage: 61.0%."
+      ],
+      "weight": 10
+    },
+    "Human readability and positioning": {
+      "score": 100,
+      "findings": [
+        "The first third is role-specific and evidence is easy to scan."
+      ],
+      "weight": 10
+    }
+  },
+  "critical_failures": [],
+  "hashes": {
+    "resume": "63506fdc45157fd3526751394d921d703b7d7dfb1f14d9091f0b66afb627c1cb",
+    "docx": "5e145e522a7cd3b0e44d95cb43e9a82e49cb98396f5d19757fbd68fe0903f91c",
+    "pdf": "b2064eab99a968892955dd798c6d28eeccaff34292dfcedf6386e83c9bd184a5",
+    "job": "437d31904cca91f5c9c45d7f1aceaa1ea45843e5cc0c7cf085c5deb578ca5a4a"
+  }
+}

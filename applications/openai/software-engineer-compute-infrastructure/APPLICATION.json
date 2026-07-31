@@ -1,0 +1,22 @@
+{
+  "company": "OpenAI",
+  "role": "Software Engineer, Compute Infrastructure",
+  "requisition_id": null,
+  "location": "San Francisco, New York City, Seattle, and London, UK",
+  "department": "Compute",
+  "source_url": "https://openai.com/careers/software-engineer-compute-infrastructure-san-francisco/",
+  "job_description": "JOB_DESCRIPTION.md",
+  "job_description_status": "complete-official-page-reviewed",
+  "job_description_captured_at": "2026-07-30",
+  "slug": "software-engineer-compute-infrastructure",
+  "artifacts": [
+    {
+      "type": "resume",
+      "source": "Jordan_Newman_OpenAI_Compute_Infrastructure_Resume.md"
+    },
+    {
+      "type": "cover_letter",
+      "source": "COVER_LETTER.md"
+    }
+  ]
+}

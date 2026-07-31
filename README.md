@@ -43,6 +43,16 @@ The employer posting associated with requisition JR39731 was verified as a Compu
 | Job description | `applications/1password/7bbbdf90-partnerships-engineering/JOB_DESCRIPTION.md` |
 | Validation | `applications/1password/7bbbdf90-partnerships-engineering/validation/` |
 
+### OpenAI — Software Engineer, Compute Infrastructure
+
+| Document | Path |
+|---|---|
+| Package | `applications/openai/software-engineer-compute-infrastructure/` |
+| Resume source | `applications/openai/software-engineer-compute-infrastructure/Jordan_Newman_OpenAI_Compute_Infrastructure_Resume.md` |
+| Cover-letter source | `applications/openai/software-engineer-compute-infrastructure/COVER_LETTER.md` |
+| Job description | `applications/openai/software-engineer-compute-infrastructure/JOB_DESCRIPTION.md` |
+| Validation | `applications/openai/software-engineer-compute-infrastructure/validation/` |
+
 ### Starlink — Embedded Software Engineer
 
 | Document | Path |
