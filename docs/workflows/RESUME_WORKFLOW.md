@@ -34,11 +34,12 @@ All three should improve over time, but each should emphasize the same facts dif
 10. Add cross-links, citations, metadata, evidence classifications, open questions, and a log entry when the new knowledge warrants them.
 11. Tailor the summary, skills order, selected highlights, project descriptions, and work-history bullets using `docs/STYLE_GUIDE.md`. Prefer the Google XYZ formula—outcome (X), verified measure or scope (Y), and method (Z)—when the documented facts support it; use an outcome-first alternative when they do not.
 12. Keep `EVIDENCE_MAP.md` synchronized with the selected wording and final evidence used in the resume.
-13. Produce Markdown and rebuild only the corresponding DOCX and PDF deliverables.
-14. Pass the exact rebuilt-artifact manifest, job description, evidence map, and relevant OKF concepts to the ATS readiness and final-artifact validation process in `docs/workflows/ATS_VALIDATION.md`.
-15. Commit the initial retained ATS baseline, including its exact source, rebuilt artifacts, validation files, evidence map, and supporting knowledge changes, before starting any revision pass.
-16. Resolve critical failures and repeat validation until the application is at least Strong or Jordan explicitly approves submission with known limitations. Commit every meaningful retained revision pass before another pass changes the same resume.
-17. Update the repository README and company package index when adding a new application package.
+13. Start from a clean, current `main` using `git pull --ff-only origin main`.
+14. Commit and push the pass's Markdown, evidence map, application metadata, and supporting OKF changes. GitHub Actions is the sole writer of tracked DOCX, PDF, ATS report, result, and history files during a normal pass.
+15. Wait for the generation workflow to commit only the corresponding DOCX and PDF deliverables and for the validation workflow to commit the ATS result from the exact rebuilt-artifact manifest.
+16. Do not make another local `main` commit while that CI chain is running. Pull the completed chain with `git pull --ff-only origin main`, then visually and factually review the committed artifacts and validation result.
+17. Resolve critical failures and repeat until the application is at least Strong or Jordan explicitly approves submission with known limitations. Every pass must complete its source/artifact/validation commit chain before the next pass begins.
+18. Update the repository README and company package index when adding a new application package.
 
 ## Application Evidence Map
 
@@ -189,11 +190,11 @@ When new facts are learned:
 1. Update the OKF knowledge base.
 2. Determine whether one or more generic resumes should be improved.
 3. Update only the generic versions for which the information strengthens the intended positioning.
-4. Regenerate only the matching DOCX and PDF files whose sources changed.
-5. Run ATS readiness and final-artifact validation only for resumes included in that rebuild.
+4. Commit and push the scoped Markdown and supporting knowledge changes from a clean, current `main`.
+5. Allow GitHub Actions to regenerate only the matching DOCX and PDF files and validate only resumes included in that rebuild.
 6. Record the knowledge change in `knowledge/log.md` when meaningful.
 7. Record significant repository decisions in an ADR.
-8. Commit the complete retained baseline or revision-pass state with a message that identifies the resume, pass, and score before beginning another pass.
+8. Wait for the CI artifact and validation commits, pull them with `git pull --ff-only`, and review the completed pass before beginning another.
 
 ## Incremental Builds and Full Rebuilds
 

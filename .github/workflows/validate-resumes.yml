@@ -7,6 +7,10 @@ on:
         description: 'JSON manifest emitted by the immediately preceding artifact build'
         required: true
         type: string
+      artifact_commit:
+        description: 'Exact source-and-artifact commit produced by the generation job'
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -15,11 +19,23 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out current main
+      - name: Check out exact generated-artifact commit
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ inputs.artifact_commit }}
           fetch-depth: 0
+
+      - name: Verify main still points to the artifact commit
+        shell: bash
+        run: |
+          git fetch origin main
+          current="$(git rev-parse origin/main)"
+          expected="${{ inputs.artifact_commit }}"
+          if [[ "$current" != "$expected" ]]; then
+            echo "main advanced from artifact commit $expected to $current before validation."
+            echo "Refusing to validate or commit reports for a stale artifact set."
+            exit 1
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -48,6 +64,7 @@ jobs:
         run: python scripts/validate_rebuilt_artifacts.py --manifest /tmp/rebuilt.json
 
       - name: Commit validation reports
+        shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -55,7 +72,14 @@ jobs:
           if git diff --cached --quiet; then
             echo 'No validation changes to commit.'
           else
+            git fetch origin main
+            current="$(git rev-parse origin/main)"
+            expected="${{ inputs.artifact_commit }}"
+            if [[ "$current" != "$expected" ]]; then
+              echo "main advanced from artifact commit $expected to $current during validation."
+              echo "Refusing to rebase stale validation output onto newer work."
+              exit 1
+            fi
             git commit -m 'Validate rebuilt resume artifacts'
-            git pull --rebase origin main
             git push origin HEAD:main
           fi

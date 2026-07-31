@@ -87,10 +87,13 @@ When Jordan provides new information:
 
 - Markdown is the editable source format.
 - DOCX and PDF are generated deliverables and must remain consistent with the Markdown source.
-- The initial ATS baseline and every meaningful ATS revision pass MUST be committed before another pass changes or regenerates the same resume.
-- A retained pass commit MUST include the exact Markdown source, rebuilt DOCX and PDF artifacts, current ATS report and result, updated ATS history, and any evidence-map or OKF changes used by that version.
-- Do not amend, squash, or overwrite retained ATS-pass commits; artifact hashes verify a version, while Git commits preserve and recover it.
-- Do not begin the next local pass, or push the next automated pass, until the preceding pass commit or CI source/artifact/validation commit chain has completed successfully.
+- GitHub Actions is the default and sole writer of tracked DOCX, PDF, ATS report, ATS result, and ATS history files during normal resume passes.
+- Before each pass, require a clean worktree and synchronize `main` with `git pull --ff-only origin main`.
+- Commit and push only the pass's human-authored source, evidence-map, application metadata, and supporting OKF changes. Do not commit locally generated tracked artifacts during a CI-owned pass.
+- After pushing a pass, do not create or push any additional commit on local `main` until the generation and validation workflows have both completed.
+- Pull the completed CI source/artifact/validation commit chain with `git pull --ff-only origin main`, then inspect the committed DOCX/PDF and ATS result before beginning another pass.
+- If parallel unrelated work is unavoidable while CI owns `main`, use a separate branch and do not merge or push it to `main` until the CI chain completes.
+- Do not amend, squash, or overwrite retained ATS-pass commit chains; artifact hashes verify a version, while Git commits preserve and recover it.
 - Automatic builds MUST rebuild only resume or cover-letter sources affected by the triggering change.
 - ATS validation MUST consume the exact rebuilt-artifact manifest and validate only resumes rebuilt in that run.
 - A repository-wide rebuild is manual-only and requires Jordan's explicit approval through the workflow's `full_rebuild` input.

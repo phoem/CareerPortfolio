@@ -130,8 +130,8 @@ Regardless of the numeric score, mark the resume **Not Ready** when any of these
 
 ATS validation is an iterative quality gate, not a one-time score.
 
-Before changing a resume in response to its first validation result, commit the
-initial retained baseline as described in **Per-pass commit gate** below.
+Before changing a resume in response to its first validation result, complete
+the initial CI-owned baseline as described in **Per-pass CI commit gate** below.
 
 When the score or disposition is below the configured submission target:
 
@@ -139,67 +139,79 @@ When the score or disposition is below the configured submission target:
 2. separate presentation problems from missing knowledge and genuine qualification gaps;
 3. apply one coherent set of supported improvements;
 4. update the OKF knowledge base first when new facts are learned;
-5. regenerate Markdown-derived DOCX and PDF artifacts;
-6. rerun validation and record the score delta.
-7. visually review the rebuilt artifacts;
-8. commit the complete retained pass before making any further resume change.
+5. commit and push the scoped source, evidence-map, application, and OKF changes;
+6. wait for GitHub Actions to regenerate the affected DOCX/PDF files and commit them;
+7. wait for the validation workflow to score the exact rebuilt-artifact manifest and commit the report, result, and history;
+8. pull the completed commit chain with `git pull --ff-only origin main`;
+9. visually and factually review the committed artifacts and score delta before making any further resume change.
 
-### Per-pass commit gate
+### Per-pass CI commit gate
 
 The initial baseline and every meaningful revision pass are recoverable Git
-versions, not merely score-history entries.
+versions, not merely score-history entries. GitHub Actions is the default and
+sole writer of tracked generated artifacts and ATS outputs for normal passes.
 
-A local or agent-driven pass is not complete until all of the following have
-happened:
+A pass begins only from a clean and synchronized local checkout:
 
-1. the exact Markdown source has been generated into DOCX and PDF;
-2. validation has produced the current report, machine-readable result, and
-   append-only history entry;
-3. visual and factual review has completed;
-4. the pass's scoped files have been staged and committed;
-5. the commit succeeded and the remaining worktree was checked for unintended
-   or unrelated changes.
+```text
+git status --short
+git pull --ff-only origin main
+```
 
-The commit must include, when applicable:
+The local source commit includes, when applicable:
 
 - the resume Markdown source;
-- the exact DOCX and PDF files listed in that pass's rebuilt-artifact manifest;
-- the current ATS report and machine-readable result;
-- the append-only ATS history;
 - the synchronized `EVIDENCE_MAP.md`;
 - application metadata or design selection changed for the pass;
 - OKF concepts and `knowledge/log.md` entries that support claims introduced in
   the pass;
-- a cover letter only when it was intentionally rebuilt as part of the same
-  coherent application change.
+- cover-letter Markdown only when it is part of the same coherent application
+  change.
 
-Do not start the next pass until this commit exists. Do not use `--amend`,
-squash, history rewriting, or a later aggregate commit to replace retained
-baseline or pass commits.
+Do not stage or commit locally generated tracked DOCX, PDF, ATS report, ATS
+result, or ATS history files in a normal CI-owned pass. Local rendering may be
+used for temporary experimentation only when it does not become a competing
+writer of tracked outputs.
 
-Recommended commit subjects:
+After the source commit is pushed, GitHub Actions owns `main` until the pass
+finishes:
+
+1. the generation workflow checks out the exact triggering source commit;
+2. it generates only the selected artifacts and commits the DOCX/PDF state;
+3. the validation workflow checks out that exact artifact commit;
+4. it validates the exact manifest and commits the report, result, and history;
+5. the local checkout pulls the completed chain with
+   `git pull --ff-only origin main`.
+
+Do not create or push any additional local `main` commit between steps 1 and 4,
+including unrelated documentation or workflow work. If parallel work is
+unavoidable, use a separate branch and do not merge or push it to `main` until
+the CI chain completes.
+
+The generation and validation workflows compare `origin/main` with the exact
+commit they are authorized to extend. If `main` advances unexpectedly, they
+fail instead of rebasing stale outputs. A failed stale-main guard requires the
+user or agent to pull with `--ff-only`, review the new state, and deliberately
+start a fresh pass.
+
+Recommended source-commit subjects:
 
 ```text
-Record <company> <role> ATS baseline (<score>)
-Revise <company> <role> ATS pass <n> (<score>)
+Record <company> <role> ATS baseline source
+Revise <company> <role> ATS pass <n> source
 ```
 
-The ATS history's artifact hashes remain useful integrity identifiers, but they
-are not a substitute for committing the files. A hash cannot reconstruct an
-overwritten Markdown, DOCX, or PDF file.
-
-In GitHub Actions, one pass may be represented by a short commit chain rather
-than one commit: the user/source commit, the generated-artifact commit, and the
-validation-report commit. That chain collectively preserves the pass. Do not
-push the next revision pass until the preceding generation and validation jobs
-have completed successfully.
+The three-commit source/artifact/validation chain collectively preserves the
+pass. Do not amend, squash, or rewrite retained chains. The ATS history's
+artifact hashes remain useful integrity identifiers, but they are not a
+substitute for Git-retained files.
 
 ### Autonomous retry limit
 
 An agent may perform at most **three consecutive revision passes without human interaction**.
 
-A pass includes analysis, one coherent set of edits, artifact regeneration,
-rescoring, visual review, and the successful per-pass commit.
+A pass includes analysis, one coherent source/evidence commit, the successful
+CI artifact and validation commits, a fast-forward-only pull, and visual review.
 
 Stop before the limit when:
 
@@ -265,8 +277,7 @@ Do not retain duplicate runs where neither the resume, artifacts, job descriptio
 
 A score becomes stale when its resume source, generated artifacts, target job description, or scoring model changes. Stale results must be labeled and rerun before relying on them.
 
-Every retained history entry must correspond to a recoverable Git state. For a
-local pass, that is the pass commit. For an automated pass, it is the completed
+Every retained history entry must correspond to a recoverable, completed
 source/artifact/validation commit chain. The history does not need to duplicate
 the old files once Git preserves them.
 
@@ -324,7 +335,8 @@ Human or agent review remains required for evidence quality, relevance, truthful
 
 `scripts/validate_rebuilt_artifacts.py` is the automation entry point after generation. It routes each rebuilt resume to its current validation directory, invokes the validator, and records history. Cover letters in the build manifest are intentionally skipped because ATS resume scoring does not apply to them.
 
-The validator does not autonomously stage arbitrary repository changes because
-the safe commit scope can include user-confirmed OKF evidence and application
-files outside the generated manifest. The calling agent or CI workflow is
-responsible for the commit gate and must preserve unrelated worktree changes.
+The validator does not autonomously stage human-authored source, evidence, or
+OKF changes. The local source commit owns those files. The CI generation and
+validation workflows own only their scoped generated outputs and fail rather
+than rebasing when `main` no longer matches the authorized source or artifact
+commit.

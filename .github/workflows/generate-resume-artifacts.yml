@@ -40,6 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       rebuilt_manifest: ${{ steps.result.outputs.rebuilt_manifest }}
+      artifact_commit: ${{ steps.commit.outputs.commit_sha }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -103,7 +104,21 @@ jobs:
             jq -r '.recommendations[] | "- " + .' "$RUNNER_TEMP/rebuilt.json" >> "$GITHUB_STEP_SUMMARY"
           fi
 
+      - name: Verify main has not advanced
+        shell: bash
+        run: |
+          git fetch origin main
+          expected="${{ github.sha }}"
+          current="$(git rev-parse origin/main)"
+          if [[ "$current" != "$expected" ]]; then
+            echo "main advanced from $expected to $current while this artifact build was running."
+            echo "Refusing to rebase stale generated artifacts onto newer source changes."
+            exit 1
+          fi
+
       - name: Commit generated artifacts
+        id: commit
+        shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -112,14 +127,15 @@ jobs:
             echo 'No generated changes to commit.'
           else
             git commit -m 'Generate changed resume artifacts'
-            git pull --rebase origin main
             git push origin HEAD:main
           fi
+          echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
   validate:
     needs: generate
-    if: needs.generate.outputs.rebuilt_manifest != ''
+    if: needs.generate.outputs.rebuilt_manifest != '' && needs.generate.outputs.artifact_commit != ''
     uses: ./.github/workflows/validate-resumes.yml
     with:
       rebuilt_manifest: ${{ needs.generate.outputs.rebuilt_manifest }}
+      artifact_commit: ${{ needs.generate.outputs.artifact_commit }}
     secrets: inherit

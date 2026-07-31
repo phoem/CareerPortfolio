@@ -104,6 +104,8 @@ Current entries include PrimeHTTPD, the CDN platform, VirtualDir, PrimeDump, Pri
 - `scripts/generate_resume_artifacts.py` generates matching DOCX and PDF files for explicitly selected Markdown sources.
 - `.github/workflows/generate-resume-artifacts.yml` rebuilds only sources changed on `main`; repository-wide rebuilds require an explicitly approved manual dispatch.
 - `.github/workflows/validate-resumes.yml` is called with the exact build manifest and validates only resumes rebuilt by that run.
+- Normal resume passes use GitHub Actions as the sole writer of tracked DOCX/PDF and ATS output files: push one source/evidence commit, wait for the artifact and validation commits, then pull with `git pull --ff-only` before starting another pass.
+- Both repository-writing workflows fail rather than rebasing stale artifacts or validation results when `main` advances unexpectedly.
 - Generated DOCX and PDF files must remain consistent with their Markdown sources and be visually reviewed before use.
 
 LinkedIn profile synchronization is intentionally manual. CareerPortfolio proposes exact evidence-backed changes first and edits the authenticated profile only after Jordan approves specific fields.

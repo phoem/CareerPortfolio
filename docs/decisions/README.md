@@ -39,6 +39,7 @@ ADRs are immutable historical records. When a decision changes, add a new ADR th
 | [0021](0021-formalize-application-evidence-maps-and-knowledge-evidence-quality.md) | Formalize application evidence maps and knowledge evidence quality | Accepted |
 | [0022](0022-upgrade-knowledge-bundle-to-okf-v0.2.md) | Upgrade the knowledge bundle to OKF v0.2 | Accepted |
 | [0023](0023-commit-every-retained-ats-validation-pass.md) | Commit every retained ATS validation pass | Accepted |
+| [0024](0024-use-ci-as-the-single-writer-for-resume-pass-outputs.md) | Use CI as the single writer for resume-pass outputs | Accepted |
 
 ## Creating a new ADR
 
