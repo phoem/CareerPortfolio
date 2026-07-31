@@ -1,10 +1,10 @@
 # ATS Readiness Report
 
-- **Validated:** 2026-07-31T04:59:16+00:00
+- **Validated:** 2026-07-31T05:05:48+00:00
 - **Validator:** CareerPortfolio ATS Validator v0.2.1
 - **Score type:** Targeted readiness
-- **Overall score:** 89/100
-- **Disposition:** Strong
+- **Overall score:** 90/100
+- **Disposition:** Submission Ready
 - **Autonomous revision pass:** 0 of 3
 
 ## Category Scores
@@ -16,7 +16,7 @@
 | Required job-requirement evidence | 78 | 30% |
 | Preferred job-requirement evidence | 78 | 15% |
 | Language and keyword quality | 100 | 10% |
-| Human readability and positioning | 91 | 10% |
+| Human readability and positioning | 97 | 10% |
 
 ## Critical Failures
 
@@ -55,7 +55,7 @@
 
 ## Human readability and positioning
 
-- 3 bullets are long enough to hinder scanning.
+- 1 bullets are long enough to hinder scanning.
 
 ## Requirement-to-Evidence Matrix
 
@@ -76,11 +76,11 @@
 
 ## Artifact Versions
 
-- `resume`: `179999c626d095a5fc1ee165fdfd4b725bf10f13e15be757b95cbf7a88402aa0`
-- `docx`: `8778a3da67b36d3a2aa2d2048cbe92ce752f37f275b2dcbcd3283440d48a5262`
-- `pdf`: `ab1aa600ae9a6929ef476dccb3c8de0ebe88e157cd589374e36f3244921182da`
+- `resume`: `91a8d2ea1839235d903dcad21e1e578e2f6e3c26e353ec2c4b3572624689df18`
+- `docx`: `89d1a8a6f8591bceb1eac314a1ecf69b54573c6cd9b592a6f653d71af69c7cce`
+- `pdf`: `b2437bee6501d8bb30ffdc5b0428c5a5e44dbc2678221a14735a5499cef843b6`
 - `job`: `f1c9302661a66f8e52c44d322831ef12d6a14b34b7b867fd217a6740ee5b24a4`
 
 ## Recommended Next Action
 
-- Review the listed deductions and submit unless a safe, evidence-backed improvement is material.
+- Submit after final human visual review.

@@ -1,7 +1,7 @@
 {
   "validator_version": "0.2.1",
-  "overall_score": 89,
-  "disposition": "Strong",
+  "overall_score": 90,
+  "disposition": "Submission Ready",
   "targeted_complete": true,
   "pass_number": 0,
   "categories": {
@@ -52,18 +52,18 @@
       "weight": 10
     },
     "Human readability and positioning": {
-      "score": 91,
+      "score": 97,
       "findings": [
-        "3 bullets are long enough to hinder scanning."
+        "1 bullets are long enough to hinder scanning."
       ],
       "weight": 10
     }
   },
   "critical_failures": [],
   "hashes": {
-    "resume": "179999c626d095a5fc1ee165fdfd4b725bf10f13e15be757b95cbf7a88402aa0",
-    "docx": "8778a3da67b36d3a2aa2d2048cbe92ce752f37f275b2dcbcd3283440d48a5262",
-    "pdf": "ab1aa600ae9a6929ef476dccb3c8de0ebe88e157cd589374e36f3244921182da",
+    "resume": "91a8d2ea1839235d903dcad21e1e578e2f6e3c26e353ec2c4b3572624689df18",
+    "docx": "89d1a8a6f8591bceb1eac314a1ecf69b54573c6cd9b592a6f653d71af69c7cce",
+    "pdf": "b2437bee6501d8bb30ffdc5b0428c5a5e44dbc2678221a14735a5499cef843b6",
     "job": "f1c9302661a66f8e52c44d322831ef12d6a14b34b7b867fd217a6740ee5b24a4"
   }
 }
