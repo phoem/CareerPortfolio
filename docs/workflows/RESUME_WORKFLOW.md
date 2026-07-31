@@ -36,8 +36,9 @@ All three should improve over time, but each should emphasize the same facts dif
 12. Keep `EVIDENCE_MAP.md` synchronized with the selected wording and final evidence used in the resume.
 13. Produce Markdown and rebuild only the corresponding DOCX and PDF deliverables.
 14. Pass the exact rebuilt-artifact manifest, job description, evidence map, and relevant OKF concepts to the ATS readiness and final-artifact validation process in `docs/workflows/ATS_VALIDATION.md`.
-15. Resolve critical failures and repeat validation until the application is at least Strong or Jordan explicitly approves submission with known limitations.
-16. Update the repository README and company package index when adding a new application package.
+15. Commit the initial retained ATS baseline, including its exact source, rebuilt artifacts, validation files, evidence map, and supporting knowledge changes, before starting any revision pass.
+16. Resolve critical failures and repeat validation until the application is at least Strong or Jordan explicitly approves submission with known limitations. Commit every meaningful retained revision pass before another pass changes the same resume.
+17. Update the repository README and company package index when adding a new application package.
 
 ## Application Evidence Map
 
@@ -192,7 +193,7 @@ When new facts are learned:
 5. Run ATS readiness and final-artifact validation only for resumes included in that rebuild.
 6. Record the knowledge change in `knowledge/log.md` when meaningful.
 7. Record significant repository decisions in an ADR.
-8. Commit with a clear message.
+8. Commit the complete retained baseline or revision-pass state with a message that identifies the resume, pass, and score before beginning another pass.
 
 ## Incremental Builds and Full Rebuilds
 

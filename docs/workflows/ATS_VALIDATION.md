@@ -130,6 +130,9 @@ Regardless of the numeric score, mark the resume **Not Ready** when any of these
 
 ATS validation is an iterative quality gate, not a one-time score.
 
+Before changing a resume in response to its first validation result, commit the
+initial retained baseline as described in **Per-pass commit gate** below.
+
 When the score or disposition is below the configured submission target:
 
 1. identify the lowest-scoring fixable categories;
@@ -138,12 +141,65 @@ When the score or disposition is below the configured submission target:
 4. update the OKF knowledge base first when new facts are learned;
 5. regenerate Markdown-derived DOCX and PDF artifacts;
 6. rerun validation and record the score delta.
+7. visually review the rebuilt artifacts;
+8. commit the complete retained pass before making any further resume change.
+
+### Per-pass commit gate
+
+The initial baseline and every meaningful revision pass are recoverable Git
+versions, not merely score-history entries.
+
+A local or agent-driven pass is not complete until all of the following have
+happened:
+
+1. the exact Markdown source has been generated into DOCX and PDF;
+2. validation has produced the current report, machine-readable result, and
+   append-only history entry;
+3. visual and factual review has completed;
+4. the pass's scoped files have been staged and committed;
+5. the commit succeeded and the remaining worktree was checked for unintended
+   or unrelated changes.
+
+The commit must include, when applicable:
+
+- the resume Markdown source;
+- the exact DOCX and PDF files listed in that pass's rebuilt-artifact manifest;
+- the current ATS report and machine-readable result;
+- the append-only ATS history;
+- the synchronized `EVIDENCE_MAP.md`;
+- application metadata or design selection changed for the pass;
+- OKF concepts and `knowledge/log.md` entries that support claims introduced in
+  the pass;
+- a cover letter only when it was intentionally rebuilt as part of the same
+  coherent application change.
+
+Do not start the next pass until this commit exists. Do not use `--amend`,
+squash, history rewriting, or a later aggregate commit to replace retained
+baseline or pass commits.
+
+Recommended commit subjects:
+
+```text
+Record <company> <role> ATS baseline (<score>)
+Revise <company> <role> ATS pass <n> (<score>)
+```
+
+The ATS history's artifact hashes remain useful integrity identifiers, but they
+are not a substitute for committing the files. A hash cannot reconstruct an
+overwritten Markdown, DOCX, or PDF file.
+
+In GitHub Actions, one pass may be represented by a short commit chain rather
+than one commit: the user/source commit, the generated-artifact commit, and the
+validation-report commit. That chain collectively preserves the pass. Do not
+push the next revision pass until the preceding generation and validation jobs
+have completed successfully.
 
 ### Autonomous retry limit
 
 An agent may perform at most **three consecutive revision passes without human interaction**.
 
-A pass includes analysis, one coherent set of edits, artifact regeneration, and rescoring.
+A pass includes analysis, one coherent set of edits, artifact regeneration,
+rescoring, visual review, and the successful per-pass commit.
 
 Stop before the limit when:
 
@@ -209,6 +265,11 @@ Do not retain duplicate runs where neither the resume, artifacts, job descriptio
 
 A score becomes stale when its resume source, generated artifacts, target job description, or scoring model changes. Stale results must be labeled and rerun before relying on them.
 
+Every retained history entry must correspond to a recoverable Git state. For a
+local pass, that is the pass commit. For an automated pass, it is the completed
+source/artifact/validation commit chain. The history does not need to duplicate
+the old files once Git preserves them.
+
 ### Suggested paths
 
 Targeted resume:
@@ -262,3 +323,8 @@ Generated extraction files may be temporary when they add no lasting review valu
 Human or agent review remains required for evidence quality, relevance, truthfulness, and narrative strength.
 
 `scripts/validate_rebuilt_artifacts.py` is the automation entry point after generation. It routes each rebuilt resume to its current validation directory, invokes the validator, and records history. Cover letters in the build manifest are intentionally skipped because ATS resume scoring does not apply to them.
+
+The validator does not autonomously stage arbitrary repository changes because
+the safe commit scope can include user-confirmed OKF evidence and application
+files outside the generated manifest. The calling agent or CI workflow is
+responsible for the commit gate and must preserve unrelated worktree changes.

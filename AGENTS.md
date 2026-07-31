@@ -87,6 +87,10 @@ When Jordan provides new information:
 
 - Markdown is the editable source format.
 - DOCX and PDF are generated deliverables and must remain consistent with the Markdown source.
+- The initial ATS baseline and every meaningful ATS revision pass MUST be committed before another pass changes or regenerates the same resume.
+- A retained pass commit MUST include the exact Markdown source, rebuilt DOCX and PDF artifacts, current ATS report and result, updated ATS history, and any evidence-map or OKF changes used by that version.
+- Do not amend, squash, or overwrite retained ATS-pass commits; artifact hashes verify a version, while Git commits preserve and recover it.
+- Do not begin the next local pass, or push the next automated pass, until the preceding pass commit or CI source/artifact/validation commit chain has completed successfully.
 - Automatic builds MUST rebuild only resume or cover-letter sources affected by the triggering change.
 - ATS validation MUST consume the exact rebuilt-artifact manifest and validate only resumes rebuilt in that run.
 - A repository-wide rebuild is manual-only and requires Jordan's explicit approval through the workflow's `full_rebuild` input.
@@ -102,6 +106,7 @@ When Jordan provides new information:
 - The canonical repository is `phoem/CareerPortfolio`.
 - Commit directly to `main` by default unless Jordan explicitly requests a branch or pull request.
 - Use clear commit messages that describe the resume, knowledge, workflow, ADR, roadmap, design, or application change.
+- Name retained ATS-pass commits so the application, baseline or pass number, and score are recognizable from Git history.
 - Do not reorganize or rename existing files without a concrete benefit and corresponding README, index, and ADR updates when appropriate.
 
 ## LinkedIn Profile Changes
