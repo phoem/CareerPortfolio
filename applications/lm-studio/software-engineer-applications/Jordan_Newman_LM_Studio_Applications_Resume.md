@@ -7,7 +7,7 @@ Willing and able to work in person in New York City
 
 ## Summary
 
-Product-minded senior software engineer with more than 20 years of experience delivering commercial application, integration, systems, and infrastructure features. Currently building Nexus, a local-first agentic control plane with a React Web UI, Tauri desktop client, multi-agent workflows, default-deny tool permissions, human approvals, layered knowledge, and auditable execution. Works holistically across the stack and uses profiling, iterative measurement, and architecture tradeoffs to solve technical problems. Hands-on with React, TypeScript, Electron, Tauri, C#, C++, and C, plus two-plus years of ML-framework and local-model experimentation with LM Studio, llama.cpp, Ollama, and LM Studio Bionic.
+Product-minded senior software engineer with more than 20 years of software product engineering experience building and shipping commercial application, integration, systems, and infrastructure features. Currently building Nexus, a local-first agentic control plane with a React Web UI, Tauri desktop client, multi-agent workflows, default-deny tool permissions, human approvals, layered knowledge, and auditable execution. Builds across the stack—from user interfaces through systems engineering, design, and applied agentic AI—to craft thoughtful product and user experiences. Approaches technical problems with a scientific-method mindset, using profiling, iterative measurement, architecture tradeoffs, and a holistic understanding of software systems. Hands-on with React, TypeScript, Electron, Tauri, C#, C++, and C, plus two-plus years of ML-framework and local-model experimentation with LM Studio, llama.cpp, Ollama, and LM Studio Bionic.
 
 ## Technical Skills
 
@@ -25,7 +25,7 @@ Product-minded senior software engineer with more than 20 years of experience de
 - Designed and built a local-first agentic control plane that persists tasks, approvals, audit records, and knowledge in SQLite and the local filesystem before introducing cloud dependencies.
 - Implemented declarative YAML, DAG-oriented workflows with sub-tasks, parallel agents, conditional branches, controlled loop-back execution, and audited task-state transitions.
 - Enforced default-deny tool permissions through risk levels, mandatory and standing approvals, workspace grants, air-gapped network controls, canonical paths, and symlink-traversal protection.
-- Crafted React/Tailwind product experiences for task creation, live events, approvals, artifacts, workflow visualization, knowledge exploration, AI-usage statistics, routing simulation, and configuration.
+- Crafted React/Tailwind product and user experiences for task creation, live events, approvals, artifacts, workflow visualization, knowledge exploration, usage statistics, routing simulation, and configuration.
 - Built a Tauri desktop client with system-tray controls, workspace selection, notifications, keychain-backed secrets, file and URL opening, and local process supervision.
 - Migrated from Electron to Tauri for a smaller footprint, faster startup, lower memory use, and a stricter capability-based security model.
 - Implemented model routing with health checks, circuit breakers, budget-aware selection, failover, prompt caching, and privacy-conscious token, latency, retry, error, and cost tracking.
