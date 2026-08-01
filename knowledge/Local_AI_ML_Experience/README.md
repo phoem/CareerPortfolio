@@ -18,6 +18,7 @@ evidence_status: confirmed
 - Hands-on experience with LM Studio, `llama.cpp`, Ollama, and LM Studio Bionic.
 - Familiarity with MLX, TensorFlow, and Hugging Face Transformers; Jordan does not characterize himself as an expert in these frameworks.
 - Longstanding familiarity with CUDA dating to its early availability, although Jordan did not previously have projects that benefited from CUDA.
+- Jordan has not modified inference-engine internals and has not profiled GPU execution.
 
 ## Evidence Quality
 
@@ -25,6 +26,7 @@ evidence_status: confirmed
 - “Hands-on experience” does not establish that Jordan modified an inference engine, contributed upstream, or deployed these tools in a commercial production environment.
 - CUDA familiarity must not be presented as CUDA development, kernel programming, GPU optimization, or production deployment without additional evidence.
 - Direct integration of any named runtime or framework into Nexus remains unconfirmed.
+- Inference-engine modification and GPU-profiling experience must not be claimed.
 
 ## Resume-Safe Positioning
 
@@ -35,11 +37,9 @@ evidence_status: confirmed
 
 - [Nexus AI Harness](../Nexus_AI_Harness/README.md)
 - [Performance Profiling Experience](../Performance_Profiling_Experience/README.md)
+- [Programming Language Experience](../Programming_Language_Experience/README.md)
 
 ## Open Questions
 
 - Which named runtimes and frameworks are integrated directly into Nexus or another implemented project?
-- Has Jordan modified, debugged, or extended model-loading, quantization, sampling, tokenization, or inference-engine code?
 - What Python-based ML work has Jordan completed, and over what period?
-- Has Jordan profiled GPU execution, memory use, or model performance on CUDA or Apple Silicon?
-

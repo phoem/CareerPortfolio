@@ -12,6 +12,8 @@
 * **Performance engineering**: Recorded CPU profiling and optimization experience using GDB, Valgrind, and Linux perf; did not infer GPU profiling.
 * **Open source**: Verified Jordan's merged cachix/secretspec pull request adding a Rust Azure Key Vault provider with authentication modes, validation, tests, documentation, and review-driven fixes.
 * **Work location**: Confirmed that Jordan is willing and able to work in person in New York City.
+* **Programming languages**: Recorded 20+ years centered on C, C++ used intermittently across that career, and approximately 20 years of periodic Python use without claiming continuous daily specialization or expert-level Python proficiency.
+* **AI/ML evidence boundary**: Confirmed that Jordan has not modified inference-engine internals and has not profiled GPUs; retained CPU-focused profiling as the supported performance claim.
 
 ## 2026-07-31
 

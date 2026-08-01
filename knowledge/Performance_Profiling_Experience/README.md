@@ -22,7 +22,7 @@ evidence_status: confirmed
 
 - The CPU focus and named tools were directly confirmed by Jordan on 2026-08-01.
 - Specific projects, bottlenecks, methods, measurements, and performance improvements are not yet documented.
-- GPU profiling and optimization are not currently supported claims.
+- Jordan directly confirmed that he has not profiled GPUs; GPU profiling and optimization must not be claimed.
 
 ## Resume-Safe Description
 
@@ -39,4 +39,3 @@ Profiled and optimized CPU-intensive systems software using GDB, Valgrind, and L
 - Which projects were profiled with each tool?
 - What bottlenecks or defects were identified and corrected?
 - Are before-and-after latency, throughput, CPU, memory, or reliability measurements available?
-

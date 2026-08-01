@@ -48,3 +48,4 @@ The bundle targets OKF v0.2. Concepts use structured authorship, verification, p
 * [Local AI and ML Experience](Local_AI_ML_Experience/README.md) - Hands-on local-LLM tooling and ML-framework experience, primarily through personal projects.
 * [Inform Desktop Application](Inform_Desktop_Application/README.md) - C# desktop application work for DDI System, now Advantive.
 * [Performance Profiling Experience](Performance_Profiling_Experience/README.md) - CPU profiling and optimization with GDB, Valgrind, and Linux perf.
+* [Programming Language Experience](Programming_Language_Experience/README.md) - Confirmed duration and proficiency boundaries for C, C++, and Python.
