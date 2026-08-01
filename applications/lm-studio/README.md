@@ -5,4 +5,4 @@ Each LM Studio posting has an isolated application package with its own captured
 | Role | Package | Status |
 |---|---|---|
 | Software Engineer, Applications | `software-engineer-applications/` | Submission ready — 96/100 |
-| Software Engineer, AI/ML Systems | `software-engineer-ai-ml-systems/` | CI baseline |
+| Software Engineer, AI/ML Systems | `software-engineer-ai-ml-systems/` | Submission ready — 94/100 |
