@@ -1,0 +1,19 @@
+{
+  "company": "LM Studio",
+  "role": "Software Engineer, AI/ML Systems",
+  "requisition_id": "9942f9e5-63b4-473d-9510-00dcaa811721",
+  "location": "New York City",
+  "department": "Engineering",
+  "source_url": "https://lmstudio.ai/careers/ai-ml-systems-engineer",
+  "application_url": "https://jobs.ashbyhq.com/lm-studio/9942f9e5-63b4-473d-9510-00dcaa811721/application",
+  "job_description": "JOB_DESCRIPTION.md",
+  "job_description_status": "complete-public-page-captured",
+  "job_description_captured_at": "2026-08-01",
+  "slug": "software-engineer-ai-ml-systems",
+  "artifacts": [
+    {
+      "type": "resume",
+      "source": "Jordan_Newman_LM_Studio_AI_ML_Systems_Resume.md"
+    }
+  ]
+}

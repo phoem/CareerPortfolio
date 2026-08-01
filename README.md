@@ -55,6 +55,16 @@ The employer posting associated with requisition JR39731 was verified as a Compu
 | Evidence map | `applications/lm-studio/software-engineer-applications/EVIDENCE_MAP.md` |
 | Validation | `applications/lm-studio/software-engineer-applications/validation/` |
 
+### LM Studio — Software Engineer, AI/ML Systems
+
+| Document | Path |
+|---|---|
+| Package | `applications/lm-studio/software-engineer-ai-ml-systems/` |
+| Resume source | `applications/lm-studio/software-engineer-ai-ml-systems/Jordan_Newman_LM_Studio_AI_ML_Systems_Resume.md` |
+| Job description | `applications/lm-studio/software-engineer-ai-ml-systems/JOB_DESCRIPTION.md` |
+| Evidence map | `applications/lm-studio/software-engineer-ai-ml-systems/EVIDENCE_MAP.md` |
+| Validation | `applications/lm-studio/software-engineer-ai-ml-systems/validation/` |
+
 ### OpenAI — Software Engineer, Compute Infrastructure
 
 | Document | Path |
