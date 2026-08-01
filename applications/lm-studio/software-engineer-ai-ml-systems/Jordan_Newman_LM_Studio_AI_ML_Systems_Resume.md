@@ -7,11 +7,11 @@ Willing and able to work in person in New York City
 
 ## Summary
 
-Systems software engineer with more than 20 years centered on C, with C++ used across that career and periodic Python use spanning approximately 20 years. Built production native runtimes, FreeBSD kernel modules, an x86 operating-system kernel, network software, and high-scale infrastructure. Brings two-plus years of hands-on machine learning framework and local model inference work, primarily through personal projects, including LM Studio, llama.cpp, Ollama, and LM Studio Bionic. Currently building Nexus, a local-first agentic control plane with model routing, observability, secure tools, React and Tauri clients, and auditable execution. Deep experience in operating systems, software system design, technical problem-solving, communication, CPU profiling, debugging, and performance optimization.
+Systems software engineer with more than 20 years centered on C; C++ has been used across that career, and periodic Python use spans approximately 20 years. Built production native runtimes, FreeBSD kernel modules, an x86 operating-system kernel, network software, and high-scale infrastructure. Brings 2+ years of hands-on experience with machine learning frameworks and model inference. This work is primarily through personal projects and includes local LLM experimentation with LM Studio, llama.cpp, Ollama, and LM Studio Bionic. Currently building Nexus, a local-first agentic control plane with TypeScript, model routing, observability, secure tools, React and Tauri clients, and auditable execution. Offers a strong understanding of operating systems and software system design, with proven problem-solving and communication skills plus deep CPU profiling, debugging, and performance expertise.
 
 ## Technical Skills
 
-- **Languages:** C, C++, Python, TypeScript, Rust, C#, assembly, Go, JavaScript, Shell
+- **Languages:** C, TypeScript, Rust, C#, assembly, Go, JavaScript, Shell; long-term experience with C++ and Python.
 - **Local AI and ML:** LM Studio, llama.cpp, Ollama, LM Studio Bionic; familiarity with MLX, TensorFlow, Hugging Face Transformers, and CUDA
 - **Runtime and Operating Systems:** FreeBSD, Linux, x86 kernel development, system calls, processes, shared memory, Unix descriptor passing, `kqueue`, non-blocking I/O, `sendfile()`
 - **Debugging and Performance:** GDB, Valgrind, Linux perf, CPU profiling and optimization, event-driven systems, concurrency, zero-copy I/O
@@ -28,7 +28,7 @@ Systems software engineer with more than 20 years centered on C, with C++ used a
 - Built a privacy-conscious model-invocation ledger tracking tokens, latency, retries, errors, and estimated cost without retaining prompt or response content.
 - Developed declarative YAML, DAG-oriented multi-agent workflows with parallel execution, conditional branches, controlled loop-back behavior, and audited task-state transitions.
 - Engineered default-deny tool permissions using risk classification, human approvals, workspace grants, air-gapped network controls, canonical paths, and symlink-traversal protection.
-- Delivered React/Tailwind and Tauri user and developer experiences with live events, approvals, routing simulation, AI-usage statistics, keychain-backed secrets, and local process supervision.
+- Built React/Tailwind and Tauri interfaces for a cohesive user and developer experience, including live events, approvals, routing simulation, usage statistics, keychain-backed secrets, and process supervision.
 
 ### PrimeHTTPD and Production CDN Runtime
 

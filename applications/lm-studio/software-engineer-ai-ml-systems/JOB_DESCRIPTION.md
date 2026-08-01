@@ -14,26 +14,22 @@ The role works closely with model authors and upstream open-source communities s
 
 ## Responsibilities
 
-- Build and maintain on-device inference engines for large language models and other models.
-- Integrate emerging AI and machine-learning technologies as production-ready LM Studio features.
-- Develop with and contribute to open-source inference engines such as llama.cpp and MLX.
-- Collaborate with model authors to deliver day-zero support for new models.
-- Profile, debug, and improve process memory, CPU use, and GPU use.
-- Communicate and collaborate effectively.
+- Build and maintain world-class on-device inference engines for LLMs and other models.
+- Integrate emerging AI/ML technologies as production-ready features in LM Studio.
+- Develop with and contribute to OSS engines like llama.cpp, MLX, and more.
+- Collaborate closely with model authors to ship day-0 support for new models.
+- Profile, debug, and improve process memory, CPU usage, and GPU usage.
+- Be an excellent communicator, contributor, and collaborator.
 
 ## Required Qualifications
 
-- Three or more years of experience with C++ and Python.
-- Two or more years of experience with machine-learning frameworks and model inference.
+- 3+ years of experience with C++ and Python. TypeScript experience is a plus.
+- 2+ years of experience with machine learning frameworks and model inference.
 - Excellent problem-solving and communication skills.
 - Strong understanding of operating systems.
-- Strong understanding of software-system design.
-- Interest in local large language models and hands-on experimentation with LM Studio.
-- Commitment to excellent user and developer experiences.
-
-## Preferred Qualifications
-
-- TypeScript experience is a plus.
+- Strong understanding of software system design.
+- Into local LLMs and have tinkered with them in LM Studio.
+- Passionate about a great user and developer experience.
 
 ## Benefits
 
