@@ -1,6 +1,6 @@
 # ATS Readiness Report
 
-- **Validated:** 2026-08-01T09:53:32+00:00
+- **Validated:** 2026-08-01T10:01:26+00:00
 - **Validator:** CareerPortfolio ATS Validator v0.2.1
 - **Score type:** Targeted readiness
 - **Overall score:** 96/100
@@ -25,7 +25,7 @@
 ## Artifact parseability and structure
 
 - DOCX token coverage versus Markdown: 100.0%.
-- PDF token coverage versus Markdown: 99.5%.
+- PDF token coverage versus Markdown: 99.1%.
 
 ## Required-information completeness
 
@@ -65,9 +65,9 @@
 
 ## Artifact Versions
 
-- `resume`: `d7215b27163ae28de977149d306c0ea82e4feba8f5fa6dea7e800d19f151877c`
-- `docx`: `d87228f8342e5fcef0077e4c878290da95b2d8e0efa48acae009a17e46c59dd5`
-- `pdf`: `b299e74b46ee18e0612a39832e962db9d9355b1fb2081bb7794d4e2d90e3ae69`
+- `resume`: `f7775cc436afecde3063de86ed50bf11e3fd0468d6e44c6ac9ed3c46b1283b2a`
+- `docx`: `5249a073feb6f8b583a3d72e9d1431a7bf2faed4f73dd88c15f43029cd768b72`
+- `pdf`: `481dc98e222a57b5d80a6bce0f7c62ef4ff502f3df3936bc00d30fa7dbe62d14`
 - `job`: `9f456dd7e3050aa2099a2127e15d80b77df005ffd96dcd11e2df8ad1e518f117`
 
 ## Recommended Next Action
