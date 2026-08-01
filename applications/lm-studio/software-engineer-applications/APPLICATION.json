@@ -1,0 +1,18 @@
+{
+  "company": "LM Studio",
+  "role": "Software Engineer, Applications",
+  "requisition_id": null,
+  "location": "New York City",
+  "department": "Engineering",
+  "source_url": "https://lmstudio.ai/careers/application-software-engineer",
+  "job_description": "JOB_DESCRIPTION.md",
+  "job_description_status": "complete-public-page-captured",
+  "job_description_captured_at": "2026-08-01",
+  "slug": "software-engineer-applications",
+  "artifacts": [
+    {
+      "type": "resume",
+      "source": "Jordan_Newman_LM_Studio_Applications_Resume.md"
+    }
+  ]
+}

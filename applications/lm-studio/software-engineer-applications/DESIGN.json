@@ -1,0 +1,5 @@
+{
+  "design": "classic-ats",
+  "scope": "persistent",
+  "applies_to": ["resume"]
+}

@@ -45,6 +45,16 @@ The employer posting associated with requisition JR39731 was verified as a Compu
 | Job description | `applications/1password/7bbbdf90-partnerships-engineering/JOB_DESCRIPTION.md` |
 | Validation | `applications/1password/7bbbdf90-partnerships-engineering/validation/` |
 
+### LM Studio — Software Engineer, Applications
+
+| Document | Path |
+|---|---|
+| Package | `applications/lm-studio/software-engineer-applications/` |
+| Resume source | `applications/lm-studio/software-engineer-applications/Jordan_Newman_LM_Studio_Applications_Resume.md` |
+| Job description | `applications/lm-studio/software-engineer-applications/JOB_DESCRIPTION.md` |
+| Evidence map | `applications/lm-studio/software-engineer-applications/EVIDENCE_MAP.md` |
+| Validation | `applications/lm-studio/software-engineer-applications/validation/` |
+
 ### OpenAI — Software Engineer, Compute Infrastructure
 
 | Document | Path |

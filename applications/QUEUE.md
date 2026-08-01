@@ -5,8 +5,7 @@ This file tracks job applications Jordan has explicitly asked to pursue. A queue
 | Priority | Company | Role | Workflow stage | Status | Next action | Source |
 |---:|---|---|---|---|---|---|
 | Hold | NVIDIA | Senior Software Engineer, Networking DGX Cloud (JR2022482) | Evidence gathering | On hold at Jordan's request | Await PrimeBGP/PrimeFlow deployment details, network configuration-management evidence, and Python/Go service details | https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-Remote/Senior-Software-Engineer--Networking-DGX-Cloud_JR2022482?source=jobboardlinkedin |
-| 1 | LM Studio | Software Engineer, Applications | Gap analysis | Active | Confirm desktop/UI technologies and product-engineering evidence, then draft the targeted resume | https://lmstudio.ai/careers/application-software-engineer |
-| 2 | LM Studio | Software Engineer, AI/ML Systems | Gap analysis | Active | Confirm ML-framework, inference-engine, local-LLM, GPU-profiling, and open-source evidence before drafting | https://lmstudio.ai/careers/ai-ml-systems-engineer |
+| 2 | LM Studio | Software Engineer, AI/ML Systems | Drafting | Active | Draft after the Applications resume completes its CI baseline and review | https://lmstudio.ai/careers/ai-ml-systems-engineer |
 
 ## Workflow-stage values
 
