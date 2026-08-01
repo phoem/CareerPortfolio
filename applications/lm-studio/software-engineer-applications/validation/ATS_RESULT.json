@@ -1,7 +1,7 @@
 {
   "validator_version": "0.2.1",
-  "overall_score": 85,
-  "disposition": "Strong",
+  "overall_score": 96,
+  "disposition": "Submission Ready",
   "targeted_complete": true,
   "pass_number": 0,
   "categories": {
@@ -9,7 +9,7 @@
       "score": 100,
       "findings": [
         "DOCX token coverage versus Markdown: 100.0%.",
-        "PDF token coverage versus Markdown: 99.3%."
+        "PDF token coverage versus Markdown: 99.5%."
       ],
       "weight": 25
     },
@@ -21,13 +21,13 @@
       "weight": 10
     },
     "Required job-requirement evidence": {
-      "score": 53,
+      "score": 85,
       "findings": [
         "Adjacent: Strong software product engineering and ability to ship features quickly. (matched: software, product, engineering, features).",
-        "Adjacent: Ability to work across user interfaces, systems engineering, design, and applied AI or agentic engineering. (matched: systems, engineering, design, ai, agentic).",
-        "Missing: Ability to craft thoughtful product and user experiences. (matched: product).",
-        "Adjacent: Scientific-method approach to technical problems. (matched: technical, problems.).",
-        "Adjacent: Holistic understanding of software systems and ability to work across the stack. (matched: software, systems).",
+        "Direct: Ability to work across user interfaces, systems engineering, design, and applied AI or agentic engineering. (matched: user, interfaces, systems, engineering, design, applied, ai, agentic).",
+        "Direct: Ability to craft thoughtful product and user experiences. (matched: craft, thoughtful, product, user, experiences.).",
+        "Adjacent: Scientific-method approach to technical problems. (matched: scientific-method, technical).",
+        "Direct: Holistic understanding of software systems and ability to work across the stack. (matched: holistic, understanding, software, systems).",
         "Direct: Willingness to work in person in the New York City office. (matched: person, new, york, city)."
       ],
       "weight": 30
@@ -40,9 +40,9 @@
       "weight": 15
     },
     "Language and keyword quality": {
-      "score": 90,
+      "score": 100,
       "findings": [
-        "Qualification-language token coverage: 43.8%."
+        "Qualification-language token coverage: 68.8%."
       ],
       "weight": 10
     },
@@ -56,9 +56,9 @@
   },
   "critical_failures": [],
   "hashes": {
-    "resume": "722c48a66113c81251c1d323e0e4251d700404fc264a1f40f38f8a018a92d42c",
-    "docx": "81b1f1ceec52789c2c1e986eac707b0392e69d5e09a406b253c0a1db8368a047",
-    "pdf": "52bd329395739c5a96855677d579034df99d720afdea35efdd2fdd95989b42a3",
+    "resume": "d7215b27163ae28de977149d306c0ea82e4feba8f5fa6dea7e800d19f151877c",
+    "docx": "d87228f8342e5fcef0077e4c878290da95b2d8e0efa48acae009a17e46c59dd5",
+    "pdf": "b299e74b46ee18e0612a39832e962db9d9355b1fb2081bb7794d4e2d90e3ae69",
     "job": "9f456dd7e3050aa2099a2127e15d80b77df005ffd96dcd11e2df8ad1e518f117"
   }
 }
