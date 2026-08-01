@@ -1,6 +1,6 @@
 {
   "validator_version": "0.2.1",
-  "overall_score": 88,
+  "overall_score": 85,
   "disposition": "Strong",
   "targeted_complete": true,
   "pass_number": 0,
@@ -9,7 +9,7 @@
       "score": 100,
       "findings": [
         "DOCX token coverage versus Markdown: 100.0%.",
-        "PDF token coverage versus Markdown: 100.0%."
+        "PDF token coverage versus Markdown: 99.3%."
       ],
       "weight": 25
     },
@@ -21,12 +21,12 @@
       "weight": 10
     },
     "Required job-requirement evidence": {
-      "score": 70,
+      "score": 53,
       "findings": [
         "Adjacent: Strong software product engineering and ability to ship features quickly. (matched: software, product, engineering, features).",
-        "Direct: Ability to work across user interfaces, systems engineering, design, and applied AI or agentic engineering. (matched: user, interfaces, systems, engineering, design, ai, agentic).",
-        "Adjacent: Ability to craft thoughtful product and user experiences. (matched: product, user).",
-        "Adjacent: Scientific-method approach to technical problems. (matched: technical).",
+        "Adjacent: Ability to work across user interfaces, systems engineering, design, and applied AI or agentic engineering. (matched: systems, engineering, design, ai, agentic).",
+        "Missing: Ability to craft thoughtful product and user experiences. (matched: product).",
+        "Adjacent: Scientific-method approach to technical problems. (matched: technical, problems.).",
         "Adjacent: Holistic understanding of software systems and ability to work across the stack. (matched: software, systems).",
         "Direct: Willingness to work in person in the New York City office. (matched: person, new, york, city)."
       ],
@@ -42,23 +42,23 @@
     "Language and keyword quality": {
       "score": 90,
       "findings": [
-        "Qualification-language token coverage: 46.9%."
+        "Qualification-language token coverage: 43.8%."
       ],
       "weight": 10
     },
     "Human readability and positioning": {
-      "score": 85,
+      "score": 100,
       "findings": [
-        "5 bullets are long enough to hinder scanning."
+        "The first third is role-specific and evidence is easy to scan."
       ],
       "weight": 10
     }
   },
   "critical_failures": [],
   "hashes": {
-    "resume": "0664f757168fa10f74f8f2b41f42fd87a6b7d15f39ede7456cb983dd079906f6",
-    "docx": "c78a05d7d95d5e443c50a3b9d0bc4afa8ecd80205400d5a142cefd862157cbd2",
-    "pdf": "6232ce74c568358ef494e555c6073f424069f602d6ab0f9ad2e100d99fc141e2",
+    "resume": "722c48a66113c81251c1d323e0e4251d700404fc264a1f40f38f8a018a92d42c",
+    "docx": "81b1f1ceec52789c2c1e986eac707b0392e69d5e09a406b253c0a1db8368a047",
+    "pdf": "52bd329395739c5a96855677d579034df99d720afdea35efdd2fdd95989b42a3",
     "job": "9f456dd7e3050aa2099a2127e15d80b77df005ffd96dcd11e2df8ad1e518f117"
   }
 }
