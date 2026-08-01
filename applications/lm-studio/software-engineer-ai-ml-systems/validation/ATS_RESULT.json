@@ -1,0 +1,65 @@
+{
+  "validator_version": "0.2.1",
+  "overall_score": 79,
+  "disposition": "Needs Revision",
+  "targeted_complete": true,
+  "pass_number": 0,
+  "categories": {
+    "Artifact parseability and structure": {
+      "score": 100,
+      "findings": [
+        "DOCX token coverage versus Markdown: 100.0%.",
+        "PDF token coverage versus Markdown: 99.3%."
+      ],
+      "weight": 25
+    },
+    "Required-information completeness": {
+      "score": 100,
+      "findings": [
+        "Contact details, conventional sections, and work-history dates are present."
+      ],
+      "weight": 10
+    },
+    "Required job-requirement evidence": {
+      "score": 55,
+      "findings": [
+        "Adjacent: Three or more years of experience with C++ and Python. (matched: more, c++).",
+        "Adjacent: Two or more years of experience with machine-learning frameworks and model inference. (matched: two, more, model).",
+        "Adjacent: Excellent problem-solving and communication skills. (matched: problem-solving, communication).",
+        "Adjacent: Strong understanding of operating systems. (matched: operating).",
+        "Adjacent: Strong understanding of software-system design. (matched: software-system).",
+        "Adjacent: Interest in local large language models and hands-on experimentation with LM Studio. (matched: local, hands-on, lm).",
+        "Adjacent: Commitment to excellent user and developer experiences. (matched: user, developer)."
+      ],
+      "weight": 30
+    },
+    "Preferred job-requirement evidence": {
+      "score": 55,
+      "findings": [
+        "Adjacent: TypeScript experience is a plus. (matched: typescript)."
+      ],
+      "weight": 15
+    },
+    "Language and keyword quality": {
+      "score": 90,
+      "findings": [
+        "Qualification-language token coverage: 41.2%."
+      ],
+      "weight": 10
+    },
+    "Human readability and positioning": {
+      "score": 100,
+      "findings": [
+        "The first third is role-specific and evidence is easy to scan."
+      ],
+      "weight": 10
+    }
+  },
+  "critical_failures": [],
+  "hashes": {
+    "resume": "8fa79b7a87c6b6ab746c426ee398ae0a232f228b8fd4e74c547d461124d8070f",
+    "docx": "3cd278b62432b32e6b4ca68ba19e57201479be6910884829008c07f0114ab166",
+    "pdf": "d79d5471c4553e2c44acd2df8be56d3f25cebad0b4fa63f8324d02db671920d9",
+    "job": "79c58cef2593f93eb3b4f3430b949085a031e3b82167c7f30785423c80d38ada"
+  }
+}
