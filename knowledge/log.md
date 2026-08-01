@@ -3,6 +3,9 @@
 ## 2026-08-01
 
 * **Nexus**: Added the active personal AI-harness project, its TypeScript implementation, and the migration from Electron to Tauri; preserved “OS” as an unverified scope description pending architecture details.
+* **Nexus architecture**: Expanded the project with its implemented local-first task engine, declarative multi-agent workflows, approval and default-deny permission systems, tool ecosystem, immutable audit model, OKF knowledge layer, model-routing controls, CLI, React Web UI, and Tauri desktop client.
+* **Nexus terminology**: Confirmed “agentic operating system” as a control-plane description while explicitly excluding an unsupported claim that Nexus is a hardware-hosting kernel or conventional operating-system replacement.
+* **Desktop architecture decision**: Recorded the early Electron-to-Tauri migration and its smaller footprint, lower memory use, faster startup, and capability-based security rationale without inventing project-specific measurements.
 * **Local AI and ML**: Recorded at least two years of experience, much through personal projects, with hands-on LM Studio, llama.cpp, Ollama, and LM Studio Bionic plus familiarity with MLX, TensorFlow, Hugging Face Transformers, and CUDA.
 * **Desktop applications**: Added Inform as a primarily C# desktop application Jordan worked on for DDI System, now Advantive, while leaving features and ownership scope open.
 * **Performance engineering**: Recorded CPU profiling and optimization experience using GDB, Valgrind, and Linux perf; did not infer GPU profiling.

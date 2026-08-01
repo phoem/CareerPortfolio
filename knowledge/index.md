@@ -44,7 +44,7 @@ The bundle targets OKF v0.2. Concepts use structured authorship, verification, p
 
 # AI, ML, and Application Engineering
 
-* [Nexus AI Harness](Nexus_AI_Harness/README.md) - Active TypeScript desktop AI harness migrated from Electron to Tauri.
+* [Nexus Agentic Operating System](Nexus_AI_Harness/README.md) - Local-first control plane for permissioned agents, approval workflows, layered knowledge, and auditable execution.
 * [Local AI and ML Experience](Local_AI_ML_Experience/README.md) - Hands-on local-LLM tooling and ML-framework experience, primarily through personal projects.
 * [Inform Desktop Application](Inform_Desktop_Application/README.md) - C# desktop application work for DDI System, now Advantive.
 * [Performance Profiling Experience](Performance_Profiling_Experience/README.md) - CPU profiling and optimization with GDB, Valgrind, and Linux perf.
