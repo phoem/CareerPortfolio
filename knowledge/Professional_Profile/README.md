@@ -21,3 +21,7 @@ evidence_status: confirmed
 - **GitHub:** https://github.com/phoem
 
 Use these exact URLs whenever a resume, cover letter, application package, or other career artifact includes Jordan's LinkedIn or GitHub profile.
+
+## Work Location
+
+- Jordan is willing and able to work in person in New York City.

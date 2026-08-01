@@ -1,5 +1,14 @@
 # Knowledge Base Update Log
 
+## 2026-08-01
+
+* **Nexus**: Added the active personal AI-harness project, its TypeScript implementation, and the migration from Electron to Tauri; preserved “OS” as an unverified scope description pending architecture details.
+* **Local AI and ML**: Recorded at least two years of experience, much through personal projects, with hands-on LM Studio, llama.cpp, Ollama, and LM Studio Bionic plus familiarity with MLX, TensorFlow, Hugging Face Transformers, and CUDA.
+* **Desktop applications**: Added Inform as a primarily C# desktop application Jordan worked on for DDI System, now Advantive, while leaving features and ownership scope open.
+* **Performance engineering**: Recorded CPU profiling and optimization experience using GDB, Valgrind, and Linux perf; did not infer GPU profiling.
+* **Open source**: Verified Jordan's merged cachix/secretspec pull request adding a Rust Azure Key Vault provider with authentication modes, validation, tests, documentation, and review-driven fixes.
+* **Work location**: Confirmed that Jordan is willing and able to work in person in New York City.
+
 ## 2026-07-31
 
 * **PrimeBGP**: Added confirmed design and implementation ownership for a passive BGP4 speaker that accepted peering sessions, processed route updates, and stored prefixes in an in-memory red-black tree for policy-based rerouting.

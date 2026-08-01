@@ -14,6 +14,7 @@ The bundle targets OKF v0.2. Concepts use structured authorship, verification, p
 * [Jordan Newman Career Timeline](Career_Timeline/README.md) - Confirmed employment titles and dates used across career artifacts and LinkedIn synchronization.
 * [Advantive Role](Advantive_Role/README.md) - Current architecture, platform-engineering, developer-tooling, and infrastructure responsibilities.
 * [ISPRIME Technical Leadership, Training, and Mentoring](ISPrime_Technical_Leadership/README.md) - Confirmed employee training, internal documentation, and multi-year mentoring at ISPRIME.
+* [Open Source Contributions](Open_Source_Contributions/README.md) - Verified public contributions, beginning with the merged secretspec Azure Key Vault provider.
 
 # Infrastructure and Distributed Systems
 
@@ -40,3 +41,10 @@ The bundle targets OKF v0.2. Concepts use structured authorship, verification, p
 
 * [TAFOS](TAFOS/README.md) - Educational x86 operating-system kernel in C and assembly.
 * [AVR Smart Smoke/CO2 Detector](AVR_Smart_Smoke_CO2_Detector/README.md) - Embedded firmware for battery-powered wireless detector prototypes.
+
+# AI, ML, and Application Engineering
+
+* [Nexus AI Harness](Nexus_AI_Harness/README.md) - Active TypeScript desktop AI harness migrated from Electron to Tauri.
+* [Local AI and ML Experience](Local_AI_ML_Experience/README.md) - Hands-on local-LLM tooling and ML-framework experience, primarily through personal projects.
+* [Inform Desktop Application](Inform_Desktop_Application/README.md) - C# desktop application work for DDI System, now Advantive.
+* [Performance Profiling Experience](Performance_Profiling_Experience/README.md) - CPU profiling and optimization with GDB, Valgrind, and Linux perf.
