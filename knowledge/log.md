@@ -8,6 +8,7 @@
 * **Desktop architecture decision**: Recorded the early Electron-to-Tauri migration and its smaller footprint, lower memory use, faster startup, and capability-based security rationale without inventing project-specific measurements.
 * **Local AI and ML**: Recorded at least two years of experience, much through personal projects, with hands-on LM Studio, llama.cpp, Ollama, and LM Studio Bionic plus familiarity with MLX, TensorFlow, Hugging Face Transformers, and CUDA.
 * **Desktop applications**: Added Inform as a primarily C# desktop application Jordan worked on for DDI System, now Advantive, while leaving features and ownership scope open.
+* **Inform integrations**: Added Jordan's confirmed work on WebCom and PrintCom connectivity to a UniVerse database backend, OAuth 2.0 email support, SellerCloud integration, and a product-catalog update integration whose product name remains unknown.
 * **Performance engineering**: Recorded CPU profiling and optimization experience using GDB, Valgrind, and Linux perf; did not infer GPU profiling.
 * **Open source**: Verified Jordan's merged cachix/secretspec pull request adding a Rust Azure Key Vault provider with authentication modes, validation, tests, documentation, and review-driven fixes.
 * **Work location**: Confirmed that Jordan is willing and able to work in person in New York City.
