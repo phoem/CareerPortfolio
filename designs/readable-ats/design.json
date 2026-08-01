@@ -3,11 +3,11 @@
   "description": "Single-column ATS-safe design with slightly larger body type and balanced two-page spacing for detailed senior resumes.",
   "font": "Arial",
   "resume": {
-    "top_margin_inches": 0.58,
-    "bottom_margin_inches": 0.58,
+    "top_margin_inches": 0.54,
+    "bottom_margin_inches": 0.54,
     "left_margin_inches": 0.62,
     "right_margin_inches": 0.62,
-    "body_font_points": 10.0,
+    "body_font_points": 9.8,
     "title_font_points": 16.5,
     "line_spacing": 1.0
   },
