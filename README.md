@@ -20,6 +20,8 @@ Targeted applications live under:
 applications/<company>/<requisition-or-role>/
 ```
 
+Roles Jordan has explicitly prioritized but whose application workflows have not yet begun are tracked in `applications/QUEUE.md`.
+
 Every posting receives a separate package with its own exact job description, resume, cover letter, evidence map, ATS report and history, and optional design selection. Multiple roles at the same company never share or overwrite one `JOB_DESCRIPTION.md`.
 
 ### Netflix — JR39731 Compute Runtime
