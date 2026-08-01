@@ -13,5 +13,5 @@ The canonical Senior Software Engineer resume was selected as the closest base b
 - `JOB_SOURCE.md` — source URL and retrieval provenance.
 - `EVIDENCE_MAP.md` — requirement-to-evidence mapping and preserved qualification boundaries.
 - resume Markdown source plus generated DOCX/PDF artifacts.
-- `DESIGN.json` — persistent `classic-ats` design selection.
+- `DESIGN.json` — persistent `readable-ats` design selection.
 - `validation/` — current ATS report, result data, and score history after CI validation.

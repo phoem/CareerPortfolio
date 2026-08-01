@@ -14,6 +14,11 @@ The `designs/` directory stores reusable rendering templates and the repository 
 
 Each named design lives in `designs/<design-name>/design.json` and may later include supporting assets, templates, examples, or implementation files.
 
+Available designs:
+
+- `classic-ats` — compact single-column layout and repository default.
+- `readable-ats` — single-column ATS layout with slightly larger body type and more balanced spacing for detailed senior resumes.
+
 ## Application-level selection
 
 Each application package may contain either or both of these files:
