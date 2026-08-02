@@ -85,6 +85,15 @@ The employer posting associated with requisition JR39731 was verified as a Compu
 | Job description | `applications/anthropic/5283063008-research-infrastructure/JOB_DESCRIPTION.md` |
 | Validation | `applications/anthropic/5283063008-research-infrastructure/validation/` |
 
+### Anthropic — Staff + Senior Software Engineer, Inference Deployment
+
+| Document | Path |
+|---|---|
+| Package | `applications/anthropic/5285557008-inference-deployment/` |
+| Job description | `applications/anthropic/5285557008-inference-deployment/JOB_DESCRIPTION.md` |
+| Evidence map | `applications/anthropic/5285557008-inference-deployment/EVIDENCE_MAP.md` |
+| Status | Evidence gathering before resume drafting |
+
 ### Starlink — Embedded Software Engineer
 
 | Document | Path |
