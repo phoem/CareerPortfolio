@@ -3,6 +3,7 @@ type: Infrastructure Platform
 title: CDN Platform
 description: Production hosting and content-delivery platform spanning thousands of servers, multiple locations, and custom systems software.
 tags: [cdn, distributed-systems, infrastructure, freebsd, networking, reliability]
+timestamp: 2026-08-02
 generated:
   at: 2026-07-12T00:00:00Z
 status: partial
@@ -39,17 +40,25 @@ Jordan built the custom HTTP/CDN serving software and substantial supporting inf
 - more than 150,000 concurrent PrimeHTTPD connections;
 - 24/7 customer-facing production workloads.
 
+## Network and Traffic Steering
+
+- The platform used BGP with multiple upstream transit providers.
+- Points of presence were interconnected through privately lit dark fiber.
+- The network maintained direct peering relationships and peering through internet exchanges.
+- CDN traffic steering used anycast DNS and GeoDNS during different periods.
+
 ## Evidence Quality
 
 - Infrastructure counts and location counts are estimates and must remain approximate in downstream artifacts.
 - Peak traffic exceeding 65 Gbps and more than 150,000 concurrent PrimeHTTPD connections are confirmed resume-safe scale statements.
 - Personal ownership is confirmed separately from the platform-wide scale claims.
+- The network and DNS traffic-steering mechanisms were directly confirmed by Jordan on 2026-08-02 as platform-level capabilities. Individual policy ownership, software ownership, automation, and failover behavior remain open.
 
 ## Open Questions
 
 - exact CDN caching and content-placement architecture;
 - content replication and invalidation workflow;
-- traffic routing and load-balancing mechanisms;
+- exact division of traffic steering between anycast DNS and GeoDNS, including selection algorithms, health inputs, failover, and operational ownership;
 - deployment and rollback design;
 - per-location topology and capacity;
 - exact PrimeHTTPD CDN features and request lifecycle.

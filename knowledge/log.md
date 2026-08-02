@@ -1,5 +1,11 @@
 # Knowledge Base Update Log
 
+## 2026-08-02
+
+* **Production network architecture**: Recorded multi-provider BGP, direct and exchange peering, privately lit dark-fiber links between PoPs, and large route/connection scope at ISPRIME.
+* **CDN traffic steering**: Recorded that the CDN used anycast DNS and GeoDNS during different periods while preserving the open questions around Jordan's individual configuration and software ownership.
+* **Multi-accelerator boundary**: Confirmed that Jordan has not run ML inference or training with a model partitioned across more than one GPU or other accelerator.
+
 ## 2026-08-01
 
 * **Nexus**: Added the active personal AI-harness project, its TypeScript implementation, and the migration from Electron to Tauri; preserved “OS” as an unverified scope description pending architecture details.

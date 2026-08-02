@@ -4,7 +4,7 @@ This package targets Greenhouse job `5285557008` for Anthropic's Inference team.
 
 ## Current status
 
-Evidence gathering. The exact posting is captured and the initial requirement map is complete. Resume drafting is waiting on targeted routing, deployment, cloud, and multi-accelerator questions.
+Evidence gathering. The exact posting and initial requirement map are complete. Multi-provider BGP, peering, private inter-PoP fiber, anycast DNS, and GeoDNS are now confirmed at platform level, and the multi-accelerator application answer is confirmed as no. Resume drafting is waiting on personal routing ownership plus deployment, autoscaling, cloud, and inference-caching details.
 
 ## Base-resume selection
 

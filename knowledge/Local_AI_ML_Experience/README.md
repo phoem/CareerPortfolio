@@ -3,6 +3,7 @@ type: Technology Experience
 title: Local AI and ML Experience
 description: Hands-on local-LLM tooling and ML-framework experience, primarily developed through personal projects.
 tags: [machine-learning, local-llm, lm-studio, llama-cpp, ollama, mlx, tensorflow, transformers]
+timestamp: 2026-08-02
 generated:
   at: 2026-08-01T00:00:00Z
 status: partial
@@ -19,6 +20,7 @@ evidence_status: confirmed
 - Familiarity with MLX, TensorFlow, and Hugging Face Transformers; Jordan does not characterize himself as an expert in these frameworks.
 - Longstanding familiarity with CUDA dating to its early availability, although Jordan did not previously have projects that benefited from CUDA.
 - Jordan has not modified inference-engine internals and has not profiled GPU execution.
+- Jordan has not run ML inference or training in which a model was partitioned across more than one GPU or other accelerator.
 
 ## Evidence Quality
 
@@ -27,6 +29,7 @@ evidence_status: confirmed
 - CUDA familiarity must not be presented as CUDA development, kernel programming, GPU optimization, or production deployment without additional evidence.
 - Direct integration of any named runtime or framework into Nexus remains unconfirmed.
 - Inference-engine modification and GPU-profiling experience must not be claimed.
+- Multi-GPU or multi-accelerator model-parallel inference or training must not be claimed.
 
 ## Resume-Safe Positioning
 
