@@ -1,0 +1,64 @@
+{
+  "validator_version": "0.2.1",
+  "overall_score": 65,
+  "disposition": "Not Ready",
+  "targeted_complete": false,
+  "pass_number": 0,
+  "categories": {
+    "Artifact parseability and structure": {
+      "score": 100,
+      "findings": [
+        "DOCX token coverage versus Markdown: 100.0%.",
+        "PDF token coverage versus Markdown: 99.4%."
+      ],
+      "weight": 25
+    },
+    "Required-information completeness": {
+      "score": 100,
+      "findings": [
+        "Contact details, conventional sections, and work-history dates are present."
+      ],
+      "weight": 10
+    },
+    "Required job-requirement evidence": {
+      "score": 0,
+      "findings": [
+        "No required requirements were available; targeted scoring is incomplete."
+      ],
+      "weight": 30
+    },
+    "Preferred job-requirement evidence": {
+      "score": 68,
+      "findings": [
+        "Direct: Experience with high-performance, large-scale distributed systems. (matched: high-performance, distributed, systems.).",
+        "Missing: Experience implementing and deploying machine-learning systems at scale. (matched: systems).",
+        "Direct: Experience with load balancing, request routing, or traffic-management systems. (matched: load, balancing, request, routing, traffic-management, systems.).",
+        "Adjacent: Familiarity with LLM inference optimization, batching, and caching strategies. (matched: familiarity, caching).",
+        "Direct: Experience with Kubernetes and cloud infrastructure using AWS, GCP, or Azure. (matched: kubernetes, cloud, infrastructure, aws, gcp).",
+        "Adjacent: Proficiency in Python or Rust. (matched: python)."
+      ],
+      "weight": 15
+    },
+    "Language and keyword quality": {
+      "score": 100,
+      "findings": [
+        "Qualification-language token coverage: 56.7%."
+      ],
+      "weight": 10
+    },
+    "Human readability and positioning": {
+      "score": 97,
+      "findings": [
+        "1 bullets are long enough to hinder scanning."
+      ],
+      "weight": 10
+    }
+  },
+  "critical_failures": [],
+  "hashes": {
+    "resume": "d0758d76df3153e2491c16ee74f20487a120e55e86dd5c07a29d32890cf6b801",
+    "docx": "57b348f4a1d4597569cd3db6bb5eabd3b54214e4d51bdc9b2d9683d777d6604c",
+    "pdf": "2ea50adaa6f9ead5f18321d7536f135261c31e0bb99801c24af8cea10ef503e9",
+    "job": "76ff893d67f4a85b92247e030b0db75fd72482fdf73bf964b5d0a7471ac76b30"
+  }
+}
