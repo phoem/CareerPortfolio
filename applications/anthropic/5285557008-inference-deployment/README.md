@@ -4,7 +4,7 @@ This package targets Greenhouse job `5285557008` for Anthropic's Inference team.
 
 ## Current status
 
-ATS baseline source drafted. Direct AWS, GCP, and Azure experience and personal authorship of ISPRIME health-check and monitoring software are confirmed. Remaining accelerator-scale inference, model autoscaling, and inference-optimization gaps are represented honestly rather than disguised with adjacent experience.
+Submission ready. ATS pass 1 completed with a 94/100 targeted-readiness score using validator v0.2.2. The final Markdown, DOCX, and PDF resume artifacts passed parseability and visual review; the DOCX and PDF cover letter also passed visual review. Remaining accelerator-scale inference, model autoscaling, and inference-optimization gaps are represented honestly rather than disguised with adjacent experience.
 
 ## Base-resume selection
 
