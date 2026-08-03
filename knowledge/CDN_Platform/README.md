@@ -30,6 +30,7 @@ Jordan built the custom HTTP/CDN serving software and substantial supporting inf
 - [PrimeDNSTop](/PrimeDNSTop/README.md), DNS-monitoring tooling;
 - DDoS detection and mitigation software;
 - monitoring, telemetry, authentication, security, deployment, and infrastructure-management systems.
+- Personally developed health-check and monitoring systems including `sitecheck`, `slugd`, and `php-seclogd`.
 
 ## Production Context
 
@@ -53,6 +54,7 @@ Jordan built the custom HTTP/CDN serving software and substantial supporting inf
 - Peak traffic exceeding 65 Gbps and more than 150,000 concurrent PrimeHTTPD connections are confirmed resume-safe scale statements.
 - Personal ownership is confirmed separately from the platform-wide scale claims.
 - The network and DNS traffic-steering mechanisms were directly confirmed by Jordan on 2026-08-02 as platform-level capabilities. Individual policy ownership, software ownership, automation, and failover behavior remain open.
+- Jordan directly confirmed personal authorship and production use of numerous health-check and monitoring systems on 2026-08-02; the deployment footprint and interaction with traffic steering remain open.
 
 ## Open Questions
 

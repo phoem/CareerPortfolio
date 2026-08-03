@@ -4,7 +4,7 @@ This package targets Greenhouse job `5285557008` for Anthropic's Inference team.
 
 ## Current status
 
-Evidence gathering. The exact posting and initial requirement map are complete. Multi-provider BGP, peering, private inter-PoP fiber, anycast DNS, and GeoDNS are now confirmed at platform level, and the multi-accelerator application answer is confirmed as no. Resume drafting is waiting on personal routing ownership plus deployment, autoscaling, cloud, and inference-caching details.
+ATS baseline source drafted. Direct AWS, GCP, and Azure experience and personal authorship of ISPRIME health-check and monitoring software are confirmed. Remaining accelerator-scale inference, model autoscaling, and inference-optimization gaps are represented honestly rather than disguised with adjacent experience.
 
 ## Base-resume selection
 
@@ -14,8 +14,10 @@ The existing Anthropic Research Infrastructure resume is relevant reference mate
 
 ## Package contents
 
-- `APPLICATION.json` — machine-readable application manifest; artifacts remain empty until evidence gathering completes.
+- `APPLICATION.json` — machine-readable application manifest and artifact registration.
 - `JOB_DESCRIPTION.md` — captured job-specific posting content.
 - `JOB_SOURCE.md` — source URL and retrieval provenance.
 - `EVIDENCE_MAP.md` — requirement-to-evidence mapping and gap boundaries.
-- Resume and application-response sources will be added after the evidence gate.
+- `Jordan_Newman_Anthropic_Inference_Deployment_Resume.md` — targeted ATS resume source.
+- `COVER_LETTER.md` — targeted cover-letter source.
+- `WHY_ANTHROPIC.md` — 200-400-word application response.

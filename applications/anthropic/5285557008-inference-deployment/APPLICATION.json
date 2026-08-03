@@ -9,5 +9,14 @@
   "job_description_status": "complete-public-page-captured",
   "job_description_captured_at": "2026-08-02",
   "slug": "5285557008-inference-deployment",
-  "artifacts": []
+  "artifacts": [
+    {
+      "type": "resume",
+      "source": "Jordan_Newman_Anthropic_Inference_Deployment_Resume.md"
+    },
+    {
+      "type": "cover_letter",
+      "source": "COVER_LETTER.md"
+    }
+  ]
 }

@@ -2,6 +2,8 @@
 
 ## 2026-08-02
 
+* **Cloud platforms**: Confirmed direct experience with AWS, Google Cloud Platform, and Microsoft Azure while preserving open questions about services, production scope, and ownership.
+* **Production monitoring**: Recorded Jordan's personal authorship of numerous ISPRIME health-check and monitoring systems, including `sitecheck`, `slugd`, and `php-seclogd`, without inferring undocumented implementation or automation behavior.
 * **Production network architecture**: Recorded multi-provider BGP, direct and exchange peering, privately lit dark-fiber links between PoPs, and large route/connection scope at ISPRIME.
 * **CDN traffic steering**: Recorded that the CDN used anycast DNS and GeoDNS during different periods while preserving the open questions around Jordan's individual configuration and software ownership.
 * **Multi-accelerator boundary**: Confirmed that Jordan has not run ML inference or training with a model partitioned across more than one GPU or other accelerator.
