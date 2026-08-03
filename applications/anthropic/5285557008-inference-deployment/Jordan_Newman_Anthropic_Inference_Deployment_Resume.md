@@ -7,7 +7,7 @@ Willing and able to work in Anthropic's New York City office
 
 ## Summary
 
-Senior software and infrastructure engineer with 20+ years designing, building, and operating performance-sensitive distributed systems. Architected 24/7 hosting and CDN infrastructure spanning approximately 3,000-4,000 servers, about 10 locations, and more than 65 Gbps of peak traffic. Personally built its high-concurrency C/FreeBSD serving runtime, production health-check and monitoring systems, and substantial networking and operational software. Combines low-level runtime, traffic-management, reliability, and observability depth with current Kubernetes, Terraform, CI/CD, cloud-platform, and local AI experience.
+Senior software and infrastructure engineer with 20+ years designing, building, and operating performance-sensitive distributed systems. Architected 24/7 hosting and CDN infrastructure spanning approximately 3,000-4,000 servers, about 10 locations, and more than 65 Gbps of peak traffic. Personally built its high-concurrency C/FreeBSD serving runtime, production health-check and monitoring systems, and substantial networking and operational software. Results-oriented and impact-focused, with the flexibility to take responsibility outside a narrowly defined job description when the work demands it. Motivated by technical excellence that drives business results and enables research breakthroughs; eager to deepen machine-learning systems and infrastructure expertise while contributing to work whose societal impact matters.
 
 ## Core Capabilities
 
@@ -21,7 +21,8 @@ Senior software and infrastructure engineer with 20+ years designing, building, 
 
 - Architected and operated a customer-facing hosting and CDN platform spanning approximately 3,000-4,000 servers across about 10 locations and carrying more than 65 Gbps of peak traffic.
 - Designed and implemented PrimeHTTPD, a high-performance HTTP/CDN runtime in C for FreeBSD deployed across approximately 200 servers and supporting more than 150,000 concurrent connections.
-- Kept latency-sensitive request processing non-blocking through a single-process `kqueue` event loop, configurable I/O workers, Unix-domain `sendmsg()` descriptor passing, shared `mmap()` worker state, least-busy-worker dispatch, and zero-copy `sendfile()` transfers.
+- Kept latency-sensitive request processing non-blocking through a single-process `kqueue` event loop, configurable I/O workers, and zero-copy `sendfile()` transfers.
+- Implemented Unix-domain `sendmsg()` descriptor passing, shared `mmap()` worker state, and least-busy-worker dispatch for blocking work.
 - Built production health-check and monitoring software—including `sitecheck`, `slugd`, and `php-seclogd`—plus telemetry, deployment, security, packet-analysis, DNS-analysis, and DDoS systems for 24/7 operations.
 - Helped design, deploy, migrate, and operate multi-datacenter and point-of-presence infrastructure using multi-provider BGP, direct and exchange peering, private inter-PoP fiber, anycast DNS, and GeoDNS.
 

@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-VERSION = "0.2.1"
+VERSION = "0.2.2"
 STANDARD_HEADINGS = {
     "summary",
     "technical skills",
@@ -198,6 +198,7 @@ def extract_requirements(job: str) -> tuple[list[str], list[str]]:
                 "what we are looking for",
                 "what we're looking for",
                 "what we’re looking for",
+                "minimum qualifications",
                 "required qualifications",
                 "requirements",
                 "qualifications",
