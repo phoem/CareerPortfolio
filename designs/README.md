@@ -17,6 +17,7 @@ Each named design lives in `designs/<design-name>/design.json` and may later inc
 Available designs:
 
 - `classic-ats` — compact single-column layout and repository default.
+- `deh-ceo-resume` — dense Times New Roman executive layout distilled from the supplied DEH CEO Word template, with compact margins and gray section rules.
 - `readable-ats` — single-column ATS layout with slightly larger body type and more balanced spacing for detailed senior resumes.
 
 ## Application-level selection

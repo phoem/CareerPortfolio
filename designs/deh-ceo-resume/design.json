@@ -1,0 +1,53 @@
+{
+  "name": "deh-ceo-resume",
+  "description": "Dense single-column executive resume design distilled from the supplied DEH CEO Word template, using Times New Roman, compact geometry, and gray section rules.",
+  "font": "Times New Roman",
+  "source": {
+    "kind": "distilled-docx",
+    "reference_sha256": "C8D5FF38A63466DC51F6818A2B5BC31B819FEFB239AFED37CF6923108CC0ED96",
+    "intentional_deviation": "Contact information remains in the document body for ATS-oriented text order instead of the reference's first-page header."
+  },
+  "resume": {
+    "top_margin_inches": 0.2,
+    "bottom_margin_inches": 0.2,
+    "left_margin_inches": 0.2,
+    "right_margin_inches": 0.2,
+    "body_font_points": 10.0,
+    "body_space_after_points": 0.0,
+    "title_font_points": 18.0,
+    "title_space_after_points": 0.0,
+    "line_spacing": 1.0,
+    "heading_1_font_points": 11.0,
+    "heading_color": "000000",
+    "heading_1_space_before_points": 4.0,
+    "heading_1_space_after_points": 0.0,
+    "heading_2_font_points": 10.0,
+    "heading_2_space_before_points": 3.0,
+    "heading_2_space_after_points": 0.0,
+    "heading_3_font_points": 10.0,
+    "heading_3_space_before_points": 2.0,
+    "heading_3_space_after_points": 0.0,
+    "emphasis_font_points": 10.0,
+    "bullet_left_indent_inches": 0.5,
+    "bullet_first_line_indent_inches": -0.25,
+    "bullet_space_after_points": 0.0,
+    "use_real_bullets": true,
+    "section_rule": {
+      "style": "template-bar",
+      "height_points": 1.5,
+      "color": "A0A0A0",
+      "line_spacing": 0.4,
+      "left_indent_inches": -0.0625
+    },
+    "show_footer": false
+  },
+  "cover_letter": {
+    "top_margin_inches": 0.65,
+    "bottom_margin_inches": 0.65,
+    "left_margin_inches": 0.75,
+    "right_margin_inches": 0.75,
+    "body_font_points": 10.5,
+    "title_font_points": 15.0,
+    "line_spacing": 1.08
+  }
+}

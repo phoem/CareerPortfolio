@@ -14,9 +14,10 @@ from pathlib import Path
 
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.oxml import OxmlElement
+from docx.oxml import OxmlElement, parse_xml
 from docx.oxml.ns import qn
-from docx.shared import Inches, Pt
+from docx.oxml.ns import nsdecls
+from docx.shared import Inches, Pt, RGBColor
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -141,16 +142,47 @@ def select_sources(
     return [by_path[path] for path in sorted(selected)], recommendations
 
 
-def add_bottom_border(paragraph) -> None:
+def add_bottom_border(
+    paragraph,
+    *,
+    color: str = "666666",
+    size: int = 5,
+    space: int = 1,
+) -> None:
     properties = paragraph._p.get_or_add_pPr()
     borders = OxmlElement("w:pBdr")
     bottom = OxmlElement("w:bottom")
     bottom.set(qn("w:val"), "single")
-    bottom.set(qn("w:sz"), "5")
-    bottom.set(qn("w:space"), "1")
-    bottom.set(qn("w:color"), "666666")
+    bottom.set(qn("w:sz"), str(size))
+    bottom.set(qn("w:space"), str(space))
+    bottom.set(qn("w:color"), color)
     borders.append(bottom)
     properties.append(borders)
+
+
+def add_template_horizontal_rule(document, config: dict) -> None:
+    """Add the compact gray bar used by the distilled DEH reference template."""
+    paragraph = document.add_paragraph()
+    paragraph.paragraph_format.left_indent = Inches(
+        float(config.get("left_indent_inches", -0.0625))
+    )
+    paragraph.paragraph_format.line_spacing = float(config.get("line_spacing", 0.4))
+    paragraph.paragraph_format.space_before = Pt(0)
+    paragraph.paragraph_format.space_after = Pt(0)
+    height = float(config.get("height_points", 1.5))
+    color = str(config.get("color", "A0A0A0")).lstrip("#")
+    run = paragraph.add_run()
+    run._r.append(
+        parse_xml(
+            f'<w:pict {nsdecls("w")} '
+            f'xmlns:v="urn:schemas-microsoft-com:vml" '
+            f'xmlns:o="urn:schemas-microsoft-com:office:office">'
+            f'<v:rect style="width:0.0pt;height:{height}pt" '
+            f'o:hr="t" o:hrstd="t" o:hralign="center" '
+            f'fillcolor="#{color}" stroked="f"/>'
+            f'</w:pict>'
+        )
+    )
 
 
 def add_inline_markup(paragraph, text: str) -> None:
@@ -182,16 +214,30 @@ def markdown_to_docx(spec: SourceSpec, destination: Path) -> None:
     normal = document.styles["Normal"]
     normal.font.name = style["font"]
     normal.font.size = Pt(float(style["body_font_points"]))
-    normal.paragraph_format.space_after = Pt(5 if is_letter else 1.2)
+    normal.paragraph_format.space_after = Pt(
+        float(style.get("body_space_after_points", 5 if is_letter else 1.2))
+    )
     normal.paragraph_format.line_spacing = float(style["line_spacing"])
 
-    for style_name, size in (("Heading 1", 11.2), ("Heading 2", 10.0), ("Heading 3", 9.2)):
+    heading_defaults = (("Heading 1", 11.2), ("Heading 2", 10.0), ("Heading 3", 9.2))
+    for style_name, default_size in heading_defaults:
+        level = style_name[-1]
         heading_style = document.styles[style_name]
         heading_style.font.name = style["font"]
         heading_style.font.bold = True
-        heading_style.font.size = Pt(size)
-        heading_style.paragraph_format.space_before = Pt(3)
-        heading_style.paragraph_format.space_after = Pt(1)
+        if "heading_color" in style:
+            heading_style.font.color.rgb = RGBColor.from_string(
+                str(style["heading_color"]).lstrip("#")
+            )
+        heading_style.font.size = Pt(
+            float(style.get(f"heading_{level}_font_points", default_size))
+        )
+        heading_style.paragraph_format.space_before = Pt(
+            float(style.get(f"heading_{level}_space_before_points", 3))
+        )
+        heading_style.paragraph_format.space_after = Pt(
+            float(style.get(f"heading_{level}_space_after_points", 1))
+        )
         heading_style.paragraph_format.keep_with_next = True
 
     for line in spec.source.read_text(encoding="utf-8").splitlines():
@@ -200,7 +246,9 @@ def markdown_to_docx(spec: SourceSpec, destination: Path) -> None:
         if line.startswith("# "):
             paragraph = document.add_paragraph()
             paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            paragraph.paragraph_format.space_after = Pt(0)
+            paragraph.paragraph_format.space_after = Pt(
+                float(style.get("title_space_after_points", 0))
+            )
             title = line[2:]
             if title.startswith("Jordan Newman -"):
                 title = "JORDAN NEWMAN"
@@ -210,16 +258,35 @@ def markdown_to_docx(spec: SourceSpec, destination: Path) -> None:
         elif line.startswith("## "):
             paragraph = document.add_paragraph(style="Heading 1")
             paragraph.add_run(line[3:].upper())
-            add_bottom_border(paragraph)
+            rule = style.get("section_rule", {})
+            if rule.get("style") == "template-bar":
+                add_template_horizontal_rule(document, rule)
+            else:
+                add_bottom_border(
+                    paragraph,
+                    color=str(rule.get("color", "666666")).lstrip("#"),
+                    size=int(rule.get("size", 5)),
+                    space=int(rule.get("space", 1)),
+                )
         elif line.startswith("### "):
             paragraph = document.add_paragraph(style="Heading 2")
             paragraph.add_run(line[4:])
         elif line.startswith("- "):
-            paragraph = document.add_paragraph()
-            paragraph.paragraph_format.left_indent = Inches(0.16)
-            paragraph.paragraph_format.first_line_indent = Inches(-0.12)
-            paragraph.paragraph_format.space_after = Pt(0.8)
-            paragraph.add_run("• ").bold = True
+            use_real_bullets = bool(style.get("use_real_bullets", False))
+            paragraph = document.add_paragraph(
+                style="List Bullet" if use_real_bullets else None
+            )
+            paragraph.paragraph_format.left_indent = Inches(
+                float(style.get("bullet_left_indent_inches", 0.16))
+            )
+            paragraph.paragraph_format.first_line_indent = Inches(
+                float(style.get("bullet_first_line_indent_inches", -0.12))
+            )
+            paragraph.paragraph_format.space_after = Pt(
+                float(style.get("bullet_space_after_points", 0.8))
+            )
+            if not use_real_bullets:
+                paragraph.add_run("• ").bold = True
             add_inline_markup(paragraph, line[2:])
         elif line.startswith("**") and line.endswith("**"):
             paragraph = document.add_paragraph()
@@ -227,7 +294,7 @@ def markdown_to_docx(spec: SourceSpec, destination: Path) -> None:
             paragraph.paragraph_format.space_after = Pt(0)
             run = paragraph.add_run(line[2:-2])
             run.bold = True
-            run.font.size = Pt(10.2)
+            run.font.size = Pt(float(style.get("emphasis_font_points", 10.2)))
         elif line.startswith("*") and line.endswith("*"):
             paragraph = document.add_paragraph()
             paragraph.paragraph_format.space_after = Pt(0)
@@ -243,9 +310,12 @@ def markdown_to_docx(spec: SourceSpec, destination: Path) -> None:
                 paragraph.paragraph_format.space_after = Pt(2)
             add_inline_markup(paragraph, line)
 
-    footer = document.sections[0].footer.paragraphs[0]
-    footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    footer.add_run("Jordan Newman").font.size = Pt(7)
+    if bool(style.get("show_footer", True)):
+        footer = document.sections[0].footer.paragraphs[0]
+        footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        footer.add_run("Jordan Newman").font.size = Pt(
+            float(style.get("footer_font_points", 7))
+        )
     document.save(destination)
 
 
