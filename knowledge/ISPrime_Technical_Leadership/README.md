@@ -19,6 +19,8 @@ Throughout his entire time at ISPRIME, Jordan led major technical projects and e
 ## Personal Ownership
 
 - Jordan led major technical projects and engineering work throughout his entire time at ISPRIME.
+- Jordan led as many as 10 employees.
+- On nearly every ISPRIME project, Jordan started with an unclear problem and determined the architecture and implementation, carrying the work from start to finish.
 - Jordan created the internal training documentation used to develop employees.
 - Jordan personally trained the majority of ISPRIME employees over the years.
 - Jordan brought two friends into the company when they had little prior technical knowledge.
@@ -29,6 +31,7 @@ Throughout his entire time at ISPRIME, Jordan led major technical projects and e
 
 - These facts were directly supplied by Jordan on 2026-07-31.
 - Jordan confirmed on 2026-08-11 that he led major technical projects and engineering work throughout his entire time at ISPRIME.
+- Jordan also confirmed on 2026-08-11 that he led as many as 10 employees and handled nearly every ISPRIME project end to end, determining architecture and implementation from an initially unclear problem.
 - The more-than-15-year scope is derived from the separately confirmed ISPRIME employment periods of January 2001-December 2014 and March 2018-December 2019.
 - “The majority of employees” is confirmed qualitative scope; an exact employee or trainee count is not yet documented.
 - “Experts” reflects Jordan's direct characterization of their eventual technical capability.
@@ -37,7 +40,7 @@ Throughout his entire time at ISPRIME, Jordan led major technical projects and e
 
 ## Resume-Ready Description
 
-Led major technical projects and engineering work throughout more than 15 years across two ISPRIME tenures; created internal training documentation, trained most employees, and personally guided two beginners over several years into technical experts and eventual company leaders.
+Led major technical projects and engineering work throughout more than 15 years across two ISPRIME tenures, leading as many as 10 employees. Took nearly every project from an unclear problem through architecture and hands-on implementation while also creating internal training documentation, training most employees, and developing future technical leaders.
 
 ## Related Concepts
 
@@ -47,7 +50,7 @@ Led major technical projects and engineering work throughout more than 15 years 
 
 ## Open Questions
 
-- Approximately how many employees did Jordan train?
+- What was the typical team size, as distinct from the confirmed maximum of 10 employees?
 - What technical and operational subjects did the training documentation cover?
 - What leadership roles did the two mentees eventually hold at ISPRIME?
 - Were there other employees Jordan mentored over an extended period?

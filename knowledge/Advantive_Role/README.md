@@ -22,6 +22,9 @@ Jordan has worked at Advantive as **Senior Development Specialist - APIs and Int
 - serves on the Architecture Team;
 - contributes to shared platform engineering and developer tooling;
 - works with Docker, Kubernetes, Terraform, Azure DevOps, CI/CD, and security-scanning workflows;
+- supports about 12 teams with Azure Pipelines;
+- has created reusable workflows, pipeline templates, deployment gates, and self-hosted runners;
+- has reduced manual work, enabled quicker releases, and saved developers time through this pipeline work;
 - collaborates on technical decisions, engineering standards, platform direction, shared libraries, and documentation;
 - develops and applies AI-assisted engineering workflows.
 
@@ -29,12 +32,14 @@ Jordan has worked at Advantive as **Senior Development Specialist - APIs and Int
 
 - The title and date range were directly confirmed by Jordan on 2026-07-15.
 - The responsibilities and technologies are direct qualitative facts supplied by Jordan.
-- No team-wide adoption count, delivery-time reduction, reliability improvement, or other quantified outcome is currently documented.
+- Jordan confirmed the approximately 12-team Azure Pipelines scope, reusable workflows, pipeline templates, deployment gates, self-hosted runners, and qualitative productivity outcomes on 2026-08-11.
+- The team count is approximate. Reduced manual work, quicker releases, and developer time savings are confirmed qualitative outcomes; exact before-and-after measurements are not documented.
 - Resume wording must not imply ownership of Kubernetes scheduler internals, Kubernetes control-plane engineering, or production container-runtime development.
 
 ## Resume-Safe Language
 
 - Implemented and improved Azure DevOps, Docker, Kubernetes, Terraform, CI/CD, and security-scanning workflows across engineering teams.
+- Supports about 12 teams with Azure Pipelines, reusable workflows, pipeline templates, deployment gates, and self-hosted runners, reducing manual work, enabling quicker releases, and saving developers time.
 - Contributes to architecture decisions, engineering standards, platform direction, shared libraries, documentation, developer tooling, and AI-assisted engineering workflows.
 
 ## Related Concepts
@@ -45,5 +50,5 @@ Jordan has worked at Advantive as **Senior Development Specialist - APIs and Int
 ## Open Questions
 
 - Which specific shared libraries, platform components, and developer tools did Jordan personally design or implement?
-- What measurable delivery, reliability, security, or developer-productivity outcomes resulted?
+- What measured delivery-time, reliability, security, or developer-productivity changes resulted?
 - What production Kubernetes responsibilities included cluster operations, troubleshooting, networking, storage, or resource management?

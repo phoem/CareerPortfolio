@@ -21,6 +21,9 @@ evidence_status: confirmed
 - Has used npm, Yarn, NuGet, pip, Poetry, Cargo, FreeBSD Ports and `pkg`, APT, `dpkg`, RPM, `yum`, Homebrew, and other package or dependency-management systems.
 - Has extensive experience building CLI tools and developer-facing services.
 - Has extensive experience with GitHub automation workflows and Azure Pipelines.
+- Currently supports about 12 teams at Advantive with Azure Pipelines.
+- Has created reusable workflows, pipeline templates, deployment gates, and self-hosted runners.
+- Has reduced manual work, enabled quicker releases, and saved developers time through this pipeline work; exact measurements are not documented.
 - Contributes to developer tooling, shared libraries, engineering standards, documentation, CI/CD, and AI-assisted engineering workflows.
 - Has professional experience with Docker, Kubernetes, Terraform, Azure DevOps, security scanning, and container-orchestrated delivery workflows.
 
@@ -31,7 +34,8 @@ Jordan's direct Nix-related exposure is limited to changes made while contributi
 ## Evidence Quality
 
 - Large-monorepo, remote-build, GitHub Actions, Azure Pipelines, named package/dependency-system, CLI, developer-facing service, GitHub automation, and Nix-boundary facts were directly confirmed by Jordan on 2026-08-11.
-- The repository count, monorepo size, build volume, remote-execution architecture, build-time improvements, cache behavior, merge-queue scale, and reliability outcomes are not yet documented.
+- The approximately 12-team Azure Pipelines scope, reusable workflows, pipeline templates, deployment gates, self-hosted runners, and qualitative productivity outcomes were directly confirmed by Jordan on 2026-08-11.
+- The repository count, monorepo size, build volume, remote-execution architecture, measured build-time improvements, cache behavior, merge-queue scale, and reliability outcomes are not yet documented.
 - Remote builds must not be described as Bazel Remote Execution API, BuildBarn, BuildBuddy, or another specific remote-execution system without further confirmation.
 - GitHub and Azure experience supports GitHub Actions and Azure Pipelines claims; it does not by itself establish multi-cloud build orchestration or ownership at Anthropic-like scale.
 
@@ -40,6 +44,7 @@ Jordan's direct Nix-related exposure is limited to changes made while contributi
 - Experience supporting developer productivity in large monorepo environments through remote builds, GitHub Actions, Azure Pipelines, shared tooling, and dependency workflows spanning npm, Yarn, NuGet, pip, Poetry, Cargo, FreeBSD Ports and `pkg`, APT/`dpkg`, RPM/`yum`, and Homebrew.
 - Extensive experience building CLI tools, developer-facing services, GitHub automation workflows, and Azure Pipelines.
 - Implemented and improved CI/CD, container, infrastructure-as-code, security-scanning, and developer-tooling workflows across engineering teams.
+- Supports about 12 teams with Azure Pipelines, reusable workflows, pipeline templates, deployment gates, and self-hosted runners that reduce manual work, enable quicker releases, and save developers time.
 - Contributed a merged Rust Azure Key Vault provider to the Cachix secretspec project, providing concrete exposure to a tool used in the Nix ecosystem without claiming broad Nix expertise.
 
 ## Related Concepts
@@ -54,5 +59,5 @@ Jordan's direct Nix-related exposure is limited to changes made while contributi
 - In what contexts and at what scale was each package or dependency-management system used?
 - Which large monorepos did Jordan support, and approximately how large were they?
 - What remote-build architecture, caching, concurrency, or orchestration mechanisms were involved?
-- Did Jordan design or operate merge queues, required-check policies, build matrices, reusable actions, artifact caches, or self-hosted runners?
+- Did Jordan design or operate merge queues, required-check policies, build matrices, reusable actions, or artifact caches?
 - What measurable developer-productivity, build-time, reliability, or delivery outcomes resulted?

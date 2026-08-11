@@ -28,6 +28,7 @@ Hands-on software architect and infrastructure engineer with 20+ years designing
 ## Developer Productivity and Platform Engineering
 
 - Work with large monorepo environments and remote builds through GitHub and Azure workflows, including direct experience with GitHub Actions and Azure Pipelines.
+- Support about 12 teams with Azure Pipelines, reusable workflows, pipeline templates, deployment gates, and self-hosted runners, reducing manual work and development friction, enabling quicker releases, and saving developers time.
 - Use package and dependency tooling across JavaScript, .NET, Python, Rust, FreeBSD, Linux, and macOS ecosystems, including npm, Yarn, NuGet, pip, Poetry, Cargo, Ports/`pkg`, APT/`dpkg`, RPM/`yum`, and Homebrew.
 - Implement and improve Docker, Kubernetes, Terraform, Azure DevOps, CI/CD, security-scanning, and developer-tooling workflows supporting shared platform delivery.
 - Collaborate with engineers and architects on technical strategy, platform direction, language and engineering standards, shared libraries, documentation, and reusable workflows.
@@ -39,7 +40,9 @@ Hands-on software architect and infrastructure engineer with 20+ years designing
 - Personally took PrimeHTTPD from architecture through hands-on implementation and production operation, using a single-process `kqueue` core to keep high-volume request processing non-blocking.
 - Isolated blocking work through configurable I/O workers, Unix-domain `sendmsg()` descriptor passing, shared `mmap()` worker state, least-busy-worker dispatch, and `sendfile()` with `SF_NODISKIO`.
 - Built monitoring, health-check, telemetry, deployment, authentication, security, packet/DNS analysis, and DDoS systems for 24/7 production operations.
-- Led large-scale, complex technical projects and engineering work throughout more than 15 years across two ISPRIME tenures; created internal technical documentation, trained most employees, and mentored two beginners over several years into technical experts and eventual company leaders.
+- Led large-scale, complex technical projects and engineering work throughout more than 15 years across two ISPRIME tenures, leading as many as 10 employees.
+- Worked independently on ambiguous technical challenges, taking nearly every ISPRIME project from an unclear problem through architecture, hands-on implementation, and production operation.
+- Created internal technical documentation, trained most employees, and mentored two beginners over several years into technical experts and eventual company leaders.
 
 ## Professional Experience
 
@@ -47,6 +50,7 @@ Hands-on software architect and infrastructure engineer with 20+ years designing
 *Remote / Tampa Bay, FL | June 2022 - Present*
 
 - Serve on the Architecture Team, contributing to technical decisions, engineering standards, shared libraries, platform direction, documentation, developer tooling, and AI-assisted engineering workflows across teams.
+- Support about 12 teams with Azure Pipelines, reusable workflows, pipeline templates, deployment gates, and self-hosted runners that reduce manual work, enable quicker releases, and save developers time.
 - Implement and improve Docker, Kubernetes, Terraform, Azure DevOps, CI/CD, security-scanning, and delivery workflows across engineering teams.
 
 ### DDI System - Senior Development Specialist
