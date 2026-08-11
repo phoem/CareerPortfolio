@@ -39,7 +39,11 @@ All three should improve over time, but each should emphasize the same facts dif
 15. Wait for the generation workflow to commit only the corresponding DOCX and PDF deliverables and for the validation workflow to commit the ATS result from the exact rebuilt-artifact manifest.
 16. Do not make another local `main` commit while that CI chain is running. Pull the completed chain with `git pull --ff-only origin main`, then visually and factually review the committed artifacts and validation result.
 17. Resolve critical failures and repeat until the application is at least Strong or Jordan explicitly approves submission with known limitations. Every pass must complete its source/artifact/validation commit chain before the next pass begins.
-18. Update the repository README and company package index when adding a new application package.
+18. Create `APPLICATION_STATUS.json` with `status: not_applied` for a new package unless a later lifecycle state is already confirmed. Never infer the state of a historical package.
+19. Refresh `applications/STATUS.json` with `python scripts/update_application_status.py` and validate it with `--check`.
+20. Update the repository README and company package index when adding a new application package.
+
+Application lifecycle tracking is independent of tailoring and ATS readiness. Follow `docs/workflows/APPLICATION_STATUS.md`; a submission-ready resume does not establish that an application was submitted.
 
 ## Application Evidence Map
 

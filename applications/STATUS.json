@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "generated_from": "applications/**/APPLICATION_STATUS.json",
+  "summary": {
+    "total": 8,
+    "by_status": {
+      "unknown": 7,
+      "closed": 1
+    },
+    "by_outcome": {
+      "not_selected": 1
+    }
+  },
+  "applications": [
+    {
+      "company": "1Password",
+      "role": "Senior Developer, Partnerships Engineering",
+      "requisition_id": "7bbbdf90-1e8d-446e-a048-7fc2e0ae6196",
+      "package": "applications/1password/7bbbdf90-partnerships-engineering",
+      "status": "unknown"
+    },
+    {
+      "company": "Anthropic",
+      "role": "Software Engineer, Research Infrastructure",
+      "requisition_id": "5283063008",
+      "package": "applications/anthropic/5283063008-research-infrastructure",
+      "status": "closed",
+      "outcome": "not_selected"
+    },
+    {
+      "company": "Anthropic",
+      "role": "Staff + Senior Software Engineer, Inference Deployment",
+      "requisition_id": "5285557008",
+      "package": "applications/anthropic/5285557008-inference-deployment",
+      "status": "unknown"
+    },
+    {
+      "company": "LM Studio",
+      "role": "Software Engineer, AI/ML Systems",
+      "requisition_id": "9942f9e5-63b4-473d-9510-00dcaa811721",
+      "package": "applications/lm-studio/software-engineer-ai-ml-systems",
+      "status": "unknown"
+    },
+    {
+      "company": "LM Studio",
+      "role": "Software Engineer, Applications",
+      "package": "applications/lm-studio/software-engineer-applications",
+      "status": "unknown"
+    },
+    {
+      "company": "Netflix",
+      "role": "Distributed Systems Engineer (L5 + L6), Compute Runtime",
+      "requisition_id": "JR39731",
+      "package": "applications/netflix/JR39731-compute-runtime",
+      "status": "unknown"
+    },
+    {
+      "company": "OpenAI",
+      "role": "Software Engineer, Compute Infrastructure",
+      "package": "applications/openai/software-engineer-compute-infrastructure",
+      "status": "unknown"
+    },
+    {
+      "company": "SpaceX / Starlink",
+      "role": "Embedded Software Engineer",
+      "package": "applications/starlink/embedded-software-engineer",
+      "status": "unknown"
+    }
+  ]
+}

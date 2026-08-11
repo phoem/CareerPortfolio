@@ -2,6 +2,8 @@
 
 This file tracks job applications Jordan has explicitly asked to pursue. A queued role does not receive an application package until work begins and its exact posting is captured through the resume workflow.
 
+Queue workflow stages describe preparation work, not confirmed submission. Once a package exists, its authoritative lifecycle state is stored in `APPLICATION_STATUS.json` and included in the generated `applications/STATUS.json` master index.
+
 | Priority | Company | Role | Workflow stage | Status | Next action | Source |
 |---:|---|---|---|---|---|---|
 | Hold | NVIDIA | Senior Software Engineer, Networking DGX Cloud (JR2022482) | Evidence gathering | On hold at Jordan's request | Await PrimeBGP/PrimeFlow deployment details, network configuration-management evidence, and Python/Go service details | https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-Remote/Senior-Software-Engineer--Networking-DGX-Cloud_JR2022482?source=jobboardlinkedin |
@@ -17,7 +19,7 @@ This file tracks job applications Jordan has explicitly asked to pursue. A queue
 - `Revision` - a retained ATS improvement pass is underway.
 - `Submission ready` - artifacts and validation passed final review.
 - `On hold` - intentionally paused with the next action preserved.
-- `Closed` - application was submitted, withdrawn, expired, or canceled; explain which in `Status`.
+- `Closed` - preparation work has ended because the application was submitted, withdrawn, expired, or canceled; explain which in `Status` and separately update the package lifecycle record when one exists.
 
 ## Queue rules
 

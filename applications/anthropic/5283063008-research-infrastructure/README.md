@@ -2,9 +2,14 @@
 
 This directory is the isolated application package for Anthropic requisition 5283063008 in the Research Productivity organization.
 
+## Application outcome
+
+Applied; not selected. Submission and outcome dates are not documented. The authoritative structured record is `APPLICATION_STATUS.json`.
+
 ## Package contents
 
 - `APPLICATION.json` - machine-readable application manifest.
+- `APPLICATION_STATUS.json` - authoritative application lifecycle status and confirmed history.
 - `JOB_DESCRIPTION.md` - structured capture of the official posting and role requirements.
 - `EVIDENCE_MAP.md` - requirement-to-resume-to-OKF traceability.
 - `GAP_ANALYSIS.md` - supported strengths, adjacent experience, and genuine gaps.

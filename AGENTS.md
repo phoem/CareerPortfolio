@@ -17,10 +17,11 @@ Agents working in this repository must preserve factual accuracy, avoid inventin
 4. `designs/` contains reusable rendering designs and the repository default.
 5. `docs/workflows/RESUME_WORKFLOW.md` defines the detailed operating process.
 6. `docs/workflows/ATS_VALIDATION.md` defines the ATS validation and revision-loop process.
-7. `docs/workflows/LINKEDIN_PROFILE_WORKFLOW.md` defines the manual LinkedIn review, approval, publishing, and verification process.
-8. `docs/OKF_PORTFOLIO.md` defines the repository-specific OKF conventions.
-9. `docs/decisions/` contains Architecture Decision Records for significant repository decisions.
-10. `docs/ROADMAP.md` stores deferred ideas and future enhancements that are not yet justified for implementation.
+7. `docs/workflows/APPLICATION_STATUS.md` defines application lifecycle tracking and uncertainty rules.
+8. `docs/workflows/LINKEDIN_PROFILE_WORKFLOW.md` defines the manual LinkedIn review, approval, publishing, and verification process.
+9. `docs/OKF_PORTFOLIO.md` defines the repository-specific OKF conventions.
+10. `docs/decisions/` contains Architecture Decision Records for significant repository decisions.
+11. `docs/ROADMAP.md` stores deferred ideas and future enhancements that are not yet justified for implementation.
 
 ## Required Behavior
 
@@ -39,6 +40,9 @@ Agents working in this repository must preserve factual accuracy, avoid inventin
 - Tailor technical depth to the audience: recruiter, ATS, hiring manager, systems engineer, or architect.
 - Keep the three generic resumes broadly reusable while selectively improving each with the strongest relevant project descriptions.
 - Keep targeted resumes tightly aligned to their own posting.
+- Keep resume-preparation status separate from confirmed application lifecycle status.
+- Never infer that an application was submitted from a completed package, generated artifacts, ATS validation, or `Submission ready` preparation state.
+- Preserve historical uncertainty as `unknown`; use `not_applied` by default only for new packages or when non-submission is confirmed.
 - Record significant structural or workflow decisions as ADRs under `docs/decisions/`.
 - Put useful but premature ideas in `docs/ROADMAP.md` instead of creating speculative structure.
 
@@ -46,6 +50,8 @@ Agents working in this repository must preserve factual accuracy, avoid inventin
 
 - Use `applications/<company>/<requisition-or-role>/`.
 - Include `APPLICATION.json` with company, role, requisition, job-description filename, and artifact sources.
+- Include `APPLICATION_STATUS.json` as the authoritative lifecycle record. Existing unverified packages use `unknown`; new packages use `not_applied` unless a later state is already confirmed.
+- Regenerate `applications/STATUS.json` from package status files; never edit the master index directly.
 - Store the exact posting as `JOB_DESCRIPTION.md` in that application directory.
 - Store ATS reports and history under that application's `validation/` directory.
 - Future interview material should remain associated with the relevant application package or link back to it unambiguously.

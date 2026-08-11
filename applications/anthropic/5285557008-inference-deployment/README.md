@@ -2,9 +2,13 @@
 
 This package targets Greenhouse job `5285557008` for Anthropic's Inference team.
 
-## Current status
+## Current preparation status
 
 Submission ready. ATS pass 1 completed with a 94/100 targeted-readiness score using validator v0.2.2. The final Markdown, DOCX, and PDF resume artifacts passed parseability and visual review; the DOCX and PDF cover letter also passed visual review. Remaining accelerator-scale inference, model autoscaling, and inference-optimization gaps are represented honestly rather than disguised with adjacent experience.
+
+## Application status
+
+Unknown. Preparation readiness does not establish whether this application was submitted; see `APPLICATION_STATUS.json`.
 
 ## Base-resume selection
 
@@ -15,6 +19,7 @@ The existing Anthropic Research Infrastructure resume is relevant reference mate
 ## Package contents
 
 - `APPLICATION.json` — machine-readable application manifest and artifact registration.
+- `APPLICATION_STATUS.json` — authoritative application lifecycle status.
 - `JOB_DESCRIPTION.md` — captured job-specific posting content.
 - `JOB_SOURCE.md` — source URL and retrieval provenance.
 - `EVIDENCE_MAP.md` — requirement-to-evidence mapping and gap boundaries.

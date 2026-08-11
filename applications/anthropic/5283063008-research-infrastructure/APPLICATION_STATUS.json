@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "closed",
+  "outcome": "not_selected",
+  "history": [
+    {
+      "status": "applied",
+      "recorded_at": "2026-08-11",
+      "source": "Jordan Newman",
+      "note": "Application date is not documented."
+    },
+    {
+      "status": "closed",
+      "outcome": "not_selected",
+      "recorded_at": "2026-08-11",
+      "source": "Jordan Newman",
+      "note": "Outcome date is not documented."
+    }
+  ]
+}

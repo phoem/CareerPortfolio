@@ -75,9 +75,11 @@ Create a separate directory for every individual posting:
 
 ```text
 applications/
+  STATUS.json
   example-company/
     REQ123-example-role/
       APPLICATION.json
+      APPLICATION_STATUS.json
       JOB_DESCRIPTION.md
       Example_Resume.md
       Example_Cover_Letter.md
@@ -102,6 +104,17 @@ A second role at the same company gets a sibling posting directory. Never overwr
   ]
 }
 ```
+
+`APPLICATION_STATUS.json` independently records the confirmed lifecycle state:
+
+```json
+{
+  "schema_version": 1,
+  "status": "not_applied"
+}
+```
+
+New packages default to `not_applied`. Historical packages whose submission state cannot be verified use `unknown`; never infer non-submission from missing records. The generated `applications/STATUS.json` is the master index and must not be edited directly. Refresh and validate it with `scripts/update_application_status.py`. See `docs/workflows/APPLICATION_STATUS.md`.
 
 ## Resume Design Selection
 

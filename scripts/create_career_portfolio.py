@@ -13,7 +13,9 @@ from pathlib import Path
 # Every file in the reusable infrastructure roots is audited in validate_source().
 COPY_FILES = (
     ".github/workflows/generate-resume-artifacts.yml",
+    ".github/workflows/validate-application-status.yml",
     ".github/workflows/validate-resumes.yml",
+    "docs/workflows/APPLICATION_STATUS.md",
     "docs/workflows/RESUME_WORKFLOW.md",
     "docs/workflows/ATS_VALIDATION.md",
     "docs/workflows/LINKEDIN_PROFILE_WORKFLOW.md",
@@ -22,10 +24,14 @@ COPY_FILES = (
     "designs/README.md",
     "designs/default.json",
     "designs/classic-ats/design.json",
+    "designs/deh-ceo-resume/design.json",
+    "designs/readable-ats/design.json",
+    "scripts/convert_docx_to_pdf_with_word.ps1",
     "scripts/generate_resume_artifacts.py",
     "scripts/validate_resume.py",
     "scripts/validate_rebuilt_artifacts.py",
     "scripts/record_ats_history.py",
+    "scripts/update_application_status.py",
     "scripts/create_career_portfolio.py",
     "linkedin/README.md",
 )
@@ -40,6 +46,7 @@ AUDITED_INFRASTRUCTURE_ROOTS = (
 GENERATED_FILES = (
     "AGENTS.md",
     "README.md",
+    "applications/STATUS.json",
     "docs/ROADMAP.md",
     "docs/STYLE_GUIDE.md",
     "docs/decisions/README.md",
@@ -133,7 +140,8 @@ This repository is the authoritative professional-knowledge, resume, and applica
 
 - `knowledge/` contains confirmed professional knowledge in Open Knowledge Format (OKF) v0.1.
 - `generic/` contains reusable resume sources and generated artifacts.
-- `applications/<company>/<posting>/` contains an isolated package for each job posting.
+- `applications/<company>/<posting>/` contains an isolated package and authoritative application-status record for each job posting.
+- `applications/STATUS.json` is the generated master application-status index.
 - `designs/` contains reusable rendering designs.
 - `scripts/` generates and validates resume artifacts.
 - `docs/workflows/` defines the resume, ATS-validation, and LinkedIn processes.
@@ -147,8 +155,9 @@ This repository is the authoritative professional-knowledge, resume, and applica
 2. Complete the initial interview described in the starter guide.
 3. Record only confirmed facts under `knowledge/` and update `knowledge/index.md` and `knowledge/log.md`.
 4. Build at least one canonical Markdown resume under `generic/`.
-5. Create one isolated package under `applications/<company>/<posting>/` for every real posting.
-6. Generate artifacts with `python scripts/generate_resume_artifacts.py --full-rebuild` only after explicitly approving a full rebuild.
+5. Create one isolated package under `applications/<company>/<posting>/` for every real posting, including `APPLICATION_STATUS.json` with `status: not_applied` for a new unsubmitted package.
+6. Refresh the master index with `python scripts/update_application_status.py`.
+7. Generate artifacts with `python scripts/generate_resume_artifacts.py --full-rebuild` only after explicitly approving a full rebuild.
 
 Markdown is the editable source format. DOCX, PDF, ATS reports, and score histories are generated artifacts.
 """
@@ -277,6 +286,20 @@ This append-only log was initialized with the CareerPortfolio. No LinkedIn chang
 """
 
 
+def application_status_index() -> str:
+    return """{
+  "schema_version": 1,
+  "generated_from": "applications/**/APPLICATION_STATUS.json",
+  "summary": {
+    "total": 0,
+    "by_status": {},
+    "by_outcome": {}
+  },
+  "applications": []
+}
+"""
+
+
 def write_text(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content.rstrip() + "\n", encoding="utf-8", newline="\n")
@@ -401,6 +424,7 @@ def create_scaffold(destination: Path, owner_name: str, force: bool) -> None:
     write_text(destination / "docs/ROADMAP.md", starter_roadmap())
     write_text(destination / "docs/STYLE_GUIDE.md", starter_style_guide())
     write_text(destination / "docs/decisions/README.md", decisions_readme())
+    write_text(destination / "applications/STATUS.json", application_status_index())
     write_text_if_missing(destination / "knowledge/index.md", knowledge_index())
     write_text_if_missing(destination / "knowledge/log.md", knowledge_log())
     write_text_if_missing(destination / "linkedin/CHANGELOG.md", linkedin_changelog())
