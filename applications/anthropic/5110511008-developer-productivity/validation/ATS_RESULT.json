@@ -1,8 +1,8 @@
 {
   "validator_version": "0.2.2",
-  "overall_score": 70,
-  "disposition": "Not Ready",
-  "targeted_complete": false,
+  "overall_score": 87,
+  "disposition": "Strong",
+  "targeted_complete": true,
   "pass_number": 0,
   "categories": {
     "Artifact parseability and structure": {
@@ -21,39 +21,49 @@
       "weight": 10
     },
     "Required job-requirement evidence": {
-      "score": 0,
+      "score": 78,
       "findings": [
-        "No required requirements were available; targeted scoring is incomplete."
+        "Direct: Have deep experience with build systems, CI/CD pipelines, and/or developer tooling in a large monorepo environment (matched: build, systems, ci/cd, pipelines, developer, tooling, large, monorepo).",
+        "Adjacent: Have strong proficiency in Python, Rust and/or Go (matched: python, rust, go).",
+        "Adjacent: Are obsessed with developer productivity and reducing friction in the software development lifecycle (matched: developer, productivity, software, development).",
+        "Direct: Have experience with container orchestration and infrastructure at scale (matched: container, orchestration, infrastructure).",
+        "Direct: Have excellent communication skills and enjoy supporting internal partners to improve their development experience (matched: communication, supporting, internal, improve, development).",
+        "Adjacent: Are excited about designing foundational systems and are comfortable working independently on ambiguous, high-impact technical challenges (matched: about, designing, systems, working, technical)."
       ],
       "weight": 30
     },
     "Preferred job-requirement evidence": {
-      "score": 100,
+      "score": 61,
       "findings": [
-        "No explicit preferred requirements were listed."
+        "Direct: 15+ years (not including internships or co-ops) of experience in a Software Engineer role, building and operating large-scale developer infrastructure (matched: software, engineer, building, operating, developer, infrastructure).",
+        "Missing: 3+ years (not including internships or co-ops) of experience leading large scale complex projects or teams as a tech lead (matched: large, teams).",
+        "Adjacent: Experience with CI orchestration tools (Buildkite, Jenkins, GitHub Actions, or similar) and merge queue management at scale (matched: ci, orchestration, tools, github, actions, management).",
+        "Adjacent: Experience building or operating remote build execution systems (Bazel Remote Execution API, BuildBarn, BuildBuddy, or similar) (matched: building, operating, remote, build, execution, systems).",
+        "Adjacent: Experience with Nix/NixOS/Docker and managing large image / package sets at scale (matched: large, image, package).",
+        "Direct: Experience building CLI tools, developer-facing services, and GitHub API and automation workflows (matched: building, cli, tools, developer-facing, services, github, automation, workflows)."
       ],
       "weight": 15
     },
     "Language and keyword quality": {
-      "score": 100,
+      "score": 90,
       "findings": [
-        "Language is specific, action-oriented, and readable."
+        "Qualification-language token coverage: 47.1%."
       ],
       "weight": 10
     },
     "Human readability and positioning": {
-      "score": 97,
+      "score": 100,
       "findings": [
-        "1 bullets are long enough to hinder scanning."
+        "The first third is role-specific and evidence is easy to scan."
       ],
       "weight": 10
     }
   },
   "critical_failures": [],
   "hashes": {
-    "resume": "50b894bf7f6f6a7999553cfa1acbdab8c8a258e2d2bd2607a71b4a842a201865",
-    "docx": "c0720b7d89032bd9a393c5a3a0ee091cb40df934ebd14934245ef49869494f68",
-    "pdf": "809848376501d67714b3f6924b4e5a002d72c3775264d20cbe8496dc57eb580b",
-    "job": "f817f1310b4cb4deff641755f6bd55e37ac6043267dc8fc630a51d1fc274b59c"
+    "resume": "ac7954659b8242647e3b15679e6358c09e724e447d40a36e898c85d92f39c91e",
+    "docx": "718dc2326328e7dc547cafc20bf49e8d69777ea35b12d4b36430252d59a4d15e",
+    "pdf": "63860dc05356b670d70db29ebc10fc636204b2dc3b3e2df316205c774ee1c2ed",
+    "job": "7c694d4674c704cc5aa6cbd27cd6b779360c95ab24c221acdd7b157f8f90a603"
   }
 }
