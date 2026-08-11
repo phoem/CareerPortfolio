@@ -63,7 +63,7 @@ Hands-on software architect and infrastructure engineer with 20+ years designing
 *Weehawken, NJ | January 2001 - December 2014*
 
 - Held technical, architectural, and operational responsibility for a 24/7 hosting and CDN platform spanning approximately 3,000-4,000 servers, about 10 locations, multiple datacenters, and more than 65 Gbps of peak traffic.
-- Personally architected and implemented PrimeHTTPD from first-principles design through deployment across approximately 200 servers, combining high-concurrency serving, workload-aware worker dispatch, caching, authentication, and operational controls.
+- Designed and built PrimeHTTPD from first principles, deploying it across approximately 200 servers with high-concurrency serving, workload-aware dispatch, caching, authentication, and operational controls.
 - Built production monitoring, telemetry, deployment, infrastructure-management, authentication, networking, DDoS defense, packet-analysis, and DNS-analysis software in response to operational requirements.
 - Developed production FreeBSD kernel modules for filesystem virtualization, execution monitoring, system protection, telemetry, and filesystem-performance instrumentation.
 - Led through architecture, direct implementation, technical documentation, employee training, mentoring, and cross-functional operational ownership.

@@ -27,7 +27,9 @@ Developer Productivity owns the end-to-end experience of how engineers and resea
 - Own and evolve build environments, package management, and dependency systems to enable fast, reproducible builds
 - Define and implement language ecosystem standards, tooling, and frameworks that drive developer productivity across research and production workloads
 
-## You may be a good fit if you
+## Qualifications
+
+Official posting heading: *You may be a good fit if you:*
 
 - Have deep experience with build systems, CI/CD pipelines, and/or developer tooling in a large monorepo environment
 - Have strong proficiency in Python, Rust and/or Go
@@ -36,7 +38,9 @@ Developer Productivity owns the end-to-end experience of how engineers and resea
 - Have excellent communication skills and enjoy supporting internal partners to improve their development experience
 - Are excited about designing foundational systems and are comfortable working independently on ambiguous, high-impact technical challenges
 
-## Strong candidates may have
+## Preferred Qualifications
+
+Official posting heading: *Strong candidates may have:*
 
 - 15+ years (not including internships or co-ops) of experience in a Software Engineer role, building and operating large-scale developer infrastructure
 - 3+ years (not including internships or co-ops) of experience leading large scale complex projects or teams as a tech lead
@@ -45,7 +49,7 @@ Developer Productivity owns the end-to-end experience of how engineers and resea
 - Experience with Nix/NixOS/Docker and managing large image / package sets at scale
 - Experience building CLI tools, developer-facing services, and GitHub API and automation workflows
 
-**Deadline to apply:** None. Applications will be reviewed on a rolling basis.
+Deadline to apply: None. Applications will be reviewed on a rolling basis.
 
 ## Compensation
 
