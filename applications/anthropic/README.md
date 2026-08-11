@@ -4,5 +4,6 @@ Each Anthropic posting has an isolated application package with its own captured
 
 | Greenhouse ID | Role | Package | Preparation | Application status |
 |---|---|---|---|---|
+| 5110511008 | Staff+ Software Engineer, Developer Productivity | `5110511008-developer-productivity/` | Baseline drafted | Not applied |
 | 5283063008 | Software Engineer, Research Infrastructure | `5283063008-research-infrastructure/` | Submission ready | Closed — not selected |
 | 5285557008 | Staff + Senior Software Engineer, Inference Deployment | `5285557008-inference-deployment/` | Submission ready | Unknown |

@@ -24,6 +24,7 @@ The bundle targets OKF v0.2. Concepts use structured authorship, verification, p
 * [Network Infrastructure and Datacenter Operations](Network_Infrastructure_Experience/README.md) - ISPRIME network-vendor, BGP4, monitoring, datacenter-design, migration, and operations experience.
 * [Production Health Checking and Monitoring Systems](Production_Health_Monitoring/README.md) - Personally developed ISPRIME health-check and monitoring software, including sitecheck, slugd, and php-seclogd.
 * [Cloud Platform Experience](Cloud_Platform_Experience/README.md) - Confirmed direct AWS, GCP, and Azure experience with service-level scope still to be documented.
+* [Developer Productivity, Build, and CI Experience](Developer_Productivity_Experience/README.md) - Confirmed large-monorepo, remote-build, GitHub Actions, Azure Pipelines, dependency-workflow, and bounded Nix-ecosystem experience.
 
 # Kernel and Systems Software
 

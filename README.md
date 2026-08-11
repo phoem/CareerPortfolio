@@ -85,6 +85,16 @@ The employer posting associated with requisition JR39731 was verified as a Compu
 | Job description | `applications/anthropic/5283063008-research-infrastructure/JOB_DESCRIPTION.md` |
 | Validation | `applications/anthropic/5283063008-research-infrastructure/validation/` |
 
+### Anthropic — Staff+ Software Engineer, Developer Productivity
+
+| Document | Path |
+|---|---|
+| Package | `applications/anthropic/5110511008-developer-productivity/` |
+| Resume source | `applications/anthropic/5110511008-developer-productivity/Jordan_Newman_Anthropic_Developer_Productivity_Resume.md` |
+| Job description | `applications/anthropic/5110511008-developer-productivity/JOB_DESCRIPTION.md` |
+| Evidence map | `applications/anthropic/5110511008-developer-productivity/EVIDENCE_MAP.md` |
+| Status | Baseline drafted; not yet applied |
+
 ### Anthropic — Staff + Senior Software Engineer, Inference Deployment
 
 | Document | Path |

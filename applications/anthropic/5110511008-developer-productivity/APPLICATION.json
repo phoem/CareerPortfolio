@@ -1,0 +1,19 @@
+{
+  "company": "Anthropic",
+  "role": "Staff+ Software Engineer, Developer Productivity",
+  "requisition_id": "PIP-260568",
+  "greenhouse_id": "5110511008",
+  "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+  "department": "Software Engineering - Infrastructure",
+  "source_url": "https://job-boards.greenhouse.io/anthropic/jobs/5110511008",
+  "job_description": "JOB_DESCRIPTION.md",
+  "job_description_status": "complete-official-greenhouse-api-capture",
+  "job_description_captured_at": "2026-08-11",
+  "slug": "5110511008-developer-productivity",
+  "artifacts": [
+    {
+      "type": "resume",
+      "source": "Jordan_Newman_Anthropic_Developer_Productivity_Resume.md"
+    }
+  ]
+}

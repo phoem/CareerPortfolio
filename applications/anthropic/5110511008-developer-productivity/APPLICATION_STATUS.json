@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "not_applied",
+  "history": [
+    {
+      "status": "not_applied",
+      "recorded_at": "2026-08-11",
+      "source": "CareerPortfolio application-package workflow",
+      "note": "New application package; submission has not been confirmed."
+    }
+  ]
+}

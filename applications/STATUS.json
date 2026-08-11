@@ -2,9 +2,10 @@
   "schema_version": 1,
   "generated_from": "applications/**/APPLICATION_STATUS.json",
   "summary": {
-    "total": 8,
+    "total": 9,
     "by_status": {
       "unknown": 7,
+      "not_applied": 1,
       "closed": 1
     },
     "by_outcome": {
@@ -33,6 +34,13 @@
       "requisition_id": "5285557008",
       "package": "applications/anthropic/5285557008-inference-deployment",
       "status": "unknown"
+    },
+    {
+      "company": "Anthropic",
+      "role": "Staff+ Software Engineer, Developer Productivity",
+      "requisition_id": "PIP-260568",
+      "package": "applications/anthropic/5110511008-developer-productivity",
+      "status": "not_applied"
     },
     {
       "company": "LM Studio",
