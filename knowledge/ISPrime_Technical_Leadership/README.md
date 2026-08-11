@@ -1,7 +1,7 @@
 ---
 type: Professional Experience Evidence
 title: ISPRIME Technical Leadership, Training, and Mentoring
-description: Confirmed employee training, internal documentation, and multi-year mentoring performed by Jordan Newman at ISPRIME.
+description: Confirmed technical-project leadership, engineering leadership, employee training, internal documentation, and multi-year mentoring performed by Jordan Newman at ISPRIME.
 tags: [isprime, technical-leadership, mentoring, training, documentation]
 generated:
   at: 2026-07-31T00:00:00Z
@@ -14,10 +14,11 @@ evidence_status: confirmed
 
 ## Summary
 
-During his years at ISPRIME, Jordan trained the majority of the company's employees, created internal training documentation, and personally developed junior people into technical experts and company leaders.
+Throughout his entire time at ISPRIME, Jordan led major technical projects and engineering work. Across the documented January 2001-December 2014 and March 2018-December 2019 tenures, this represents more than 15 years of technical-project and engineering leadership. He also trained the majority of the company's employees, created internal training documentation, and personally developed junior people into technical experts and company leaders.
 
 ## Personal Ownership
 
+- Jordan led major technical projects and engineering work throughout his entire time at ISPRIME.
 - Jordan created the internal training documentation used to develop employees.
 - Jordan personally trained the majority of ISPRIME employees over the years.
 - Jordan brought two friends into the company when they had little prior technical knowledge.
@@ -27,6 +28,8 @@ During his years at ISPRIME, Jordan trained the majority of the company's employ
 ## Evidence Quality
 
 - These facts were directly supplied by Jordan on 2026-07-31.
+- Jordan confirmed on 2026-08-11 that he led major technical projects and engineering work throughout his entire time at ISPRIME.
+- The more-than-15-year scope is derived from the separately confirmed ISPRIME employment periods of January 2001-December 2014 and March 2018-December 2019.
 - “The majority of employees” is confirmed qualitative scope; an exact employee or trainee count is not yet documented.
 - “Experts” reflects Jordan's direct characterization of their eventual technical capability.
 - Their later IT-career success is a qualitative outcome; current employers, titles, and other career details are not documented here.
@@ -34,7 +37,7 @@ During his years at ISPRIME, Jordan trained the majority of the company's employ
 
 ## Resume-Ready Description
 
-Acted as a technical lead and mentor across ISPRIME, creating internal training documentation and training most employees; personally guided two beginners over several years into technical experts and eventual company leaders.
+Led major technical projects and engineering work throughout more than 15 years across two ISPRIME tenures; created internal training documentation, trained most employees, and personally guided two beginners over several years into technical experts and eventual company leaders.
 
 ## Related Concepts
 

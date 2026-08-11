@@ -9,6 +9,7 @@
 - Extensive CLI, developer-facing service, GitHub automation, and Azure Pipeline experience, with a documented Nexus example.
 - Package/dependency experience across npm, Yarn, NuGet, pip/Poetry, Cargo, FreeBSD Ports/pkg, APT/dpkg, RPM/yum, and Homebrew.
 - Technical leadership, documentation, training, mentoring, and cross-team communication.
+- More than 15 years leading major technical projects and engineering work across two ISPRIME tenures.
 
 ## Adjacent or bounded alignment
 

@@ -2,6 +2,7 @@
 
 ## 2026-08-11
 
+* **ISPRIME technical leadership**: Confirmed that Jordan led major technical projects and engineering work throughout his entire time at ISPRIME, representing more than 15 years across the documented 2001-2014 and 2018-2019 tenures.
 * **Developer productivity**: Recorded confirmed experience with large monorepo environments, remote builds through GitHub and Azure, GitHub Actions, Azure Pipelines, extensive CLI and developer-facing service development, GitHub automation, and container-orchestrated delivery.
 * **Package ecosystems**: Recorded direct use of npm, Yarn, NuGet, pip, Poetry, Cargo, FreeBSD Ports and `pkg`, APT, `dpkg`, RPM, `yum`, Homebrew, and other package or dependency-management systems without inventing scale or outcomes.
 * **Nix boundary**: Recorded that direct Nix-related exposure is limited to the merged cachix/secretspec contribution and does not support a claim of broad Nix/NixOS expertise or large-scale Nix package management.

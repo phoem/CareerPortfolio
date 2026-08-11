@@ -39,7 +39,7 @@ Hands-on software architect and infrastructure engineer with 20+ years designing
 - Personally took PrimeHTTPD from architecture through hands-on implementation and production operation, using a single-process `kqueue` core to keep high-volume request processing non-blocking.
 - Isolated blocking work through configurable I/O workers, Unix-domain `sendmsg()` descriptor passing, shared `mmap()` worker state, least-busy-worker dispatch, and `sendfile()` with `SF_NODISKIO`.
 - Built monitoring, health-check, telemetry, deployment, authentication, security, packet/DNS analysis, and DDoS systems for 24/7 production operations.
-- Created internal technical documentation, trained most ISPRIME employees, and mentored two beginners over several years into technical experts and eventual company leaders.
+- Led large-scale, complex technical projects and engineering work throughout more than 15 years across two ISPRIME tenures; created internal technical documentation, trained most employees, and mentored two beginners over several years into technical experts and eventual company leaders.
 
 ## Professional Experience
 
