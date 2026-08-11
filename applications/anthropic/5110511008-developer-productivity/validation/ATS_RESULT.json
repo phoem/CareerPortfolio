@@ -1,6 +1,6 @@
 {
   "validator_version": "0.2.2",
-  "overall_score": 91,
+  "overall_score": 95,
   "disposition": "Submission Ready",
   "targeted_complete": true,
   "pass_number": 0,
@@ -9,7 +9,7 @@
       "score": 100,
       "findings": [
         "DOCX token coverage versus Markdown: 99.1%.",
-        "PDF token coverage versus Markdown: 98.6%."
+        "PDF token coverage versus Markdown: 98.7%."
       ],
       "weight": 25
     },
@@ -21,14 +21,14 @@
       "weight": 10
     },
     "Required job-requirement evidence": {
-      "score": 78,
+      "score": 92,
       "findings": [
         "Direct: Have deep experience with build systems, CI/CD pipelines, and/or developer tooling in a large monorepo environment (matched: build, systems, ci/cd, pipelines, developer, tooling, large, monorepo).",
         "Adjacent: Have strong proficiency in Python, Rust and/or Go (matched: python, rust, go).",
-        "Adjacent: Are obsessed with developer productivity and reducing friction in the software development lifecycle (matched: developer, productivity, software, development).",
+        "Direct: Are obsessed with developer productivity and reducing friction in the software development lifecycle (matched: developer, productivity, reducing, friction, software, development).",
         "Direct: Have experience with container orchestration and infrastructure at scale (matched: container, orchestration, infrastructure, scale).",
         "Direct: Have excellent communication skills and enjoy supporting internal partners to improve their development experience (matched: communication, supporting, internal, improve, development).",
-        "Adjacent: Are excited about designing foundational systems and are comfortable working independently on ambiguous, high-impact technical challenges (matched: about, designing, systems, working, technical)."
+        "Direct: Are excited about designing foundational systems and are comfortable working independently on ambiguous, high-impact technical challenges (matched: about, designing, systems, working, independently, ambiguous, technical, challenges)."
       ],
       "weight": 30
     },
@@ -36,7 +36,7 @@
       "score": 85,
       "findings": [
         "Direct: 15+ years (not including internships or co-ops) of experience in a Software Engineer role, building and operating large-scale developer infrastructure (matched: software, engineer, building, operating, large-scale, developer, infrastructure).",
-        "Adjacent: 3+ years (not including internships or co-ops) of experience leading large scale complex projects or teams as a tech lead (matched: large, scale, complex, projects, teams).",
+        "Adjacent: 3+ years (not including internships or co-ops) of experience leading large scale complex projects or teams as a tech lead (matched: leading, large, scale, complex, projects, teams).",
         "Direct: Experience with CI orchestration tools (Buildkite, Jenkins, GitHub Actions, or similar) and merge queue management at scale (matched: ci, orchestration, tools, github, actions, management, scale).",
         "Adjacent: Experience building or operating remote build execution systems (Bazel Remote Execution API, BuildBarn, BuildBuddy, or similar) (matched: building, operating, remote, build, execution, systems).",
         "Direct: Experience with Nix/NixOS/Docker and managing large image / package sets at scale (matched: large, image, package, scale).",
@@ -47,23 +47,23 @@
     "Language and keyword quality": {
       "score": 100,
       "findings": [
-        "Qualification-language token coverage: 50.6%."
+        "Qualification-language token coverage: 58.8%."
       ],
       "weight": 10
     },
     "Human readability and positioning": {
-      "score": 97,
+      "score": 100,
       "findings": [
-        "1 bullets are long enough to hinder scanning."
+        "The first third is role-specific and evidence is easy to scan."
       ],
       "weight": 10
     }
   },
   "critical_failures": [],
   "hashes": {
-    "resume": "13075fc056599d036907d939933f40d770c8bcf425abe065498c1da113602e5b",
-    "docx": "ec67b9d9b7ca5e0ddaf43c50f7fc0d1b16324398a4fac20aef6ca364ba93b76b",
-    "pdf": "7cb8d337b9bd4a6af523fb98e2d7d8814f58d03fa2921042cc639cf0f88eaa5b",
+    "resume": "7e5ab859f866d881319217b8012f6f2ba53d9a28081260b75412405479e776b2",
+    "docx": "c1e359d199d6db8ee183249f2ffbd8d1fe8d3ccaa68182367ca86d6998658ad8",
+    "pdf": "005ce560b1a20641008a10e8158a4574da70ab34add10fe886961896af91d25d",
     "job": "7c694d4674c704cc5aa6cbd27cd6b779360c95ab24c221acdd7b157f8f90a603"
   }
 }
