@@ -1,6 +1,6 @@
 {
-  "validator_version": "0.2.1",
-  "overall_score": 99,
+  "validator_version": "0.2.2",
+  "overall_score": 100,
   "disposition": "Submission Ready",
   "targeted_complete": true,
   "pass_number": 0,
@@ -8,8 +8,8 @@
     "Artifact parseability and structure": {
       "score": 100,
       "findings": [
-        "DOCX token coverage versus Markdown: 99.5%.",
-        "PDF token coverage versus Markdown: 99.5%."
+        "DOCX token coverage versus Markdown: 99.3%.",
+        "PDF token coverage versus Markdown: 99.3%."
       ],
       "weight": 50
     },
@@ -28,17 +28,17 @@
       "weight": 15
     },
     "Human readability and positioning": {
-      "score": 91,
+      "score": 100,
       "findings": [
-        "3 bullets are long enough to hinder scanning."
+        "The first third is role-specific and evidence is easy to scan."
       ],
       "weight": 15
     }
   },
   "critical_failures": [],
   "hashes": {
-    "resume": "8a9e3772b96d8f678a622a48e13943adca378fdbf81801bbba4656114aa6ce5b",
-    "docx": "6ef366a9048a05a48134f4f17ac8752bc83a3809585cd3aec2983e3c5b2534dd",
-    "pdf": "cf49adf357f8844371210661fb00f7e606e4c93e11150e187d0cba5a0d26843b"
+    "resume": "d626b978bdc355243ebe4bcf4e6ebba1be2a988232cf3f5a6f34b17b64defb5e",
+    "docx": "8f889f4d878e7842401c86ae116cd82f8aa5b4874074c83a0e3b405536cc478e",
+    "pdf": "96bcc42492bd5bb6cd145983b65ddd53e23662b1c7ca05b4d296be7c11d636d1"
   }
 }

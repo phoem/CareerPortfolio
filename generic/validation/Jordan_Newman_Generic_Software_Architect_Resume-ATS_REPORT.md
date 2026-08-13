@@ -1,9 +1,9 @@
 # ATS Readiness Report
 
-- **Validated:** 2026-07-16T05:04:48+00:00
-- **Validator:** CareerPortfolio ATS Validator v0.2.1
+- **Validated:** 2026-08-13T06:28:03+00:00
+- **Validator:** CareerPortfolio ATS Validator v0.2.2
 - **Score type:** Generic baseline
-- **Overall score:** 99/100
+- **Overall score:** 100/100
 - **Disposition:** Submission Ready
 - **Autonomous revision pass:** 0 of 3
 
@@ -14,7 +14,7 @@
 | Artifact parseability and structure | 100 | 50% |
 | Required-information completeness | 100 | 20% |
 | Language and keyword quality | 100 | 15% |
-| Human readability and positioning | 91 | 15% |
+| Human readability and positioning | 100 | 15% |
 
 ## Critical Failures
 
@@ -22,8 +22,8 @@
 
 ## Artifact parseability and structure
 
-- DOCX token coverage versus Markdown: 99.5%.
-- PDF token coverage versus Markdown: 99.5%.
+- DOCX token coverage versus Markdown: 99.3%.
+- PDF token coverage versus Markdown: 99.3%.
 
 ## Required-information completeness
 
@@ -35,13 +35,13 @@
 
 ## Human readability and positioning
 
-- 3 bullets are long enough to hinder scanning.
+- The first third is role-specific and evidence is easy to scan.
 
 ## Artifact Versions
 
-- `resume`: `8a9e3772b96d8f678a622a48e13943adca378fdbf81801bbba4656114aa6ce5b`
-- `docx`: `6ef366a9048a05a48134f4f17ac8752bc83a3809585cd3aec2983e3c5b2534dd`
-- `pdf`: `cf49adf357f8844371210661fb00f7e606e4c93e11150e187d0cba5a0d26843b`
+- `resume`: `d626b978bdc355243ebe4bcf4e6ebba1be2a988232cf3f5a6f34b17b64defb5e`
+- `docx`: `8f889f4d878e7842401c86ae116cd82f8aa5b4874074c83a0e3b405536cc478e`
+- `pdf`: `96bcc42492bd5bb6cd145983b65ddd53e23662b1c7ca05b4d296be7c11d636d1`
 
 ## Recommended Next Action
 
