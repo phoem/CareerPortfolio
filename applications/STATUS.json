@@ -5,11 +5,10 @@
     "total": 9,
     "by_status": {
       "unknown": 7,
-      "not_applied": 1,
-      "closed": 1
+      "closed": 2
     },
     "by_outcome": {
-      "not_selected": 1
+      "not_selected": 2
     }
   },
   "applications": [
@@ -40,7 +39,8 @@
       "role": "Staff+ Software Engineer, Developer Productivity",
       "requisition_id": "PIP-260568",
       "package": "applications/anthropic/5110511008-developer-productivity",
-      "status": "not_applied"
+      "status": "closed",
+      "outcome": "not_selected"
     },
     {
       "company": "LM Studio",
