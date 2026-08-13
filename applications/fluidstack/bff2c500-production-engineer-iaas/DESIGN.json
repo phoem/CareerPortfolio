@@ -1,5 +1,5 @@
 {
   "design": "readable-ats",
   "scope": "persistent",
-  "applies_to": ["resume"]
+  "applies_to": ["resume", "cover_letter"]
 }

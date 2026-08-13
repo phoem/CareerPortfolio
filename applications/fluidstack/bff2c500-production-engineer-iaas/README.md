@@ -14,6 +14,6 @@ The canonical Backend / Infrastructure Engineer resume was selected as the close
 - `JOB_SOURCE.md` — source URLs, posting ID, and retrieval provenance.
 - `EVIDENCE_MAP.md` — requirement-to-evidence mapping and explicit qualification boundaries.
 - `GAP_ANALYSIS.md` — strong matches, adjacent evidence, genuine gaps, and drafting constraints.
-- targeted resume Markdown source plus CI-generated DOCX/PDF artifacts.
+- targeted resume and concise cover-letter Markdown sources plus CI-generated DOCX/PDF artifacts.
 - `DESIGN.json` — persistent `readable-ats` design selection.
 - `validation/` — ATS report, result data, and score history after CI validation.

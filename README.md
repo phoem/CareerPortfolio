@@ -81,6 +81,7 @@ The employer posting associated with requisition JR39731 was verified as a Compu
 |---|---|
 | Package | `applications/fluidstack/bff2c500-production-engineer-iaas/` |
 | Resume source | `applications/fluidstack/bff2c500-production-engineer-iaas/Jordan_Newman_Fluidstack_Production_Engineer_IaaS_Resume.md` |
+| Cover-letter source | `applications/fluidstack/bff2c500-production-engineer-iaas/COVER_LETTER.md` |
 | Job description | `applications/fluidstack/bff2c500-production-engineer-iaas/JOB_DESCRIPTION.md` |
 | Evidence map | `applications/fluidstack/bff2c500-production-engineer-iaas/EVIDENCE_MAP.md` |
 | Validation | `applications/fluidstack/bff2c500-production-engineer-iaas/validation/` |

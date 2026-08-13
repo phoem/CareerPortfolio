@@ -2,18 +2,20 @@
 
 **Senior Software Engineer | Systems, Backend, Security, Infrastructure**
 
-Marlboro, NJ | 347-739-4731 | phoem@mac.com | github.com/phoem  
+Marlboro, NJ | 347-739-4731 | phoem@mac.com | https://www.linkedin.com/in/jordan-newman-aa3b19b2/ | https://github.com/phoem
+
 *Selected public repositories are available. The most significant engineering repositories are private; access is available upon request.*
 
 ## Summary
 
-Senior software engineer specializing in systems software, distributed infrastructure, networking, security, and performance engineering. Built production systems spanning high-performance HTTP/CDN serving, FreeBSD kernel modules, packet and DNS analysis, authentication, telemetry, deployment automation, and enterprise integrations. Combines deep C and operating-system expertise with modern cloud and DevOps delivery.
+Senior software engineer specializing in systems software, distributed infrastructure, networking, security, and performance engineering. Built production systems spanning high-performance HTTP/CDN serving, FreeBSD kernel modules, observability, deployment automation, and enterprise integrations. Combines deep C and operating-system expertise with modern cloud delivery, developer tooling, and agentic AI systems.
 
 ## Technical Skills
-- **Languages:** C, C++, Go, Python, C#, Objective-C, PHP, Perl, JavaScript, Node.js, Shell, Visual Basic
+- **Languages:** C, C++, C#, Go, Python, Rust, TypeScript, JavaScript, Node.js, Shell, Objective-C, PHP, Perl, Visual Basic
 - **Systems:** FreeBSD, Linux, kernel modules, system calls, operating systems, kqueue, sendfile(), GDB, TCP/IP, non-blocking I/O
 - **Networking/Security:** HTTP, DNS, CDN architecture, socket programming, DDoS detection/mitigation, packet capture, libpcap, IPFW, authentication, telemetry
-- **Cloud/DevOps:** Azure DevOps, Docker, Kubernetes, Terraform, CI/CD, security scanning, deployment automation
+- **Cloud/DevOps:** Azure DevOps, Azure Pipelines, GitHub Actions, Docker, Kubernetes, Terraform, CI/CD, security scanning, deployment automation
+- **AI/Developer Tooling:** LLM APIs and routing, MCP, agentic workflows, CLI tools, GitHub automation, auditable task execution
 - **Databases/Web:** MySQL, MultiValue/Universe, OAuth/OAuth2, SMTP OAuth, React, jQuery, PHP, web services
 
 ## Selected Technical Highlights
@@ -22,23 +24,24 @@ Senior software engineer specializing in systems software, distributed infrastru
 - Designed the custom HTTP/CDN server and supporting software platform used for high-traffic production workloads.
 - Built non-blocking event-driven systems around kqueue, zero-copy sendfile(), kernel-aware I/O, and dedicated disk I/O workers.
 - Developed production FreeBSD kernel modules, DDoS mitigation systems, packet analyzers, DNS monitoring, authentication, and telemetry software.
-- Implemented Azure DevOps, Docker, Kubernetes, Terraform, CI/CD, and security-scanning workflows.
+- Built Nexus, a local-first agentic control plane with LLM routing, MCP integrations, declarative workflows, permissioned tools, and auditable task state.
 
 ## Selected Systems Projects
 
-- **PrimeHTTPD:** Architected and implemented a high-performance, non-blocking, kqueue-based HTTP/CDN server in C for FreeBSD. Used sendfile(), SF_NODISKIO, TCP_NODELAY, TCP_NOPUSH, O_NONBLOCK, accept_filter_http, persistent connections, and dedicated I/O workers.
-- **VirtualDir:** Designed and developed a FreeBSD kernel module that intercepted filesystem-related syscalls and transparently remapped paths from configuration, enabling shared physical layouts without chroot jails; included the vdcli runtime management tool.
+- **PrimeHTTPD:** Built a non-blocking C/FreeBSD HTTP/CDN server using `kqueue`, `sendfile()`, persistent connections, caching, and specialized I/O workers.
+- **VirtualDir:** Built a FreeBSD kernel module that transparently remapped filesystem paths from runtime configuration; included the `vdcli` management tool.
 - **PrimeDump:** Built a libpcap-based real-time traffic analyzer decoding Ethernet, IP, TCP, UDP, and ICMPv6 with ncurses views and IPFW integration.
 - **PrimeDNSTop:** Built a DNS traffic monitor parsing UDP/53 and RFC 1035 queries to detect recursion attacks and rank source and domain activity.
-- **TAFOS:** Developed an educational x86 operating-system kernel in C and assembly with a custom MBR bootloader, protected mode, IDT, heap allocator, port I/O, VGA output, and GDB support.
+- **Nexus:** Building a local-first agentic control plane with LLM routing, MCP integrations, declarative workflows, permissioned tools, and auditable task state.
 
 ## Professional Experience
 
-### Advantive - Senior Development Specialist
+### Advantive - Senior Development Specialist, APIs and Integrations
 *Remote / Tampa Bay, FL | June 2022 - Present*
 
-- Implemented Azure DevOps, Docker, Kubernetes, Terraform, CI/CD, and security-scanning workflows across engineering teams.
-- Served as a member of the Architecture Team, collaborating with fellow architects and the architecture lead to make technical decisions, define engineering standards, guide platform direction, and develop shared libraries, documentation, and AI-assisted engineering workflows.
+- Serve on the Architecture Team, contributing to technical decisions, engineering standards, shared libraries, platform direction, and documentation.
+- Support about 12 teams with reusable Azure Pipelines, templates, deployment gates, and self-hosted runners that reduce manual work and enable quicker releases.
+- Implement and improve Docker, Kubernetes, Terraform, CI/CD, security-scanning, developer-tooling, and AI-assisted engineering workflows.
 
 ### DDI Systems - Senior Development Specialist
 *Manalapan, NJ | October 2021 - July 2022*
@@ -75,6 +78,7 @@ Senior software engineer specializing in systems software, distributed infrastru
 
 **Infrastructure Leadership**
 - Architected and operated hosting and CDN infrastructure spanning approximately 3,000-4,000 servers, 10 locations, multiple datacenters, and more than 65 Gbps of peak traffic.
+- Led major technical projects and as many as 10 employees, taking unclear problems through architecture, hands-on implementation, and production operation.
 
 **Systems Software Engineering**
 - Designed and built PrimeHTTPD, a high-performance, non-blocking, kqueue-based HTTP/CDN server in C for FreeBSD; deployed it across approximately 200 servers and supported more than 150,000 concurrent connections.
@@ -82,7 +86,7 @@ Senior software engineer specializing in systems software, distributed infrastru
 - Developed production FreeBSD kernel modules including VirtualDir, KeepClean, and StatCache.
 
 **Security and Networking**
-- Built DDoS detection and mitigation systems, packet and DNS analysis tools, monitoring, telemetry, authentication, deployment, and security software used across production infrastructure.
+- Built DDoS defenses, packet and DNS analysis, authentication, deployment, and production health-check and monitoring software including `sitecheck`, `slugd`, and `php-seclogd`.
 
 ### FatWallet.com - Systems Administrator
 *Wisconsin / Remote | December 2000 - June 2001*

@@ -17,6 +17,10 @@
     {
       "type": "resume",
       "source": "Jordan_Newman_Fluidstack_Production_Engineer_IaaS_Resume.md"
+    },
+    {
+      "type": "cover_letter",
+      "source": "COVER_LETTER.md"
     }
   ]
 }
