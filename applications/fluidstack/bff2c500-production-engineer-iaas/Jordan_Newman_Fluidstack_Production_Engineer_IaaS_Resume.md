@@ -19,9 +19,10 @@ Hands-on production and infrastructure engineer with 20+ years designing, buildi
 
 ## Selected Production Engineering Impact
 
-- Treat operational toil as a bug: when work repeatedly requires a human, build reusable automation, tooling, and deployment controls that remove the manual step.
-- Design APIs and shared abstractions to age well, drawing on long-lived production systems plus current API, integration, shared-library, and engineering-standards work.
-- Move toward ambiguity by turning unclear operational problems into an architecture and implementation map, explaining the approach, and owning delivery through production.
+- Treat toil as a bug: if work requires a human to do it twice, build the reusable automation, tooling, and deployment controls that make the manual step unnecessary.
+- Design APIs that age well and avoid leaky abstractions at scale, drawing on long-lived production systems plus current API, integration, shared-library, and engineering-standards work.
+- Move toward ambiguity: walk into the fog, build the architecture and implementation map, explain it to everyone involved, and own delivery through production.
+- Learn at a steep slope, reaching real competence in unfamiliar domains fast; career breadth spans systems, kernels, networking, infrastructure, enterprise software, AI, and open-source engineering.
 - Architected and operated 24/7 hosting and CDN infrastructure spanning approximately 3,000-4,000 servers across about 10 locations and carrying more than 65 Gbps of peak traffic.
 - Designed and built production health-check and monitoring software, including `sitecheck`, `slugd`, and `php-seclogd`, plus telemetry, deployment, authentication, and infrastructure-management systems.
 - Designed and programmed PrimeFlow, a NetFlow v5 collector with a modular processing pipeline and companion `pcap`-based flow generator; also built packet- and DNS-level observability tools.
