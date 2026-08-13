@@ -19,18 +19,23 @@ Hands-on production and infrastructure engineer with 20+ years designing, buildi
 
 ## Selected Production Engineering Impact
 
+- Treat operational toil as a bug: when work repeatedly requires a human, build reusable automation, tooling, and deployment controls that remove the manual step.
+- Design APIs and shared abstractions to age well, drawing on long-lived production systems plus current API, integration, shared-library, and engineering-standards work.
+- Move toward ambiguity by turning unclear operational problems into an architecture and implementation map, explaining the approach, and owning delivery through production.
 - Architected and operated 24/7 hosting and CDN infrastructure spanning approximately 3,000-4,000 servers across about 10 locations and carrying more than 65 Gbps of peak traffic.
 - Designed and built production health-check and monitoring software, including `sitecheck`, `slugd`, and `php-seclogd`, plus telemetry, deployment, authentication, and infrastructure-management systems.
 - Designed and programmed PrimeFlow, a NetFlow v5 collector with a modular processing pipeline and companion `pcap`-based flow generator; also built packet- and DNS-level observability tools.
 - Architected PrimeHTTPD, a high-concurrency C/FreeBSD runtime deployed across approximately 200 servers and supporting more than 150,000 concurrent connections.
 - Support about 12 teams with reusable Azure Pipelines, pipeline templates, deployment gates, and self-hosted runners that reduce manual work, enable quicker releases, and save developers time.
 - Led major technical projects for more than 15 years at ISPRIME, often taking an unclear operational problem through architecture, hands-on implementation, production deployment, and ongoing ownership.
+- Shipped production services that other teams and customer workloads depended on at scale, then diagnosed incidents and built monitoring, security, and infrastructure software to address recurring systemic causes.
 
 ## Platform, Automation, and AI Engineering
 
 - Serve on Advantive's Architecture Team, contributing to APIs and integrations, technical decisions, engineering standards, shared libraries, platform direction, documentation, developer tooling, and AI-assisted workflows.
 - Implement and improve Kubernetes, Docker, Terraform, Azure DevOps, CI/CD, and security-scanning workflows across engineering teams.
 - Build Nexus, a local-first agentic control plane with declarative YAML/DAG workflows, permissioned tools, human approvals, task-state transitions, audit records, LLM routing, provider health, circuit breakers, and MCP integrations.
+- Apply AI coding tools across unfamiliar domains and languages, combining LLM APIs, MCP servers, and agentic frameworks with more than 20 years of systems, networking, infrastructure, and application engineering.
 - Developed `nexusctl`, a developer-facing CLI for tasks, approvals, workflows, scheduled jobs, knowledge operations, model-routing simulation and health, and security simulation.
 - Built GitHub repository, issue, file, and pull-request tooling plus structured code editing, Git, test, and build capabilities behind auditable permission controls.
 
