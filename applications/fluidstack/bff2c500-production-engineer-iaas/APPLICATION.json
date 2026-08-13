@@ -1,0 +1,22 @@
+{
+  "company": "Fluidstack",
+  "role": "Production Engineer, IaaS",
+  "requisition_id": "bff2c500-d321-4bde-b251-9f7a2ef2d894",
+  "location": "San Francisco, CA; New York, NY; Austin, TX; Seattle, WA",
+  "department": "Operations",
+  "team": "Production Engineering",
+  "employment_type": "FullTime",
+  "workplace_type": "OnSite",
+  "source_url": "https://jobs.ashbyhq.com/fluidstack/bff2c500-d321-4bde-b251-9f7a2ef2d894",
+  "application_url": "https://jobs.ashbyhq.com/fluidstack/application-request/c6cbb711-c19a-4294-a4ba-9a008eae571d/overview",
+  "job_description": "JOB_DESCRIPTION.md",
+  "job_description_status": "complete-public-posting-captured",
+  "job_description_captured_at": "2026-08-13",
+  "slug": "bff2c500-production-engineer-iaas",
+  "artifacts": [
+    {
+      "type": "resume",
+      "source": "Jordan_Newman_Fluidstack_Production_Engineer_IaaS_Resume.md"
+    }
+  ]
+}

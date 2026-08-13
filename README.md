@@ -75,6 +75,16 @@ The employer posting associated with requisition JR39731 was verified as a Compu
 | Job description | `applications/openai/software-engineer-compute-infrastructure/JOB_DESCRIPTION.md` |
 | Validation | `applications/openai/software-engineer-compute-infrastructure/validation/` |
 
+### Fluidstack — Production Engineer, IaaS
+
+| Document | Path |
+|---|---|
+| Package | `applications/fluidstack/bff2c500-production-engineer-iaas/` |
+| Resume source | `applications/fluidstack/bff2c500-production-engineer-iaas/Jordan_Newman_Fluidstack_Production_Engineer_IaaS_Resume.md` |
+| Job description | `applications/fluidstack/bff2c500-production-engineer-iaas/JOB_DESCRIPTION.md` |
+| Evidence map | `applications/fluidstack/bff2c500-production-engineer-iaas/EVIDENCE_MAP.md` |
+| Validation | `applications/fluidstack/bff2c500-production-engineer-iaas/validation/` |
+
 ### Anthropic — Software Engineer, Research Infrastructure
 
 | Document | Path |
