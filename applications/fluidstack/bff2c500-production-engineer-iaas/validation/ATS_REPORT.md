@@ -1,10 +1,10 @@
 # ATS Readiness Report
 
-- **Validated:** 2026-08-13T06:09:04+00:00
+- **Validated:** 2026-08-13T06:11:59+00:00
 - **Validator:** CareerPortfolio ATS Validator v0.2.2
 - **Score type:** Targeted readiness
-- **Overall score:** 76/100
-- **Disposition:** Needs Revision
+- **Overall score:** 82/100
+- **Disposition:** Strong
 - **Autonomous revision pass:** 0 of 3
 
 ## Category Scores
@@ -13,7 +13,7 @@
 |---|---:|---:|
 | Artifact parseability and structure | 100 | 25% |
 | Required-information completeness | 100 | 10% |
-| Required job-requirement evidence | 54 | 30% |
+| Required job-requirement evidence | 74 | 30% |
 | Preferred job-requirement evidence | 42 | 15% |
 | Language and keyword quality | 90 | 10% |
 | Human readability and positioning | 97 | 10% |
@@ -33,10 +33,10 @@
 
 ## Required job-requirement evidence
 
-- Adjacent: You treat toil as a bug. If something requires a human to do it twice, you build the thing that makes it not require a human. (matched: treat, toil, requires, human, build).
-- Adjacent: You design APIs that age well. You've felt the pain of a leaky abstraction at scale and you don't repeat it. (matched: design, apis, age, scale).
-- Adjacent: You move toward ambiguity, not away from it. You walk into the fog, build the map, and explain it to everyone else. (matched: move, toward, ambiguity, into, build, map).
-- Missing: You learn at a steep slope. You reach real competence in an unfamiliar domain fast. We value this over existing expertise. (matched: real, unfamiliar).
+- Direct: You treat toil as a bug. If something requires a human to do it twice, you build the thing that makes it not require a human. (matched: treat, toil, if, requires, human, do, it, twice).
+- Adjacent: You design APIs that age well. You've felt the pain of a leaky abstraction at scale and you don't repeat it. (matched: design, apis, age, leaky, scale).
+- Direct: You move toward ambiguity, not away from it. You walk into the fog, build the map, and explain it to everyone else. (matched: move, toward, ambiguity, walk, into, fog, build, map).
+- Adjacent: You learn at a steep slope. You reach real competence in an unfamiliar domain fast. We value this over existing expertise. (matched: learn, steep, real, competence, unfamiliar).
 - Adjacent: You carry a pager without flinching. You run the incident, write the postmortem, fix the systemic cause, and move on. (matched: without, incident, systemic, move).
 - Adjacent: You're fluent with AI tooling. LLM APIs, MCP servers, and agentic frameworks, and you drive Claude Code, Cursor, or similar every day. (matched: ai, llm, apis, mcp, servers, agentic, frameworks, code).
 - Direct: You've shipped production services that other teams depend on at scale, and you're comfortable in any language using AI coding tools. (matched: shipped, production, services, other, teams, scale, ai, coding).
@@ -52,7 +52,7 @@
 
 ## Language and keyword quality
 
-- Qualification-language token coverage: 35.9%.
+- Qualification-language token coverage: 47.0%.
 
 ## Human readability and positioning
 
@@ -62,10 +62,10 @@
 
 | Type | Strength | Requirement | Matched terms |
 |---|---|---|---|
-| Required | Adjacent | You treat toil as a bug. If something requires a human to do it twice, you build the thing that makes it not require a human. | treat, toil, requires, human, build |
-| Required | Adjacent | You design APIs that age well. You've felt the pain of a leaky abstraction at scale and you don't repeat it. | design, apis, age, scale |
-| Required | Adjacent | You move toward ambiguity, not away from it. You walk into the fog, build the map, and explain it to everyone else. | move, toward, ambiguity, into, build, map |
-| Required | Missing | You learn at a steep slope. You reach real competence in an unfamiliar domain fast. We value this over existing expertise. | real, unfamiliar |
+| Required | Direct | You treat toil as a bug. If something requires a human to do it twice, you build the thing that makes it not require a human. | treat, toil, if, requires, human, do, it, twice, build |
+| Required | Adjacent | You design APIs that age well. You've felt the pain of a leaky abstraction at scale and you don't repeat it. | design, apis, age, leaky, scale |
+| Required | Direct | You move toward ambiguity, not away from it. You walk into the fog, build the map, and explain it to everyone else. | move, toward, ambiguity, walk, into, fog, build, map, explain, it |
+| Required | Adjacent | You learn at a steep slope. You reach real competence in an unfamiliar domain fast. We value this over existing expertise. | learn, steep, real, competence, unfamiliar |
 | Required | Adjacent | You carry a pager without flinching. You run the incident, write the postmortem, fix the systemic cause, and move on. | without, incident, systemic, move |
 | Required | Adjacent | You're fluent with AI tooling. LLM APIs, MCP servers, and agentic frameworks, and you drive Claude Code, Cursor, or similar every day. | ai, llm, apis, mcp, servers, agentic, frameworks, code |
 | Required | Direct | You've shipped production services that other teams depend on at scale, and you're comfortable in any language using AI coding tools. | shipped, production, services, other, teams, scale, ai, coding, tools. |
@@ -78,11 +78,11 @@
 
 ## Artifact Versions
 
-- `resume`: `183f429f66907881a56d1a5e1d404568cc754b357ee6199d8839d73883fa9916`
-- `docx`: `97bb8edc4c240ebbecca47f21024d45fb750a08064038e539e3b99a0aae11900`
-- `pdf`: `85f2738f4df7cb6c14966b3a13ded0f8f327898f0c5fad8231063f7d15d29b16`
+- `resume`: `174c506f5f8dfc03ab5f904c6d37caee54fa8c552e4dcdae185246e6319ccf45`
+- `docx`: `4e8c118ce03bd2f70c69533165f06db8d38a42c3b27d37a5086e5c512c1ee29e`
+- `pdf`: `1c9820137ecadfc34eff4235ff2946f6b24e4ee46f080977016c8c6ecb01e663`
 - `job`: `519df57152a39adc8c59e4217326bcea0146ac3c1570a26e06189554a3dcef03`
 
 ## Recommended Next Action
 
-- Revise the lowest-scoring fixable categories, regenerate artifacts, and rerun validation. Stop after three autonomous passes or earlier when a stop condition is reached.
+- Review the listed deductions and submit unless a safe, evidence-backed improvement is material.
