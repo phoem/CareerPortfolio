@@ -1,0 +1,21 @@
+{
+  "company": "OpenAI",
+  "role": "Software Engineer, Compute Infrastructure",
+  "requisition_id": "ca300a6d-a2a7-4580-aad7-323fbdfee7b1",
+  "location": "San Francisco; New York City; Seattle; London, UK",
+  "department": "Scaling",
+  "team": "Compute",
+  "source_url": "https://jobs.ashbyhq.com/openai/ca300a6d-a2a7-4580-aad7-323fbdfee7b1",
+  "apply_url": "https://jobs.ashbyhq.com/openai/ca300a6d-a2a7-4580-aad7-323fbdfee7b1/application",
+  "published_at": "2026-08-14T19:27:55.134-04:00",
+  "job_description": "JOB_DESCRIPTION.md",
+  "job_description_status": "complete-official-api-capture",
+  "job_description_captured_at": "2026-08-15",
+  "slug": "ca300a6d-compute-infrastructure",
+  "artifacts": [
+    {
+      "type": "resume",
+      "source": "Jordan_Newman_OpenAI_Compute_Infrastructure_Resume.md"
+    }
+  ]
+}

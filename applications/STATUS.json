@@ -2,10 +2,10 @@
   "schema_version": 1,
   "generated_from": "applications/**/APPLICATION_STATUS.json",
   "summary": {
-    "total": 10,
+    "total": 11,
     "by_status": {
       "unknown": 7,
-      "not_applied": 1,
+      "not_applied": 2,
       "closed": 2
     },
     "by_outcome": {
@@ -69,6 +69,13 @@
       "requisition_id": "JR39731",
       "package": "applications/netflix/JR39731-compute-runtime",
       "status": "unknown"
+    },
+    {
+      "company": "OpenAI",
+      "role": "Software Engineer, Compute Infrastructure",
+      "requisition_id": "ca300a6d-a2a7-4580-aad7-323fbdfee7b1",
+      "package": "applications/openai/ca300a6d-compute-infrastructure",
+      "status": "not_applied"
     },
     {
       "company": "OpenAI",

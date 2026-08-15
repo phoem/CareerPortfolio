@@ -75,6 +75,17 @@ The employer posting associated with requisition JR39731 was verified as a Compu
 | Job description | `applications/openai/software-engineer-compute-infrastructure/JOB_DESCRIPTION.md` |
 | Validation | `applications/openai/software-engineer-compute-infrastructure/validation/` |
 
+### OpenAI — Software Engineer, Compute Infrastructure (Ashby ca300a6d)
+
+| Document | Path |
+|---|---|
+| Package | `applications/openai/ca300a6d-compute-infrastructure/` |
+| Resume source | `applications/openai/ca300a6d-compute-infrastructure/Jordan_Newman_OpenAI_Compute_Infrastructure_Resume.md` |
+| Job description | `applications/openai/ca300a6d-compute-infrastructure/JOB_DESCRIPTION.md` |
+| Evidence map | `applications/openai/ca300a6d-compute-infrastructure/EVIDENCE_MAP.md` |
+| Validation | `applications/openai/ca300a6d-compute-infrastructure/validation/` |
+| Status | Baseline drafted; not yet applied |
+
 ### Fluidstack — Production Engineer, IaaS
 
 | Document | Path |
