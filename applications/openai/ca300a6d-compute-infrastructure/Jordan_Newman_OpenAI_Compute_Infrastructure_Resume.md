@@ -8,7 +8,7 @@ Marlboro, NJ | 347-739-4731 | phoem@mac.com | https://www.linkedin.com/in/jordan
 
 ## Summary
 
-Systems software and infrastructure engineer with deep experience building and operating distributed production platforms, high-performance network services, observability systems, developer tooling, and agent infrastructure. Architected and operated infrastructure spanning approximately 3,000-4,000 servers, 10 locations, and more than 65 Gbps of peak traffic. Built a C/FreeBSD HTTP/CDN runtime deployed across approximately 200 servers and supporting more than 150,000 concurrent connections. Combines low-level implementation and cross-layer incident diagnosis with platform architecture, Kubernetes delivery, reusable CI/CD supporting about 12 teams, and end-to-end ownership of ambiguous infrastructure problems.
+Systems software and infrastructure engineer with deep experience building and operating distributed production platforms, high-performance network services, observability systems, developer tooling, and agent infrastructure. Architected and operated infrastructure spanning approximately 3,000-4,000 servers, 10 locations, and more than 65 Gbps of peak traffic. Built a C/FreeBSD HTTP/CDN runtime deployed across approximately 200 servers and supporting more than 150,000 concurrent connections. Brings comfort with ambiguity, strong ownership, and a bias toward practical, durable solutions. Interested in building infrastructure that directly enables frontier AI research and product impact.
 
 ## Technical Skills
 
@@ -31,7 +31,8 @@ Systems software and infrastructure engineer with deep experience building and o
 
 ### PrimeHTTPD — High-Concurrency C/FreeBSD Runtime
 
-- Built a non-blocking HTTP/CDN server around one primary `kqueue` process, keeping latency-sensitive connection handling in the event loop while delegating potentially blocking file operations and disk-backed transfers to configurable workers.
+- Built a non-blocking HTTP/CDN server around one primary `kqueue` process, keeping latency-sensitive connection handling in the event loop.
+- Delegated potentially blocking file operations and disk-backed transfers to configurable workers.
 - Passed jobs, files, and client sockets with `sendmsg()` descriptor passing; shared worker state through `mmap()` and assigned work to the least-busy worker.
 - Used `sendfile()`, `SF_NODISKIO`, `TCP_NODELAY`, `TCP_NOPUSH`, `O_NONBLOCK`, and FreeBSD HTTP accept filters to optimize host, network, and storage-I/O behavior.
 - Implemented persistent connections, descriptor and gzip caches, chunked encoding, ETags, conditional requests, authentication, wildcard and PCRE2 rewrites, and signal-driven configuration reloads.
@@ -90,7 +91,8 @@ Systems software and infrastructure engineer with deep experience building and o
 *Weehawken, NJ | January 2001 - December 2014*
 
 - Led major technical projects and as many as 10 employees, taking unclear problems through architecture, hands-on implementation, production operation, and long-term improvement.
-- Architected and operated hosting, CDN, network, and datacenter infrastructure spanning approximately 3,000-4,000 servers, 10 locations, multiple upstream transit providers, direct and exchange peering, private inter-PoP fiber, and more than 65 Gbps of peak traffic.
+- Architected and operated hosting, CDN, network, and datacenter infrastructure spanning approximately 3,000-4,000 servers, 10 locations, and more than 65 Gbps of peak traffic.
+- Helped design and operate multi-provider transit, direct and exchange peering, and private inter-PoP fiber connectivity.
 - Designed and built PrimeHTTPD and its network core, I/O workers, scheduling protocol, shared-memory telemetry, kernel-assisted transfers, caches, authentication, routing, and HTTP features.
 - Built DDoS defenses and packet, DNS, BGP, NetFlow, monitoring, health-check, deployment, authentication, and security tooling for demanding 24/7 production operations.
 - Diagnosed complex behavior across operating-system, storage, networking, and workload layers, turning operational findings into durable systems and clearer abstractions.
