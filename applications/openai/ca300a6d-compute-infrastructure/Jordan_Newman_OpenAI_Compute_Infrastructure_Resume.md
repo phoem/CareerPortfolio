@@ -8,7 +8,7 @@ Marlboro, NJ | 347-739-4731 | phoem@mac.com | https://www.linkedin.com/in/jordan
 
 ## Summary
 
-Systems software and infrastructure engineer with deep experience building and operating distributed production platforms, high-performance network services, observability systems, developer tooling, and agent infrastructure. Architected and operated infrastructure spanning approximately 3,000-4,000 servers, 10 locations, and more than 65 Gbps of peak traffic. Built a C/FreeBSD HTTP/CDN runtime deployed across approximately 200 servers and supporting more than 150,000 concurrent connections. Brings comfort with ambiguity, strong ownership, and a bias toward practical, durable solutions. Interested in building infrastructure that directly enables frontier AI research and product impact.
+Systems software and infrastructure engineer experienced in building and operating distributed production platforms, high-performance networking, observability, developer tooling, and agent infrastructure. Architected 24/7 infrastructure spanning approximately 3,000-4,000 servers, 10 locations, and more than 65 Gbps of peak traffic. Built a C/FreeBSD HTTP/CDN runtime deployed across approximately 200 servers and supporting more than 150,000 concurrent connections. Brings comfort with ambiguity, strong ownership, and a bias toward practical, durable solutions. Interested in building infrastructure that directly enables frontier AI research and product impact.
 
 ## Technical Skills
 
@@ -44,7 +44,7 @@ Systems software and infrastructure engineer with deep experience building and o
 
 ### Network, Fleet Observability, and Kernel Systems
 
-- Built PrimeDump and PrimeDNSTop with libpcap for packet- and DNS-level visibility, including Ethernet/IP/TCP/UDP/ICMPv6 decoding, RFC 1035 query parsing, source/domain ranking, recursion-attack detection, and IPFW mitigation workflows.
+- Built PrimeDump and PrimeDNSTop with libpcap for packet and DNS visibility, decoding Ethernet/IP/TCP/UDP/ICMPv6 and RFC 1035 DNS; ranked activity, detected recursion attacks, and supported IPFW mitigation.
 - Built PrimeFlow for NetFlow v5 collection and PrimeBGP for BGP4 systems work; developed production health-check and monitoring software including `sitecheck`, `slugd`, and `php-seclogd`.
 - Developed production FreeBSD kernel modules including VirtualDir, KeepClean, and StatCache; profiled and optimized CPU-intensive systems using GDB, Valgrind, and Linux `perf`.
 
